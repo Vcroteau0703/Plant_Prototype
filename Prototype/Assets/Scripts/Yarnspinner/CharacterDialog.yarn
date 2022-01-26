@@ -1,0 +1,23 @@
+﻿title: Start
+tags:
+position: 1,-1
+---
+
+Scared Plant: Please help! I've been separated from my precious seedling.
+
+-> That's terrible!
+    Scared Plant: She fell down that pit to my right. Please save her!
+-> I'll help you
+    Scared Plant: She fell down that pit to my right. Please save her!
+-> ...
+    Scared Plant: She fell down that pit to my right. Please save her!
+
+===
+title: GotSeedling
+position: 399,316.5
+---
+
+You found her! Thank you so much!
+
+
+===
