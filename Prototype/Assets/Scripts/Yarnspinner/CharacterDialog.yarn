@@ -17,7 +17,18 @@ title: GotSeedling
 position: 399,316.5
 ---
 
-You found her! Thank you so much!
+Scared Plant: You found her! Thank you so much!
+<<change_world GreenifyObj>>
 
+===
+title: AfterTransformation
+position: 285,222.5
+---
+Scared Plant: This place is so much greener now! How did you do that?
 
+-> I'm the chosen one
+    Scared Plant: ... I'm not so sure about that
+-> I don't know
+    Scared Plant: Strange
+-> ...
 ===

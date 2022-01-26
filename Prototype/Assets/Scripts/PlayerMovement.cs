@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     public Vector3 velocity;
     public Vector3 movement;
+    public Vector3 prevMovement;
+    public Vector3 jumpdirection;
     public float gravity = -9.81f;
     public float jumpHeight = 2f;
 
@@ -44,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
         controls.Player.Interact.performed += ctx => Interact();
 
+        controls.Player.Drop.performed += ctx => Drop();
+
     }
 
     // Update is called once per frame
@@ -51,23 +55,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = characterController.isGrounded;
 
-        //Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-        //movement
-        if (transform.hasChanged)
-        {
-            isMoving = true;
-            transform.hasChanged = false;
-        }
-        else
-        {
-            isMoving = false;
-        }
-
         move = controls.Player.Move.ReadValue<Vector2>();
 
         //gravity and movement 
-        if (!isGrounded)
+        if (!isGrounded && !onWall)
         {
             if (velocity.y < 0)
             {
@@ -75,7 +66,24 @@ public class PlayerMovement : MonoBehaviour
             }
             velocity.y += gravity * Time.deltaTime;
         }
-        movement = move.y * transform.forward + (move.x * transform.right);
+        else
+        {
+            if (movement.x != 0 && onWall)
+            {
+                if((movement.x < prevMovement.x && prevMovement.x > 0 && movement.x < 0) || (movement.x > prevMovement.x && prevMovement.x < 0 && movement.x > 0))
+                {
+                    movement = jumpdirection.y * transform.forward + (jumpdirection.x * transform.right);
+                    onWall = false;
+                }
+                //else if (prevMovement.x == 0)
+                //{
+                //    onWall = false;
+                    
+                //}
+            }
+            movement = move.y * transform.forward + (move.x * transform.right);
+        }
+        
 
         characterController.Move(movement * movementSpeed * Time.deltaTime);
 
@@ -105,40 +113,55 @@ public class PlayerMovement : MonoBehaviour
         {
             onWall = true;
             velocity.y = 0f;
+            prevMovement.x = hit.moveDirection.x;
+            jumpdirection = -prevMovement;
         }
     }
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if(other.tag == "Wall")
-    //    {
-    //        StopCoroutine(WallHang());
-    //        onWall = false;
-    //    }
-    //}
-
-    void Jump()
+    void Drop()
     {
-        if (isGrounded || onWall)
+        if (onWall)
         {
-            velocity.y = jumpHeight;
             onWall = false;
         }
     }
 
-    //IEnumerator WallHang()
-    //{
-    //    onWall = true;
-    //    velocity.y = 0f;
-    //    yield return new WaitForSeconds(1);
-    //    onWall = false;
-    //}
+    public void DisableCharacterControls()
+    {
+        controls.Player.Move.Disable();
+        controls.Player.Jump.Disable();
+        controls.Player.Interact.Disable();
+    }
+
+    public void EnableCharacterControls()
+    {
+        controls.Player.Move.Enable();
+        controls.Player.Jump.Enable();
+        controls.Player.Interact.Enable();
+    }
+
+    void Jump()
+    {
+        if (isGrounded)
+        {
+            velocity.y = jumpHeight;
+        }
+        else if (onWall)
+        {
+            velocity.y = jumpHeight;
+            movement = jumpdirection.y * transform.forward + (jumpdirection.x * transform.right);
+
+            onWall = false;
+        }
+    }
+
 
     public void Interact()
     {
         Debug.DrawRay(transform.position, transform.right * rayLength, Color.red, 0.5f);
 
-        if(Physics.Raycast(transform.position, transform.right, out vision, rayLength))
+        Debug.DrawRay(transform.position, -transform.right * rayLength, Color.red, 0.5f);
+
+        if (Physics.Raycast(transform.position, transform.right, out vision, rayLength))
         {
             if(vision.transform.tag == "Character")
             {
@@ -147,6 +170,30 @@ public class PlayerMovement : MonoBehaviour
                     dialog.StartDialogue("GotSeedling");
                     transform.GetChild(0).SetParent(vision.transform);
                     vision.transform.GetChild(0).position = new Vector3(6.51f, 5.192f, 0f);
+                }
+                else if (vision.transform.childCount > 0)
+                {
+                    dialog.StartDialogue("AfterTransformation");
+                }
+                else
+                {
+                    dialog.StartDialogue("Start");
+                }
+            }
+        }
+        else if (Physics.Raycast(transform.position, -transform.right, out vision, rayLength))
+        {
+            if (vision.transform.tag == "Character")
+            {
+                if (transform.childCount > 0)
+                {
+                    dialog.StartDialogue("GotSeedling");
+                    transform.GetChild(0).SetParent(vision.transform);
+                    vision.transform.GetChild(0).position = new Vector3(6.51f, 5.192f, 0f);
+                }
+                else if (vision.transform.childCount > 0)
+                {
+                    dialog.StartDialogue("AfterTransformation");
                 }
                 else
                 {
