@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     // movement variables
     public float movementSpeed = 4.5f;
+    public float regSpeed = 4.5f;
+    public float midairSpeed = 2f;
     private Vector2 move;
     public bool isMoving;
 
@@ -57,8 +59,6 @@ public class PlayerMovement : MonoBehaviour
 
         move = controls.Player.Move.ReadValue<Vector2>();
 
-        Debug.Log(movement.x);
-
         //gravity and movement 
         if (!isGrounded && !onWall)
         {
@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            movement = move.y * transform.forward + (move.x * transform.right);
             if (movement.x != 0 && onWall)
             {
                 if((movement.x < prevMovement.x && prevMovement.x > 0 && movement.x < 0) || (movement.x > prevMovement.x && prevMovement.x < 0 && movement.x > 0))
@@ -77,14 +78,8 @@ public class PlayerMovement : MonoBehaviour
                     movement = jumpdirection.y * transform.forward + (jumpdirection.x * transform.right);
                     onWall = false;
                 }
-                //else if (prevMovement.x == 0)
-                //{
-                //    onWall = false;
-                    
-                //}
+
             }
-            movement = move.y * transform.forward + (move.x * transform.right);
-            movement.Normalize();
         }
         
 
