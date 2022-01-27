@@ -57,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
         move = controls.Player.Move.ReadValue<Vector2>();
 
+        Debug.Log(movement.x);
+
         //gravity and movement 
         if (!isGrounded && !onWall)
         {
@@ -82,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
                 //}
             }
             movement = move.y * transform.forward + (move.x * transform.right);
+            movement.Normalize();
         }
         
 
