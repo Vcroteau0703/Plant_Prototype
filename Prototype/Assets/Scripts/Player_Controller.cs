@@ -57,10 +57,8 @@ public class Player_Controller : MonoBehaviour
     #region JUMP
     private void Jump(InputAction.CallbackContext context)
     {
-        if (grounded == true)
-        {
-            StartCoroutine(Jump());         
-        }
+        if (grounded == true){StartCoroutine(Jump()); }
+        if (wall[0] || wall[1]) { Wall_Jump(); }
     }
 
     private IEnumerator Jump()
