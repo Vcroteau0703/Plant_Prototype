@@ -19256,6 +19256,7 @@ MonoBehaviour:
   wall_jump_power: 500
   wall_grab_strength: 15
   wall_slide_speed: 1
+  wall_jump_angle: 45
   delay: 0
 --- !u!54 &1681745388
 Rigidbody:

@@ -21,6 +21,7 @@ public class Player_Controller : MonoBehaviour
     public float wall_jump_power = 10.0f;
     public float wall_grab_strength = 20.0f;
     public float wall_slide_speed = 5.0f;
+    public float wall_jump_angle = 45.0f;
 
     private Vector2 direction;
     private bool grounded;
@@ -94,21 +95,15 @@ public class Player_Controller : MonoBehaviour
     {
         Debug.Log("Wall Jump");
         grounded = false;
-        //float force;
-        Vector2 mouse = Camera.main.ScreenToWorldPoint(controls.Player.Pointer.ReadValue<Vector2>());
-        Vector2 dir =  (mouse - (Vector2)transform.position).normalized;
+        Quaternion rotA = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
+        Quaternion rotB = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
+        Vector2 dirA = rotA * Vector2.right;
+        Vector2 dirB = rotB * Vector2.right;
+
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        rb.AddForce(dir * wall_jump_power, ForceMode.Force);
-        yield return new WaitForEndOfFrame();
-        //float time = 0;
-        //while (time == 0 || !grounded)
-        //{
-        //    time += Time.deltaTime;
-        //    force = (-Mathf.Pow(time, 2) / (1 / weight * 10)) + floatiness;
-        //    rb.AddForce(new Vector3(0, force, 0), ForceMode.Acceleration);
-        //    yield return new WaitForEndOfFrame();
-        //    if (grounded || wall[0] || wall[1] || ceiling) { break; }
-        //}      
+        if (wall[0]){rb.AddForce(dirA * wall_jump_power, ForceMode.Force);}
+        else if (wall[1]){rb.AddForce(-dirB * wall_jump_power, ForceMode.Force);}
+        yield return new WaitForEndOfFrame();    
     }
 
     public void Wall_Grab()
@@ -185,14 +180,22 @@ public class Player_Controller : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        if (controls != null)
-        {
-            Vector3 mouse = Camera.main.ScreenToWorldPoint(controls.Player.Pointer.ReadValue<Vector2>());
-            mouse.z = transform.position.z;
-            Gizmos.DrawSphere(mouse, 0.2f);
-            Gizmos.DrawLine(transform.position, mouse);
-        }
-      
+        //if (controls != null)
+        //{
+        //    Vector3 mouse = Camera.main.ScreenToWorldPoint(controls.Player.Pointer.ReadValue<Vector2>());
+        //    mouse.z = transform.position.z;
+        //    Gizmos.DrawSphere(mouse, 0.2f);
+        //    Gizmos.DrawLine(transform.position, mouse);
+        //}
+
+        Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
+        Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
+        Vector2 dirA = rot * Vector2.right;
+        Vector2 dirB = rot2 * Vector2.right;
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + dirA);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position - dirB);
+
+
         if (grounded)
         {
             Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.02f));
