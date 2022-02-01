@@ -67,10 +67,12 @@ public class Player_Controller : MonoBehaviour
 
     private IEnumerator Jump()
     {
+        yield return new WaitForEndOfFrame();
         Debug.Log("Jump");        
         float force;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(Vector3.up * jump_power, ForceMode.Force);
+        yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         grounded = false;
         float time = 0;
@@ -81,6 +83,7 @@ public class Player_Controller : MonoBehaviour
             rb.AddForce(new Vector3(0,force,0), ForceMode.Acceleration);
             Debug.Log("Force");
             yield return new WaitForEndOfFrame();
+            if(grounded || wall[0] || wall[1] || ceiling) { Debug.Log("stop"); break; }
         }
     }
     #endregion
