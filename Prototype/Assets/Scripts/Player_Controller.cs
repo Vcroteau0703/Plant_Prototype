@@ -81,7 +81,6 @@ public class Player_Controller : MonoBehaviour
             rb.AddForce(new Vector3(0,force,0), ForceMode.Acceleration);
             Debug.Log("Force");
             yield return new WaitForEndOfFrame();
-            if(grounded || wall[0] || wall[1] || ceiling) { Debug.Log("stop"); break; }
         }
     }
     #endregion
