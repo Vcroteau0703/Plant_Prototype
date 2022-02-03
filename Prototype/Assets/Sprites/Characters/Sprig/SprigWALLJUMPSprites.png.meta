@@ -187,7 +187,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -206,7 +206,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -218,7 +218,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -230,7 +230,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -242,7 +242,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: tvOS
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -254,7 +254,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -266,7 +266,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Lumin
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -278,7 +278,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -290,7 +290,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -307,10 +307,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 2492
-        width: 481
-        height: 451
+        x: 84
+        y: 2494
+        width: 474
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_1
       rect:
         serializedVersion: 2
-        x: 671
-        y: 2492
-        width: 492
-        height: 451
+        x: 672
+        y: 2494
+        width: 490
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_2
       rect:
         serializedVersion: 2
-        x: 1263
-        y: 2492
-        width: 503
-        height: 451
+        x: 1264
+        y: 2494
+        width: 498
+        height: 445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_3
       rect:
         serializedVersion: 2
-        x: 1855
-        y: 2492
-        width: 509
-        height: 451
+        x: 1856
+        y: 2494
+        width: 507
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_4
       rect:
         serializedVersion: 2
-        x: 2446
-        y: 2492
-        width: 522
-        height: 445
+        x: 2451
+        y: 2494
+        width: 512
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_5
       rect:
         serializedVersion: 2
-        x: 3044
-        y: 2492
-        width: 527
-        height: 445
+        x: 3045
+        y: 2497
+        width: 522
+        height: 436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_6
       rect:
         serializedVersion: 2
-        x: 3642
-        y: 2492
-        width: 527
-        height: 442
+        x: 3646
+        y: 2497
+        width: 521
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_7
       rect:
         serializedVersion: 2
-        x: 4245
-        y: 2492
-        width: 527
-        height: 439
+        x: 4244
+        y: 2497
+        width: 524
+        height: 430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_8
       rect:
         serializedVersion: 2
-        x: 4843
-        y: 2492
-        width: 530
-        height: 434
+        x: 4847
+        y: 2497
+        width: 522
+        height: 427
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_9
       rect:
         serializedVersion: 2
-        x: 5447
-        y: 2492
-        width: 527
-        height: 434
+        x: 5451
+        y: 2494
+        width: 518
+        height: 427
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_10
       rect:
         serializedVersion: 2
-        x: 6056
-        y: 2492
-        width: 515
-        height: 428
+        x: 6057
+        y: 2494
+        width: 513
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_11
       rect:
         serializedVersion: 2
-        x: 6665
-        y: 2492
-        width: 510
-        height: 428
+        x: 6667
+        y: 2491
+        width: 506
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_12
       rect:
         serializedVersion: 2
-        x: 7274
-        y: 2486
-        width: 504
-        height: 428
+        x: 7276
+        y: 2491
+        width: 498
+        height: 419
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_13
       rect:
         serializedVersion: 2
-        x: 7884
-        y: 2486
-        width: 492
-        height: 422
+        x: 7888
+        y: 2491
+        width: 486
+        height: 416
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_14
       rect:
         serializedVersion: 2
-        x: 8499
-        y: 2486
-        width: 480
-        height: 416
+        x: 8503
+        y: 2488
+        width: 472
+        height: 413
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_15
       rect:
         serializedVersion: 2
-        x: 9120
-        y: 2486
-        width: 457
-        height: 416
+        x: 9119
+        y: 2488
+        width: 459
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_16
       rect:
         serializedVersion: 2
-        x: 9671
-        y: 2492
-        width: 509
-        height: 422
+        x: 9672
+        y: 2494
+        width: 504
+        height: 416
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_17
       rect:
         serializedVersion: 2
-        x: 10257
-        y: 2492
-        width: 515
-        height: 428
+        x: 10261
+        y: 2497
+        width: 511
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +685,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_18
       rect:
         serializedVersion: 2
-        x: 10884
-        y: 2498
-        width: 486
-        height: 428
+        x: 10885
+        y: 2500
+        width: 484
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_19
       rect:
         serializedVersion: 2
-        x: 11476
-        y: 2498
-        width: 492
-        height: 428
+        x: 11480
+        y: 2500
+        width: 486
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -727,10 +727,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_20
       rect:
         serializedVersion: 2
-        x: 62
-        y: 1983
-        width: 503
-        height: 451
+        x: 66
+        y: 1984
+        width: 495
+        height: 445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +748,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_21
       rect:
         serializedVersion: 2
-        x: 659
-        y: 1989
-        width: 504
-        height: 439
+        x: 664
+        y: 1993
+        width: 495
+        height: 430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -769,10 +769,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_22
       rect:
         serializedVersion: 2
-        x: 1269
-        y: 2006
-        width: 486
-        height: 410
+        x: 1270
+        y: 2008
+        width: 483
+        height: 406
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,10 +790,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_23
       rect:
         serializedVersion: 2
-        x: 1855
-        y: 2006
-        width: 497
-        height: 398
+        x: 1859
+        y: 2010
+        width: 489
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,10 +811,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_24
       rect:
         serializedVersion: 2
-        x: 2458
-        y: 2006
-        width: 492
-        height: 398
+        x: 2460
+        y: 2010
+        width: 486
+        height: 393
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,10 +832,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_25
       rect:
         serializedVersion: 2
-        x: 3062
-        y: 2006
-        width: 486
-        height: 404
+        x: 3063
+        y: 2010
+        width: 480
+        height: 396
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,10 +853,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_26
       rect:
         serializedVersion: 2
-        x: 3665
-        y: 2006
-        width: 480
-        height: 404
+        x: 3667
+        y: 2011
+        width: 474
+        height: 398
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,10 +874,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_27
       rect:
         serializedVersion: 2
-        x: 4263
-        y: 2006
-        width: 480
-        height: 410
+        x: 4267
+        y: 2011
+        width: 472
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +895,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_28
       rect:
         serializedVersion: 2
-        x: 4860
-        y: 2010
-        width: 481
-        height: 406
+        x: 4865
+        y: 2013
+        width: 471
+        height: 402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +916,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_29
       rect:
         serializedVersion: 2
-        x: 5461
-        y: 2012
-        width: 477
-        height: 410
+        x: 5465
+        y: 2013
+        width: 469
+        height: 405
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,10 +937,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_30
       rect:
         serializedVersion: 2
-        x: 6056
-        y: 2012
-        width: 474
-        height: 410
+        x: 6060
+        y: 2016
+        width: 471
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +958,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_31
       rect:
         serializedVersion: 2
-        x: 6653
-        y: 2012
-        width: 479
-        height: 410
+        x: 6658
+        y: 2016
+        width: 468
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +979,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_32
       rect:
         serializedVersion: 2
-        x: 7251
-        y: 2018
-        width: 475
-        height: 410
+        x: 7255
+        y: 2022
+        width: 466
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1000,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_33
       rect:
         serializedVersion: 2
-        x: 7849
-        y: 2024
-        width: 468
-        height: 404
+        x: 7853
+        y: 2028
+        width: 466
+        height: 398
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1021,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_34
       rect:
         serializedVersion: 2
-        x: 8446
-        y: 2030
-        width: 469
-        height: 404
+        x: 8451
+        y: 2034
+        width: 463
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1042,10 +1042,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_35
       rect:
         serializedVersion: 2
-        x: 9044
-        y: 2041
-        width: 469
-        height: 393
+        x: 9048
+        y: 2043
+        width: 460
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1063,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_36
       rect:
         serializedVersion: 2
-        x: 9642
-        y: 2047
-        width: 468
-        height: 387
+        x: 9646
+        y: 2049
+        width: 460
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1084,10 +1084,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_37
       rect:
         serializedVersion: 2
-        x: 10239
-        y: 2053
-        width: 463
-        height: 386
+        x: 10244
+        y: 2054
+        width: 454
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1105,10 +1105,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_38
       rect:
         serializedVersion: 2
-        x: 10837
-        y: 2059
-        width: 463
-        height: 380
+        x: 10841
+        y: 2060
+        width: 454
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,10 +1126,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_39
       rect:
         serializedVersion: 2
-        x: 11435
-        y: 2065
-        width: 457
-        height: 374
+        x: 11439
+        y: 2069
+        width: 451
+        height: 369
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1147,10 +1147,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_40
       rect:
         serializedVersion: 2
-        x: 32
-        y: 1573
-        width: 457
-        height: 379
+        x: 37
+        y: 1574
+        width: 448
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1168,10 +1168,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_41
       rect:
         serializedVersion: 2
-        x: 630
-        y: 1573
-        width: 456
-        height: 380
+        x: 634
+        y: 1574
+        width: 447
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1189,10 +1189,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_42
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 1567
-        width: 451
-        height: 386
+        x: 1232
+        y: 1571
+        width: 442
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1210,10 +1210,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_43
       rect:
         serializedVersion: 2
-        x: 1831
-        y: 1567
-        width: 439
-        height: 386
+        x: 1833
+        y: 1571
+        width: 436
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1231,10 +1231,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_44
       rect:
         serializedVersion: 2
-        x: 2429
-        y: 1567
-        width: 439
-        height: 386
+        x: 2430
+        y: 1571
+        width: 437
+        height: 381
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1252,10 +1252,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_45
       rect:
         serializedVersion: 2
-        x: 3026
-        y: 1567
-        width: 440
-        height: 386
+        x: 3028
+        y: 1568
+        width: 433
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1273,10 +1273,10 @@ TextureImporter:
       name: SprigWALLJUMPSprites_46
       rect:
         serializedVersion: 2
-        x: 3624
-        y: 1564
-        width: 434
-        height: 389
+        x: 3628
+        y: 1568
+        width: 428
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1293,7 +1293,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2dbbe7f213e9bc145bd4747be263fce5
+    spriteID: eb43351bd582f6e498943f4f1f837f5b
     internalID: 0
     vertices: []
     indices: 

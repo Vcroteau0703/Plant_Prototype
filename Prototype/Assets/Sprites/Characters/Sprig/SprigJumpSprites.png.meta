@@ -208,7 +208,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -227,7 +227,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -239,7 +239,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -251,7 +251,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -263,7 +263,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: tvOS
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -275,7 +275,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -287,7 +287,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Lumin
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -299,7 +299,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -311,7 +311,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -328,10 +328,10 @@ TextureImporter:
       name: SprigJumpSprites_0
       rect:
         serializedVersion: 2
-        x: 220
-        y: 1625
-        width: 158
-        height: 245
+        x: 225
+        y: 1630
+        width: 151
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: SprigJumpSprites_1
       rect:
         serializedVersion: 2
-        x: 823
-        y: 1624
-        width: 158
-        height: 240
+        x: 825
+        y: 1628
+        width: 149
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: SprigJumpSprites_2
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 1624
-        width: 158
-        height: 240
+        x: 1425
+        y: 1625
+        width: 150
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: SprigJumpSprites_3
       rect:
         serializedVersion: 2
-        x: 2019
-        y: 1619
-        width: 158
-        height: 239
+        x: 2023
+        y: 1625
+        width: 152
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: SprigJumpSprites_4
       rect:
         serializedVersion: 2
-        x: 2617
-        y: 1618
-        width: 163
-        height: 234
+        x: 2621
+        y: 1622
+        width: 155
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: SprigJumpSprites_5
       rect:
         serializedVersion: 2
-        x: 3215
-        y: 1618
-        width: 169
-        height: 234
+        x: 3221
+        y: 1622
+        width: 158
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: SprigJumpSprites_6
       rect:
         serializedVersion: 2
-        x: 3812
-        y: 1618
-        width: 175
-        height: 229
+        x: 3816
+        y: 1622
+        width: 167
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: SprigJumpSprites_7
       rect:
         serializedVersion: 2
-        x: 4409
-        y: 1618
-        width: 182
-        height: 228
+        x: 4414
+        y: 1619
+        width: 171
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: SprigJumpSprites_8
       rect:
         serializedVersion: 2
-        x: 5007
-        y: 1618
-        width: 181
-        height: 223
+        x: 5008
+        y: 1619
+        width: 179
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: SprigJumpSprites_9
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 1614
-        width: 192
-        height: 221
+        x: 5606
+        y: 1619
+        width: 184
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: SprigJumpSprites_10
       rect:
         serializedVersion: 2
-        x: 6197
-        y: 1613
-        width: 198
-        height: 228
+        x: 6201
+        y: 1619
+        width: 193
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: SprigJumpSprites_11
       rect:
         serializedVersion: 2
-        x: 6795
-        y: 1619
-        width: 204
-        height: 222
+        x: 6799
+        y: 1622
+        width: 198
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: SprigJumpSprites_12
       rect:
         serializedVersion: 2
-        x: 7398
-        y: 1624
-        width: 205
-        height: 222
+        x: 7399
+        y: 1628
+        width: 202
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: SprigJumpSprites_13
       rect:
         serializedVersion: 2
-        x: 8001
-        y: 1630
-        width: 205
-        height: 216
+        x: 8003
+        y: 1631
+        width: 202
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: SprigJumpSprites_14
       rect:
         serializedVersion: 2
-        x: 8605
-        y: 1630
-        width: 205
-        height: 217
+        x: 8607
+        y: 1634
+        width: 201
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: SprigJumpSprites_15
       rect:
         serializedVersion: 2
-        x: 9209
-        y: 1631
-        width: 208
-        height: 221
+        x: 9213
+        y: 1636
+        width: 199
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: SprigJumpSprites_16
       rect:
         serializedVersion: 2
-        x: 9817
-        y: 1636
-        width: 205
-        height: 216
+        x: 9820
+        y: 1637
+        width: 195
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +685,10 @@ TextureImporter:
       name: SprigJumpSprites_17
       rect:
         serializedVersion: 2
-        x: 10424
-        y: 1636
-        width: 202
-        height: 222
+        x: 10428
+        y: 1640
+        width: 191
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: SprigJumpSprites_18
       rect:
         serializedVersion: 2
-        x: 11030
-        y: 1636
-        width: 199
-        height: 222
+        x: 11035
+        y: 1641
+        width: 190
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -727,10 +727,10 @@ TextureImporter:
       name: SprigJumpSprites_19
       rect:
         serializedVersion: 2
-        x: 11634
-        y: 1642
-        width: 193
-        height: 216
+        x: 11638
+        y: 1643
+        width: 188
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +748,10 @@ TextureImporter:
       name: SprigJumpSprites_20
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1321
-        width: 199
-        height: 215
+        x: 236
+        y: 1326
+        width: 190
+        height: 208
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -769,10 +769,10 @@ TextureImporter:
       name: SprigJumpSprites_21
       rect:
         serializedVersion: 2
-        x: 835
-        y: 1326
-        width: 199
-        height: 210
+        x: 836
+        y: 1327
+        width: 194
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,10 +790,10 @@ TextureImporter:
       name: SprigJumpSprites_22
       rect:
         serializedVersion: 2
-        x: 1433
-        y: 1326
-        width: 199
-        height: 210
+        x: 1434
+        y: 1329
+        width: 196
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,10 +811,10 @@ TextureImporter:
       name: SprigJumpSprites_23
       rect:
         serializedVersion: 2
-        x: 2030
-        y: 1326
-        width: 205
-        height: 210
+        x: 2035
+        y: 1329
+        width: 196
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,10 +832,10 @@ TextureImporter:
       name: SprigJumpSprites_24
       rect:
         serializedVersion: 2
-        x: 2628
-        y: 1327
-        width: 211
-        height: 209
+        x: 2632
+        y: 1332
+        width: 202
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,10 +853,10 @@ TextureImporter:
       name: SprigJumpSprites_25
       rect:
         serializedVersion: 2
-        x: 3231
-        y: 1332
-        width: 205
-        height: 204
+        x: 3233
+        y: 1333
+        width: 202
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,10 +874,10 @@ TextureImporter:
       name: SprigJumpSprites_26
       rect:
         serializedVersion: 2
-        x: 3829
-        y: 1332
-        width: 211
-        height: 204
+        x: 3831
+        y: 1335
+        width: 205
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +895,10 @@ TextureImporter:
       name: SprigJumpSprites_27
       rect:
         serializedVersion: 2
-        x: 4427
-        y: 1332
-        width: 215
-        height: 204
+        x: 4431
+        y: 1335
+        width: 205
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +916,10 @@ TextureImporter:
       name: SprigJumpSprites_28
       rect:
         serializedVersion: 2
-        x: 5025
-        y: 1333
-        width: 216
-        height: 203
+        x: 5029
+        y: 1338
+        width: 210
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,10 +937,10 @@ TextureImporter:
       name: SprigJumpSprites_29
       rect:
         serializedVersion: 2
-        x: 5628
-        y: 1332
-        width: 211
-        height: 204
+        x: 5630
+        y: 1338
+        width: 207
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +958,10 @@ TextureImporter:
       name: SprigJumpSprites_30
       rect:
         serializedVersion: 2
-        x: 6231
-        y: 1332
-        width: 211
-        height: 204
+        x: 6233
+        y: 1335
+        width: 202
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +979,10 @@ TextureImporter:
       name: SprigJumpSprites_31
       rect:
         serializedVersion: 2
-        x: 6829
-        y: 1332
-        width: 211
-        height: 204
+        x: 6834
+        y: 1335
+        width: 202
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1000,10 @@ TextureImporter:
       name: SprigJumpSprites_32
       rect:
         serializedVersion: 2
-        x: 7433
-        y: 1332
-        width: 205
-        height: 204
+        x: 7434
+        y: 1335
+        width: 199
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1021,10 @@ TextureImporter:
       name: SprigJumpSprites_33
       rect:
         serializedVersion: 2
-        x: 8031
+        x: 8036
         y: 1332
-        width: 204
-        height: 204
+        width: 197
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1042,10 +1042,10 @@ TextureImporter:
       name: SprigJumpSprites_34
       rect:
         serializedVersion: 2
-        x: 8634
-        y: 1327
-        width: 199
-        height: 209
+        x: 8638
+        y: 1332
+        width: 194
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1063,10 @@ TextureImporter:
       name: SprigJumpSprites_35
       rect:
         serializedVersion: 2
-        x: 9237
-        y: 1326
-        width: 198
-        height: 210
+        x: 9239
+        y: 1332
+        width: 190
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1084,10 +1084,10 @@ TextureImporter:
       name: SprigJumpSprites_36
       rect:
         serializedVersion: 2
-        x: 9835
-        y: 1326
-        width: 199
-        height: 210
+        x: 9839
+        y: 1329
+        width: 191
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1105,10 +1105,10 @@ TextureImporter:
       name: SprigJumpSprites_37
       rect:
         serializedVersion: 2
-        x: 10439
-        y: 1326
-        width: 193
-        height: 210
+        x: 10442
+        y: 1329
+        width: 185
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,10 +1126,10 @@ TextureImporter:
       name: SprigJumpSprites_38
       rect:
         serializedVersion: 2
-        x: 11042
-        y: 1326
-        width: 187
-        height: 210
+        x: 11043
+        y: 1329
+        width: 182
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1147,10 +1147,10 @@ TextureImporter:
       name: SprigJumpSprites_39
       rect:
         serializedVersion: 2
-        x: 11640
-        y: 1326
-        width: 187
-        height: 210
+        x: 11644
+        y: 1327
+        width: 182
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1168,10 +1168,10 @@ TextureImporter:
       name: SprigJumpSprites_40
       rect:
         serializedVersion: 2
-        x: 243
-        y: 1004
-        width: 182
-        height: 210
+        x: 245
+        y: 1007
+        width: 178
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1189,10 +1189,10 @@ TextureImporter:
       name: SprigJumpSprites_41
       rect:
         serializedVersion: 2
-        x: 841
-        y: 1004
-        width: 187
-        height: 210
+        x: 846
+        y: 1007
+        width: 175
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1210,10 +1210,10 @@ TextureImporter:
       name: SprigJumpSprites_42
       rect:
         serializedVersion: 2
-        x: 1444
-        y: 1004
-        width: 182
-        height: 210
+        x: 1449
+        y: 1005
+        width: 173
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1231,10 +1231,10 @@ TextureImporter:
       name: SprigJumpSprites_43
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1000
-        width: 176
-        height: 214
+        x: 2049
+        y: 1004
+        width: 170
+        height: 208
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1252,10 +1252,10 @@ TextureImporter:
       name: SprigJumpSprites_44
       rect:
         serializedVersion: 2
-        x: 2646
-        y: 998
-        width: 175
-        height: 216
+        x: 2650
+        y: 1003
+        width: 167
+        height: 209
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1273,10 +1273,10 @@ TextureImporter:
       name: SprigJumpSprites_45
       rect:
         serializedVersion: 2
-        x: 3249
-        y: 998
-        width: 170
-        height: 216
+        x: 3251
+        y: 1001
+        width: 166
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1294,10 +1294,10 @@ TextureImporter:
       name: SprigJumpSprites_46
       rect:
         serializedVersion: 2
-        x: 3847
-        y: 998
-        width: 170
-        height: 216
+        x: 3852
+        y: 1001
+        width: 163
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1315,10 +1315,10 @@ TextureImporter:
       name: SprigJumpSprites_47
       rect:
         serializedVersion: 2
-        x: 4450
-        y: 994
-        width: 170
-        height: 220
+        x: 4455
+        y: 998
+        width: 158
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1336,10 +1336,10 @@ TextureImporter:
       name: SprigJumpSprites_48
       rect:
         serializedVersion: 2
-        x: 5054
-        y: 992
-        width: 164
-        height: 222
+        x: 5055
+        y: 998
+        width: 158
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1357,10 +1357,10 @@ TextureImporter:
       name: SprigJumpSprites_49
       rect:
         serializedVersion: 2
-        x: 5652
-        y: 992
-        width: 163
-        height: 222
+        x: 5656
+        y: 998
+        width: 157
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1378,10 +1378,10 @@ TextureImporter:
       name: SprigJumpSprites_50
       rect:
         serializedVersion: 2
-        x: 6255
-        y: 992
-        width: 162
-        height: 222
+        x: 6257
+        y: 998
+        width: 155
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1399,10 +1399,10 @@ TextureImporter:
       name: SprigJumpSprites_51
       rect:
         serializedVersion: 2
-        x: 6853
-        y: 992
-        width: 164
-        height: 222
+        x: 6857
+        y: 995
+        width: 155
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1420,10 +1420,10 @@ TextureImporter:
       name: SprigJumpSprites_52
       rect:
         serializedVersion: 2
-        x: 7452
+        x: 7458
         y: 992
-        width: 162
-        height: 222
+        width: 155
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1441,10 +1441,10 @@ TextureImporter:
       name: SprigJumpSprites_53
       rect:
         serializedVersion: 2
-        x: 8054
-        y: 986
-        width: 164
-        height: 228
+        x: 8055
+        y: 992
+        width: 158
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1461,7 +1461,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d2199646a86241e4ba20fbae38ec219f
+    spriteID: 7334323aad6fd2f4780e8fa88122fc3d
     internalID: 0
     vertices: []
     indices: 

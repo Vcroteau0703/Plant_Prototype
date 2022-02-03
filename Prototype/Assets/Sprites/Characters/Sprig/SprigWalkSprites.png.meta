@@ -199,7 +199,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -218,7 +218,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -230,7 +230,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -242,7 +242,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -254,7 +254,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: tvOS
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -266,7 +266,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -278,7 +278,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Lumin
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -290,7 +290,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -302,7 +302,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -319,10 +319,10 @@ TextureImporter:
       name: SprigWalkSprites_0
       rect:
         serializedVersion: 2
-        x: 196
-        y: 1631
-        width: 211
-        height: 239
+        x: 198
+        y: 1637
+        width: 208
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: SprigWalkSprites_1
       rect:
         serializedVersion: 2
-        x: 794
-        y: 1630
-        width: 211
-        height: 240
+        x: 796
+        y: 1634
+        width: 207
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: SprigWalkSprites_2
       rect:
         serializedVersion: 2
-        x: 1397
-        y: 1630
-        width: 205
-        height: 238
+        x: 1399
+        y: 1634
+        width: 202
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,10 +382,10 @@ TextureImporter:
       name: SprigWalkSprites_3
       rect:
         serializedVersion: 2
-        x: 1996
-        y: 1627
-        width: 204
-        height: 237
+        x: 2001
+        y: 1631
+        width: 198
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: SprigWalkSprites_4
       rect:
         serializedVersion: 2
-        x: 2600
-        y: 1624
-        width: 198
-        height: 240
+        x: 2606
+        y: 1628
+        width: 187
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,10 +424,10 @@ TextureImporter:
       name: SprigWalkSprites_5
       rect:
         serializedVersion: 2
-        x: 3202
-        y: 1624
-        width: 190
-        height: 240
+        x: 3204
+        y: 1625
+        width: 184
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: SprigWalkSprites_6
       rect:
         serializedVersion: 2
-        x: 3800
-        y: 1618
-        width: 187
-        height: 246
+        x: 3804
+        y: 1622
+        width: 179
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,10 +466,10 @@ TextureImporter:
       name: SprigWalkSprites_7
       rect:
         serializedVersion: 2
-        x: 4398
-        y: 1618
-        width: 181
-        height: 246
+        x: 4402
+        y: 1619
+        width: 176
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,10 +487,10 @@ TextureImporter:
       name: SprigWalkSprites_8
       rect:
         serializedVersion: 2
-        x: 5001
-        y: 1613
-        width: 172
-        height: 245
+        x: 5002
+        y: 1616
+        width: 167
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,10 +508,10 @@ TextureImporter:
       name: SprigWalkSprites_9
       rect:
         serializedVersion: 2
-        x: 5599
-        y: 1612
-        width: 170
-        height: 246
+        x: 5603
+        y: 1615
+        width: 164
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,10 +529,10 @@ TextureImporter:
       name: SprigWalkSprites_10
       rect:
         serializedVersion: 2
-        x: 6197
-        y: 1608
-        width: 175
-        height: 250
+        x: 6201
+        y: 1613
+        width: 165
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,10 +550,10 @@ TextureImporter:
       name: SprigWalkSprites_11
       rect:
         serializedVersion: 2
-        x: 6800
-        y: 1607
-        width: 170
-        height: 251
+        x: 6801
+        y: 1613
+        width: 164
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,10 +571,10 @@ TextureImporter:
       name: SprigWalkSprites_12
       rect:
         serializedVersion: 2
-        x: 7398
-        y: 1607
-        width: 169
-        height: 251
+        x: 7402
+        y: 1613
+        width: 164
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,10 +592,10 @@ TextureImporter:
       name: SprigWalkSprites_13
       rect:
         serializedVersion: 2
-        x: 7999
-        y: 1612
-        width: 172
-        height: 246
+        x: 8002
+        y: 1613
+        width: 164
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,10 +613,10 @@ TextureImporter:
       name: SprigWalkSprites_14
       rect:
         serializedVersion: 2
-        x: 8599
-        y: 1612
-        width: 170
-        height: 246
+        x: 8603
+        y: 1614
+        width: 164
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: SprigWalkSprites_15
       rect:
         serializedVersion: 2
-        x: 9202
-        y: 1613
-        width: 176
-        height: 250
+        x: 9204
+        y: 1617
+        width: 172
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,10 +655,10 @@ TextureImporter:
       name: SprigWalkSprites_16
       rect:
         serializedVersion: 2
-        x: 9806
-        y: 1618
-        width: 181
-        height: 246
+        x: 9807
+        y: 1619
+        width: 176
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,10 +676,10 @@ TextureImporter:
       name: SprigWalkSprites_17
       rect:
         serializedVersion: 2
-        x: 10407
-        y: 1618
-        width: 184
-        height: 246
+        x: 10411
+        y: 1622
+        width: 177
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: SprigWalkSprites_18
       rect:
         serializedVersion: 2
-        x: 11008
-        y: 1624
-        width: 186
-        height: 240
+        x: 11013
+        y: 1625
+        width: 177
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -718,10 +718,10 @@ TextureImporter:
       name: SprigWalkSprites_19
       rect:
         serializedVersion: 2
-        x: 11610
-        y: 1624
-        width: 187
-        height: 240
+        x: 11612
+        y: 1628
+        width: 180
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -739,10 +739,10 @@ TextureImporter:
       name: SprigWalkSprites_20
       rect:
         serializedVersion: 2
-        x: 208
-        y: 1308
-        width: 187
-        height: 240
+        x: 213
+        y: 1312
+        width: 178
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,10 +760,10 @@ TextureImporter:
       name: SprigWalkSprites_21
       rect:
         serializedVersion: 2
-        x: 812
-        y: 1314
-        width: 181
-        height: 234
+        x: 813
+        y: 1315
+        width: 179
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,10 +781,10 @@ TextureImporter:
       name: SprigWalkSprites_22
       rect:
         serializedVersion: 2
-        x: 1409
-        y: 1314
-        width: 187
-        height: 234
+        x: 1414
+        y: 1317
+        width: 175
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,10 +802,10 @@ TextureImporter:
       name: SprigWalkSprites_23
       rect:
         serializedVersion: 2
-        x: 2007
-        y: 1314
-        width: 187
-        height: 234
+        x: 2011
+        y: 1318
+        width: 179
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,10 +823,10 @@ TextureImporter:
       name: SprigWalkSprites_24
       rect:
         serializedVersion: 2
-        x: 2608
-        y: 1315
-        width: 184
-        height: 233
+        x: 2612
+        y: 1320
+        width: 176
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,10 +844,10 @@ TextureImporter:
       name: SprigWalkSprites_25
       rect:
         serializedVersion: 2
-        x: 3208
+        x: 3210
         y: 1320
-        width: 181
-        height: 228
+        width: 175
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: SprigWalkSprites_26
       rect:
         serializedVersion: 2
-        x: 3806
-        y: 1320
-        width: 181
-        height: 228
+        x: 3810
+        y: 1321
+        width: 173
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -886,10 +886,10 @@ TextureImporter:
       name: SprigWalkSprites_27
       rect:
         serializedVersion: 2
-        x: 4404
-        y: 1315
-        width: 181
-        height: 233
+        x: 4408
+        y: 1320
+        width: 173
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -907,10 +907,10 @@ TextureImporter:
       name: SprigWalkSprites_28
       rect:
         serializedVersion: 2
-        x: 5004
-        y: 1314
-        width: 179
-        height: 234
+        x: 5008
+        y: 1317
+        width: 170
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,10 +928,10 @@ TextureImporter:
       name: SprigWalkSprites_29
       rect:
         serializedVersion: 2
-        x: 5605
-        y: 1309
-        width: 175
-        height: 239
+        x: 5606
+        y: 1315
+        width: 172
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -949,10 +949,10 @@ TextureImporter:
       name: SprigWalkSprites_30
       rect:
         serializedVersion: 2
-        x: 6202
-        y: 1308
-        width: 176
-        height: 240
+        x: 6207
+        y: 1312
+        width: 169
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -970,10 +970,10 @@ TextureImporter:
       name: SprigWalkSprites_31
       rect:
         serializedVersion: 2
-        x: 6803
-        y: 1303
-        width: 173
-        height: 239
+        x: 6807
+        y: 1309
+        width: 167
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -991,10 +991,10 @@ TextureImporter:
       name: SprigWalkSprites_32
       rect:
         serializedVersion: 2
-        x: 7403
-        y: 1302
-        width: 170
-        height: 240
+        x: 7406
+        y: 1306
+        width: 164
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,10 +1012,10 @@ TextureImporter:
       name: SprigWalkSprites_33
       rect:
         serializedVersion: 2
-        x: 7999
-        y: 1297
-        width: 172
-        height: 245
+        x: 8002
+        y: 1303
+        width: 164
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1033,10 +1033,10 @@ TextureImporter:
       name: SprigWalkSprites_34
       rect:
         serializedVersion: 2
-        x: 8593
-        y: 1296
-        width: 176
-        height: 246
+        x: 8598
+        y: 1300
+        width: 169
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1054,10 +1054,10 @@ TextureImporter:
       name: SprigWalkSprites_35
       rect:
         serializedVersion: 2
-        x: 9191
-        y: 1296
-        width: 181
-        height: 246
+        x: 9195
+        y: 1297
+        width: 176
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1075,10 +1075,10 @@ TextureImporter:
       name: SprigWalkSprites_36
       rect:
         serializedVersion: 2
-        x: 9789
-        y: 1292
-        width: 192
-        height: 250
+        x: 9795
+        y: 1297
+        width: 185
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1096,10 +1096,10 @@ TextureImporter:
       name: SprigWalkSprites_37
       rect:
         serializedVersion: 2
-        x: 10392
-        y: 1291
-        width: 199
-        height: 251
+        x: 10393
+        y: 1297
+        width: 193
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1117,10 +1117,10 @@ TextureImporter:
       name: SprigWalkSprites_38
       rect:
         serializedVersion: 2
-        x: 10990
-        y: 1291
-        width: 209
-        height: 251
+        x: 10994
+        y: 1294
+        width: 199
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1138,10 +1138,10 @@ TextureImporter:
       name: SprigWalkSprites_39
       rect:
         serializedVersion: 2
-        x: 11593
-        y: 1291
-        width: 211
-        height: 251
+        x: 11595
+        y: 1295
+        width: 204
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1159,10 +1159,10 @@ TextureImporter:
       name: SprigWalkSprites_40
       rect:
         serializedVersion: 2
-        x: 196
-        y: 975
-        width: 211
-        height: 251
+        x: 198
+        y: 978
+        width: 205
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1180,10 +1180,10 @@ TextureImporter:
       name: SprigWalkSprites_41
       rect:
         serializedVersion: 2
-        x: 800
-        y: 975
-        width: 210
-        height: 251
+        x: 801
+        y: 978
+        width: 205
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1201,10 +1201,10 @@ TextureImporter:
       name: SprigWalkSprites_42
       rect:
         serializedVersion: 2
-        x: 1403
-        y: 975
-        width: 205
-        height: 251
+        x: 1405
+        y: 980
+        width: 202
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1222,10 +1222,10 @@ TextureImporter:
       name: SprigWalkSprites_43
       rect:
         serializedVersion: 2
-        x: 2007
-        y: 980
-        width: 204
-        height: 246
+        x: 2009
+        y: 983
+        width: 196
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1243,10 +1243,10 @@ TextureImporter:
       name: SprigWalkSprites_44
       rect:
         serializedVersion: 2
-        x: 2610
-        y: 980
-        width: 199
-        height: 252
+        x: 2612
+        y: 983
+        width: 193
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1264,10 +1264,10 @@ TextureImporter:
       name: SprigWalkSprites_45
       rect:
         serializedVersion: 2
-        x: 3208
-        y: 984
-        width: 199
-        height: 248
+        x: 3212
+        y: 986
+        width: 191
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1285,10 +1285,10 @@ TextureImporter:
       name: SprigWalkSprites_46
       rect:
         serializedVersion: 2
-        x: 3806
-        y: 986
-        width: 205
-        height: 246
+        x: 3807
+        y: 989
+        width: 199
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1306,10 +1306,10 @@ TextureImporter:
       name: SprigWalkSprites_47
       rect:
         serializedVersion: 2
-        x: 4403
+        x: 4405
         y: 992
-        width: 211
-        height: 240
+        width: 205
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1327,10 +1327,10 @@ TextureImporter:
       name: SprigWalkSprites_48
       rect:
         serializedVersion: 2
-        x: 4996
-        y: 992
-        width: 216
-        height: 240
+        x: 5000
+        y: 995
+        width: 210
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1348,10 +1348,10 @@ TextureImporter:
       name: SprigWalkSprites_49
       rect:
         serializedVersion: 2
-        x: 5593
-        y: 992
-        width: 217
-        height: 240
+        x: 5597
+        y: 998
+        width: 211
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,10 +1369,10 @@ TextureImporter:
       name: SprigWalkSprites_50
       rect:
         serializedVersion: 2
-        x: 6192
+        x: 6198
         y: 998
-        width: 215
-        height: 234
+        width: 208
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1389,7 +1389,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 003b7f64eb164ca448b342bf3ca98bec
     internalID: 0
     vertices: []
     indices: 

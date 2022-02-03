@@ -199,7 +199,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -218,7 +218,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -230,7 +230,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -242,7 +242,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -254,7 +254,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: tvOS
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -266,7 +266,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -278,7 +278,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Lumin
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -290,7 +290,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -302,7 +302,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -319,10 +319,10 @@ TextureImporter:
       name: SprigIdleSprites_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 1630
-        width: 170
-        height: 240
+        x: 221
+        y: 1634
+        width: 156
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: SprigIdleSprites_1
       rect:
         serializedVersion: 2
-        x: 812
-        y: 1630
-        width: 169
-        height: 240
+        x: 821
+        y: 1634
+        width: 156
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: SprigIdleSprites_2
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 1630
-        width: 170
-        height: 240
+        x: 1420
+        y: 1634
+        width: 157
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,10 +382,10 @@ TextureImporter:
       name: SprigIdleSprites_3
       rect:
         serializedVersion: 2
-        x: 2013
-        y: 1630
-        width: 170
-        height: 240
+        x: 2020
+        y: 1634
+        width: 157
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: SprigIdleSprites_4
       rect:
         serializedVersion: 2
-        x: 2611
-        y: 1628
-        width: 173
-        height: 242
+        x: 2619
+        y: 1634
+        width: 158
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,10 +424,10 @@ TextureImporter:
       name: SprigIdleSprites_5
       rect:
         serializedVersion: 2
-        x: 3214
-        y: 1628
-        width: 170
-        height: 242
+        x: 3218
+        y: 1634
+        width: 159
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: SprigIdleSprites_6
       rect:
         serializedVersion: 2
-        x: 3812
-        y: 1627
-        width: 169
-        height: 243
+        x: 3818
+        y: 1634
+        width: 159
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,10 +466,10 @@ TextureImporter:
       name: SprigIdleSprites_7
       rect:
         serializedVersion: 2
-        x: 4410
-        y: 1626
-        width: 175
-        height: 243
+        x: 4418
+        y: 1634
+        width: 159
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,10 +487,10 @@ TextureImporter:
       name: SprigIdleSprites_8
       rect:
         serializedVersion: 2
-        x: 5010
-        y: 1627
-        width: 173
-        height: 242
+        x: 5017
+        y: 1634
+        width: 160
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,10 +508,10 @@ TextureImporter:
       name: SprigIdleSprites_9
       rect:
         serializedVersion: 2
-        x: 5610
-        y: 1626
-        width: 174
-        height: 242
+        x: 5617
+        y: 1634
+        width: 160
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,10 +529,10 @@ TextureImporter:
       name: SprigIdleSprites_10
       rect:
         serializedVersion: 2
-        x: 6208
-        y: 1626
-        width: 176
-        height: 238
+        x: 6216
+        y: 1634
+        width: 161
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,10 +550,10 @@ TextureImporter:
       name: SprigIdleSprites_11
       rect:
         serializedVersion: 2
-        x: 6809
-        y: 1626
-        width: 172
-        height: 238
+        x: 6815
+        y: 1634
+        width: 162
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,10 +571,10 @@ TextureImporter:
       name: SprigIdleSprites_12
       rect:
         serializedVersion: 2
-        x: 7409
-        y: 1625
-        width: 175
-        height: 239
+        x: 7415
+        y: 1634
+        width: 162
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,10 +592,10 @@ TextureImporter:
       name: SprigIdleSprites_13
       rect:
         serializedVersion: 2
-        x: 8007
-        y: 1626
-        width: 175
-        height: 238
+        x: 8015
+        y: 1633
+        width: 162
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,10 +613,10 @@ TextureImporter:
       name: SprigIdleSprites_14
       rect:
         serializedVersion: 2
-        x: 8608
-        y: 1625
-        width: 176
-        height: 239
+        x: 8614
+        y: 1634
+        width: 163
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: SprigIdleSprites_15
       rect:
         serializedVersion: 2
-        x: 9208
-        y: 1625
-        width: 176
-        height: 239
+        x: 9214
+        y: 1633
+        width: 163
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,10 +655,10 @@ TextureImporter:
       name: SprigIdleSprites_16
       rect:
         serializedVersion: 2
-        x: 9806
-        y: 1625
-        width: 175
-        height: 239
+        x: 9814
+        y: 1633
+        width: 163
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,10 +676,10 @@ TextureImporter:
       name: SprigIdleSprites_17
       rect:
         serializedVersion: 2
-        x: 10407
-        y: 1625
-        width: 177
-        height: 239
+        x: 10413
+        y: 1633
+        width: 164
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: SprigIdleSprites_18
       rect:
         serializedVersion: 2
-        x: 11007
-        y: 1625
-        width: 175
-        height: 239
+        x: 11013
+        y: 1633
+        width: 164
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -718,10 +718,10 @@ TextureImporter:
       name: SprigIdleSprites_19
       rect:
         serializedVersion: 2
-        x: 11605
-        y: 1625
-        width: 178
-        height: 239
+        x: 11612
+        y: 1633
+        width: 165
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -739,10 +739,10 @@ TextureImporter:
       name: SprigIdleSprites_20
       rect:
         serializedVersion: 2
-        x: 205
-        y: 1308
-        width: 179
-        height: 240
+        x: 212
+        y: 1315
+        width: 164
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,10 +760,10 @@ TextureImporter:
       name: SprigIdleSprites_21
       rect:
         serializedVersion: 2
-        x: 806
-        y: 1308
-        width: 175
-        height: 240
+        x: 811
+        y: 1315
+        width: 165
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,10 +781,10 @@ TextureImporter:
       name: SprigIdleSprites_22
       rect:
         serializedVersion: 2
-        x: 1404
-        y: 1308
-        width: 181
-        height: 240
+        x: 1411
+        y: 1315
+        width: 166
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,10 +802,10 @@ TextureImporter:
       name: SprigIdleSprites_23
       rect:
         serializedVersion: 2
-        x: 2007
-        y: 1308
-        width: 176
-        height: 240
+        x: 2011
+        y: 1315
+        width: 166
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,10 +823,10 @@ TextureImporter:
       name: SprigIdleSprites_24
       rect:
         serializedVersion: 2
-        x: 2605
-        y: 1308
-        width: 178
-        height: 240
+        x: 2611
+        y: 1315
+        width: 165
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,10 +844,10 @@ TextureImporter:
       name: SprigIdleSprites_25
       rect:
         serializedVersion: 2
-        x: 3203
-        y: 1308
-        width: 181
-        height: 240
+        x: 3211
+        y: 1315
+        width: 165
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: SprigIdleSprites_26
       rect:
         serializedVersion: 2
-        x: 3806
-        y: 1308
-        width: 175
-        height: 240
+        x: 3811
+        y: 1315
+        width: 165
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -886,10 +886,10 @@ TextureImporter:
       name: SprigIdleSprites_27
       rect:
         serializedVersion: 2
-        x: 4404
-        y: 1308
-        width: 181
-        height: 240
+        x: 4411
+        y: 1315
+        width: 166
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -907,10 +907,10 @@ TextureImporter:
       name: SprigIdleSprites_28
       rect:
         serializedVersion: 2
-        x: 5007
-        y: 1308
-        width: 176
-        height: 240
+        x: 5011
+        y: 1315
+        width: 166
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,10 +928,10 @@ TextureImporter:
       name: SprigIdleSprites_29
       rect:
         serializedVersion: 2
-        x: 5605
-        y: 1308
-        width: 178
-        height: 240
+        x: 5612
+        y: 1315
+        width: 165
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -949,10 +949,10 @@ TextureImporter:
       name: SprigIdleSprites_30
       rect:
         serializedVersion: 2
-        x: 6205
-        y: 1308
-        width: 179
-        height: 240
+        x: 6212
+        y: 1315
+        width: 165
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -970,10 +970,10 @@ TextureImporter:
       name: SprigIdleSprites_31
       rect:
         serializedVersion: 2
-        x: 6806
-        y: 1308
-        width: 175
-        height: 240
+        x: 6813
+        y: 1315
+        width: 164
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -991,10 +991,10 @@ TextureImporter:
       name: SprigIdleSprites_32
       rect:
         serializedVersion: 2
-        x: 7405
-        y: 1308
-        width: 180
-        height: 240
+        x: 7413
+        y: 1315
+        width: 164
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,10 +1012,10 @@ TextureImporter:
       name: SprigIdleSprites_33
       rect:
         serializedVersion: 2
-        x: 8007
-        y: 1308
-        width: 176
-        height: 240
+        x: 8013
+        y: 1315
+        width: 164
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1033,10 +1033,10 @@ TextureImporter:
       name: SprigIdleSprites_34
       rect:
         serializedVersion: 2
-        x: 8606
-        y: 1308
-        width: 178
-        height: 240
+        x: 8614
+        y: 1315
+        width: 163
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1054,10 +1054,10 @@ TextureImporter:
       name: SprigIdleSprites_35
       rect:
         serializedVersion: 2
-        x: 9208
-        y: 1308
-        width: 176
-        height: 240
+        x: 9214
+        y: 1315
+        width: 163
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1075,10 +1075,10 @@ TextureImporter:
       name: SprigIdleSprites_36
       rect:
         serializedVersion: 2
-        x: 9806
-        y: 1308
-        width: 175
-        height: 240
+        x: 9815
+        y: 1315
+        width: 162
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1096,10 +1096,10 @@ TextureImporter:
       name: SprigIdleSprites_37
       rect:
         serializedVersion: 2
-        x: 10409
-        y: 1308
-        width: 176
-        height: 240
+        x: 10415
+        y: 1316
+        width: 162
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1117,10 +1117,10 @@ TextureImporter:
       name: SprigIdleSprites_38
       rect:
         serializedVersion: 2
-        x: 11007
-        y: 1308
-        width: 176
-        height: 240
+        x: 11015
+        y: 1316
+        width: 162
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1138,10 +1138,10 @@ TextureImporter:
       name: SprigIdleSprites_39
       rect:
         serializedVersion: 2
-        x: 11610
-        y: 1308
-        width: 175
-        height: 240
+        x: 11616
+        y: 1316
+        width: 161
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1159,10 +1159,10 @@ TextureImporter:
       name: SprigIdleSprites_40
       rect:
         serializedVersion: 2
-        x: 208
-        y: 992
-        width: 176
-        height: 240
+        x: 217
+        y: 998
+        width: 160
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1180,10 +1180,10 @@ TextureImporter:
       name: SprigIdleSprites_41
       rect:
         serializedVersion: 2
-        x: 812
-        y: 992
-        width: 169
-        height: 240
+        x: 817
+        y: 998
+        width: 160
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1201,10 +1201,10 @@ TextureImporter:
       name: SprigIdleSprites_42
       rect:
         serializedVersion: 2
-        x: 1409
-        y: 992
-        width: 176
-        height: 240
+        x: 1418
+        y: 998
+        width: 159
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1222,10 +1222,10 @@ TextureImporter:
       name: SprigIdleSprites_43
       rect:
         serializedVersion: 2
-        x: 2013
-        y: 992
-        width: 170
-        height: 240
+        x: 2018
+        y: 998
+        width: 159
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1243,10 +1243,10 @@ TextureImporter:
       name: SprigIdleSprites_44
       rect:
         serializedVersion: 2
-        x: 2611
-        y: 992
-        width: 174
-        height: 240
+        x: 2619
+        y: 998
+        width: 158
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1264,10 +1264,10 @@ TextureImporter:
       name: SprigIdleSprites_45
       rect:
         serializedVersion: 2
-        x: 3214
-        y: 992
-        width: 170
-        height: 240
+        x: 3219
+        y: 998
+        width: 158
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1285,10 +1285,10 @@ TextureImporter:
       name: SprigIdleSprites_46
       rect:
         serializedVersion: 2
-        x: 3812
-        y: 992
-        width: 169
-        height: 240
+        x: 3820
+        y: 998
+        width: 157
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1306,10 +1306,10 @@ TextureImporter:
       name: SprigIdleSprites_47
       rect:
         serializedVersion: 2
-        x: 4415
-        y: 992
-        width: 170
-        height: 240
+        x: 4420
+        y: 998
+        width: 157
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1327,10 +1327,10 @@ TextureImporter:
       name: SprigIdleSprites_48
       rect:
         serializedVersion: 2
-        x: 5013
-        y: 992
-        width: 170
-        height: 240
+        x: 5021
+        y: 998
+        width: 156
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1348,10 +1348,10 @@ TextureImporter:
       name: SprigIdleSprites_49
       rect:
         serializedVersion: 2
-        x: 5616
-        y: 992
-        width: 169
-        height: 240
+        x: 5622
+        y: 998
+        width: 155
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,10 +1369,10 @@ TextureImporter:
       name: SprigIdleSprites_50
       rect:
         serializedVersion: 2
-        x: 6214
-        y: 992
-        width: 170
-        height: 240
+        x: 6222
+        y: 998
+        width: 155
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1389,7 +1389,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 43235ae1de97e86439fefe65620576ae
+    spriteID: 90cde37b4f4ec9c4ab4cf25ad9530653
     internalID: 0
     vertices: []
     indices: 
