@@ -19420,7 +19420,8 @@ MonoBehaviour:
   weight: 20
   air_control: 0.2
   max_air_speed: 5
-  coyote_jump_delay: 0.15
+  max_fall_speed: 30
+  coyote_jump_delay: 0
   wall_jump_power: 500
   wall_grab_strength: 10
   wall_jump_angle: 68

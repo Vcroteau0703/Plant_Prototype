@@ -20,6 +20,7 @@ public class Player_Controller : MonoBehaviour
     public float floatiness, weight;
     public float air_control = 1.0f;
     public float max_air_speed = 10.0f;
+    public float max_fall_speed = 20.0f;
     public float coyote_jump_delay = 0.15f;
     [Header("Wall Jump Settings")]
     public float wall_jump_power = 10.0f;
@@ -96,30 +97,25 @@ public class Player_Controller : MonoBehaviour
     {
         if (grounded == true){StartCoroutine(Jump()); }
         else if (wall[0] || wall[1]) { StartCoroutine(Wall_Jump()); }
-    }
-
+    }   
     private IEnumerator Jump()
-    {       
-        yield return new WaitForEndOfFrame();
+    {              
         float force;
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(Vector3.up * jump_power, ForceMode.Force);
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        grounded = false;
         float time = 0;
-        while (time == 0 || !grounded)
+        while (time >= 0)
         {
             time += Time.deltaTime;
-            force = (-Mathf.Pow(time, 2) / (1/weight*10)) + floatiness;
+            force = Mathf.Clamp((-Mathf.Pow(time, 2) / (1/weight*10)) + floatiness, Mathf.Infinity, max_fall_speed);
             rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
             yield return new WaitForEndOfFrame();
-            if(grounded || wall[0] || wall[1] || ceiling) { break; }
+            if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { Debug.Log("STOP"); break; }
         }
     }
     #endregion
 
     #region WALL JUMP
-
     public IEnumerator Wall_Jump()
     {
         isControlling = false;
