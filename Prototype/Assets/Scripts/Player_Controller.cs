@@ -9,11 +9,13 @@ public class Player_Controller : MonoBehaviour
     private Controls controls;
     private Rigidbody rb;
     private CapsuleCollider col;
+    private Animator animator;
 
 
     [Header("Movement Settings")]
     public float move_speed = 1.0f;
     public float move_smoothing = 0.5f;
+    public float downforce = 1f;
     public LayerMask walkable;
     [Header("Jump Settings")]
     public float jump_power = 1.0f;
@@ -48,10 +50,11 @@ public class Player_Controller : MonoBehaviour
     {
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out CapsuleCollider c) ? c : null;
+        animator = TryGetComponent(out Animator a) ? a : null;
         controls = controls == null ? new Controls() : controls;
         controls.Player.Move.performed += Request_Movement;
         controls.Player.Move.canceled += Request_Movement;
-        controls.Player.Jump.performed += Jump;
+        controls.Player.Jump.performed += Request_Jump;
         controls.Player.Enable();
     }
 
@@ -61,13 +64,15 @@ public class Player_Controller : MonoBehaviour
         Vector2 temp = context.ReadValue<Vector2>();
         float x =  Mathf.Abs(temp.x) > (horizontal_deadzone / 100f) ? temp.x : 0.0f;
         float y = Mathf.Abs(temp.y) > (vertical_deadzone / 100f) ? temp.y : 0.0f;      
-        direction = new Vector2(x, y);       
+        direction = new Vector2(x, y);
+        animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
     }
 
     private void Movement()
-    {
+    { 
+        Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (isControlling)
-        {
+        {           
             float speed = 0.0f;
             if (grounded == false)
             {
@@ -93,10 +98,13 @@ public class Player_Controller : MonoBehaviour
     #endregion
 
     #region JUMP
-    private void Jump(InputAction.CallbackContext context)
+    private void Request_Jump(InputAction.CallbackContext context)
     {
-        if (grounded == true){StartCoroutine(Jump()); }
-        else if (wall[0] || wall[1]) { StartCoroutine(Wall_Jump()); }
+        if (grounded == true){ StartCoroutine(Jump()); animator.SetTrigger("Jump"); }
+        else if (wall[0] || wall[1]) { 
+            StartCoroutine(Wall_Jump()); 
+            animator.SetTrigger("Wall_Jump");
+        }
     }   
     private IEnumerator Jump()
     {              
@@ -107,7 +115,9 @@ public class Player_Controller : MonoBehaviour
         while (time >= 0)
         {
             time += Time.deltaTime;
-            force = Mathf.Clamp((-Mathf.Pow(time, 2) / (1/weight*10)) + floatiness, Mathf.Infinity, max_fall_speed);
+            force = -Mathf.Pow(time, 2) / (1/weight*10) + floatiness;
+            if (direction.y < 0) { force = -Mathf.Abs(force) * downforce; }
+            force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
             rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
             yield return new WaitForEndOfFrame();
             if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { Debug.Log("STOP"); break; }
@@ -126,14 +136,27 @@ public class Player_Controller : MonoBehaviour
         Vector3 dirB = rotB * Vector3.right;
         if (wall[0]){rb.AddForce(dirA * wall_jump_power, ForceMode.Force);}
         else if (wall[1]){rb.AddForce(-dirB * wall_jump_power, ForceMode.Force);}
-        yield return new WaitForSeconds(0.2f);
-        controls.Player.Move.Enable();
+        yield return new WaitForSeconds(0.2f);       
         isControlling = true;
+
+        float force;
+        float time = 0;
+        while (time >= 0)
+        {
+            time += Time.deltaTime;
+            force = -Mathf.Pow(time, 2) / (1 / weight * 10) + floatiness;
+            if (direction.y < 0) { force = -Mathf.Abs(force) * downforce; }
+            force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
+            rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
+            yield return new WaitForEndOfFrame();
+            if (grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
+        }
     }
 
     private float slide_time = 0;
     public void Wall_Grab()
     {
+        animator.SetBool("Cling", true);
         if (wall[0])
         {
             rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force);
@@ -163,9 +186,10 @@ public class Player_Controller : MonoBehaviour
     {
         Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.02f));
         Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
-        if(hit.Length > 0) { grounded = true; delay = 0.0f; return; }
+        if(hit.Length > 0) { grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
         if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
         grounded = false;
+        animator.SetBool("Ground", false);
     }
 
     private void Ceiling_Check()
@@ -177,17 +201,37 @@ public class Player_Controller : MonoBehaviour
 
     private void Wall_Check()
     {
-        Vector3 posA = (transform.position - (Vector3.left * (col.bounds.size.x / 2)) + (Vector3.left * 0.7f));
+        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
         Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);        
         wall[0] = hit_left.Length > 0 ? true : false;
-        if (wall[0]) { Wall_Grab(); rb.useGravity = false; }
+        if (wall[0]) { Wall_Grab(); rb.useGravity = false; Flip(-1); }
 
-        Vector3 posB = (transform.position - (Vector3.right * (col.bounds.size.x / 2)) + (Vector3.right * 0.7f));
+
+        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
         Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);
         wall[1] = hit_right.Length > 0 ? true : false;
-        if (wall[1]) { Wall_Grab(); rb.useGravity = false; }
+        if (wall[1]) { Wall_Grab(); rb.useGravity = false; Flip(1); }
 
-        if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0;}
+        if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
+    }
+
+    private void Flip(int direction)
+    {
+        switch (direction) 
+        {
+            default:
+                if (wall[0]) { Flip(1); }
+                else if (wall[1]) { Flip(-1); }
+                break;
+
+            case 1:
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                break;
+
+            case -1:
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                break;
+        }
     }
     #endregion
 
@@ -198,7 +242,6 @@ public class Player_Controller : MonoBehaviour
         Wall_Check();
         Ceiling_Check();
     }
-
     private void OnDisable()
     {
         controls.Player.Disable();
@@ -229,12 +272,12 @@ public class Player_Controller : MonoBehaviour
         }
         if (wall[0])
         {         
-            Vector3 pos = (transform.position - (Vector3.left * (col.bounds.size.x / 2)) + (Vector3.left * 0.7f));
+            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
             Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (wall[1])
         {
-            Vector3 pos = (transform.position - (Vector3.right * (col.bounds.size.x / 2)) + (Vector3.right * 0.7f));
+            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
             Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (ceiling)
