@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: 7dad3268a586e024c83bb456dab1c168
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4417218748351312962
+    second: SprigIdleSprites_0
+  - first:
+      213: 27035966394474382
+    second: SprigIdleSprites_1
+  - first:
+      213: -5385935232822595805
+    second: SprigIdleSprites_2
+  - first:
+      213: -176839228252161759
+    second: SprigIdleSprites_3
+  - first:
+      213: -5366327823790427587
+    second: SprigIdleSprites_4
+  - first:
+      213: -8041559854172828869
+    second: SprigIdleSprites_5
+  - first:
+      213: 4922684060059973121
+    second: SprigIdleSprites_6
+  - first:
+      213: 546858580219769532
+    second: SprigIdleSprites_7
+  - first:
+      213: -9039317579240116211
+    second: SprigIdleSprites_8
+  - first:
+      213: 5300207837910739754
+    second: SprigIdleSprites_9
+  - first:
+      213: 2242317355954886058
+    second: SprigIdleSprites_10
+  - first:
+      213: 1153116674354869087
+    second: SprigIdleSprites_11
+  - first:
+      213: -1577790736154433269
+    second: SprigIdleSprites_12
+  - first:
+      213: 8081831735544997146
+    second: SprigIdleSprites_13
+  - first:
+      213: -2089448616879310443
+    second: SprigIdleSprites_14
+  - first:
+      213: 173268834754878811
+    second: SprigIdleSprites_15
+  - first:
+      213: 2925228830440887216
+    second: SprigIdleSprites_16
+  - first:
+      213: 8564580309857716232
+    second: SprigIdleSprites_17
+  - first:
+      213: -6291839114788926846
+    second: SprigIdleSprites_18
+  - first:
+      213: -3014264598225426425
+    second: SprigIdleSprites_19
+  - first:
+      213: -2037178106669443556
+    second: SprigIdleSprites_20
+  - first:
+      213: 8928035409884618590
+    second: SprigIdleSprites_21
+  - first:
+      213: -6473899350012108289
+    second: SprigIdleSprites_22
+  - first:
+      213: -8408095732066237516
+    second: SprigIdleSprites_23
+  - first:
+      213: -8787172361963867079
+    second: SprigIdleSprites_24
+  - first:
+      213: -4680927254417579131
+    second: SprigIdleSprites_25
+  - first:
+      213: 7823063889465892725
+    second: SprigIdleSprites_26
+  - first:
+      213: -1967938235138208597
+    second: SprigIdleSprites_27
+  - first:
+      213: 4362154518593428248
+    second: SprigIdleSprites_28
+  - first:
+      213: -3348556412943627396
+    second: SprigIdleSprites_29
+  - first:
+      213: -1715473030777676184
+    second: SprigIdleSprites_30
+  - first:
+      213: -3870284458312611028
+    second: SprigIdleSprites_31
+  - first:
+      213: 3141965518704567664
+    second: SprigIdleSprites_32
+  - first:
+      213: -2498751197712766696
+    second: SprigIdleSprites_33
+  - first:
+      213: -3140609524561105339
+    second: SprigIdleSprites_34
+  - first:
+      213: -8248131298188905652
+    second: SprigIdleSprites_35
+  - first:
+      213: 7583338724243721843
+    second: SprigIdleSprites_36
+  - first:
+      213: -6389169042334733128
+    second: SprigIdleSprites_37
+  - first:
+      213: 6361924744002085190
+    second: SprigIdleSprites_38
+  - first:
+      213: -2651932876669706015
+    second: SprigIdleSprites_39
+  - first:
+      213: -5479731865163914792
+    second: SprigIdleSprites_40
+  - first:
+      213: -6088423697725832436
+    second: SprigIdleSprites_41
+  - first:
+      213: 6224987883046768985
+    second: SprigIdleSprites_42
+  - first:
+      213: 1202218923856618597
+    second: SprigIdleSprites_43
+  - first:
+      213: 1474927017950887135
+    second: SprigIdleSprites_44
+  - first:
+      213: -5310022131531660986
+    second: SprigIdleSprites_45
+  - first:
+      213: 1347816038103108183
+    second: SprigIdleSprites_46
+  - first:
+      213: 7477227791363813936
+    second: SprigIdleSprites_47
+  - first:
+      213: -5788468652110124633
+    second: SprigIdleSprites_48
+  - first:
+      213: -8441504861578212304
+    second: SprigIdleSprites_49
+  - first:
+      213: -7272434956200911700
+    second: SprigIdleSprites_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigIdleSprites_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1634
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244fca65c0d1d4d30800000000000000
+      internalID: 4417218748351312962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_1
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1634
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f1a15711d006000800000000000000
+      internalID: 27035966394474382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_2
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1634
+        width: 157
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f295011705145b0800000000000000
+      internalID: -5385935232822595805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_3
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 1634
+        width: 157
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129fca9a8adbb8df0800000000000000
+      internalID: -176839228252161759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_4
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 1634
+        width: 158
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d323daab649f685b0800000000000000
+      internalID: -5366327823790427587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_5
+      rect:
+        serializedVersion: 2
+        x: 3218
+        y: 1634
+        width: 159
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b8cfb2be3a66090800000000000000
+      internalID: -8041559854172828869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_6
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 1634
+        width: 159
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1063a553213e05440800000000000000
+      internalID: 4922684060059973121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_7
+      rect:
+        serializedVersion: 2
+        x: 4418
+        y: 1634
+        width: 159
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2bf583bf4d69700800000000000000
+      internalID: 546858580219769532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_8
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 1634
+        width: 160
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00f275dd84ed8280800000000000000
+      internalID: -9039317579240116211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_9
+      rect:
+        serializedVersion: 2
+        x: 5617
+        y: 1634
+        width: 160
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b296662fe1e8940800000000000000
+      internalID: 5300207837910739754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_10
+      rect:
+        serializedVersion: 2
+        x: 6216
+        y: 1634
+        width: 161
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5526341cf4e1f10800000000000000
+      internalID: 2242317355954886058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_11
+      rect:
+        serializedVersion: 2
+        x: 6815
+        y: 1634
+        width: 162
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53708f7181b00010800000000000000
+      internalID: 1153116674354869087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_12
+      rect:
+        serializedVersion: 2
+        x: 7415
+        y: 1634
+        width: 162
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09ec995faf8a1ae0800000000000000
+      internalID: -1577790736154433269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_13
+      rect:
+        serializedVersion: 2
+        x: 8015
+        y: 1633
+        width: 162
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1563a3e42f682070800000000000000
+      internalID: 8081831735544997146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_14
+      rect:
+        serializedVersion: 2
+        x: 8614
+        y: 1634
+        width: 163
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5993a76ad89c003e0800000000000000
+      internalID: -2089448616879310443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_15
+      rect:
+        serializedVersion: 2
+        x: 9214
+        y: 1633
+        width: 163
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dd5325613976200800000000000000
+      internalID: 173268834754878811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_16
+      rect:
+        serializedVersion: 2
+        x: 9814
+        y: 1633
+        width: 163
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3192d6f10889820800000000000000
+      internalID: 2925228830440887216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_17
+      rect:
+        serializedVersion: 2
+        x: 10413
+        y: 1633
+        width: 164
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808cf5b2a608bd670800000000000000
+      internalID: 8564580309857716232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_18
+      rect:
+        serializedVersion: 2
+        x: 11013
+        y: 1633
+        width: 164
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a091329a5eea8a0800000000000000
+      internalID: -6291839114788926846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_19
+      rect:
+        serializedVersion: 2
+        x: 11612
+        y: 1633
+        width: 165
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708ecb3715e2b26d0800000000000000
+      internalID: -3014264598225426425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1315
+        width: 164
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16d3cf2e4d7ab3e0800000000000000
+      internalID: -2037178106669443556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_21
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1315
+        width: 165
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f184c07e0c6eb70800000000000000
+      internalID: 8928035409884618590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_22
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1315
+        width: 166
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff165e267d61826a0800000000000000
+      internalID: -6473899350012108289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_23
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 1315
+        width: 166
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3c6bcca71705b80800000000000000
+      internalID: -8408095732066237516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_24
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 1315
+        width: 165
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93473011b41bd0680800000000000000
+      internalID: -8787172361963867079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_25
+      rect:
+        serializedVersion: 2
+        x: 3211
+        y: 1315
+        width: 165
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583eef476710a0fb0800000000000000
+      internalID: -4680927254417579131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_26
+      rect:
+        serializedVersion: 2
+        x: 3811
+        y: 1315
+        width: 165
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fdccab82b119c60800000000000000
+      internalID: 7823063889465892725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_27
+      rect:
+        serializedVersion: 2
+        x: 4411
+        y: 1315
+        width: 166
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac8daa0a9a70b4e0800000000000000
+      internalID: -1967938235138208597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_28
+      rect:
+        serializedVersion: 2
+        x: 5011
+        y: 1315
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b50284c6c798c30800000000000000
+      internalID: 4362154518593428248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_29
+      rect:
+        serializedVersion: 2
+        x: 5612
+        y: 1315
+        width: 165
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b83201fa98781d0800000000000000
+      internalID: -3348556412943627396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_30
+      rect:
+        serializedVersion: 2
+        x: 6212
+        y: 1315
+        width: 165
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86edbb21e5a6138e0800000000000000
+      internalID: -1715473030777676184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_31
+      rect:
+        serializedVersion: 2
+        x: 6813
+        y: 1315
+        width: 164
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bcf827accf94ac0800000000000000
+      internalID: -3870284458312611028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_32
+      rect:
+        serializedVersion: 2
+        x: 7413
+        y: 1315
+        width: 164
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07569ee0ef08a9b20800000000000000
+      internalID: 3141965518704567664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_33
+      rect:
+        serializedVersion: 2
+        x: 8013
+        y: 1315
+        width: 164
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819af3e4607a25dd0800000000000000
+      internalID: -2498751197712766696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_34
+      rect:
+        serializedVersion: 2
+        x: 8614
+        y: 1315
+        width: 163
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ea35ee6405a64d0800000000000000
+      internalID: -3140609524561105339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_35
+      rect:
+        serializedVersion: 2
+        x: 9214
+        y: 1315
+        width: 163
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c433ba6e840c88d80800000000000000
+      internalID: -8248131298188905652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_36
+      rect:
+        serializedVersion: 2
+        x: 9815
+        y: 1315
+        width: 162
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ec206346e6d3960800000000000000
+      internalID: 7583338724243721843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_37
+      rect:
+        serializedVersion: 2
+        x: 10415
+        y: 1316
+        width: 162
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc27b57b9c1557a0800000000000000
+      internalID: -6389169042334733128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_38
+      rect:
+        serializedVersion: 2
+        x: 11015
+        y: 1316
+        width: 162
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641230609d81a4850800000000000000
+      internalID: 6361924744002085190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_39
+      rect:
+        serializedVersion: 2
+        x: 11616
+        y: 1316
+        width: 161
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e02ce56911723bd0800000000000000
+      internalID: -2651932876669706015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_40
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 998
+        width: 160
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d12488c6e414f3b0800000000000000
+      internalID: -5479731865163914792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_41
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 998
+        width: 160
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c034bfe97e2918ba0800000000000000
+      internalID: -6088423697725832436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_42
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 998
+        width: 159
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9511d1c8f79936650800000000000000
+      internalID: 6224987883046768985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_43
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 998
+        width: 159
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564e9baddb32fa010800000000000000
+      internalID: 1202218923856618597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_44
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 998
+        width: 158
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcb69eee4ef77410800000000000000
+      internalID: 1474927017950887135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_45
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 998
+        width: 158
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641c79c41030f46b0800000000000000
+      internalID: -5310022131531660986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_46
+      rect:
+        serializedVersion: 2
+        x: 3820
+        y: 998
+        width: 157
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ac5bdab8764b210800000000000000
+      internalID: 1347816038103108183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_47
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 998
+        width: 157
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0323be86f0374c760800000000000000
+      internalID: 7477227791363813936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_48
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 998
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9ed75fd6a3bafa0800000000000000
+      internalID: -5788468652110124633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_49
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 998
+        width: 155
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cc5ebad00c9da80800000000000000
+      internalID: -8441504861578212304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigIdleSprites_50
+      rect:
+        serializedVersion: 2
+        x: 6222
+        y: 998
+        width: 155
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacd28730fe131b90800000000000000
+      internalID: -7272434956200911700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 90cde37b4f4ec9c4ab4cf25ad9530653
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

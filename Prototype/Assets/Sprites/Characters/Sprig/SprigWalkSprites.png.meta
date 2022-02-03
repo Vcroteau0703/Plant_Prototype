@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: 80349db9b0c278b42a23f23062a33f59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2924353186670761994
+    second: SprigWalkSprites_0
+  - first:
+      213: 4927515012225220074
+    second: SprigWalkSprites_1
+  - first:
+      213: 6911617808625724405
+    second: SprigWalkSprites_2
+  - first:
+      213: 2755115106865144979
+    second: SprigWalkSprites_3
+  - first:
+      213: -7002250064523690061
+    second: SprigWalkSprites_4
+  - first:
+      213: -1658206567060034480
+    second: SprigWalkSprites_5
+  - first:
+      213: 6437964620339978638
+    second: SprigWalkSprites_6
+  - first:
+      213: 3086052694538155490
+    second: SprigWalkSprites_7
+  - first:
+      213: -8293315068262311860
+    second: SprigWalkSprites_8
+  - first:
+      213: 4315184075941189680
+    second: SprigWalkSprites_9
+  - first:
+      213: -7809918145289691512
+    second: SprigWalkSprites_10
+  - first:
+      213: -6045637786306015315
+    second: SprigWalkSprites_11
+  - first:
+      213: -5304457380433191348
+    second: SprigWalkSprites_12
+  - first:
+      213: 3302202980001463548
+    second: SprigWalkSprites_13
+  - first:
+      213: -2945700520841100491
+    second: SprigWalkSprites_14
+  - first:
+      213: -4562538626392319555
+    second: SprigWalkSprites_15
+  - first:
+      213: 1203208053278964940
+    second: SprigWalkSprites_16
+  - first:
+      213: -499417247362433555
+    second: SprigWalkSprites_17
+  - first:
+      213: -2802246937236358898
+    second: SprigWalkSprites_18
+  - first:
+      213: -947107322105877584
+    second: SprigWalkSprites_19
+  - first:
+      213: -7278215528284707651
+    second: SprigWalkSprites_20
+  - first:
+      213: 912314630652814353
+    second: SprigWalkSprites_21
+  - first:
+      213: -5526598446067790683
+    second: SprigWalkSprites_22
+  - first:
+      213: 6508314033510591471
+    second: SprigWalkSprites_23
+  - first:
+      213: 9127805261057997248
+    second: SprigWalkSprites_24
+  - first:
+      213: -1079179479167114389
+    second: SprigWalkSprites_25
+  - first:
+      213: 7936881718036668145
+    second: SprigWalkSprites_26
+  - first:
+      213: -6228999930945043465
+    second: SprigWalkSprites_27
+  - first:
+      213: -5804830804193414598
+    second: SprigWalkSprites_28
+  - first:
+      213: -7368150132367328900
+    second: SprigWalkSprites_29
+  - first:
+      213: 4994134194617062278
+    second: SprigWalkSprites_30
+  - first:
+      213: -6019592068581821793
+    second: SprigWalkSprites_31
+  - first:
+      213: 888413878292206686
+    second: SprigWalkSprites_32
+  - first:
+      213: 7332452322555253530
+    second: SprigWalkSprites_33
+  - first:
+      213: -7548724323807468995
+    second: SprigWalkSprites_34
+  - first:
+      213: 8734820232171337717
+    second: SprigWalkSprites_35
+  - first:
+      213: 7075782992370199125
+    second: SprigWalkSprites_36
+  - first:
+      213: 4751215553846864587
+    second: SprigWalkSprites_37
+  - first:
+      213: -2314856775686097334
+    second: SprigWalkSprites_38
+  - first:
+      213: -3214136739902573044
+    second: SprigWalkSprites_39
+  - first:
+      213: -7677464258960081452
+    second: SprigWalkSprites_40
+  - first:
+      213: 8220369319532738709
+    second: SprigWalkSprites_41
+  - first:
+      213: 6893979840619652101
+    second: SprigWalkSprites_42
+  - first:
+      213: -1750253860716842934
+    second: SprigWalkSprites_43
+  - first:
+      213: 1249795947974684811
+    second: SprigWalkSprites_44
+  - first:
+      213: -4706392293198108946
+    second: SprigWalkSprites_45
+  - first:
+      213: -579504811777896633
+    second: SprigWalkSprites_46
+  - first:
+      213: 2784169612951202671
+    second: SprigWalkSprites_47
+  - first:
+      213: -7713267051950625116
+    second: SprigWalkSprites_48
+  - first:
+      213: -704772619917719235
+    second: SprigWalkSprites_49
+  - first:
+      213: 740465058851179465
+    second: SprigWalkSprites_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigWalkSprites_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1637
+        width: 208
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f725b6454c9a67d0800000000000000
+      internalID: -2924353186670761994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_1
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1634
+        width: 207
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedb619ebcc026440800000000000000
+      internalID: 4927515012225220074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_2
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1634
+        width: 202
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb666217cffaef50800000000000000
+      internalID: 6911617808625724405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_3
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 1631
+        width: 198
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394620ca7922c3620800000000000000
+      internalID: 2755115106865144979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_4
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 1628
+        width: 187
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bffb937aa203de90800000000000000
+      internalID: -7002250064523690061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_5
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 1625
+        width: 184
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05caa2ea9eddcf8e0800000000000000
+      internalID: -1658206567060034480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_6
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 1622
+        width: 179
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81a5ef56be385950800000000000000
+      internalID: 6437964620339978638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_7
+      rect:
+        serializedVersion: 2
+        x: 4402
+        y: 1619
+        width: 176
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e57518339cd3da20800000000000000
+      internalID: 3086052694538155490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_8
+      rect:
+        serializedVersion: 2
+        x: 5002
+        y: 1616
+        width: 167
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4894d1a2e938ec80800000000000000
+      internalID: -8293315068262311860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_9
+      rect:
+        serializedVersion: 2
+        x: 5603
+        y: 1615
+        width: 164
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03895e2ed0d92eb30800000000000000
+      internalID: 4315184075941189680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_10
+      rect:
+        serializedVersion: 2
+        x: 6201
+        y: 1613
+        width: 165
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e512953d89d9390800000000000000
+      internalID: -7809918145289691512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_11
+      rect:
+        serializedVersion: 2
+        x: 6801
+        y: 1613
+        width: 164
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf0d8ae674991ca0800000000000000
+      internalID: -6045637786306015315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_12
+      rect:
+        serializedVersion: 2
+        x: 7402
+        y: 1613
+        width: 164
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e9411ed18c266b0800000000000000
+      internalID: -5304457380433191348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_13
+      rect:
+        serializedVersion: 2
+        x: 8002
+        y: 1613
+        width: 164
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc393f4d18c3dd20800000000000000
+      internalID: 3302202980001463548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_14
+      rect:
+        serializedVersion: 2
+        x: 8603
+        y: 1614
+        width: 164
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5334598bbf4ce17d0800000000000000
+      internalID: -2945700520841100491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_15
+      rect:
+        serializedVersion: 2
+        x: 9204
+        y: 1617
+        width: 172
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db913ebea4b9ea0c0800000000000000
+      internalID: -4562538626392319555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_16
+      rect:
+        serializedVersion: 2
+        x: 9807
+        y: 1619
+        width: 176
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccf49e7957a2b010800000000000000
+      internalID: 1203208053278964940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_17
+      rect:
+        serializedVersion: 2
+        x: 10411
+        y: 1622
+        width: 177
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded3248d8a6b119f0800000000000000
+      internalID: -499417247362433555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_18
+      rect:
+        serializedVersion: 2
+        x: 11013
+        y: 1625
+        width: 177
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09b91de14b6c19d0800000000000000
+      internalID: -2802246937236358898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_19
+      rect:
+        serializedVersion: 2
+        x: 11612
+        y: 1628
+        width: 180
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb25b598e23bd2f0800000000000000
+      internalID: -947107322105877584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_20
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1312
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4abd5e9859efa90800000000000000
+      internalID: -7278215528284707651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_21
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1315
+        width: 179
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114e37ba25139ac00800000000000000
+      internalID: 912314630652814353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_22
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1317
+        width: 175
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac47e59ef39d43b0800000000000000
+      internalID: -5526598446067790683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_23
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 1318
+        width: 179
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feba616812d225a50800000000000000
+      internalID: 6508314033510591471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_24
+      rect:
+        serializedVersion: 2
+        x: 2612
+        y: 1320
+        width: 176
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9bd44168a7cae70800000000000000
+      internalID: 9127805261057997248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_25
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 1320
+        width: 175
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b636a5f3bfbf501f0800000000000000
+      internalID: -1079179479167114389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_26
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1321
+        width: 173
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe1ed30fd7752e60800000000000000
+      internalID: 7936881718036668145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_27
+      rect:
+        serializedVersion: 2
+        x: 4408
+        y: 1320
+        width: 173
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f38612c0952e89a0800000000000000
+      internalID: -6228999930945043465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_28
+      rect:
+        serializedVersion: 2
+        x: 5008
+        y: 1317
+        width: 170
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a327ece8329117fa0800000000000000
+      internalID: -5804830804193414598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_29
+      rect:
+        serializedVersion: 2
+        x: 5606
+        y: 1315
+        width: 172
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c797f742e721fb990800000000000000
+      internalID: -7368150132367328900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_30
+      rect:
+        serializedVersion: 2
+        x: 6207
+        y: 1312
+        width: 169
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68318c6079abe4540800000000000000
+      internalID: 4994134194617062278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_31
+      rect:
+        serializedVersion: 2
+        x: 6807
+        y: 1309
+        width: 167
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92fb6328ec167ca0800000000000000
+      internalID: -6019592068581821793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_32
+      rect:
+        serializedVersion: 2
+        x: 7406
+        y: 1306
+        width: 164
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54522d17b7445c00800000000000000
+      internalID: 888413878292206686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_33
+      rect:
+        serializedVersion: 2
+        x: 8002
+        y: 1303
+        width: 164
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13d462d98a12c560800000000000000
+      internalID: 7332452322555253530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_34
+      rect:
+        serializedVersion: 2
+        x: 8598
+        y: 1300
+        width: 169
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32ea1ce83b8d3790800000000000000
+      internalID: -7548724323807468995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_35
+      rect:
+        serializedVersion: 2
+        x: 9195
+        y: 1297
+        width: 176
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7b77bd8b0583970800000000000000
+      internalID: 8734820232171337717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_36
+      rect:
+        serializedVersion: 2
+        x: 9795
+        y: 1297
+        width: 185
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ae9f7742b323260800000000000000
+      internalID: 7075782992370199125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_37
+      rect:
+        serializedVersion: 2
+        x: 10393
+        y: 1297
+        width: 193
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca6a5a8f55bfe140800000000000000
+      internalID: 4751215553846864587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_38
+      rect:
+        serializedVersion: 2
+        x: 10994
+        y: 1294
+        width: 199
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46f253f60affdfd0800000000000000
+      internalID: -2314856775686097334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_39
+      rect:
+        serializedVersion: 2
+        x: 11595
+        y: 1295
+        width: 204
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06339e0aa71563d0800000000000000
+      internalID: -3214136739902573044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_40
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 978
+        width: 205
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd3de4feea247590800000000000000
+      internalID: -7677464258960081452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_41
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 978
+        width: 205
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598b44db75e941270800000000000000
+      internalID: 8220369319532738709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_42
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 980
+        width: 202
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504a6d0a3265caf50800000000000000
+      internalID: 6893979840619652101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_43
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 983
+        width: 196
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40773d0369d5b7e0800000000000000
+      internalID: -1750253860716842934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_44
+      rect:
+        serializedVersion: 2
+        x: 2612
+        y: 983
+        width: 193
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80f0c00bca285110800000000000000
+      internalID: 1249795947974684811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_45
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 986
+        width: 191
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee66a4615298faeb0800000000000000
+      internalID: -4706392293198108946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_46
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 989
+        width: 199
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f495ca17f25f7f0800000000000000
+      internalID: -579504811777896633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_47
+      rect:
+        serializedVersion: 2
+        x: 4405
+        y: 992
+        width: 205
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ba466038b53a620800000000000000
+      internalID: 2784169612951202671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_48
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 995
+        width: 210
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae22ce9b78f4f490800000000000000
+      internalID: -7713267051950625116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_49
+      rect:
+        serializedVersion: 2
+        x: 5597
+        y: 998
+        width: 211
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39026649052836f0800000000000000
+      internalID: -704772619917719235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWalkSprites_50
+      rect:
+        serializedVersion: 2
+        x: 6198
+        y: 998
+        width: 208
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbc9614c09a64a00800000000000000
+      internalID: 740465058851179465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 003b7f64eb164ca448b342bf3ca98bec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
