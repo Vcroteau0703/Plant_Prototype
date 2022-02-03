@@ -1,2 +1,1308 @@
 fileFormatVersion: 2
 guid: a9e6a480480d4c04eaf79f4075124b8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8795340820955072214
+    second: SprigWALLJUMPSprites_0
+  - first:
+      213: -6005914639381893999
+    second: SprigWALLJUMPSprites_1
+  - first:
+      213: 8456797238172112475
+    second: SprigWALLJUMPSprites_2
+  - first:
+      213: -7019055243823517933
+    second: SprigWALLJUMPSprites_3
+  - first:
+      213: 2954244085465198236
+    second: SprigWALLJUMPSprites_4
+  - first:
+      213: -8175837356201059961
+    second: SprigWALLJUMPSprites_5
+  - first:
+      213: 8503216207385960273
+    second: SprigWALLJUMPSprites_6
+  - first:
+      213: -6760242655876638636
+    second: SprigWALLJUMPSprites_7
+  - first:
+      213: 3915341146160405076
+    second: SprigWALLJUMPSprites_8
+  - first:
+      213: -3692262488303037313
+    second: SprigWALLJUMPSprites_9
+  - first:
+      213: -7245572216429255304
+    second: SprigWALLJUMPSprites_10
+  - first:
+      213: 3537277759380859662
+    second: SprigWALLJUMPSprites_11
+  - first:
+      213: -4565547564165398829
+    second: SprigWALLJUMPSprites_12
+  - first:
+      213: 8927798548029358737
+    second: SprigWALLJUMPSprites_13
+  - first:
+      213: -4196344686120882969
+    second: SprigWALLJUMPSprites_14
+  - first:
+      213: 2523430839164921076
+    second: SprigWALLJUMPSprites_15
+  - first:
+      213: -6418739930191419750
+    second: SprigWALLJUMPSprites_16
+  - first:
+      213: 6760023460215683596
+    second: SprigWALLJUMPSprites_17
+  - first:
+      213: -4670666685327759499
+    second: SprigWALLJUMPSprites_18
+  - first:
+      213: 2536121898107532658
+    second: SprigWALLJUMPSprites_19
+  - first:
+      213: -4562529822834983793
+    second: SprigWALLJUMPSprites_20
+  - first:
+      213: 3109744805968583704
+    second: SprigWALLJUMPSprites_21
+  - first:
+      213: 372634854331545075
+    second: SprigWALLJUMPSprites_22
+  - first:
+      213: 5127175844045530819
+    second: SprigWALLJUMPSprites_23
+  - first:
+      213: 2320322381334367719
+    second: SprigWALLJUMPSprites_24
+  - first:
+      213: 6797972104595943450
+    second: SprigWALLJUMPSprites_25
+  - first:
+      213: 6761736308250434675
+    second: SprigWALLJUMPSprites_26
+  - first:
+      213: 1173637975289707414
+    second: SprigWALLJUMPSprites_27
+  - first:
+      213: 5331822930141216551
+    second: SprigWALLJUMPSprites_28
+  - first:
+      213: 2630696286982633760
+    second: SprigWALLJUMPSprites_29
+  - first:
+      213: -5517622570063464708
+    second: SprigWALLJUMPSprites_30
+  - first:
+      213: -1302565562820010425
+    second: SprigWALLJUMPSprites_31
+  - first:
+      213: -8335614898493836545
+    second: SprigWALLJUMPSprites_32
+  - first:
+      213: -7156876713240297539
+    second: SprigWALLJUMPSprites_33
+  - first:
+      213: -2832857561339041492
+    second: SprigWALLJUMPSprites_34
+  - first:
+      213: 4291883729080234411
+    second: SprigWALLJUMPSprites_35
+  - first:
+      213: -5158374400543668166
+    second: SprigWALLJUMPSprites_36
+  - first:
+      213: -2300832937570318049
+    second: SprigWALLJUMPSprites_37
+  - first:
+      213: -6705412368021673389
+    second: SprigWALLJUMPSprites_38
+  - first:
+      213: -3249187168098042036
+    second: SprigWALLJUMPSprites_39
+  - first:
+      213: 4630914848393616103
+    second: SprigWALLJUMPSprites_40
+  - first:
+      213: 8992037019046152822
+    second: SprigWALLJUMPSprites_41
+  - first:
+      213: -7654531219103173243
+    second: SprigWALLJUMPSprites_42
+  - first:
+      213: -1401046141885727984
+    second: SprigWALLJUMPSprites_43
+  - first:
+      213: 3672878239622943196
+    second: SprigWALLJUMPSprites_44
+  - first:
+      213: -4452586803175572635
+    second: SprigWALLJUMPSprites_45
+  - first:
+      213: -7283552240700158424
+    second: SprigWALLJUMPSprites_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2492
+        width: 481
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29fa708f1ca0f580800000000000000
+      internalID: -8795340820955072214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_1
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2492
+        width: 492
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ce258c474b6aca0800000000000000
+      internalID: -6005914639381893999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_2
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 2492
+        width: 503
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56d0c638449c5570800000000000000
+      internalID: 8456797238172112475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2492
+        width: 509
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f6e0db17e479e90800000000000000
+      internalID: -7019055243823517933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_4
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 2492
+        width: 522
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ea3fde7559ff820800000000000000
+      internalID: 2954244085465198236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_5
+      rect:
+        serializedVersion: 2
+        x: 3044
+        y: 2492
+        width: 527
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7895442fd37998e80800000000000000
+      internalID: -8175837356201059961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_6
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2492
+        width: 527
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f9591b61e710670800000000000000
+      internalID: 8503216207385960273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_7
+      rect:
+        serializedVersion: 2
+        x: 4245
+        y: 2492
+        width: 527
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458970d2f1bce22a0800000000000000
+      internalID: -6760242655876638636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_8
+      rect:
+        serializedVersion: 2
+        x: 4843
+        y: 2492
+        width: 530
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a9c5f2706165630800000000000000
+      internalID: 3915341146160405076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_9
+      rect:
+        serializedVersion: 2
+        x: 5447
+        y: 2492
+        width: 527
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74923f44d272ccc0800000000000000
+      internalID: -3692262488303037313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_10
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 2492
+        width: 515
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8756b45357e827b90800000000000000
+      internalID: -7245572216429255304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_11
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 2492
+        width: 510
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b29cf716fe61130800000000000000
+      internalID: 3537277759380859662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_12
+      rect:
+        serializedVersion: 2
+        x: 7274
+        y: 2486
+        width: 504
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de75c00eaae3a0c0800000000000000
+      internalID: -4565547564165398829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_13
+      rect:
+        serializedVersion: 2
+        x: 7884
+        y: 2486
+        width: 492
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192c9895a79e5eb70800000000000000
+      internalID: 8927798548029358737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_14
+      rect:
+        serializedVersion: 2
+        x: 8499
+        y: 2486
+        width: 480
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecaaacbdb693c5c0800000000000000
+      internalID: -4196344686120882969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_15
+      rect:
+        serializedVersion: 2
+        x: 9120
+        y: 2486
+        width: 457
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4e0bf7af6050320800000000000000
+      internalID: 2523430839164921076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_16
+      rect:
+        serializedVersion: 2
+        x: 9671
+        y: 2492
+        width: 509
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96235b9a0e0ce6a0800000000000000
+      internalID: -6418739930191419750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_17
+      rect:
+        serializedVersion: 2
+        x: 10257
+        y: 2492
+        width: 515
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a767b558d60dd50800000000000000
+      internalID: 6760023460215683596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_18
+      rect:
+        serializedVersion: 2
+        x: 10884
+        y: 2498
+        width: 486
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577a9cc55657e2fb0800000000000000
+      internalID: -4670666685327759499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_19
+      rect:
+        serializedVersion: 2
+        x: 11476
+        y: 2498
+        width: 492
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275f9cbed6d123320800000000000000
+      internalID: 2536121898107532658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_20
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1983
+        width: 503
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c7bc8ac43aea0c0800000000000000
+      internalID: -4562529822834983793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_21
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1989
+        width: 504
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c9fd5cc68082b20800000000000000
+      internalID: 3109744805968583704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_22
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 2006
+        width: 486
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f57c5bfc6ddb2500800000000000000
+      internalID: 372634854331545075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_23
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2006
+        width: 497
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c62c45e343672740800000000000000
+      internalID: 5127175844045530819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_24
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2006
+        width: 492
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edc2d789e0733020800000000000000
+      internalID: 2320322381334367719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_25
+      rect:
+        serializedVersion: 2
+        x: 3062
+        y: 2006
+        width: 486
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10b477ac9f375e50800000000000000
+      internalID: 6797972104595943450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_26
+      rect:
+        serializedVersion: 2
+        x: 3665
+        y: 2006
+        width: 480
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cd02ed85386dd50800000000000000
+      internalID: 6761736308250434675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_27
+      rect:
+        serializedVersion: 2
+        x: 4263
+        y: 2006
+        width: 480
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b3d043589994010800000000000000
+      internalID: 1173637975289707414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_28
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 2010
+        width: 481
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f795ca4b07ef940800000000000000
+      internalID: 5331822930141216551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_29
+      rect:
+        serializedVersion: 2
+        x: 5461
+        y: 2012
+        width: 477
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029f981c55c128420800000000000000
+      internalID: 2630696286982633760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_30
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 2012
+        width: 474
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf670b291877d63b0800000000000000
+      internalID: -5517622570063464708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_31
+      rect:
+        serializedVersion: 2
+        x: 6653
+        y: 2012
+        width: 479
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ed47b958b5cede0800000000000000
+      internalID: -1302565562820010425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_32
+      rect:
+        serializedVersion: 2
+        x: 7251
+        y: 2018
+        width: 475
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff232dee962f15c80800000000000000
+      internalID: -8335614898493836545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_33
+      rect:
+        serializedVersion: 2
+        x: 7849
+        y: 2024
+        width: 468
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbffb0e4c8aadac90800000000000000
+      internalID: -7156876713240297539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_34
+      rect:
+        serializedVersion: 2
+        x: 8446
+        y: 2030
+        width: 469
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c296b1d9e0bafa8d0800000000000000
+      internalID: -2832857561339041492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_35
+      rect:
+        serializedVersion: 2
+        x: 9044
+        y: 2041
+        width: 469
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13b112385df8b30800000000000000
+      internalID: 4291883729080234411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_36
+      rect:
+        serializedVersion: 2
+        x: 9642
+        y: 2047
+        width: 468
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38402d10d5c968b0800000000000000
+      internalID: -5158374400543668166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_37
+      rect:
+        serializedVersion: 2
+        x: 10239
+        y: 2053
+        width: 463
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f194a9432acc110e0800000000000000
+      internalID: -2300832937570318049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_38
+      rect:
+        serializedVersion: 2
+        x: 10837
+        y: 2059
+        width: 463
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aae836af691f2a0800000000000000
+      internalID: -6705412368021673389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_39
+      rect:
+        serializedVersion: 2
+        x: 11435
+        y: 2065
+        width: 457
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f32cc4c7198e2d0800000000000000
+      internalID: -3249187168098042036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1573
+        width: 457
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea559bd480544040800000000000000
+      internalID: 4630914848393616103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_41
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1573
+        width: 456
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a8867e6022acc70800000000000000
+      internalID: 8992037019046152822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_42
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1567
+        width: 451
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585b7336964a5c590800000000000000
+      internalID: -7654531219103173243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_43
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 1567
+        width: 439
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b38fef4fb7e8ce0800000000000000
+      internalID: -1401046141885727984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_44
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 1567
+        width: 439
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1dcf79c4fa8f230800000000000000
+      internalID: 3672878239622943196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_45
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 1567
+        width: 440
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bb021b4eb3532c0800000000000000
+      internalID: -4452586803175572635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigWALLJUMPSprites_46
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 1564
+        width: 434
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e0116b3df9bea90800000000000000
+      internalID: -7283552240700158424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2dbbe7f213e9bc145bd4747be263fce5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
