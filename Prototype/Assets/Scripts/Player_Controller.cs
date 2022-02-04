@@ -11,7 +11,7 @@ public class Player_Controller : MonoBehaviour
     private CapsuleCollider col;
     private Animator animator;
 
-
+    #region MOVEMENT VARIABLES
     [Header("Movement Settings")]
     public float move_speed = 1.0f;
     public float move_smoothing = 0.5f;
@@ -19,11 +19,12 @@ public class Player_Controller : MonoBehaviour
     public LayerMask walkable;
     [Header("Jump Settings")]
     public float jump_power = 1.0f;
-    public float floatiness, weight;
+    public float floatiness, weight;   
+    public float coyote_jump_delay = 0.15f;
+    [Header("Air Control Settings")]
     public float air_control = 1.0f;
     public float max_air_speed = 10.0f;
     public float max_fall_speed = 20.0f;
-    public float coyote_jump_delay = 0.15f;
     [Header("Wall Jump Settings")]
     public float wall_jump_power = 10.0f;
     public float wall_grab_strength = 20.0f; 
@@ -38,23 +39,21 @@ public class Player_Controller : MonoBehaviour
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
     [Range(0f, 100f)] public float vertical_deadzone = 20f;
 
-
-
-    public Vector2 direction;
-    private bool grounded;
+    private Vector2 direction;
+    private bool grounded, ceiling, isControlling = true;
     private bool[] wall = new bool[2];
-    private bool ceiling;
-    private bool isControlling = true;
+    #endregion
 
     private void Awake()
     {
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out CapsuleCollider c) ? c : null;
-        animator = TryGetComponent(out Animator a) ? a : null;
+        animator = TryGetComponent(out Animator a) ? a : null;      
+    }
+    private void OnEnable()
+    {
         controls = controls == null ? new Controls() : controls;
-        controls.Player.Move.performed += Request_Movement;
-        controls.Player.Move.canceled += Request_Movement;
-        controls.Player.Jump.performed += Request_Jump;
+        Subscribe_Actions();
         controls.Player.Enable();
     }
 
@@ -101,10 +100,7 @@ public class Player_Controller : MonoBehaviour
     private void Request_Jump(InputAction.CallbackContext context)
     {
         if (grounded == true){ StartCoroutine(Jump()); animator.SetTrigger("Jump"); }
-        else if (wall[0] || wall[1]) { 
-            StartCoroutine(Wall_Jump()); 
-            animator.SetTrigger("Wall_Jump");
-        }
+        else if (wall[0] || wall[1]) { StartCoroutine(Wall_Jump()); animator.SetTrigger("Wall_Jump");}
     }   
     private IEnumerator Jump()
     {              
@@ -120,7 +116,7 @@ public class Player_Controller : MonoBehaviour
             force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
             rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
             yield return new WaitForEndOfFrame();
-            if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { Debug.Log("STOP"); break; }
+            if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
         }
     }
     #endregion
@@ -132,10 +128,8 @@ public class Player_Controller : MonoBehaviour
         grounded = false;
         Quaternion rotA = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
         Quaternion rotB = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
-        Vector3 dirA = rotA * Vector3.right;
-        Vector3 dirB = rotB * Vector3.right;
-        if (wall[0]){rb.AddForce(dirA * wall_jump_power, ForceMode.Force);}
-        else if (wall[1]){rb.AddForce(-dirB * wall_jump_power, ForceMode.Force);}
+        if (wall[0]){rb.AddForce(rotA * Vector3.right * wall_jump_power, ForceMode.Force);}
+        else if (wall[1]){rb.AddForce(-(rotB * Vector3.right) * wall_jump_power, ForceMode.Force);}
         yield return new WaitForSeconds(0.2f);       
         isControlling = true;
 
@@ -152,27 +146,14 @@ public class Player_Controller : MonoBehaviour
             if (grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
         }
     }
-
     private float slide_time = 0;
     public void Wall_Grab()
     {
         animator.SetBool("Cling", true);
-        if (wall[0])
-        {
-            rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force);
-        }
-        else if(wall[1])
-        {
-            rb.AddForce(Vector3.right * wall_grab_strength, ForceMode.Force);
-        }
-
-        if (slide_time < landing_slide_duration)
-        {
-            slide_time += Time.deltaTime;
-            Wall_Slide(landing_slide_speed);
-        }        
+        if (wall[0]){rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force);}
+        else if(wall[1]){rb.AddForce(Vector3.right * wall_grab_strength, ForceMode.Force);}
+        if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
-
     public void Wall_Slide(float speed)
     {
         transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (speed / 10), wall_slide_smoothing);
@@ -180,7 +161,12 @@ public class Player_Controller : MonoBehaviour
     #endregion
 
     #region UTILITY
-
+    private void Subscribe_Actions()
+    {
+        controls.Player.Move.performed += Request_Movement;
+        controls.Player.Move.canceled += Request_Movement;
+        controls.Player.Jump.performed += Request_Jump;
+    }
     private float delay = 0;
     private void Ground_Check()
     {
@@ -191,21 +177,18 @@ public class Player_Controller : MonoBehaviour
         grounded = false;
         animator.SetBool("Ground", false);
     }
-
     private void Ceiling_Check()
     {
         Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.02f));
         Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
         ceiling = hit.Length > 0 ? true : false;
     }
-
     private void Wall_Check()
     {
         Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
         Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);        
         wall[0] = hit_left.Length > 0 ? true : false;
         if (wall[0]) { Wall_Grab(); rb.useGravity = false; Flip(-1); }
-
 
         Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
         Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);
@@ -214,20 +197,16 @@ public class Player_Controller : MonoBehaviour
 
         if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
     }
-
     private void Flip(int direction)
     {
-        switch (direction) 
-        {
+        switch (direction) {
             default:
                 if (wall[0]) { Flip(1); }
                 else if (wall[1]) { Flip(-1); }
                 break;
-
             case 1:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 break;
-
             case -1:
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 break;
@@ -249,22 +228,14 @@ public class Player_Controller : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        //if (controls != null)
-        //{
-        //    Vector3 mouse = Camera.main.ScreenToWorldPoint(controls.Player.Pointer.ReadValue<Vector2>());
-        //    mouse.z = transform.position.z;
-        //    Gizmos.DrawSphere(mouse, 0.2f);
-        //    Gizmos.DrawLine(transform.position, mouse);
-        //}
-
+        #region WALL JUMP DIRECTIONS
         Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
         Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
-        Vector2 dirA = rot * Vector2.right;
-        Vector2 dirB = rot2 * Vector2.right;
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + dirA);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position - dirB);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.right));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position - (Vector2)(rot * Vector2.left));
+        #endregion
 
-
+        #region SURFACE INDICATORS
         if (grounded)
         {
             Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.02f));
@@ -285,5 +256,6 @@ public class Player_Controller : MonoBehaviour
             Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.02f));
             Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.01f, 0.2f) * 2);
         }
+        #endregion
     }
 }

@@ -55,10 +55,10 @@ MonoBehaviour:
     m_Bits: 65
   jump_power: 400
   floatiness: 1
-  weight: 20
+  weight: 18
   air_control: 0.2
   max_air_speed: 5
-  max_fall_speed: 5
+  max_fall_speed: 4
   coyote_jump_delay: 0.1
   wall_jump_power: 500
   wall_grab_strength: 10
@@ -70,7 +70,6 @@ MonoBehaviour:
   wall_slide_smoothing: 0.02
   horizontal_deadzone: 50
   vertical_deadzone: 50
-  direction: {x: 0, y: 0}
 --- !u!212 &6061469062083727000
 SpriteRenderer:
   m_ObjectHideFlags: 0
