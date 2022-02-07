@@ -168,7 +168,6 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.performed += Request_Movement;
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
-        controls.Player.Jump.canceled += Request_Jump;
     }
     private float delay = 0;
     private void Ground_Check()
