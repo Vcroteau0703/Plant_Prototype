@@ -127,6 +127,7 @@ public class Player_Controller : MonoBehaviour
     {
         isControlling = false;
         grounded = false;
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         Quaternion rotA = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
         Quaternion rotB = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
         if (wall[0]){rb.AddForce(rotA * Vector3.right * wall_jump_power, ForceMode.Force);}
