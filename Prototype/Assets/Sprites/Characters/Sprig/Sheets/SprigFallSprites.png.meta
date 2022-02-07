@@ -1,0 +1,2124 @@
+fileFormatVersion: 2
+guid: 886d090784935d345b98a14b46d806ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1381005199689574175
+    second: SprigFallSprites_0
+  - first:
+      213: -7731167182779629160
+    second: SprigFallSprites_1
+  - first:
+      213: 1207806933988214543
+    second: SprigFallSprites_2
+  - first:
+      213: -1455598341880609809
+    second: SprigFallSprites_3
+  - first:
+      213: -7235221486425159078
+    second: SprigFallSprites_4
+  - first:
+      213: 3372965858761292984
+    second: SprigFallSprites_5
+  - first:
+      213: 6581594990869790909
+    second: SprigFallSprites_6
+  - first:
+      213: 6846190028601059696
+    second: SprigFallSprites_7
+  - first:
+      213: 3370937774855797884
+    second: SprigFallSprites_8
+  - first:
+      213: -4209341886052162490
+    second: SprigFallSprites_9
+  - first:
+      213: -5765125706299458017
+    second: SprigFallSprites_10
+  - first:
+      213: -946383104078583191
+    second: SprigFallSprites_11
+  - first:
+      213: 4632118244635632230
+    second: SprigFallSprites_12
+  - first:
+      213: 2793061142794417805
+    second: SprigFallSprites_13
+  - first:
+      213: 5971299743308321099
+    second: SprigFallSprites_14
+  - first:
+      213: -7658785997913655851
+    second: SprigFallSprites_15
+  - first:
+      213: 6973732106897787950
+    second: SprigFallSprites_16
+  - first:
+      213: -7065266120939232538
+    second: SprigFallSprites_17
+  - first:
+      213: -509136908288630539
+    second: SprigFallSprites_18
+  - first:
+      213: 6982111974603818161
+    second: SprigFallSprites_19
+  - first:
+      213: -5134793757887405384
+    second: SprigFallSprites_20
+  - first:
+      213: 8108229647635804476
+    second: SprigFallSprites_21
+  - first:
+      213: -3911973186557199200
+    second: SprigFallSprites_22
+  - first:
+      213: -1564757701181231996
+    second: SprigFallSprites_23
+  - first:
+      213: 419137769499045082
+    second: SprigFallSprites_24
+  - first:
+      213: -5300473283619003084
+    second: SprigFallSprites_25
+  - first:
+      213: 551829976092153387
+    second: SprigFallSprites_26
+  - first:
+      213: 5962599799984178382
+    second: SprigFallSprites_27
+  - first:
+      213: -3806227064566669698
+    second: SprigFallSprites_28
+  - first:
+      213: -3961516424597013109
+    second: SprigFallSprites_29
+  - first:
+      213: -4167939928187754971
+    second: SprigFallSprites_30
+  - first:
+      213: -3217435209319815409
+    second: SprigFallSprites_31
+  - first:
+      213: -1365445387089626837
+    second: SprigFallSprites_32
+  - first:
+      213: 9009179189098606150
+    second: SprigFallSprites_33
+  - first:
+      213: -2409766118643014917
+    second: SprigFallSprites_34
+  - first:
+      213: 3054572823940540867
+    second: SprigFallSprites_35
+  - first:
+      213: -6595847379205001081
+    second: SprigFallSprites_36
+  - first:
+      213: -2049712136525250819
+    second: SprigFallSprites_37
+  - first:
+      213: -250028176630809437
+    second: SprigFallSprites_38
+  - first:
+      213: -2480168923189498038
+    second: SprigFallSprites_39
+  - first:
+      213: 7748306748727514615
+    second: SprigFallSprites_40
+  - first:
+      213: -515748565941538388
+    second: SprigFallSprites_41
+  - first:
+      213: 305239605925623606
+    second: SprigFallSprites_42
+  - first:
+      213: -4338649507312658927
+    second: SprigFallSprites_43
+  - first:
+      213: -612136201360212910
+    second: SprigFallSprites_44
+  - first:
+      213: -6049046718754621690
+    second: SprigFallSprites_45
+  - first:
+      213: 8722435839757564909
+    second: SprigFallSprites_46
+  - first:
+      213: 7744787287199156861
+    second: SprigFallSprites_47
+  - first:
+      213: -6171190714045302889
+    second: SprigFallSprites_48
+  - first:
+      213: -7613901192359168987
+    second: SprigFallSprites_49
+  - first:
+      213: 7782359366392002512
+    second: SprigFallSprites_50
+  - first:
+      213: 2027673492734539097
+    second: SprigFallSprites_51
+  - first:
+      213: -1304468742452475874
+    second: SprigFallSprites_52
+  - first:
+      213: 361659953969528868
+    second: SprigFallSprites_53
+  - first:
+      213: -1954178839057854159
+    second: SprigFallSprites_54
+  - first:
+      213: -548074195257353887
+    second: SprigFallSprites_55
+  - first:
+      213: 1014361278580770927
+    second: SprigFallSprites_56
+  - first:
+      213: -5934713241340561198
+    second: SprigFallSprites_57
+  - first:
+      213: 4117195343812078975
+    second: SprigFallSprites_58
+  - first:
+      213: -5461283830323828337
+    second: SprigFallSprites_59
+  - first:
+      213: 4118440153634151278
+    second: SprigFallSprites_60
+  - first:
+      213: 4815412851803401561
+    second: SprigFallSprites_61
+  - first:
+      213: -1695300206054788264
+    second: SprigFallSprites_62
+  - first:
+      213: 8380137206971024259
+    second: SprigFallSprites_63
+  - first:
+      213: 8693276200249776
+    second: SprigFallSprites_64
+  - first:
+      213: -3295745809527314602
+    second: SprigFallSprites_65
+  - first:
+      213: -4742747739577499655
+    second: SprigFallSprites_66
+  - first:
+      213: 4123315317688853695
+    second: SprigFallSprites_67
+  - first:
+      213: 8314146147506832252
+    second: SprigFallSprites_68
+  - first:
+      213: 1654385579359447827
+    second: SprigFallSprites_69
+  - first:
+      213: 3129270886151766469
+    second: SprigFallSprites_70
+  - first:
+      213: -5903907280896887375
+    second: SprigFallSprites_71
+  - first:
+      213: -5276226080086669103
+    second: SprigFallSprites_72
+  - first:
+      213: 1857584980267233583
+    second: SprigFallSprites_73
+  - first:
+      213: -1415391380977236448
+    second: SprigFallSprites_74
+  - first:
+      213: -2366651013298312190
+    second: SprigFallSprites_75
+  - first:
+      213: 2875421446305525905
+    second: SprigFallSprites_76
+  - first:
+      213: 7535105693555572073
+    second: SprigFallSprites_77
+  - first:
+      213: -744664264953627351
+    second: SprigFallSprites_78
+  - first:
+      213: 5564020523430613680
+    second: SprigFallSprites_79
+  - first:
+      213: 5979236181586721486
+    second: SprigFallSprites_80
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigFallSprites_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2617
+        width: 261
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17e67889e05a2310800000000000000
+      internalID: 1381005199689574175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_1
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 2617
+        width: 261
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8914343a86065b490800000000000000
+      internalID: -7731167182779629160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_2
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 2615
+        width: 261
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f070f99d10ef2c010800000000000000
+      internalID: 1207806933988214543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 2614
+        width: 261
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe30f88250daccbe0800000000000000
+      internalID: -1455598341880609809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_4
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 2614
+        width: 260
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5aca565464579b90800000000000000
+      internalID: -7235221486425159078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_5
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 2612
+        width: 259
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcbcfae39e2fce20800000000000000
+      internalID: 3372965858761292984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_6
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2612
+        width: 259
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0c84ef5c5865b50800000000000000
+      internalID: 6581594990869790909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_7
+      rect:
+        serializedVersion: 2
+        x: 4373
+        y: 2611
+        width: 260
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079669fee8d820f50800000000000000
+      internalID: 6846190028601059696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_8
+      rect:
+        serializedVersion: 2
+        x: 4973
+        y: 2611
+        width: 259
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cb936db0af7ce20800000000000000
+      internalID: 3370937774855797884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_9
+      rect:
+        serializedVersion: 2
+        x: 5573
+        y: 2609
+        width: 258
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64420bf4bd96595c0800000000000000
+      internalID: -4209341886052162490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_10
+      rect:
+        serializedVersion: 2
+        x: 6172
+        y: 2609
+        width: 258
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e3c8e07b82effa0800000000000000
+      internalID: -5765125706299458017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_11
+      rect:
+        serializedVersion: 2
+        x: 6771
+        y: 2608
+        width: 258
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ae6fbb495cdd2f0800000000000000
+      internalID: -946383104078583191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_12
+      rect:
+        serializedVersion: 2
+        x: 7371
+        y: 2608
+        width: 257
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662ec116007984040800000000000000
+      internalID: 4632118244635632230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_13
+      rect:
+        serializedVersion: 2
+        x: 7971
+        y: 2608
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d863534af42f2c620800000000000000
+      internalID: 2793061142794417805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_14
+      rect:
+        serializedVersion: 2
+        x: 8570
+        y: 2606
+        width: 255
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41164faa715ed250800000000000000
+      internalID: 5971299743308321099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_15
+      rect:
+        serializedVersion: 2
+        x: 9169
+        y: 2606
+        width: 255
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5fe9f76b686b590800000000000000
+      internalID: -7658785997913655851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_16
+      rect:
+        serializedVersion: 2
+        x: 9770
+        y: 2605
+        width: 253
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c016e176ca7c060800000000000000
+      internalID: 6973732106897787950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_17
+      rect:
+        serializedVersion: 2
+        x: 10369
+        y: 2605
+        width: 253
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2a0d975e123fd90800000000000000
+      internalID: -7065266120939232538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_18
+      rect:
+        serializedVersion: 2
+        x: 10969
+        y: 2605
+        width: 252
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f06a6fedae2fe8f0800000000000000
+      internalID: -509136908288630539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_19
+      rect:
+        serializedVersion: 2
+        x: 11569
+        y: 2604
+        width: 252
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4034c19d175e060800000000000000
+      internalID: 6982111974603818161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 2286
+        width: 252
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b26a32584c8db8b0800000000000000
+      internalID: -5134793757887405384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_21
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2286
+        width: 252
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c317f90c7e7368070800000000000000
+      internalID: 8108229647635804476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_22
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 2286
+        width: 252
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acb7640d11e5b9c0800000000000000
+      internalID: -3911973186557199200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_23
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 2286
+        width: 251
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c2985492dd84ae0800000000000000
+      internalID: -1564757701181231996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_24
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 2286
+        width: 252
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adca0f6a49311d500800000000000000
+      internalID: 419137769499045082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_25
+      rect:
+        serializedVersion: 2
+        x: 3171
+        y: 2287
+        width: 252
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435e074b1afe076b0800000000000000
+      internalID: -5300473283619003084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_26
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 2287
+        width: 252
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b269265807e78a700800000000000000
+      internalID: 551829976092153387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_27
+      rect:
+        serializedVersion: 2
+        x: 4372
+        y: 2287
+        width: 252
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec44fd74de86fb250800000000000000
+      internalID: 5962599799984178382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_28
+      rect:
+        serializedVersion: 2
+        x: 4972
+        y: 2287
+        width: 252
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e960aa6a09d2bc0800000000000000
+      internalID: -3806227064566669698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_29
+      rect:
+        serializedVersion: 2
+        x: 5573
+        y: 2289
+        width: 252
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8df4040dcdd509c0800000000000000
+      internalID: -3961516424597013109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_30
+      rect:
+        serializedVersion: 2
+        x: 6174
+        y: 2289
+        width: 252
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526a33fc7b08826c0800000000000000
+      internalID: -4167939928187754971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_31
+      rect:
+        serializedVersion: 2
+        x: 6774
+        y: 2289
+        width: 252
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0768ac49bf5953d0800000000000000
+      internalID: -3217435209319815409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_32
+      rect:
+        serializedVersion: 2
+        x: 7375
+        y: 2289
+        width: 252
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29b356a7a6fc0de0800000000000000
+      internalID: -1365445387089626837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_33
+      rect:
+        serializedVersion: 2
+        x: 7975
+        y: 2289
+        width: 252
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e60146db8070d70800000000000000
+      internalID: 9009179189098606150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_34
+      rect:
+        serializedVersion: 2
+        x: 8576
+        y: 2290
+        width: 252
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2e28a8b7ace8ed0800000000000000
+      internalID: -2409766118643014917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_35
+      rect:
+        serializedVersion: 2
+        x: 9178
+        y: 2290
+        width: 250
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9a98facc5046a20800000000000000
+      internalID: 3054572823940540867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_36
+      rect:
+        serializedVersion: 2
+        x: 9779
+        y: 2290
+        width: 250
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7807bc141c7d674a0800000000000000
+      internalID: -6595847379205001081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_37
+      rect:
+        serializedVersion: 2
+        x: 10379
+        y: 2290
+        width: 251
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfefa92fba5fd83e0800000000000000
+      internalID: -2049712136525250819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_38
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 2292
+        width: 250
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acf414b2b8b78cf0800000000000000
+      internalID: -250028176630809437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_39
+      rect:
+        serializedVersion: 2
+        x: 11582
+        y: 2292
+        width: 249
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fa35e318ba49dd0800000000000000
+      internalID: -2480168923189498038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_40
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1974
+        width: 249
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f55aa88fe3878b60800000000000000
+      internalID: 7748306748727514615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_41
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1974
+        width: 248
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca133ad6961b7d8f0800000000000000
+      internalID: -515748565941538388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_42
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1972
+        width: 247
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637b39aedcd6c3400800000000000000
+      internalID: 305239605925623606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_43
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1971
+        width: 247
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11694bf92450ac3c0800000000000000
+      internalID: -4338649507312658927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_44
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 1971
+        width: 248
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c74cb3e514187f0800000000000000
+      internalID: -612136201360212910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_45
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 1970
+        width: 248
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60773eafe087d0ca0800000000000000
+      internalID: -6049046718754621690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_46
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 1969
+        width: 247
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debb2ecce215c0970800000000000000
+      internalID: 8722435839757564909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_47
+      rect:
+        serializedVersion: 2
+        x: 4375
+        y: 1969
+        width: 247
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a877a01030b7b60800000000000000
+      internalID: 7744787287199156861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_48
+      rect:
+        serializedVersion: 2
+        x: 4974
+        y: 1968
+        width: 246
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797f320fdb68b5aa0800000000000000
+      internalID: -6171190714045302889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_49
+      rect:
+        serializedVersion: 2
+        x: 5574
+        y: 1968
+        width: 245
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524328aa43df55690800000000000000
+      internalID: -7613901192359168987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_50
+      rect:
+        serializedVersion: 2
+        x: 6174
+        y: 1968
+        width: 244
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7ba3c6c9e700c60800000000000000
+      internalID: 7782359366392002512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_51
+      rect:
+        serializedVersion: 2
+        x: 6773
+        y: 1967
+        width: 243
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955faee6c4eb32c10800000000000000
+      internalID: 2027673492734539097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_52
+      rect:
+        serializedVersion: 2
+        x: 7372
+        y: 1966
+        width: 243
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e180581179895ede0800000000000000
+      internalID: -1304468742452475874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_53
+      rect:
+        serializedVersion: 2
+        x: 7971
+        y: 1966
+        width: 242
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42086dddfcfd40500800000000000000
+      internalID: 361659953969528868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_54
+      rect:
+        serializedVersion: 2
+        x: 8572
+        y: 1965
+        width: 240
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1311f5613bc51e4e0800000000000000
+      internalID: -1954178839057854159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_55
+      rect:
+        serializedVersion: 2
+        x: 9171
+        y: 1965
+        width: 238
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16990295c69d468f0800000000000000
+      internalID: -548074195257353887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_56
+      rect:
+        serializedVersion: 2
+        x: 9770
+        y: 1964
+        width: 238
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68c7b3653cb31e00800000000000000
+      internalID: 1014361278580770927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_57
+      rect:
+        serializedVersion: 2
+        x: 10370
+        y: 1963
+        width: 236
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8b61e10c9a3ada0800000000000000
+      internalID: -5934713241340561198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_58
+      rect:
+        serializedVersion: 2
+        x: 10970
+        y: 1963
+        width: 235
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7dafc2f957332930800000000000000
+      internalID: 4117195343812078975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_59
+      rect:
+        serializedVersion: 2
+        x: 11570
+        y: 1962
+        width: 233
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a6fb9a4f9534b0800000000000000
+      internalID: -5461283830323828337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_60
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1644
+        width: 233
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b9112df73a72930800000000000000
+      internalID: 4118440153634151278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_61
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1644
+        width: 234
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95da79eb978c3d240800000000000000
+      internalID: 4815412851803401561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_62
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1646
+        width: 236
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8533576d1751978e0800000000000000
+      internalID: -1695300206054788264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_63
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1647
+        width: 238
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383ca8ec36a3c4470800000000000000
+      internalID: 8380137206971024259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_64
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 1649
+        width: 240
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9a9d71d72ee1000800000000000000
+      internalID: 8693276200249776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_65
+      rect:
+        serializedVersion: 2
+        x: 3171
+        y: 1649
+        width: 241
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6576429d5a82342d0800000000000000
+      internalID: -3295745809527314602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_66
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 1650
+        width: 243
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff323b1f006e2eb0800000000000000
+      internalID: -4742747739577499655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_67
+      rect:
+        serializedVersion: 2
+        x: 4372
+        y: 1651
+        width: 244
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb465c76f65f83930800000000000000
+      internalID: 4123315317688853695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_68
+      rect:
+        serializedVersion: 2
+        x: 4971
+        y: 1653
+        width: 247
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73c3d4fed7c16370800000000000000
+      internalID: 8314146147506832252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_69
+      rect:
+        serializedVersion: 2
+        x: 5572
+        y: 1653
+        width: 249
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31baf3b4bee85f610800000000000000
+      internalID: 1654385579359447827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_70
+      rect:
+        serializedVersion: 2
+        x: 6172
+        y: 1654
+        width: 251
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c14c079a476d6b20800000000000000
+      internalID: 3129270886151766469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_71
+      rect:
+        serializedVersion: 2
+        x: 6773
+        y: 1656
+        width: 252
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b57c47bb9b111ea0800000000000000
+      internalID: -5903907280896887375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_72
+      rect:
+        serializedVersion: 2
+        x: 7373
+        y: 1657
+        width: 254
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d848c5b55417c6b0800000000000000
+      internalID: -5276226080086669103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_73
+      rect:
+        serializedVersion: 2
+        x: 7974
+        y: 1657
+        width: 255
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21fde892b777c910800000000000000
+      internalID: 1857584980267233583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_74
+      rect:
+        serializedVersion: 2
+        x: 8574
+        y: 1659
+        width: 257
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026c3beb9058b5ce0800000000000000
+      internalID: -1415391380977236448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_75
+      rect:
+        serializedVersion: 2
+        x: 9175
+        y: 1660
+        width: 258
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c29054177f72fd0800000000000000
+      internalID: -2366651013298312190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_76
+      rect:
+        serializedVersion: 2
+        x: 9775
+        y: 1662
+        width: 260
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190b49e129c87e720800000000000000
+      internalID: 2875421446305525905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_77
+      rect:
+        serializedVersion: 2
+        x: 10375
+        y: 1662
+        width: 262
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d3761a4b2129860800000000000000
+      internalID: 7535105693555572073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_78
+      rect:
+        serializedVersion: 2
+        x: 10976
+        y: 1663
+        width: 263
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92df282ebcb6aa5f0800000000000000
+      internalID: -744664264953627351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_79
+      rect:
+        serializedVersion: 2
+        x: 11576
+        y: 1665
+        width: 264
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b29016cf2f573d40800000000000000
+      internalID: 5564020523430613680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigFallSprites_80
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1347
+        width: 265
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecab3a7b0a38af250800000000000000
+      internalID: 5979236181586721486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 089886478cec7604285e57bcfedf1b72
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
