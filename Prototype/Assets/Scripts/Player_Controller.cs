@@ -68,31 +68,31 @@ public class Player_Controller : MonoBehaviour
     }
 
     private void Movement()
-    { 
+    {      
+        animator.SetFloat("Speed_Y", rb.velocity.y);
         Flip((int)((direction.x % 1) + (direction.x / 1)));
-        if (isControlling)
-        {           
-            float speed = 0.0f;
-            if (grounded == false)
+        if (!isControlling) { return; }
+        float speed;
+        if (grounded == false)
+        {
+            if ((wall[0] || wall[1]) && direction.x != 0)
             {
-                if ((wall[0] || wall[1]) && direction.x != 0)
-                {
-                    speed = direction.x * move_speed * wall_release_strength / 100;
-                    rb.velocity = new Vector3(speed, rb.velocity.y, 0);
-                }
-                else
-                {
-                    speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * move_speed, air_control), -max_air_speed, max_air_speed);
-                    rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
-                }
+                speed = direction.x * move_speed * wall_release_strength / 100;
+                rb.velocity = new Vector3(speed, rb.velocity.y, 0);
             }
             else
             {
-                speed = direction.x * move_speed;
+                speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * move_speed, air_control), -max_air_speed, max_air_speed);
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
             }
-            if ((wall[0] || wall[1]) && direction.y < 0) { Wall_Slide(wall_slide_speed); }
         }
+        else
+        {
+            speed = direction.x * move_speed;
+            rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
+        }
+        if ((wall[0] || wall[1]) && direction.y < 0) { Wall_Slide(wall_slide_speed); }
+
     }
     #endregion
 
