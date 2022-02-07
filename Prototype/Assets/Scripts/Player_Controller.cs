@@ -8,7 +8,7 @@ public class Player_Controller : MonoBehaviour
     //Class References
     private Controls controls;
     private Rigidbody rb;
-    private CapsuleCollider col;
+    private Collider col;
     private Animator animator;
 
     #region MOVEMENT VARIABLES
@@ -47,7 +47,7 @@ public class Player_Controller : MonoBehaviour
     private void Awake()
     {
         rb = TryGetComponent(out Rigidbody r) ? r : null;
-        col = TryGetComponent(out CapsuleCollider c) ? c : null;
+        col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;      
     }
     private void OnEnable()
@@ -112,9 +112,10 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             force = -Mathf.Pow(time, 2) / (1/weight*10) + floatiness;
-            if (direction.y < 0) { force = -Mathf.Abs(force) * downforce; }
-            force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
-            rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
+            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * downforce; }
+            //force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
+            if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
             if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
         }
@@ -139,9 +140,10 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             force = -Mathf.Pow(time, 2) / (1 / weight * 10) + floatiness;
-            if (direction.y < 0) { force = -Mathf.Abs(force) * downforce; }
-            force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
-            rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
+            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * downforce; }
+            //force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
+            if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
             if (grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
         }
@@ -171,7 +173,7 @@ public class Player_Controller : MonoBehaviour
     private float delay = 0;
     private void Ground_Check()
     {
-        Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.02f));
+        Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.01f));
         Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
         if(hit.Length > 0) { grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
         if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
@@ -180,18 +182,18 @@ public class Player_Controller : MonoBehaviour
     }
     private void Ceiling_Check()
     {
-        Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.02f));
+        Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.01f));
         Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
         ceiling = hit.Length > 0 ? true : false;
     }
     private void Wall_Check()
     {
-        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
+        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.01f));
         Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);        
         wall[0] = hit_left.Length > 0 ? true : false;
         if (wall[0]) { Wall_Grab(); rb.useGravity = false; Flip(-1); }
 
-        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
+        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.01f));
         Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);
         wall[1] = hit_right.Length > 0 ? true : false;
         if (wall[1]) { Wall_Grab(); rb.useGravity = false; Flip(1); }
@@ -239,22 +241,22 @@ public class Player_Controller : MonoBehaviour
         #region SURFACE INDICATORS
         if (grounded)
         {
-            Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.02f));
+            Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.01f));
             Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.01f, 0.2f) * 2);
         }
         if (wall[0])
         {         
-            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
+            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.01f));
             Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (wall[1])
         {
-            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
+            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.01f));
             Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (ceiling)
         {
-            Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.02f));
+            Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.01f));
             Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.01f, 0.2f) * 2);
         }
         #endregion

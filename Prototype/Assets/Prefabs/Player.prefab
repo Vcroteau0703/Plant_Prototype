@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6061469062083726999}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.48, y: 4.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -49,17 +49,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_speed: 5
   move_smoothing: 0.2
-  downforce: 5
+  downforce: 1
   walkable:
     serializedVersion: 2
     m_Bits: 65
-  jump_power: 400
-  floatiness: 1
-  weight: 18
+  jump_power: 300
+  floatiness: 5
+  weight: 10
+  coyote_jump_delay: 0.1
   air_control: 0.2
   max_air_speed: 5
-  max_fall_speed: 4
-  coyote_jump_delay: 0.1
+  max_fall_speed: 15
   wall_jump_power: 500
   wall_grab_strength: 10
   wall_jump_angle: 68
