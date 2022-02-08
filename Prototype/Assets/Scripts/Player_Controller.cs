@@ -150,15 +150,16 @@ public class Player_Controller : MonoBehaviour
         }
     }
     private float slide_time = 0;
-    public void Wall_Grab()
+    public void Wall_Grab(Vector3 dir)
     {
         animator.SetBool("Cling", true);
-        if (wall[0]){rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force);}
+        //rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, float.NegativeInfinity, 1), rb.velocity.z);
+        if (wall[0]){ rb.velocity = new Vector3(0, rb.velocity.y, 0); }
         else if(wall[1]){rb.AddForce(Vector3.right * wall_grab_strength, ForceMode.Force);}
         if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
     public void Wall_Slide(float speed)
-    {
+    {        
         transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (speed / 10), wall_slide_smoothing);
     }
     #endregion
@@ -189,14 +190,14 @@ public class Player_Controller : MonoBehaviour
     private void Wall_Check()
     {
         Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
-        Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.2f, 0.2f), Quaternion.identity, walkable);        
+        Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);        
         wall[0] = hit_left.Length > 0 ? true : false;
-        if (wall[0]) { Wall_Grab(); rb.useGravity = false; Flip(-1); }
+        if (wall[0] && !grounded) {Wall_Grab(transform.position + Vector3.left); rb.useGravity = false; Flip(-1);}
 
         Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
-        Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.2f, 0.2f), Quaternion.identity, walkable);
+        Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);
         wall[1] = hit_right.Length > 0 ? true : false;
-        if (wall[1]) { Wall_Grab(); rb.useGravity = false; Flip(1); }
+        if (wall[1] && !grounded) {Wall_Grab(transform.position + Vector3.right); rb.useGravity = false; Flip(1);}
 
         if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
     }
@@ -231,12 +232,12 @@ public class Player_Controller : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        #region WALL JUMP DIRECTIONS
-        Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
-        Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.right));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position - (Vector2)(rot * Vector2.left));
-        #endregion
+        //#region WALL JUMP DIRECTIONS
+        //Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
+        //Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.right));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position - (Vector2)(rot * Vector2.left));
+        //#endregion
 
         #region SURFACE INDICATORS
         if (grounded)
@@ -247,12 +248,12 @@ public class Player_Controller : MonoBehaviour
         if (wall[0])
         {         
             Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.2f, 0.2f) * 2);
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
         }
         if (wall[1])
         {
             Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.2f, 0.2f) * 2);
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
         }
         if (ceiling)
         {
