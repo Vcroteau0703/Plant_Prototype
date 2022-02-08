@@ -1816,7 +1816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: coyote_jump_delay
-      value: 0.15
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: landing_slide_speed
@@ -1824,7 +1824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: wall_release_strength
-      value: 7.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: landing_slide_duration
