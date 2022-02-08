@@ -68,31 +68,31 @@ public class Player_Controller : MonoBehaviour
     }
 
     private void Movement()
-    { 
+    {      
+        animator.SetFloat("Speed_Y", rb.velocity.y);
         Flip((int)((direction.x % 1) + (direction.x / 1)));
-        if (isControlling)
-        {           
-            float speed = 0.0f;
-            if (grounded == false)
+        if (!isControlling) { return; }
+        float speed;
+        if (grounded == false)
+        {
+            if ((wall[0] || wall[1]) && direction.x != 0)
             {
-                if ((wall[0] || wall[1]) && direction.x != 0)
-                {
-                    speed = direction.x * move_speed * wall_release_strength / 100;
-                    rb.velocity = new Vector3(speed, rb.velocity.y, 0);
-                }
-                else
-                {
-                    speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * move_speed, air_control), -max_air_speed, max_air_speed);
-                    rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
-                }
+                speed = direction.x * move_speed * wall_release_strength / 100;
+                rb.velocity = new Vector3(speed, rb.velocity.y, 0);
             }
             else
             {
-                speed = direction.x * move_speed;
+                speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * move_speed, air_control), -max_air_speed, max_air_speed);
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
             }
-            if ((wall[0] || wall[1]) && direction.y < 0) { Wall_Slide(wall_slide_speed); }
         }
+        else
+        {
+            speed = direction.x * move_speed;
+            rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
+        }
+        if ((wall[0] || wall[1]) && direction.y < 0) { Wall_Slide(wall_slide_speed); }
+
     }
     #endregion
 
@@ -173,28 +173,28 @@ public class Player_Controller : MonoBehaviour
     private float delay = 0;
     private void Ground_Check()
     {
-        Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.01f));
-        Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
-        if(hit.Length > 0) { grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
+        Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+        Collider[] hit = Physics.OverlapBox(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f), Quaternion.identity, walkable);
+        if(hit.Length > 0) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
         if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
         grounded = false;
         animator.SetBool("Ground", false);
     }
     private void Ceiling_Check()
     {
-        Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.01f));
-        Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.01f, 0.2f), Quaternion.identity, walkable);
+        Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
+        Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.1f, 0.2f), Quaternion.identity, walkable);
         ceiling = hit.Length > 0 ? true : false;
     }
     private void Wall_Check()
     {
-        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.01f));
-        Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);        
+        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
+        Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.2f, 0.2f), Quaternion.identity, walkable);        
         wall[0] = hit_left.Length > 0 ? true : false;
         if (wall[0]) { Wall_Grab(); rb.useGravity = false; Flip(-1); }
 
-        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.01f));
-        Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.01f, 0.2f, 0.2f), Quaternion.identity, walkable);
+        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
+        Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.2f, 0.2f), Quaternion.identity, walkable);
         wall[1] = hit_right.Length > 0 ? true : false;
         if (wall[1]) { Wall_Grab(); rb.useGravity = false; Flip(1); }
 
@@ -241,23 +241,23 @@ public class Player_Controller : MonoBehaviour
         #region SURFACE INDICATORS
         if (grounded)
         {
-            Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.01f));
-            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.01f, 0.2f) * 2);
+            Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f) * 2);
         }
         if (wall[0])
         {         
-            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.01f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
+            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (wall[1])
         {
-            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.01f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.01f, col.bounds.size.y/2, 0.2f) * 2);
+            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, col.bounds.size.y/2, 0.2f) * 2);
         }
         if (ceiling)
         {
-            Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.01f));
-            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.01f, 0.2f) * 2);
+            Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
+            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
         }
         #endregion
     }
