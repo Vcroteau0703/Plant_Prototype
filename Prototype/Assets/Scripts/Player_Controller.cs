@@ -11,6 +11,8 @@ public class Player_Controller : MonoBehaviour
     private Collider col;
     private Animator animator;
 
+    public Bounds feet;
+
     #region MOVEMENT VARIABLES
     [Header("Movement Settings")]
     public float move_speed = 1.0f;
@@ -154,7 +156,7 @@ public class Player_Controller : MonoBehaviour
     {
         animator.SetBool("Cling", true);
         //rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, float.NegativeInfinity, 1), rb.velocity.z);
-        if (wall[0]){ rb.velocity = new Vector3(0, rb.velocity.y, 0); }
+        if (wall[0]){ rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force); }
         else if(wall[1]){rb.AddForce(Vector3.right * wall_grab_strength, ForceMode.Force);}
         if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
@@ -216,6 +218,15 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (feet.Contains(transform.InverseTransformPoint(collision.GetContact(0).point))){
+            Debug.Log("Grounded");
+        }
+    }
+
     #endregion
 
     private void FixedUpdate()
@@ -231,7 +242,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.5f);
         //#region WALL JUMP DIRECTIONS
         //Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
         //Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
@@ -239,26 +250,29 @@ public class Player_Controller : MonoBehaviour
         //Gizmos.DrawLine(transform.position, (Vector2)transform.position - (Vector2)(rot * Vector2.left));
         //#endregion
 
+        //Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+        Gizmos.DrawCube(transform.position + feet.center, feet.size);
+
         #region SURFACE INDICATORS
-        if (grounded)
-        {
-            Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f) * 2);
-        }
+        //if (grounded)
+        //{
+        //    Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+        //    Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f) * 2);
+        //}
         if (wall[0])
         {         
             Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
+            Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
         }
         if (wall[1])
         {
             Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
+            Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
         }
         if (ceiling)
         {
             Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
+            Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
         }
         #endregion
     }

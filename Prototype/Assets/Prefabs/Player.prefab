@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6061469062083726999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.48, y: 4.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,26 +47,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534430b34e876a043997b41f78aca379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 6
+  feet:
+    m_Center: {x: 0, y: -0.9, z: 0}
+    m_Extent: {x: 0.7, y: 0.1, z: 1}
+  move_speed: 8
   move_smoothing: 0.2
-  downforce: 2
+  downforce: 15
   walkable:
     serializedVersion: 2
     m_Bits: 65
-  jump_power: 300
-  floatiness: 4
-  weight: 30
-  coyote_jump_delay: 0.1
-  air_control: 0.2
-  max_air_speed: 5
-  max_fall_speed: 15
+  jump_power: 350
+  floatiness: 0.5
+  weight: 20
+  coyote_jump_delay: 0.15
+  air_control: 1
+  max_air_speed: 6
+  max_fall_speed: 10
   wall_jump_power: 400
   wall_grab_strength: 10
-  wall_jump_angle: 68
-  wall_release_strength: 5
-  landing_slide_duration: 0.5
-  landing_slide_speed: 15
-  wall_slide_speed: 10
+  wall_jump_angle: 50
+  wall_release_strength: 7.5
+  landing_slide_duration: 0.2
+  landing_slide_speed: 10
+  wall_slide_speed: 25
   wall_slide_smoothing: 0.02
   horizontal_deadzone: 50
   vertical_deadzone: 50
