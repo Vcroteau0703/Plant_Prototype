@@ -11,7 +11,7 @@ public class Player_Controller : MonoBehaviour
     private Collider col;
     private Animator animator;
 
-    public Bounds feet;
+    public Bounds Player_Bounds;
 
     #region MOVEMENT VARIABLES
     [Header("Movement Settings")]
@@ -40,10 +40,18 @@ public class Player_Controller : MonoBehaviour
     [Header("Input Settings")]
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
     [Range(0f, 100f)] public float vertical_deadzone = 20f;
+    [Header("Detection Settings")]
+    public float slope_angle = 30f;
+    public float ceiling_angle = 30f;
 
     private Vector2 direction;
-    private bool grounded, ceiling, isControlling = true;
-    private bool[] wall = new bool[2];
+    public Vector2 detection;
+    public bool isControlling = true;
+
+    public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
+    public State current_state;
+
+
     #endregion
 
     private void Awake()
@@ -66,43 +74,47 @@ public class Player_Controller : MonoBehaviour
         float x =  Mathf.Abs(temp.x) > (horizontal_deadzone / 100f) ? temp.x : 0.0f;
         float y = Mathf.Abs(temp.y) > (vertical_deadzone / 100f) ? temp.y : 0.0f;      
         direction = new Vector2(x, y);
-        animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
     }
 
     private void Movement()
     {      
-        animator.SetFloat("Speed_Y", rb.velocity.y);
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (!isControlling) { return; }
         float speed;
-        if (grounded == false)
+
+        switch (current_state)
         {
-            if ((wall[0] || wall[1]) && direction.x != 0)
-            {
-                speed = direction.x * move_speed * wall_release_strength / 100;
-                rb.velocity = new Vector3(speed, rb.velocity.y, 0);
-            }
-            else
-            {
+            default: break;
+            case State.Grounded:
+                speed = direction.x * move_speed;
+                rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
+                break;
+            case State.Cling:
+                if(direction.y < 0) { Wall_Slide(wall_slide_speed); }
+                if(direction.x != 0) {
+                    speed = direction.x * move_speed * wall_release_strength / 100;
+                    rb.velocity = new Vector3(speed, rb.velocity.y, 0);}
+                break;
+            case State.Aerial:
                 speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * move_speed, air_control), -max_air_speed, max_air_speed);
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
-            }
+                break;
         }
-        else
-        {
-            speed = direction.x * move_speed;
-            rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), move_smoothing);
-        }
-        if ((wall[0] || wall[1]) && direction.y < 0) { Wall_Slide(wall_slide_speed); }
-
     }
     #endregion
 
     #region JUMP
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        if (grounded == true){ StartCoroutine(Jump()); animator.SetTrigger("Jump"); }
-        else if (wall[0] || wall[1]) { StartCoroutine(Wall_Jump()); animator.SetTrigger("Wall_Jump");}
+        switch (current_state)
+        {
+            case State.Grounded:
+                StartCoroutine(Jump()); animator.SetTrigger("Jump");
+                break;
+            case State.Cling:
+                StartCoroutine(Wall_Jump()); animator.SetTrigger("Wall_Jump");
+                break;
+        }
     }   
     private IEnumerator Jump()
     {              
@@ -115,11 +127,10 @@ public class Player_Controller : MonoBehaviour
             time += Time.deltaTime;
             force = -Mathf.Pow(time, 2) / (1/weight*10) + floatiness;
             if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * downforce; }
-            //force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if(grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
+            if (current_state != State.Aerial) { break; }
         }
     }
     #endregion
@@ -128,12 +139,11 @@ public class Player_Controller : MonoBehaviour
     public IEnumerator Wall_Jump()
     {
         isControlling = false;
-        grounded = false;
+        //grounded = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         Quaternion rotA = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
-        Quaternion rotB = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
-        if (wall[0]){rb.AddForce(rotA * Vector3.right * wall_jump_power, ForceMode.Force);}
-        else if (wall[1]){rb.AddForce(-(rotB * Vector3.right) * wall_jump_power, ForceMode.Force);}
+        //FIX
+        rb.AddForce(rotA * Vector3.right * wall_jump_power, ForceMode.Force);
         yield return new WaitForSeconds(0.2f);       
         isControlling = true;
 
@@ -144,20 +154,17 @@ public class Player_Controller : MonoBehaviour
             time += Time.deltaTime;
             force = -Mathf.Pow(time, 2) / (1 / weight * 10) + floatiness;
             if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * downforce; }
-            //force = Mathf.Clamp(force, -max_fall_speed, float.PositiveInfinity);
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (grounded && time > 0.1f || wall[0] || wall[1] || ceiling) { break; }
+            if (current_state != State.Aerial) { break; }
         }
     }
     private float slide_time = 0;
-    public void Wall_Grab(Vector3 dir)
+    public void Wall_Grab()
     {
         animator.SetBool("Cling", true);
-        //rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, float.NegativeInfinity, 1), rb.velocity.z);
-        if (wall[0]){ rb.AddForce(Vector3.left * wall_grab_strength, ForceMode.Force); }
-        else if(wall[1]){rb.AddForce(Vector3.right * wall_grab_strength, ForceMode.Force);}
+        rb.AddForce(detection * wall_grab_strength, ForceMode.Force);
         if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
     public void Wall_Slide(float speed)
@@ -174,41 +181,76 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Jump.performed += Request_Jump;
     }
     private float delay = 0;
-    private void Ground_Check()
+    //private void Ground_Check()
+    //{
+    //    Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+    //    Collider[] hit = Physics.OverlapBox(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f), Quaternion.identity, walkable);
+    //    if(hit.Length > 0 && !wall[0] && !wall[1]) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
+    //    if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
+    //    grounded = false;
+    //    animator.SetBool("Ground", false);
+    //}
+    //private void Ceiling_Check()
+    //{
+    //    Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
+    //    Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.1f, 0.2f), Quaternion.identity, walkable);
+    //    ceiling = hit.Length > 0 ? true : false;
+    //}
+    //private void Wall_Check()
+    //{
+    //    Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
+    //    Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);        
+    //    wall[0] = hit_left.Length > 0 ? true : false;
+    //    if (wall[0] && !grounded) {Wall_Grab(transform.position + Vector3.left); rb.useGravity = false; Flip(-1);}
+
+    //    Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
+    //    Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);
+    //    wall[1] = hit_right.Length > 0 ? true : false;
+    //    if (wall[1] && !grounded) {Wall_Grab(transform.position + Vector3.right); rb.useGravity = false; Flip(1);}
+
+    //    if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
+    //}
+
+    private State last_state = State.Waiting;
+    private void Animation_Driver()
     {
-        Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-        Collider[] hit = Physics.OverlapBox(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f), Quaternion.identity, walkable);
-        if(hit.Length > 0 && !wall[0] && !wall[1]) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
-        if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
-        grounded = false;
+        animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
+        animator.SetFloat("Speed_Y", rb.velocity.y);
+
+        switch (current_state)
+        {
+            case State.Grounded:
+                animator.SetBool("Ground", true);
+                break;
+            case State.Aerial:     
+                break;
+            case State.Cling:               
+                animator.SetBool("Cling", true);
+                break;
+            case State.Ceiling:
+                break;
+        }
+
+        if(last_state != current_state) { 
+            last_state = current_state;
+            Reset_Animation_Parameters();
+        }
+    }
+
+    private void Reset_Animation_Parameters()
+    {
         animator.SetBool("Ground", false);
+        animator.SetBool("Cling", false);
+        animator.ResetTrigger("Jump");
+        animator.ResetTrigger("Wall_Jump");
     }
-    private void Ceiling_Check()
-    {
-        Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
-        Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.1f, 0.2f), Quaternion.identity, walkable);
-        ceiling = hit.Length > 0 ? true : false;
-    }
-    private void Wall_Check()
-    {
-        Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
-        Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);        
-        wall[0] = hit_left.Length > 0 ? true : false;
-        if (wall[0] && !grounded) {Wall_Grab(transform.position + Vector3.left); rb.useGravity = false; Flip(-1);}
 
-        Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
-        Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);
-        wall[1] = hit_right.Length > 0 ? true : false;
-        if (wall[1] && !grounded) {Wall_Grab(transform.position + Vector3.right); rb.useGravity = false; Flip(1);}
-
-        if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
-    }
     private void Flip(int direction)
     {
         switch (direction) {
             default:
-                if (wall[0]) { Flip(1); }
-                else if (wall[1]) { Flip(-1); }
+                if (detection.x < 0) { Flip(1); }
+                else if(detection.x > 0) { Flip(-1); }
                 break;
             case 1:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -220,11 +262,24 @@ public class Player_Controller : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
-        if (feet.Contains(transform.InverseTransformPoint(collision.GetContact(0).point))){
-            Debug.Log("Grounded");
-        }
+        current_state = State.Aerial;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        Vector3 p = collision.GetContact(0).point;
+        Vector3 dir = p - transform.position;     
+        float angle = Vector3.Angle(dir, -transform.up);
+        detection = dir;
+
+        if (angle < slope_angle) { current_state = State.Grounded; }
+        else if(angle > 180 - ceiling_angle) { current_state = State.Ceiling; }
+        else if(angle > slope_angle && angle < 180 - ceiling_angle) { 
+            current_state = State.Cling; Wall_Grab(); rb.useGravity = false; Flip(Mathf.RoundToInt(detection.x)); }
+        else { current_state = State.Waiting; }    
+        Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
     }
 
     #endregion
@@ -232,9 +287,7 @@ public class Player_Controller : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
-        Ground_Check();
-        Wall_Check();
-        Ceiling_Check();
+        Animation_Driver();
     }
     private void OnDisable()
     {
@@ -242,38 +295,43 @@ public class Player_Controller : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.5f);
-        //#region WALL JUMP DIRECTIONS
-        //Quaternion rot = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
-        //Quaternion rot2 = Quaternion.AngleAxis(-wall_jump_angle, Vector3.forward);
-        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.right));
-        //Gizmos.DrawLine(transform.position, (Vector2)transform.position - (Vector2)(rot * Vector2.left));
-        //#endregion
+        Gizmos.color = Color.yellow;
+        #region SLOPE ANGLE BOUNDS
+        Quaternion rot = Quaternion.AngleAxis(slope_angle, Vector3.forward);
+        Quaternion rot2 = Quaternion.AngleAxis((-slope_angle), Vector3.forward);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.down));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+        #endregion
 
-        //Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-        Gizmos.DrawCube(transform.position + feet.center, feet.size);
+        #region PLAYER BOUNDS
+        Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.4f);
+        Gizmos.DrawCube(transform.position + Player_Bounds.center, Player_Bounds.size);
+        Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+        Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
+        #endregion
 
+        Gizmos.color = new Color(1.0f, 1.0f, 0.1f, 0.5f);
         #region SURFACE INDICATORS
         //if (grounded)
         //{
-        //    Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-        //    Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f) * 2);
+        //    //Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
+        //    //Gizmos.DrawCube(transform.position, new Vector3(feet.max.x, feet.extents.y, feet.max.z));
         //}
-        if (wall[0])
-        {         
-            Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
-            Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
-        }
-        if (wall[1])
-        {
-            Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
-            Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
-        }
-        if (ceiling)
-        {
-            Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
-            Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
-        }
+        //if (wall[0])
+        //{         
+        //    Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
+        //    Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
+        //}
+        //if (wall[1])
+        //{
+        //    Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
+        //    Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
+        //}
+        //if (ceiling)
+        //{
+        //    Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
+        //    Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
+        //}
         #endregion
     }
 }
