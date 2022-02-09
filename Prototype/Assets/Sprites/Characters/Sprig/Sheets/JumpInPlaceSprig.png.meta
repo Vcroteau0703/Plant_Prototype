@@ -1,0 +1,1164 @@
+fileFormatVersion: 2
+guid: e410cefcfb8dbf5418af778f48e1ac6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3384698655627131343
+    second: JumpInPlaceSprig_0
+  - first:
+      213: -6548881505521653156
+    second: JumpInPlaceSprig_1
+  - first:
+      213: -5002490638719632224
+    second: JumpInPlaceSprig_2
+  - first:
+      213: 6171102663524429779
+    second: JumpInPlaceSprig_3
+  - first:
+      213: 480374037754471866
+    second: JumpInPlaceSprig_4
+  - first:
+      213: -4680626647183137720
+    second: JumpInPlaceSprig_5
+  - first:
+      213: -1467021393392041867
+    second: JumpInPlaceSprig_6
+  - first:
+      213: -710524233576194826
+    second: JumpInPlaceSprig_7
+  - first:
+      213: 384802671514627818
+    second: JumpInPlaceSprig_8
+  - first:
+      213: 3068592185178091700
+    second: JumpInPlaceSprig_9
+  - first:
+      213: -7048938365721627541
+    second: JumpInPlaceSprig_10
+  - first:
+      213: 8693079505782082282
+    second: JumpInPlaceSprig_11
+  - first:
+      213: -8231507217325015007
+    second: JumpInPlaceSprig_12
+  - first:
+      213: -7657718559288583746
+    second: JumpInPlaceSprig_13
+  - first:
+      213: 4222461411397929736
+    second: JumpInPlaceSprig_14
+  - first:
+      213: 4613090515018266526
+    second: JumpInPlaceSprig_15
+  - first:
+      213: 5511156288759835149
+    second: JumpInPlaceSprig_16
+  - first:
+      213: 429813182024722209
+    second: JumpInPlaceSprig_17
+  - first:
+      213: 1160218590814166633
+    second: JumpInPlaceSprig_18
+  - first:
+      213: 3588081762773523811
+    second: JumpInPlaceSprig_19
+  - first:
+      213: 2399570890058233165
+    second: JumpInPlaceSprig_20
+  - first:
+      213: 6594470285166284967
+    second: JumpInPlaceSprig_21
+  - first:
+      213: -152579919738694761
+    second: JumpInPlaceSprig_22
+  - first:
+      213: 2606776386073373029
+    second: JumpInPlaceSprig_23
+  - first:
+      213: 4409900840176897527
+    second: JumpInPlaceSprig_24
+  - first:
+      213: 4205058468797794760
+    second: JumpInPlaceSprig_25
+  - first:
+      213: 49105882588605799
+    second: JumpInPlaceSprig_26
+  - first:
+      213: -1360646316728600240
+    second: JumpInPlaceSprig_27
+  - first:
+      213: -6723584669688934635
+    second: JumpInPlaceSprig_28
+  - first:
+      213: -8844664181340057821
+    second: JumpInPlaceSprig_29
+  - first:
+      213: 7864069533193938976
+    second: JumpInPlaceSprig_30
+  - first:
+      213: 8956932837445830728
+    second: JumpInPlaceSprig_31
+  - first:
+      213: 7963602021836755501
+    second: JumpInPlaceSprig_32
+  - first:
+      213: -5760966360559506176
+    second: JumpInPlaceSprig_33
+  - first:
+      213: -664890169055295558
+    second: JumpInPlaceSprig_34
+  - first:
+      213: 14804998841295903
+    second: JumpInPlaceSprig_35
+  - first:
+      213: -1825059331780294991
+    second: JumpInPlaceSprig_36
+  - first:
+      213: 1834270226521589439
+    second: JumpInPlaceSprig_37
+  - first:
+      213: -6894747720956219319
+    second: JumpInPlaceSprig_38
+  - first:
+      213: 1515220094918879792
+    second: JumpInPlaceSprig_39
+  - first:
+      213: -6982148275391247038
+    second: JumpInPlaceSprig_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1364a9f61822701d0800000000000000
+      internalID: -3384698655627131343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5aa14bd7f2bd15a0800000000000000
+      internalID: -6548881505521653156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_2
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac36e6b445939ab0800000000000000
+      internalID: -5002490638719632224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_3
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df27d33d2924a550800000000000000
+      internalID: 6171102663524429779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_4
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5eca764a1aaa600800000000000000
+      internalID: 480374037754471866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_5
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844eb680dd21b0fb0800000000000000
+      internalID: -4680626647183137720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_6
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57008f8b0d714abe0800000000000000
+      internalID: -1467021393392041867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_7
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc526d59f5b326f0800000000000000
+      internalID: -710524233576194826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_8
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee2040bdf7175500800000000000000
+      internalID: 384802671514627818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_9
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b074169554d59a20800000000000000
+      internalID: 3068592185178091700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_10
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b643a8b37e32d2e90800000000000000
+      internalID: -7048938365721627541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_11
+      rect:
+        serializedVersion: 2
+        x: 6710
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea8e5aa0c504a870800000000000000
+      internalID: 8693079505782082282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_12
+      rect:
+        serializedVersion: 2
+        x: 7320
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12047495ccfc3cd80800000000000000
+      internalID: -8231507217325015007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_13
+      rect:
+        serializedVersion: 2
+        x: 7930
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb910bbea815ab590800000000000000
+      internalID: -7657718559288583746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_14
+      rect:
+        serializedVersion: 2
+        x: 8540
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b0b283842399a30800000000000000
+      internalID: 4222461411397929736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_15
+      rect:
+        serializedVersion: 2
+        x: 9150
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e973368d16df40040800000000000000
+      internalID: 4613090515018266526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_16
+      rect:
+        serializedVersion: 2
+        x: 9760
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0aa03df17f8b7c40800000000000000
+      internalID: 5511156288759835149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_17
+      rect:
+        serializedVersion: 2
+        x: 10370
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1272d52dfc007f500800000000000000
+      internalID: 429813182024722209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_18
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e584749ace91010800000000000000
+      internalID: 1160218590814166633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_19
+      rect:
+        serializedVersion: 2
+        x: 11590
+        y: 636
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d5c2f4a5d6bc130800000000000000
+      internalID: 3588081762773523811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45f943d20dfc4120800000000000000
+      internalID: 2399570890058233165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_21
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0943d09c3448b50800000000000000
+      internalID: 6594470285166284967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_22
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7931e141f5de1edf0800000000000000
+      internalID: -152579919738694761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_23
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569a7c4df412d2420800000000000000
+      internalID: 2606776386073373029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_24
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdc071137d133d30800000000000000
+      internalID: 4409900840176897527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_25
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9c074e56e5b5a30800000000000000
+      internalID: 4205058468797794760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_26
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d63104a857ea000800000000000000
+      internalID: 49105882588605799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_27
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b27a42630e1de0800000000000000
+      internalID: -1360646316728600240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_28
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fcde1bd5701b2a0800000000000000
+      internalID: -6723584669688934635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_29
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fca91c9c0714580800000000000000
+      internalID: -8844664181340057821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_30
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0282ff62399c22d60800000000000000
+      internalID: 7864069533193938976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_31
+      rect:
+        serializedVersion: 2
+        x: 6710
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8488df4b5fa6d4c70800000000000000
+      internalID: 8956932837445830728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_32
+      rect:
+        serializedVersion: 2
+        x: 7320
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22992c88d5648e60800000000000000
+      internalID: 7963602021836755501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_33
+      rect:
+        serializedVersion: 2
+        x: 7930
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d20e33e9fec00b0800000000000000
+      internalID: -5760966360559506176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_34
+      rect:
+        serializedVersion: 2
+        x: 8540
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab74fcaf9e5d5c6f0800000000000000
+      internalID: -664890169055295558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_35
+      rect:
+        serializedVersion: 2
+        x: 9150
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14e5d86119943000800000000000000
+      internalID: 14804998841295903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_36
+      rect:
+        serializedVersion: 2
+        x: 9760
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6493315361ca6e0800000000000000
+      internalID: -1825059331780294991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_37
+      rect:
+        serializedVersion: 2
+        x: 10370
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb605e97d03a47910800000000000000
+      internalID: 1834270226521589439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_38
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940787c4a7fe050a0800000000000000
+      internalID: -6894747720956219319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_39
+      rect:
+        serializedVersion: 2
+        x: 11590
+        y: 318
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a6c2af5a4270510800000000000000
+      internalID: 1515220094918879792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpInPlaceSprig_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 610
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dc234f22d6a1f90800000000000000
+      internalID: -6982148275391247038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 086eaec4f16d91740bf3006e96f923ab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
