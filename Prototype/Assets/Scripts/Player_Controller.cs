@@ -175,7 +175,7 @@ public class Player_Controller : MonoBehaviour
     {
         Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
         Collider[] hit = Physics.OverlapBox(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f), Quaternion.identity, walkable);
-        if(hit.Length > 0) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
+        if(hit.Length > 0 && !wall[0] && !wall[1]) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
         if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
         grounded = false;
         animator.SetBool("Ground", false);
@@ -247,12 +247,12 @@ public class Player_Controller : MonoBehaviour
         if (wall[0])
         {         
             Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, col.bounds.size.y/2, 0.2f) * 2);
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.2f, 0.2f) * 2);
         }
         if (wall[1])
         {
             Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
-            Gizmos.DrawWireCube(pos, new Vector3(0.1f, col.bounds.size.y/2, 0.2f) * 2);
+            Gizmos.DrawWireCube(pos, new Vector3(0.1f, 0.2f, 0.2f) * 2);
         }
         if (ceiling)
         {
