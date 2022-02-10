@@ -46,7 +46,7 @@ public class Player_Controller : MonoBehaviour
     [Range(0f, 100f)] public float vertical_deadzone = 20f;
     
     private Vector2 direction;
-    private Vector2 detection;
+    public Vector2 detection;
     public bool isControlling = true;
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
@@ -141,9 +141,10 @@ public class Player_Controller : MonoBehaviour
     {
         isControlling = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        float angle = wall_jump_angle * Mathf.RoundToInt(detection.x);
+        float angle = wall_jump_angle * detection.x;
         Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
-        rb.AddForce(transform.position + (rotA * Vector3.up) * wall_jump_power, ForceMode.Force);
+        rb.AddForce((rotA * Vector3.up) * wall_jump_power, ForceMode.Force);
+        Debug.Log((rotA * Vector3.up));
         yield return new WaitForSeconds(0.15f);       
         isControlling = true;
 
@@ -165,7 +166,8 @@ public class Player_Controller : MonoBehaviour
     {
         rb.useGravity = false;
         Flip(Mathf.RoundToInt(detection.x));
-        rb.AddForce(detection * wall_grab_strength, ForceMode.Force);
+        Vector2 dir = transform.position - (transform.position - (Vector3)detection);
+        rb.AddForce(dir * wall_grab_strength, ForceMode.Force);
         if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
     public void Wall_Slide(float speed)
@@ -289,7 +291,6 @@ public class Player_Controller : MonoBehaviour
         float angle = wall_jump_angle * Mathf.RoundToInt(detection.x);
         Quaternion rot3 = Quaternion.AngleAxis(angle, Vector3.forward);
         Gizmos.DrawLine(transform.position, transform.position + (rot3 * Vector3.up));
-        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.down));
 
         #endregion
 
