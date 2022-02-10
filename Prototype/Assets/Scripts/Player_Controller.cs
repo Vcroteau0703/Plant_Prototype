@@ -130,7 +130,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial) { break; }
+            if (time > 0.2 && current_state != State.Aerial) { Debug.Log("Stop Jump"); break; }
         }
     }
     #endregion
@@ -143,7 +143,7 @@ public class Player_Controller : MonoBehaviour
         float angle = wall_jump_angle * Mathf.RoundToInt(detection.x);
         Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
         rb.AddForce(transform.position + (rotA * Vector3.up) * wall_jump_power, ForceMode.Force);
-        yield return new WaitForSeconds(0.2f);       
+        yield return new WaitForSeconds(0.15f);       
         isControlling = true;
 
         float force;
@@ -156,7 +156,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial) { break; }
+            if (current_state != State.Aerial) { Debug.Log("Stop Wall Jump"); break; }
         }
     }
     private float slide_time = 0;
@@ -180,52 +180,26 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
     }
-    private float delay = 0;
-    //private void Ground_Check()
-    //{
-    //    Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-    //    Collider[] hit = Physics.OverlapBox(pos, new Vector3(col.bounds.size.x / 2 - 0.1f, 0.1f, 0.2f), Quaternion.identity, walkable);
-    //    if(hit.Length > 0 && !wall[0] && !wall[1]) { Debug.Log("We hit: " + hit[0].name); grounded = true; delay = 0.0f; animator.SetBool("Ground", true); return; }
-    //    if (delay < coyote_jump_delay && rb.velocity.y < 0.0f) { delay += Time.deltaTime; return; }
-    //    grounded = false;
-    //    animator.SetBool("Ground", false);
-    //}
-    //private void Ceiling_Check()
-    //{
-    //    Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
-    //    Collider[] hit = Physics.OverlapBox(pos, new Vector3(0.2f, 0.1f, 0.2f), Quaternion.identity, walkable);
-    //    ceiling = hit.Length > 0 ? true : false;
-    //}
-    //private void Wall_Check()
-    //{
-    //    Vector3 posA = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.02f));
-    //    Collider[] hit_left = Physics.OverlapBox(posA, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);        
-    //    wall[0] = hit_left.Length > 0 ? true : false;
-    //    if (wall[0] && !grounded) {Wall_Grab(transform.position + Vector3.left); rb.useGravity = false; Flip(-1);}
-
-    //    Vector3 posB = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.02f));
-    //    Collider[] hit_right = Physics.OverlapBox(posB, new Vector3(0.1f, 0.5f, 0.2f), Quaternion.identity, walkable);
-    //    wall[1] = hit_right.Length > 0 ? true : false;
-    //    if (wall[1] && !grounded) {Wall_Grab(transform.position + Vector3.right); rb.useGravity = false; Flip(1);}
-
-    //    if(!wall[0] && !wall[1]) { rb.useGravity = true; slide_time = 0; animator.SetBool("Cling", false);}
-    //}
 
     private State last_state = State.Waiting;
     private void Animation_Driver()
     {
         animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
         animator.SetFloat("Speed_Y", rb.velocity.y);
-
+        animator.speed = rb.velocity.magnitude / max_air_speed;
         switch (current_state)
         {
             case State.Grounded:
-                animator.SetBool("Ground", true);
+                if(direction.x != 0) { animator.Play("Walk", 0); }
+                else { animator.speed = 1; animator.Play("Idle"); }
                 break;
-            case State.Aerial:     
+            case State.Aerial:
+                if(rb.velocity.y < 0){ animator.Play("Fall", 0); }
+                else { animator.Play("Aerial", 0); }
                 break;
-            case State.Cling:               
-                animator.SetBool("Cling", true);                                           
+            case State.Cling:
+                animator.speed = 1;
+                animator.Play("Cling", 0);
                 break;
             case State.Ceiling:
                 break;
@@ -239,6 +213,7 @@ public class Player_Controller : MonoBehaviour
 
     private void Reset_Animation_Parameters()
     {
+        animator.speed = 1;
         animator.SetBool("Ground", false);
         animator.SetBool("Cling", false);
         animator.ResetTrigger("Jump");
@@ -266,6 +241,7 @@ public class Player_Controller : MonoBehaviour
     {
         current_state = State.Aerial;
         rb.useGravity = true;
+        slide_time = 0;
     }
 
     private void OnCollisionStay(Collision collision)
