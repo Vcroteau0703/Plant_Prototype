@@ -139,11 +139,10 @@ public class Player_Controller : MonoBehaviour
     public IEnumerator Wall_Jump()
     {
         isControlling = false;
-        //grounded = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        Quaternion rotA = Quaternion.AngleAxis(wall_jump_angle, Vector3.forward);
-        //FIX
-        rb.AddForce(rotA * Vector3.right * wall_jump_power, ForceMode.Force);
+        float angle = wall_jump_angle * Mathf.RoundToInt(detection.x);
+        Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
+        rb.AddForce(transform.position + (rotA * Vector3.up) * wall_jump_power, ForceMode.Force);
         yield return new WaitForSeconds(0.2f);       
         isControlling = true;
 
@@ -163,7 +162,8 @@ public class Player_Controller : MonoBehaviour
     private float slide_time = 0;
     public void Wall_Grab()
     {
-        animator.SetBool("Cling", true);
+        rb.useGravity = false;
+        Flip(Mathf.RoundToInt(detection.x));
         rb.AddForce(detection * wall_grab_strength, ForceMode.Force);
         if (slide_time < landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(landing_slide_speed);}        
     }
@@ -225,7 +225,7 @@ public class Player_Controller : MonoBehaviour
             case State.Aerial:     
                 break;
             case State.Cling:               
-                animator.SetBool("Cling", true);
+                animator.SetBool("Cling", true);                                           
                 break;
             case State.Ceiling:
                 break;
@@ -265,6 +265,7 @@ public class Player_Controller : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         current_state = State.Aerial;
+        rb.useGravity = true;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -274,11 +275,11 @@ public class Player_Controller : MonoBehaviour
         float angle = Vector3.Angle(dir, -transform.up);
         detection = dir;
 
-        if (angle < slope_angle) { current_state = State.Grounded; }
-        else if(angle > 180 - ceiling_angle) { current_state = State.Ceiling; }
-        else if(angle > slope_angle && angle < 180 - ceiling_angle) { 
-            current_state = State.Cling; Wall_Grab(); rb.useGravity = false; Flip(Mathf.RoundToInt(detection.x)); }
-        else { current_state = State.Waiting; }    
+        if (angle < slope_angle) { current_state = State.Grounded; } // GROUND
+        else if(angle > 180 - ceiling_angle) { current_state = State.Ceiling; } // CEILING
+        else if(angle > slope_angle && angle < 180 - ceiling_angle) { current_state = State.Cling; Wall_Grab(); } // WALL 
+        else { current_state = State.Waiting; } // WAITING (DEFAULT)
+
         Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
     }
 
@@ -301,6 +302,15 @@ public class Player_Controller : MonoBehaviour
         Quaternion rot2 = Quaternion.AngleAxis((-slope_angle), Vector3.forward);
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot * Vector2.down));
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+        #endregion
+
+        #region WALL JUMP ANGLE
+        Gizmos.color = Color.blue;
+        float angle = wall_jump_angle * Mathf.RoundToInt(detection.x);
+        Quaternion rot3 = Quaternion.AngleAxis(angle, Vector3.forward);
+        Gizmos.DrawLine(transform.position, transform.position + (rot3 * Vector3.up));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.down));
+
         #endregion
 
         #region PLAYER BOUNDS
