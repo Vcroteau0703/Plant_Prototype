@@ -37,15 +37,16 @@ public class Player_Controller : MonoBehaviour
     public float landing_slide_speed = 5.0f;
     public float wall_slide_speed = 5.0f;
     public float wall_slide_smoothing = 0.1f;
-    [Header("Input Settings")]
-    [Range(0f, 100f)] public float horizontal_deadzone = 20f;
-    [Range(0f, 100f)] public float vertical_deadzone = 20f;
     [Header("Detection Settings")]
     public float slope_angle = 30f;
     public float ceiling_angle = 30f;
-
+    public float min_climb_height = 1f;
+    [Header("Input Settings")]
+    [Range(0f, 100f)] public float horizontal_deadzone = 20f;
+    [Range(0f, 100f)] public float vertical_deadzone = 20f;
+    
     private Vector2 direction;
-    public Vector2 detection;
+    private Vector2 detection;
     public bool isControlling = true;
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
@@ -109,10 +110,10 @@ public class Player_Controller : MonoBehaviour
         switch (current_state)
         {
             case State.Grounded:
-                StartCoroutine(Jump()); animator.SetTrigger("Jump");
+                StartCoroutine(Jump()); animator.Play("Jump_01");
                 break;
             case State.Cling:
-                StartCoroutine(Wall_Jump()); animator.SetTrigger("Wall_Jump");
+                StartCoroutine(Wall_Jump()); animator.SetTrigger("Jump_03");
                 break;
         }
     }   
@@ -130,7 +131,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (time > 0.2 && current_state != State.Aerial) { Debug.Log("Stop Jump"); break; }
+            if (time > 0.2 && current_state != State.Aerial) { break; }
         }
     }
     #endregion
@@ -156,7 +157,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial) { Debug.Log("Stop Wall Jump"); break; }
+            if (current_state != State.Aerial) { break; }
         }
     }
     private float slide_time = 0;
@@ -194,7 +195,7 @@ public class Player_Controller : MonoBehaviour
                 else { animator.speed = 1; animator.Play("Idle"); }
                 break;
             case State.Aerial:
-                if(rb.velocity.y < 0){ animator.Play("Fall", 0); }
+                if (rb.velocity.y < 0) { animator.Play("Fall", 0); }
                 else { animator.Play("Aerial", 0); }
                 break;
             case State.Cling:
@@ -214,10 +215,10 @@ public class Player_Controller : MonoBehaviour
     private void Reset_Animation_Parameters()
     {
         animator.speed = 1;
-        animator.SetBool("Ground", false);
-        animator.SetBool("Cling", false);
-        animator.ResetTrigger("Jump");
-        animator.ResetTrigger("Wall_Jump");
+        //animator.SetBool("Ground", false);
+        //animator.SetBool("Cling", false);
+        //animator.ResetTrigger("Jump");
+        //animator.ResetTrigger("Wall_Jump");
     }
 
     private void Flip(int direction)
@@ -242,6 +243,7 @@ public class Player_Controller : MonoBehaviour
         current_state = State.Aerial;
         rb.useGravity = true;
         slide_time = 0;
+        detection = Vector3.zero;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -250,10 +252,12 @@ public class Player_Controller : MonoBehaviour
         Vector3 dir = p - transform.position;     
         float angle = Vector3.Angle(dir, -transform.up);
         detection = dir;
+        float height = collision.GetContact(0).otherCollider.bounds.size.y;
+        Debug.Log("height: " + height);
 
         if (angle < slope_angle) { current_state = State.Grounded; } // GROUND
         else if(angle > 180 - ceiling_angle) { current_state = State.Ceiling; } // CEILING
-        else if(angle > slope_angle && angle < 180 - ceiling_angle) { current_state = State.Cling; Wall_Grab(); } // WALL 
+        else if(angle > slope_angle && angle < 180 - ceiling_angle && height > min_climb_height) { current_state = State.Cling; Wall_Grab(); } // WALL 
         else { current_state = State.Waiting; } // WAITING (DEFAULT)
 
         Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
@@ -294,30 +298,6 @@ public class Player_Controller : MonoBehaviour
         Gizmos.DrawCube(transform.position + Player_Bounds.center, Player_Bounds.size);
         Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
         Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
-        #endregion
-
-        Gizmos.color = new Color(1.0f, 1.0f, 0.1f, 0.5f);
-        #region SURFACE INDICATORS
-        //if (grounded)
-        //{
-        //    //Vector3 pos = (transform.position - (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.down * 0.1f));
-        //    //Gizmos.DrawCube(transform.position, new Vector3(feet.max.x, feet.extents.y, feet.max.z));
-        //}
-        //if (wall[0])
-        //{         
-        //    Vector3 pos = (transform.position - (Vector3.left * -(col.bounds.size.x / 2)) + (Vector3.left * 0.1f));
-        //    Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
-        //}
-        //if (wall[1])
-        //{
-        //    Vector3 pos = (transform.position - (Vector3.right * -(col.bounds.size.x / 2)) + (Vector3.right * 0.1f));
-        //    Gizmos.DrawCube(pos, new Vector3(0.1f, 0.5f, 0.2f) * 2);
-        //}
-        //if (ceiling)
-        //{
-        //    Vector3 pos = (transform.position + (Vector3.up * (col.bounds.size.y / 2)) + (Vector3.up * 0.1f));
-        //    Gizmos.DrawCube(pos, new Vector3(col.bounds.size.x / 2, 0.1f, 0.2f) * 2);
-        //}
         #endregion
     }
 }

@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534430b34e876a043997b41f78aca379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feet:
-    m_Center: {x: 0, y: -0.9, z: 0}
-    m_Extent: {x: 0.7, y: 0.1, z: 1}
+  Player_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 1, y: 1, z: 1}
   move_speed: 8
   move_smoothing: 0.2
   downforce: 15
@@ -73,6 +73,11 @@ MonoBehaviour:
   wall_slide_smoothing: 0.02
   horizontal_deadzone: 50
   vertical_deadzone: 50
+  slope_angle: 30
+  ceiling_angle: 30
+  detection: {x: 0, y: 0}
+  isControlling: 1
+  current_state: 0
 --- !u!212 &6061469062083727000
 SpriteRenderer:
   m_ObjectHideFlags: 0
