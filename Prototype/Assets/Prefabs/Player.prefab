@@ -71,11 +71,11 @@ MonoBehaviour:
   landing_slide_speed: 10
   wall_slide_speed: 25
   wall_slide_smoothing: 0.02
-  horizontal_deadzone: 50
-  vertical_deadzone: 50
   slope_angle: 30
   ceiling_angle: 30
-  detection: {x: 0, y: 0}
+  min_climb_height: 1
+  horizontal_deadzone: 50
+  vertical_deadzone: 50
   isControlling: 1
   current_state: 0
 --- !u!212 &6061469062083727000
