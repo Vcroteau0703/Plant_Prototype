@@ -54,7 +54,6 @@ public class Player_Controller : MonoBehaviour
 
 
     #endregion
-
     private void Awake()
     {
         rb = TryGetComponent(out Rigidbody r) ? r : null;
