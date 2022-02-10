@@ -5,9 +5,9 @@ using UnityEditor;
 
 public class Checkpoint : MonoBehaviour, ICheckpoint
 {
-    public Bounds bounds;
+    public Bounds bounds = new Bounds(Vector3.zero, Vector3.one * 2);
     public LayerMask trigger_filter;
-    public enum State { Disabled = default, Active, Inactive}
+    public enum State { Inactive = default, Disabled, Active}
     public State state = default;
     private void Update()
     {
@@ -48,10 +48,20 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(0.0f, 1.0f, 0.0f, 0.4f);
-        Gizmos.DrawCube(transform.position, Vector3.one);
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireCube(transform.position, Vector3.one);
+        if (state == State.Active)
+        {
+            Gizmos.color = new Color(0.0f, 1.0f, 0.0f, 0.4f);
+            Gizmos.DrawCube(transform.position + bounds.center, bounds.size);
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireCube(transform.position + bounds.center, bounds.size);
+        }
+        else
+        {
+            Gizmos.color = new Color(1.0f, 0.0f, 0.0f, 0.4f);
+            Gizmos.DrawCube(transform.position + bounds.center, bounds.size);
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireCube(transform.position + bounds.center, bounds.size);
+        }
     }
 
     #region EDITOR
