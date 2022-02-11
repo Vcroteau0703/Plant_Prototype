@@ -22,14 +22,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Interact",
-                    "type": "Button",
-                    "id": "5d4f1a49-2a09-411f-a292-c3e7e89cc0b7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Drop",
                     "type": "Button",
                     "id": "d17bb22a-7d88-4a90-bffc-6a09172b069f",
@@ -42,6 +34,30 @@
                     "type": "Value",
                     "id": "661adf6b-5fc0-489d-a979-739ef2e1423c",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "37d21709-5980-445f-b349-34eace5e3373",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "9f6018bf-0971-4adb-8a29-6de3ea4aa7b0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "473d9208-0f56-44ad-a14d-e155545fa3fd",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -247,28 +263,6 @@
                 },
                 {
                     "name": "",
-                    "id": "28bb3c1a-e239-475d-99f0-23650c0e45b3",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "81366f38-8abd-4202-9eaf-52c3c81ac910",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b6aab0f9-146f-4d2c-8107-31f117bd042b",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
@@ -286,6 +280,72 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Pointer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17d7e45e-a5a6-4515-a385-2e85a3c963ff",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "275bf37f-3a7a-4dd4-8de8-5b3daa62c1b4",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3e74aa3-c738-42ca-addd-e897c4b7eed6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21a0c821-a70b-4410-ae0a-64d4468cdb0d",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df015d14-18aa-4ce4-8563-bf8a7ee41078",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48fe2a14-e4f1-4166-9880-c56c11f0436d",
+                    "path": "<XInputController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

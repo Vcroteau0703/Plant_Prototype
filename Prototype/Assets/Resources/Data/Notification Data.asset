@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5cc4c1710af034fa57fd70b9728efb, type: 3}
+  m_Name: Notification Data
+  m_EditorClassIdentifier: 
+  defaultNotificationCanvas: {fileID: 6640751647949433944, guid: 9eb4c6ae806939544adbc9c98620da3f, type: 3}
+  defaultActionWindow: {fileID: 4679845885770315674, guid: 93a22bba2fd84344fb6d765886bbab09, type: 3}
+  defaultSystemNotify: {fileID: 2131634511817445747, guid: b667d0697e59da04eb20afad506b641c, type: 3}

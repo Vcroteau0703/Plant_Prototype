@@ -8,7 +8,7 @@ public class Hazard : MonoBehaviour
 
     private void Awake()
     {
-        if (!GetComponent<Collider>()){ Debug.LogError("MISSING COMPONENT: " + this.gameObject.name + " is missing a collider."); };
+        //if (!GetComponent<Collider>()){ Debug.LogError("MISSING COMPONENT: " + this.gameObject.name + " is missing a collider."); };
     }
     private void OnCollisionEnter(Collision collision)
     {
