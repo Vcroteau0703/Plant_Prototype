@@ -49,36 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534430b34e876a043997b41f78aca379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: c91c78ca3962ec14b96c397db13de748, type: 2}
   Player_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1, y: 1, z: 1}
-  move_speed: 8
-  move_smoothing: 0.2
-  downforce: 3
-  walkable:
-    serializedVersion: 2
-    m_Bits: 65
-  jump_power: 350
-  floatiness: 0.5
-  weight: 20
-  coyote_jump_delay: 0.15
-  air_control: 1
-  max_air_speed: 7
-  max_fall_speed: 10
-  wall_jump_power: 450
-  wall_grab_strength: 10
-  wall_jump_angle: 30
-  wall_release_strength: 5.5
-  landing_slide_duration: 0.2
-  landing_slide_speed: 10
-  wall_slide_speed: 25
-  wall_slide_smoothing: 0.02
-  slope_angle: 30
-  ceiling_angle: 30
-  min_climb_height: 1
-  horizontal_deadzone: 50
-  vertical_deadzone: 50
-  detection: {x: 0, y: 0}
+  show_bounds: 1
   isControlling: 1
   current_state: 0
 --- !u!212 &6061469062083727000
@@ -194,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  max_health: 1
 --- !u!114 &7987982498921918015
 MonoBehaviour:
   m_ObjectHideFlags: 0
