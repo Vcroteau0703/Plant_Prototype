@@ -8,10 +8,10 @@ public class Parallax : MonoBehaviour
     private float length, startpos;
     public float parallaxFactor;
     public GameObject cam;
-    public CinemachineVirtualCameraBase cinemachineVirtualCamera;
-    public CinemachineConfiner camConfiner;
     public float PixelsPerUnit;
     public Vector3 newPosition;
+    public float leftBounds;
+    public float rightBounds;
 
     private void Awake()
     {
@@ -26,12 +26,9 @@ public class Parallax : MonoBehaviour
 
         newPosition = new Vector3(startpos + distance, transform.position.y, transform.position.z);
 
-        if (camConfiner.CameraWasDisplaced(cinemachineVirtualCamera))   if(camConfiner.GetCameraDisplacementDistance(cinemachineVirtualCamera) > 10)
-            {
-                Debug.Log("Camera Displacement = " + camConfiner.GetCameraDisplacementDistance(cinemachineVirtualCamera));
-            }
-
-        transform.position = PixelPerfectClamp(newPosition, PixelsPerUnit);
+        Vector3 updatedPos = PixelPerfectClamp(newPosition, PixelsPerUnit);
+        //updatedPos.x = Mathf.Clamp(updatedPos.x, leftBounds, rightBounds);
+        transform.position = updatedPos;
     }
 
     private Vector3 PixelPerfectClamp(Vector3 locationVector, float pixelsPerUnit)
