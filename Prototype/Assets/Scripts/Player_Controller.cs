@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
 {
+    public static Player_Controller instance;
     //Class References
     private Controls controls;
     private Rigidbody rb;
@@ -56,6 +57,7 @@ public class Player_Controller : MonoBehaviour
     #endregion
     private void Awake()
     {
+        instance = this;
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;      

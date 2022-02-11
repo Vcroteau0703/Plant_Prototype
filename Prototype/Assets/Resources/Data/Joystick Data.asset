@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f401ead3c94964690dce284d25fac4, type: 3}
+  m_Name: Joystick Data
+  m_EditorClassIdentifier: 
+  JoystickUI:
+  - joystickName: Xbox
+    interact: {fileID: -2016434858499896805, guid: ec8a2dbbf63ed5944a61e60b6491dbe5, type: 3}
