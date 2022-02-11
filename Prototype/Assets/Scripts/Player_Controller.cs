@@ -16,12 +16,16 @@ public class Player_Controller : MonoBehaviour
     public Bounds Player_Bounds;
     public bool show_bounds;
 
-    private Vector2 direction;
-    private Vector2 detection;
+    public float jump_buffer = 0.2f;
+    public float wall_jump_buffer = 0.15f;
+    public Vector2 direction;
+    public Vector2 detection;
     public bool isControlling = true;
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
     public State current_state;
+    public State last_state = State.Waiting;
+
 
     private void Awake()
     {
@@ -55,12 +59,12 @@ public class Player_Controller : MonoBehaviour
         switch (current_state)
         {
             default: break;
-            case State.Grounded:
+            case State.Grounded:                
                 speed = direction.x * settings.move_speed;
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
                 break;
             case State.Cling:
-                if(direction.y < 0) { Wall_Slide(settings.wall_slide_speed); }
+                if (direction.y < 0) { Wall_Slide(settings.wall_slide_speed); }
                 if(direction.x != 0) {
                     speed = direction.x * settings.move_speed * settings.wall_release_strength / 100;
                     rb.velocity = new Vector3(speed, rb.velocity.y, 0);}
@@ -69,54 +73,13 @@ public class Player_Controller : MonoBehaviour
                 speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * settings.move_speed, settings.air_control), -settings.max_air_speed, settings.max_air_speed);
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
                 break;
-        }
-    }
-    #endregion
-
-    #region JUMP
-    private void Request_Jump(InputAction.CallbackContext context)
-    {
-        switch (current_state)
-        {
-            case State.Grounded:
-                StartCoroutine(Jump()); animator.Play("Jump_01");
-                break;
-            case State.Cling:
-                StartCoroutine(Wall_Jump()); animator.SetTrigger("Jump_03");
+            case State.Ceiling:
                 break;
         }
-    }   
-    private IEnumerator Jump()
-    {              
-        float force;
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        rb.AddForce(Vector3.up * settings.jump_power, ForceMode.Force);
-        float time = 0;
-        while (time >= 0)
-        {
-            time += Time.deltaTime;
-            force = -Mathf.Pow(time, 2) / (1/ settings.weight *10) + settings.floatiness;
-            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * settings.downforce; }
-            if (rb.velocity.y > -settings.max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
-            rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, float.PositiveInfinity), rb.velocity.z);
-            yield return new WaitForEndOfFrame();
-            if (time > 0.2 && current_state != State.Aerial) { break; }
-        }
     }
-    #endregion
 
-    #region WALL JUMP
-    public IEnumerator Wall_Jump()
+    private IEnumerator Fall()
     {
-        isControlling = false;
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        float angle = settings.wall_jump_angle * detection.x;
-        Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
-        rb.AddForce((rotA * Vector3.up) * settings.wall_jump_power, ForceMode.Force);
-        Debug.Log((rotA * Vector3.up));
-        yield return new WaitForSeconds(0.15f);       
-        isControlling = true;
-
         float force;
         float time = 0;
         while (time >= 0)
@@ -130,17 +93,58 @@ public class Player_Controller : MonoBehaviour
             if (current_state != State.Aerial) { break; }
         }
     }
+    #endregion
+
+    #region JUMP
+    private void Request_Jump(InputAction.CallbackContext context)
+    {
+        Notification_System.Send_SystemNotify("Jump action has been pressed", Color.green);
+        switch (current_state)
+        {
+            case State.Grounded:
+                StartCoroutine(Jump()); animator.Play("Jump_01");
+                break;
+            case State.Cling:
+                StartCoroutine(Wall_Jump()); animator.SetTrigger("Jump_03");
+                break;
+        }
+    }   
+    private IEnumerator Jump()
+    {
+        controls.Player.Jump.Disable();
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.AddForce(Vector3.up * settings.jump_power, ForceMode.Force);
+        StartCoroutine(Fall());
+        yield return new WaitForSeconds(jump_buffer);
+        controls.Player.Jump.Enable();
+
+    }
+    #endregion
+
+    #region WALL JUMP
+    public IEnumerator Wall_Jump()
+    {
+        isControlling = false;
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        float angle = settings.wall_jump_angle * detection.x;
+        Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
+        rb.AddForce((rotA * transform.up) * settings.wall_jump_power, ForceMode.Force);
+        yield return new WaitForSeconds(wall_jump_buffer);       
+        isControlling = true;
+        StartCoroutine(Fall());
+    }
     private float slide_time = 0;
     public void Wall_Grab()
     {
+        Debug.Log("GRAB");
         rb.useGravity = false;
-        Flip(Mathf.RoundToInt(detection.x));
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
         rb.AddForce(dir * settings.wall_grab_strength, ForceMode.Force);
         if (slide_time < settings.landing_slide_duration){slide_time += Time.deltaTime; Wall_Slide(settings.landing_slide_speed);}        
     }
     public void Wall_Slide(float speed)
-    {        
+    {
+        Debug.Log("SLIDE");
         transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (speed / 10), settings.wall_slide_smoothing);
     }
     #endregion
@@ -153,7 +157,6 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Jump.performed += Request_Jump;
     }
 
-    private State last_state = State.Waiting;
     private void Animation_Driver()
     {
         animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
@@ -195,9 +198,7 @@ public class Player_Controller : MonoBehaviour
     private void Flip(int direction)
     {
         switch (direction) {
-            default:
-                if (detection.x < 0) { Flip(1); }
-                else if(detection.x > 0) { Flip(-1); }
+            default:                
                 break;
             case 1:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -208,11 +209,17 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
+    //private void Rotation()
+    //{
+    //    float angle = Vector3.Angle(detection, -Vector3.up);
+    //    Debug.Log("Angle: " + angle);
+    //    transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -angle);
+    //}
+
     private IEnumerator Delay_State(State state, float t)
     {
-        while(t > 0 && rb.velocity.y <= 0)
+        while(t > 0 && controls.Player.Jump.enabled)
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             t -= Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
@@ -225,10 +232,15 @@ public class Player_Controller : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if(last_state == State.Grounded && rb.velocity.y < 0)
+        if(current_state == State.Grounded)
         {
             StartCoroutine(Delay_State(State.Aerial, settings.coyote_jump_delay));
             return;
+        }
+
+        if (last_state == State.Cling)
+        {
+            Flip((int)((-detection.x % 1) + (-detection.x / 1)));
         }
         current_state = State.Aerial;
         rb.useGravity = true;
@@ -236,16 +248,26 @@ public class Player_Controller : MonoBehaviour
         detection = Vector3.zero;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(current_state == State.Cling)
+        {
+            Flip((int)((detection.x % 1) + (detection.x / 1)));
+        }
+    }
+
+
+
     private void OnCollisionStay(Collision collision)
     {
         Vector3 p = collision.GetContact(0).point;
         Vector3 dir = p - transform.position;     
-        float angle = Vector3.Angle(dir, -transform.up);
+        float angle = Vector3.Angle(dir, -Vector3.up);
         detection = dir;
         float height = collision.GetContact(0).otherCollider.bounds.size.y;
 
         if (angle < settings.slope_angle) { current_state = State.Grounded; } // GROUND
-        else if(angle > 180 - settings.ceiling_angle) { current_state = State.Ceiling; } // CEILING
+        else if(angle > 180 - settings.ceiling_angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
         else if(angle > settings.slope_angle && angle < 180 - settings.ceiling_angle && height > settings.min_climb_height) { current_state = State.Cling; Wall_Grab(); } // WALL 
         else { current_state = State.Waiting; } // WAITING (DEFAULT)
 
@@ -256,6 +278,7 @@ public class Player_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Rotation();
         Movement();
         Animation_Driver();
     }

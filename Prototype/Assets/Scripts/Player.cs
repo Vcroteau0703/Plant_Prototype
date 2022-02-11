@@ -24,7 +24,9 @@ public class Player : MonoBehaviour, IDamagable
                 x = c.Get_Active_Checkpoint();
                 if(x != null) {
                     health = max_health;
-                    transform.position = x.transform.position; return; 
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    transform.position = x.transform.position; 
+                    return; 
                 }
             }
         }
