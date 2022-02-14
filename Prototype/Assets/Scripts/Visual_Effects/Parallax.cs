@@ -10,6 +10,7 @@ public class Parallax : MonoBehaviour
     public GameObject cam;
     public float PixelsPerUnit;
     public Vector3 newPosition;
+    public Vector3 updatedPos;
     public float leftBounds;
     public float rightBounds;
 
@@ -26,7 +27,7 @@ public class Parallax : MonoBehaviour
 
         newPosition = new Vector3(startpos + distance, transform.position.y, transform.position.z);
 
-        Vector3 updatedPos = PixelPerfectClamp(newPosition, PixelsPerUnit);
+        updatedPos = PixelPerfectClamp(newPosition, PixelsPerUnit);
         //updatedPos.x = Mathf.Clamp(updatedPos.x, leftBounds, rightBounds);
         transform.position = updatedPos;
     }
