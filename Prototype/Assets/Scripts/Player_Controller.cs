@@ -164,7 +164,15 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Switch_Controls.performed += Switch_Settings;
+        controls.Player.Pause.performed += Request_Pause;
     }
+
+    private void Request_Pause(InputAction.CallbackContext context)
+    {
+        ActionWindow.ButtonFunction function = Application.Quit;
+        Notification_System.Send_ActionWindow("Do you want to exit the game?", "Exit", function);
+    }
+   
 
     private void Animation_Driver()
     {

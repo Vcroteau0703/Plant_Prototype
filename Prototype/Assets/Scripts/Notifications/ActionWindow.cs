@@ -17,6 +17,10 @@ public class ActionWindow : MonoBehaviour
     private void Start()
     {
         EventSystem.current.SetSelectedGameObject(ActionButton);
+        if (Player_Controller.instance)
+        {
+            Player_Controller.instance.isControlling = false;
+        }
     }
 
     public void SetAttributes(string message, string buttonText, ButtonFunction buttonFunction)
@@ -36,7 +40,7 @@ public class ActionWindow : MonoBehaviour
         Destroy(gameObject, delay);
         if (Player_Controller.instance)
         {
-            Player_Controller.instance.isControlling = false;
+            Player_Controller.instance.isControlling = true;
         }  
     }
 }
