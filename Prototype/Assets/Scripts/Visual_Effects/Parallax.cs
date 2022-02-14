@@ -13,6 +13,7 @@ public class Parallax : MonoBehaviour
     public Vector3 updatedPos;
     public float leftBounds;
     public float rightBounds;
+    public bool isSky;
 
     private void Awake()
     {
@@ -25,10 +26,21 @@ public class Parallax : MonoBehaviour
     {
         float distance = cam.transform.position.x * parallaxFactor;
 
-        newPosition = new Vector3(startpos + distance, transform.position.y, transform.position.z);
+        if (isSky)
+        {
+            float distanceY = cam.transform.position.y * parallaxFactor;
+            newPosition = new Vector3(startpos + distance, startpos + distanceY, transform.position.z);
+        }
+        else
+        {
+            newPosition = new Vector3(startpos + distance, transform.position.y, transform.position.z);
+        }
+
 
         updatedPos = PixelPerfectClamp(newPosition, PixelsPerUnit);
+
         //updatedPos.x = Mathf.Clamp(updatedPos.x, leftBounds, rightBounds);
+
         transform.position = updatedPos;
     }
 
