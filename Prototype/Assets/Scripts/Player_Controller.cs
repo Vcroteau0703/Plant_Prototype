@@ -18,14 +18,18 @@ public class Player_Controller : MonoBehaviour
 
     public float jump_buffer = 0.2f;
     public float wall_jump_buffer = 0.15f;
+
+    [Header("Debug")]
+    public Player_Control_Settings[] setting_presets;
+    public LineRenderer line_rend;
     private Vector2 direction;
     private Vector2 detection;
-    public Vector2 momentum;
+    private Vector2 momentum;
     public bool isControlling = true;
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
     public State current_state;
-    public State last_state = State.Waiting;
+    private State last_state = default;
 
 
     private void Awake()
@@ -37,6 +41,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void OnEnable()
     {
+        settings = setting_presets.Length > 0 ? setting_presets[0] : settings;
         controls = controls == null ? new Controls() : controls;
         Subscribe_Actions();
         controls.Player.Enable();
@@ -53,6 +58,7 @@ public class Player_Controller : MonoBehaviour
 
     private void Movement()
     {
+        rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, rb.velocity.y));
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (!isControlling) { return; }
         float speed;      
@@ -80,6 +86,7 @@ public class Player_Controller : MonoBehaviour
 
     private IEnumerator Fall()
     {
+        yield return new WaitForEndOfFrame();
         float force;
         float time = 0;
         while (time >= 0)
@@ -90,7 +97,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -settings.max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial) { Debug.Log("STOP"); break; }
+            if (current_state != State.Aerial && controls.Player.Jump.enabled) { break; }
         }
     }
     #endregion
@@ -116,21 +123,22 @@ public class Player_Controller : MonoBehaviour
         StartCoroutine(Fall());
         yield return new WaitForSeconds(jump_buffer);
         controls.Player.Jump.Enable();
-
     }
     #endregion
 
     #region WALL JUMP
     public IEnumerator Wall_Jump()
     {
+        controls.Player.Jump.Disable();
         isControlling = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         float angle = settings.wall_jump_angle * detection.x;
         Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
         rb.AddForce((rotA * transform.up) * settings.wall_jump_power, ForceMode.Force);
+        StartCoroutine(Fall());
         yield return new WaitForSeconds(wall_jump_buffer);       
         isControlling = true;
-        StartCoroutine(Fall());
+        controls.Player.Jump.Enable();
     }
     private float slide_time = 0;
     public void Wall_Grab()
@@ -270,12 +278,14 @@ public class Player_Controller : MonoBehaviour
     private int index = 0;
     private void Switch_Settings(InputAction.CallbackContext context)
     {
-        Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.red);
+        index = setting_presets.Length-1 > index ? index+=1 : 0;
+        settings = setting_presets[index];
+        Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
     }
 
     #endregion
 
-    private void Update()
+    private void FixedUpdate()
     {
         //if (momentum.x != 0) { rb.velocity = new Vector2(momentum.x, rb.velocity.y); }
         //Debug.Log("Velocity X: " + rb.velocity.x);
@@ -290,6 +300,17 @@ public class Player_Controller : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
+        #region JUMP TRAJECTORY
+        //Vector3[] verts = new Vector3[10];
+        //for(int x = 0; x < verts.Length; x++)
+        //{
+        //    float force = -Mathf.Pow(x, 2) / (1 / settings.weight * 10) + settings.floatiness;
+        //    verts[x] = transform.position + new Vector3(force, x, 0);
+        //}
+        //line_rend.SetPositions(verts);
+        //line_rend.startColor = Color.blue;
+        #endregion
+
         #region SLOPE ANGLE BOUNDS
         Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
         Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
