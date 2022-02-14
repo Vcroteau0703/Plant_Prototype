@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: 456c3e089a6cea5469b17123df94f73e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8631886151694188046
+    second: SprigRun_0
+  - first:
+      213: 6514499519979016711
+    second: SprigRun_1
+  - first:
+      213: -6207092615378232885
+    second: SprigRun_2
+  - first:
+      213: 8368772206351403258
+    second: SprigRun_3
+  - first:
+      213: 4391962907505095738
+    second: SprigRun_4
+  - first:
+      213: -6976796407922275299
+    second: SprigRun_5
+  - first:
+      213: -4550995034177005266
+    second: SprigRun_6
+  - first:
+      213: 1833135632360802827
+    second: SprigRun_7
+  - first:
+      213: -7210739077203223973
+    second: SprigRun_8
+  - first:
+      213: 8126420539929009567
+    second: SprigRun_9
+  - first:
+      213: -1664558943020892434
+    second: SprigRun_10
+  - first:
+      213: 6863391486925961926
+    second: SprigRun_11
+  - first:
+      213: -8808400212791324821
+    second: SprigRun_12
+  - first:
+      213: -1390012170722808562
+    second: SprigRun_13
+  - first:
+      213: -3796521389101396609
+    second: SprigRun_14
+  - first:
+      213: -6303378164733548187
+    second: SprigRun_15
+  - first:
+      213: -1291393065054732704
+    second: SprigRun_16
+  - first:
+      213: -19229913911040330
+    second: SprigRun_17
+  - first:
+      213: -6179880027255800771
+    second: SprigRun_18
+  - first:
+      213: 9127360035915373324
+    second: SprigRun_19
+  - first:
+      213: 7665819823960705315
+    second: SprigRun_20
+  - first:
+      213: -8047358159823019543
+    second: SprigRun_21
+  - first:
+      213: 7807306331150878829
+    second: SprigRun_22
+  - first:
+      213: 8564292765070190223
+    second: SprigRun_23
+  - first:
+      213: 8302758943820800328
+    second: SprigRun_24
+  - first:
+      213: -8479575125738074748
+    second: SprigRun_25
+  - first:
+      213: -647852333060825025
+    second: SprigRun_26
+  - first:
+      213: 4157062594084476216
+    second: SprigRun_27
+  - first:
+      213: -5788038057594044110
+    second: SprigRun_28
+  - first:
+      213: 4512091964406019214
+    second: SprigRun_29
+  - first:
+      213: 3902661854571089975
+    second: SprigRun_30
+  - first:
+      213: -881404401962177253
+    second: SprigRun_31
+  - first:
+      213: 4999446416592802167
+    second: SprigRun_32
+  - first:
+      213: 8125228397067137191
+    second: SprigRun_33
+  - first:
+      213: -8094312488879860495
+    second: SprigRun_34
+  - first:
+      213: -7314705127738414225
+    second: SprigRun_35
+  - first:
+      213: 7276211717288719146
+    second: SprigRun_36
+  - first:
+      213: -7403636604057382701
+    second: SprigRun_37
+  - first:
+      213: -7145812579915611968
+    second: SprigRun_38
+  - first:
+      213: 5905162414057341602
+    second: SprigRun_39
+  - first:
+      213: -435060258537180846
+    second: SprigRun_40
+  - first:
+      213: -5510367532358746828
+    second: SprigRun_41
+  - first:
+      213: -7646812844163907292
+    second: SprigRun_42
+  - first:
+      213: -1254637057021737889
+    second: SprigRun_43
+  - first:
+      213: -588511884240445350
+    second: SprigRun_44
+  - first:
+      213: 2678223007768164458
+    second: SprigRun_45
+  - first:
+      213: 5028089816687349844
+    second: SprigRun_46
+  - first:
+      213: -2196173021048043510
+    second: SprigRun_47
+  - first:
+      213: 3589708136757900761
+    second: SprigRun_48
+  - first:
+      213: -1677457755865493719
+    second: SprigRun_49
+  - first:
+      213: -2114402079415105503
+    second: SprigRun_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e7855a8be9ac770800000000000000
+      internalID: 8631886151694188046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7025dc15cc6286a50800000000000000
+      internalID: 6514499519979016711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_2
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc91e64272afbd9a0800000000000000
+      internalID: -6207092615378232885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_3
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8ccb56bf9d32470800000000000000
+      internalID: 8368772206351403258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_4
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a347888aef263fc30800000000000000
+      internalID: 4391962907505095738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_5
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c4293b1a07d2f90800000000000000
+      internalID: -6976796407922275299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_6
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29105de02e97d0c0800000000000000
+      internalID: -4550995034177005266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_7
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a0aff252b907910800000000000000
+      internalID: 1833135632360802827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_8
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a164f630f4eeb90800000000000000
+      internalID: -7210739077203223973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_9
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d18e9ec68d6c070800000000000000
+      internalID: 8126420539929009567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_10
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee3a85e57c46e8e0800000000000000
+      internalID: -1664558943020892434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_11
+      rect:
+        serializedVersion: 2
+        x: 6710
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca79ac813aaf3f50800000000000000
+      internalID: 6863391486925961926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_12
+      rect:
+        serializedVersion: 2
+        x: 7320
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f0915eca642c580800000000000000
+      internalID: -8808400212791324821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_13
+      rect:
+        serializedVersion: 2
+        x: 7930
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0de89a9b4fa5bce0800000000000000
+      internalID: -1390012170722808562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_14
+      rect:
+        serializedVersion: 2
+        x: 8540
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d407459eb005bc0800000000000000
+      internalID: -3796521389101396609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_15
+      rect:
+        serializedVersion: 2
+        x: 9150
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5696a16b4f6e588a0800000000000000
+      internalID: -6303378164733548187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_16
+      rect:
+        serializedVersion: 2
+        x: 9760
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e720479dc041ee0800000000000000
+      internalID: -1291393065054732704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_17
+      rect:
+        serializedVersion: 2
+        x: 10370
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b66544ce7eabbff0800000000000000
+      internalID: -19229913911040330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_18
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cf2ec8bd7ac3aa0800000000000000
+      internalID: -6179880027255800771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_19
+      rect:
+        serializedVersion: 2
+        x: 11590
+        y: 660
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b15d50895eaae70800000000000000
+      internalID: 9127360035915373324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329435fb386726a60800000000000000
+      internalID: 7665819823960705315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_21
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1686fe36a025090800000000000000
+      internalID: -8047358159823019543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_22
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6808e84ebf195c60800000000000000
+      internalID: 7807306331150878829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_23
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86e47ee4ea7ad670800000000000000
+      internalID: 8564292765070190223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_24
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841e22ef443593370800000000000000
+      internalID: 8302758943820800328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_25
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dc420995f725a80800000000000000
+      internalID: -8479575125738074748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_26
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30600d4cbd5207f0800000000000000
+      internalID: -647852333060825025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_27
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835187d776ad0b930800000000000000
+      internalID: 4157062594084476216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_28
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2314aae8d02ccafa0800000000000000
+      internalID: -5788038057594044110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_29
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84b05c4cbb2e9e30800000000000000
+      internalID: 4512091964406019214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_30
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7305d20974a092630800000000000000
+      internalID: 3902661854571089975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_31
+      rect:
+        serializedVersion: 2
+        x: 6710
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d2495cd5f94c3f0800000000000000
+      internalID: -881404401962177253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_32
+      rect:
+        serializedVersion: 2
+        x: 7320
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7711d96170a916540800000000000000
+      internalID: 4999446416592802167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_33
+      rect:
+        serializedVersion: 2
+        x: 7930
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a07a168d2c92c070800000000000000
+      internalID: 8125228397067137191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_34
+      rect:
+        serializedVersion: 2
+        x: 8540
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4de474da93baf80800000000000000
+      internalID: -8094312488879860495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_35
+      rect:
+        serializedVersion: 2
+        x: 9150
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b6c68f072fc7a90800000000000000
+      internalID: -7314705127738414225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_36
+      rect:
+        serializedVersion: 2
+        x: 9760
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23778f710c4af460800000000000000
+      internalID: 7276211717288719146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_37
+      rect:
+        serializedVersion: 2
+        x: 10370
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d094191cbff04990800000000000000
+      internalID: -7403636604057382701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_38
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0cc969159f4dc90800000000000000
+      internalID: -7145812579915611968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_39
+      rect:
+        serializedVersion: 2
+        x: 11590
+        y: 330
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a240eebde953f150800000000000000
+      internalID: 5905162414057341602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251700afffa56f9f0800000000000000
+      internalID: -435060258537180846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_41
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d39ebaced3783b0800000000000000
+      internalID: -5510367532358746828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_42
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42147b79b3011e590800000000000000
+      internalID: -7646812844163907292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_43
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f548d267e32a69ee0800000000000000
+      internalID: -1254637057021737889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_44
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50a0c13f8f25d7f0800000000000000
+      internalID: -588511884240445350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_45
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68bc4fb2a5fa2520800000000000000
+      internalID: 2678223007768164458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_46
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450986e5c0d57c540800000000000000
+      internalID: 5028089816687349844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_47
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08822fe540a581e0800000000000000
+      internalID: -2196173021048043510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_48
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5b8c2088431d130800000000000000
+      internalID: 3589708136757900761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_49
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fc9effe0978b8e0800000000000000
+      internalID: -1677457755865493719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigRun_50
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 0
+        width: 610
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1288d18e28228a2e0800000000000000
+      internalID: -2114402079415105503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8875b583cb58c994792e457bafb5c948
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
