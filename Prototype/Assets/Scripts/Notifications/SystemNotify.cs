@@ -5,8 +5,10 @@ using TMPro;
 
 public class SystemNotify : MonoBehaviour
 {
+    private Transform parent;
     public TMP_Text message;
-    float lifeTime;
+    private float lifeTime;
+    private bool active;
 
     public void SetAttributes(string message)
     {
@@ -15,27 +17,38 @@ public class SystemNotify : MonoBehaviour
     public void SetAttributes(string message, Color color)
     {
         this.message.text = message;
-        this.message.color = color;
+        this.message.color = color - new Color(0,0,0,color.a);
     }
 
     private void OnEnable()
     {
-        Transform parent = gameObject.transform.parent;
-        for(int i = 0; i < parent.childCount; i++)
-        {
-            if (parent.GetChild(i).gameObject != gameObject)
-            {
-                Destroy(parent.GetChild(i).gameObject);
-            }
-        }
-        lifeTime = 0.18f * message.text.Length;
+        parent = gameObject.transform.parent;
+        Transform last = parent.GetChild(parent.childCount-1);
+        if (last == transform && parent.GetChild(0) != transform) { active = false; }
+        else { active = true; }
+        message.color = new Color(message.color.r, message.color.g, message.color.b, 0);       
+        lifeTime = 0.10f * message.text.Length;
         if (lifeTime < 2) { lifeTime = 2; }
+        StartCoroutine(Life());
     }
 
-    private void FixedUpdate()
-    {
-        lifeTime -= Time.deltaTime;
-        if (lifeTime < 0) { Destroy(gameObject); }
-        message.color = message.color - new Color(0, 0, 0, message.color.a * (1f * Time.deltaTime));
+    private IEnumerator Life()
+    {    
+        yield return new WaitUntil(() => parent.GetChild(0) == transform);
+        float alpha = message.color.a;      
+        while(alpha < 1f)
+        {
+            alpha = Mathf.Clamp01(alpha + Time.deltaTime * 2);
+            message.color = new Color(message.color.r, message.color.g, message.color.b, alpha);
+            yield return new WaitForFixedUpdate();
+        }
+        if (active){yield return new WaitForSeconds(lifeTime);}
+        while (alpha > 0f)
+        {
+            alpha = Mathf.Clamp01(alpha - Time.deltaTime * 2);
+            message.color = new Color(message.color.r, message.color.g, message.color.b, alpha);
+            yield return new WaitForFixedUpdate();
+        }
+        Destroy(gameObject);
     }
 }

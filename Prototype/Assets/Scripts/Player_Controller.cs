@@ -18,8 +18,9 @@ public class Player_Controller : MonoBehaviour
 
     public float jump_buffer = 0.2f;
     public float wall_jump_buffer = 0.15f;
-    public Vector2 direction;
-    public Vector2 detection;
+    private Vector2 direction;
+    private Vector2 detection;
+    public Vector2 momentum;
     public bool isControlling = true;
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
@@ -51,17 +52,17 @@ public class Player_Controller : MonoBehaviour
     }
 
     private void Movement()
-    {      
+    {
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (!isControlling) { return; }
-        float speed;
-
+        float speed;      
         switch (current_state)
         {
             default: break;
-            case State.Grounded:                
-                speed = direction.x * settings.move_speed;
+            case State.Grounded:
+                speed = direction.x * settings.move_speed;              
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
+                momentum = Vector2.zero;
                 break;
             case State.Cling:
                 if (direction.y < 0) { Wall_Slide(settings.wall_slide_speed); }
@@ -70,12 +71,11 @@ public class Player_Controller : MonoBehaviour
                     rb.velocity = new Vector3(speed, rb.velocity.y, 0);}
                 break;
             case State.Aerial:
+                momentum = direction.x != 0 ? (Vector2)rb.velocity : Vector2.zero;
                 speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * settings.move_speed, settings.air_control), -settings.max_air_speed, settings.max_air_speed);
                 rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
                 break;
-            case State.Ceiling:
-                break;
-        }
+        }      
     }
 
     private IEnumerator Fall()
@@ -90,7 +90,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -settings.max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial) { break; }
+            if (current_state != State.Aerial) { Debug.Log("STOP"); break; }
         }
     }
     #endregion
@@ -98,7 +98,6 @@ public class Player_Controller : MonoBehaviour
     #region JUMP
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        Notification_System.Send_SystemNotify("Jump action has been pressed", Color.green);
         switch (current_state)
         {
             case State.Grounded:
@@ -136,7 +135,7 @@ public class Player_Controller : MonoBehaviour
     private float slide_time = 0;
     public void Wall_Grab()
     {
-        Debug.Log("GRAB");
+        Flip((int)((detection.x % 1) + (detection.x / 1)));
         rb.useGravity = false;
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
         rb.AddForce(dir * settings.wall_grab_strength, ForceMode.Force);
@@ -144,7 +143,6 @@ public class Player_Controller : MonoBehaviour
     }
     public void Wall_Slide(float speed)
     {
-        Debug.Log("SLIDE");
         transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (speed / 10), settings.wall_slide_smoothing);
     }
     #endregion
@@ -155,6 +153,7 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.performed += Request_Movement;
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
+        controls.Player.Switch_Controls.performed += Switch_Settings;
     }
 
     private void Animation_Driver()
@@ -248,16 +247,6 @@ public class Player_Controller : MonoBehaviour
         detection = Vector3.zero;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(current_state == State.Cling)
-        {
-            Flip((int)((detection.x % 1) + (detection.x / 1)));
-        }
-    }
-
-
-
     private void OnCollisionStay(Collision collision)
     {
         Vector3 p = collision.GetContact(0).point;
@@ -276,8 +265,20 @@ public class Player_Controller : MonoBehaviour
 
     #endregion
 
-    private void FixedUpdate()
+    #region DEBUG
+
+    private int index = 0;
+    private void Switch_Settings(InputAction.CallbackContext context)
     {
+        Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.red);
+    }
+
+    #endregion
+
+    private void Update()
+    {
+        //if (momentum.x != 0) { rb.velocity = new Vector2(momentum.x, rb.velocity.y); }
+        //Debug.Log("Velocity X: " + rb.velocity.x);
         //Rotation();
         Movement();
         Animation_Driver();
