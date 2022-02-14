@@ -26,6 +26,7 @@ public class Player_Controller : MonoBehaviour
     private Vector2 detection;
     private Vector2 momentum;
     public bool isControlling = true;
+    public Jump Jump = new Jump();
 
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
     public State current_state;
@@ -97,7 +98,7 @@ public class Player_Controller : MonoBehaviour
             if (rb.velocity.y > -settings.max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, float.PositiveInfinity), rb.velocity.z);
             yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial && controls.Player.Jump.enabled) { break; }
+            if (current_state != State.Aerial && Jump.Enabled) { break; }
         }
     }
     #endregion
@@ -105,31 +106,32 @@ public class Player_Controller : MonoBehaviour
     #region JUMP
     private void Request_Jump(InputAction.CallbackContext context)
     {
+        if (Jump.Enabled == false) { return; }
         switch (current_state)
         {
             case State.Grounded:
-                StartCoroutine(Jump()); animator.Play("Jump_01");
+                StartCoroutine(Ground_Jump()); animator.Play("Jump_01");
                 break;
             case State.Cling:
                 StartCoroutine(Wall_Jump()); animator.SetTrigger("Jump_03");
                 break;
         }
     }   
-    private IEnumerator Jump()
+    private IEnumerator Ground_Jump()
     {
-        controls.Player.Jump.Disable();
+        Jump.Enabled = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(Vector3.up * settings.jump_power, ForceMode.Force);
         StartCoroutine(Fall());
         yield return new WaitForSeconds(jump_buffer);
-        controls.Player.Jump.Enable();
+        Jump.Enabled = true;
     }
     #endregion
 
     #region WALL JUMP
     public IEnumerator Wall_Jump()
     {
-        controls.Player.Jump.Disable();
+        Jump.Enabled = false;
         isControlling = false;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         float angle = settings.wall_jump_angle * detection.x;
@@ -138,7 +140,7 @@ public class Player_Controller : MonoBehaviour
         StartCoroutine(Fall());
         yield return new WaitForSeconds(wall_jump_buffer);       
         isControlling = true;
-        controls.Player.Jump.Enable();
+        Jump.Enabled = true;
     }
     private float slide_time = 0;
     public void Wall_Grab()
@@ -225,7 +227,7 @@ public class Player_Controller : MonoBehaviour
 
     private IEnumerator Delay_State(State state, float t)
     {
-        while(t > 0 && controls.Player.Jump.enabled)
+        while(t > 0 && Jump.Enabled)
         {
             t -= Time.deltaTime;
             yield return new WaitForEndOfFrame();
@@ -342,5 +344,16 @@ public class Player_Controller : MonoBehaviour
             Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
         }
         #endregion
+    }
+}
+
+public class Jump
+{
+    private bool m_enabled = true;
+    public bool Enabled { get { return m_enabled; } set { m_enabled = value; } }
+
+    public Jump()
+    {
+        m_enabled = true;
     }
 }
