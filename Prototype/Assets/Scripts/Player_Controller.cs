@@ -164,7 +164,7 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Switch_Controls.performed += Switch_Settings;
-        controls.Player.Pause.performed += Request_Pause;
+        //controls.Player.Pause.performed += Request_Pause;
     }
 
     private void Request_Pause(InputAction.CallbackContext context)
