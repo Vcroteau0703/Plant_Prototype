@@ -22,6 +22,7 @@ public class Player_Controller : MonoBehaviour
     [Header("Debug")]
     public Player_Control_Settings[] setting_presets;
     private Vector2 direction;
+    public Vector2 momentum;
     private Vector2 detection;
     public bool isControlling = true;
     private bool groundLock = true;
@@ -56,7 +57,7 @@ public class Player_Controller : MonoBehaviour
 
     private void Movement()
     {
-        if (groundLock && direction.x != 0f) { Ground_Lock(); }
+        if (groundLock && direction.x != 0f) { Ground_Lock(); }       
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, rb.velocity.y));
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (!isControlling) { return; }
@@ -64,14 +65,13 @@ public class Player_Controller : MonoBehaviour
         switch (current_state)
         {
             default: break;
-            case State.Grounded:               
+            case State.Grounded:
                 speed = direction.x * settings.move_speed;
-                float force = Mathf.Abs(direction.x) > 0.01f ? Mathf.Pow(Mathf.Abs(speed - rb.velocity.x), settings.acceleration) : 0;              
+                float force = Mathf.Abs(direction.x) > 0.01f ? Mathf.Pow(Mathf.Abs(speed - rb.velocity.x), settings.acceleration) : 0;
                 rb.AddForce((force * direction.x) * Vector3.right, ForceMode.Acceleration);
-                float friction_force = direction.x < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.friction)): 0;
+                float friction_force = direction.x < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.friction)) : 0;
                 friction_force *= Mathf.Sign(rb.velocity.x);
                 rb.AddForce(Vector3.right * -friction_force, ForceMode.Impulse);
-
                 break;
             case State.Cling:
                 if (direction.y < 0) { Wall_Slide(settings.wall_slide_speed); }
@@ -84,6 +84,7 @@ public class Player_Controller : MonoBehaviour
                 speed = direction.x * settings.air_control;
                 rb.AddForce(speed * Vector3.right, ForceMode.Acceleration);
                 rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -settings.max_air_speed, settings.max_air_speed), rb.velocity.y, rb.velocity.z);
+                momentum = rb.velocity;
                 break;
         }      
     }

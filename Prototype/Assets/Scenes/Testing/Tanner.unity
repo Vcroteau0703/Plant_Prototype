@@ -77915,6 +77915,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727005, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: m_Drag
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727005, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727005, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
