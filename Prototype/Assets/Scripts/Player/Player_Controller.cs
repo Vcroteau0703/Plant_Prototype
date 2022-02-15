@@ -16,18 +16,15 @@ public class Player_Controller : MonoBehaviour
     public Bounds Player_Bounds;
     public bool show_bounds;
 
-    public float jump_buffer = 0.2f;
-    public float wall_jump_buffer = 0.15f;
+    private Jump Jump = new Jump();
+    private Jump Wall_Jump = new Jump();
 
     [Header("Debug")]
     public Player_Control_Settings[] setting_presets;
-    public LineRenderer line_rend;
     private Vector2 direction;
     private Vector2 detection;
-    private Vector2 momentum;
     public bool isControlling = true;
-    public Jump Jump = new Jump();
-
+    private bool groundLock = true;
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
     public State current_state;
     private State last_state = default;
@@ -59,17 +56,22 @@ public class Player_Controller : MonoBehaviour
 
     private void Movement()
     {
+        if (groundLock && direction.x != 0f) { Ground_Lock(); }
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, rb.velocity.y));
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         if (!isControlling) { return; }
-        float speed;      
+        float speed;
         switch (current_state)
         {
             default: break;
-            case State.Grounded:
-                speed = direction.x * settings.move_speed;              
-                rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
-                momentum = Vector2.zero;
+            case State.Grounded:               
+                speed = direction.x * settings.move_speed;
+                float force = Mathf.Abs(direction.x) > 0.01f ? Mathf.Pow(Mathf.Abs(speed - rb.velocity.x), settings.acceleration) : 0;              
+                rb.AddForce((force * direction.x) * Vector3.right, ForceMode.Acceleration);
+                float friction_force = direction.x < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.friction)): 0;
+                friction_force *= Mathf.Sign(rb.velocity.x);
+                rb.AddForce(Vector3.right * -friction_force, ForceMode.Impulse);
+
                 break;
             case State.Cling:
                 if (direction.y < 0) { Wall_Slide(settings.wall_slide_speed); }
@@ -78,70 +80,100 @@ public class Player_Controller : MonoBehaviour
                     rb.velocity = new Vector3(speed, rb.velocity.y, 0);}
                 break;
             case State.Aerial:
-                momentum = direction.x != 0 ? (Vector2)rb.velocity : Vector2.zero;
-                speed = Mathf.Clamp(Mathf.Lerp(rb.velocity.x, rb.velocity.x + direction.x * settings.move_speed, settings.air_control), -settings.max_air_speed, settings.max_air_speed);
-                rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(speed, rb.velocity.y, 0), settings.move_smoothing);
+                groundLock = true;
+                speed = direction.x * settings.air_control;
+                rb.AddForce(speed * Vector3.right, ForceMode.Acceleration);
+                rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -settings.max_air_speed, settings.max_air_speed), rb.velocity.y, rb.velocity.z);
                 break;
         }      
     }
 
-    private IEnumerator Fall()
+    private void Ground_Lock()
     {
-        yield return new WaitForEndOfFrame();
-        float force;
-        float time = 0;
-        while (time >= 0)
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, -Vector3.up, out hit, 1f))
         {
-            time += Time.deltaTime;
-            force = -Mathf.Pow(time, 2) / (1 / settings.weight * 10) + settings.floatiness;
-            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { force = -Mathf.Abs(force) * settings.downforce; }
-            if (rb.velocity.y > -settings.max_fall_speed) { rb.AddForce(Vector3.up * force, ForceMode.Acceleration); };
-            rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -settings.max_fall_speed, float.PositiveInfinity), rb.velocity.z);
-            yield return new WaitForEndOfFrame();
-            if (current_state != State.Aerial && Jump.Enabled) { break; }
+            float distance = hit.distance;
+            transform.position += (hit.distance - col.bounds.extents.y) * Vector3.down;
         }
+        Debug.DrawRay(transform.position, -Vector3.up, Color.red, 1f);
     }
     #endregion
 
     #region JUMP
+
+    #region INPUT ACTION
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        if (Jump.Enabled == false) { return; }
+        groundLock = false;
+        if (Jump.Enabled == false && Wall_Jump.Enabled == false) { return; }
         switch (current_state)
         {
             case State.Grounded:
-                StartCoroutine(Ground_Jump()); animator.Play("Jump_01");
+                StartCoroutine(Vertical_Jump_Action()); animator.Play("Jump_01");
                 break;
             case State.Cling:
-                StartCoroutine(Wall_Jump()); animator.SetTrigger("Jump_03");
+                StartCoroutine(Wall_Jump_Action()); animator.SetTrigger("Jump_03");
                 break;
         }
-    }   
-    private IEnumerator Ground_Jump()
-    {
-        Jump.Enabled = false;
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        rb.AddForce(Vector3.up * settings.jump_power, ForceMode.Force);
-        StartCoroutine(Fall());
-        yield return new WaitForSeconds(jump_buffer);
-        Jump.Enabled = true;
     }
     #endregion
 
-    #region WALL JUMP
-    public IEnumerator Wall_Jump()
+    #region VERTICAL JUMP
+    private IEnumerator Vertical_Jump_Action()
+    {
+        StartCoroutine(Jump_Buffer(settings.jump_buffer));
+        float time = 0;
+        while (time >= 0)
+        {
+            time += Time.deltaTime;
+            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { time = settings.jump_height; }
+            float force = (settings.jump_height / time) * Mathf.Sqrt(settings.jump_power/10f) - settings.weight;
+            Vector2 dir = force * Vector3.up;
+            rb.AddForce(dir, ForceMode.Acceleration);
+            yield return new WaitForFixedUpdate();
+            if (current_state != State.Aerial && Jump.Enabled) { Debug.Log("Stop"); break; }
+        }
+    }
+    public IEnumerator Jump_Buffer(float amount)
     {
         Jump.Enabled = false;
-        isControlling = false;
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        float angle = settings.wall_jump_angle * detection.x;
-        Quaternion rotA = Quaternion.AngleAxis(angle, Vector3.forward);
-        rb.AddForce((rotA * transform.up) * settings.wall_jump_power, ForceMode.Force);
-        StartCoroutine(Fall());
-        yield return new WaitForSeconds(wall_jump_buffer);       
-        isControlling = true;
+        yield return new WaitForSeconds(amount);
         Jump.Enabled = true;
+    }   
+    #endregion
+
+    #region WALL JUMP
+    public IEnumerator Wall_Jump_Action()
+    {
+        StartCoroutine(Wall_Jump_Buffer(settings.wall_jump_buffer));
+        float time = 0;
+        while (time >= 0)
+        {
+            time += Time.deltaTime;
+            if (controls.Player.Jump.phase == InputActionPhase.Waiting) { time = settings.jump_height; }
+
+            float angle = settings.wall_jump_angle * detection.x;
+            Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            float force = (settings.jump_height / time) * Mathf.Sqrt(settings.wall_jump_power/10f) - settings.weight;
+            Vector2 dir = (force * (rot * transform.up)) + (direction.x * settings.move_speed - rb.velocity.x) * Vector3.right;
+
+            
+            //rb.AddForce((rot * transform.up) * settings.wall_jump_power, ForceMode.Force);
+
+            rb.AddForce(dir, ForceMode.Acceleration);
+            yield return new WaitForFixedUpdate();
+            if (current_state != State.Aerial && Wall_Jump.Enabled) { Debug.Log("Stop"); break; }
+        }  
     }
+    public IEnumerator Wall_Jump_Buffer(float amount)
+    {
+        isControlling = false; Wall_Jump.Enabled = false;
+        yield return new WaitForSeconds(amount);
+        isControlling = true; Wall_Jump.Enabled = true;
+    }
+
     private float slide_time = 0;
     public void Wall_Grab()
     {
@@ -155,6 +187,8 @@ public class Player_Controller : MonoBehaviour
     {
         transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (speed / 10), settings.wall_slide_smoothing);
     }
+    #endregion
+
     #endregion
 
     #region UTILITY
@@ -173,7 +207,6 @@ public class Player_Controller : MonoBehaviour
         Notification_System.Send_ActionWindow("Do you want to exit the game?", "Exit", function);
     }
    
-
     private void Animation_Driver()
     {
         animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
@@ -246,7 +279,6 @@ public class Player_Controller : MonoBehaviour
         detection = Vector3.zero;
     }
 
-
     private void OnCollisionExit(Collision collision)
     {
         if(current_state == State.Grounded)
@@ -278,7 +310,7 @@ public class Player_Controller : MonoBehaviour
         else if(angle > settings.slope_angle && angle < 180 - settings.ceiling_angle && height > settings.min_climb_height) { current_state = State.Cling; Wall_Grab(); } // WALL 
         else { current_state = State.Waiting; } // WAITING (DEFAULT)
 
-        Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
+        //Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
     }
 
     #endregion
@@ -301,58 +333,49 @@ public class Player_Controller : MonoBehaviour
         //Debug.Log("Velocity X: " + rb.velocity.x);
         //Rotation();
         Movement();
-        Animation_Driver();
+        Animation_Driver();        
     }
     private void OnDisable()
     {
         controls.Player.Disable();
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        #region JUMP TRAJECTORY
-        //Vector3[] verts = new Vector3[10];
-        //for(int x = 0; x < verts.Length; x++)
-        //{
-        //    float force = -Mathf.Pow(x, 2) / (1 / settings.weight * 10) + settings.floatiness;
-        //    verts[x] = transform.position + new Vector3(force, x, 0);
-        //}
-        //line_rend.SetPositions(verts);
-        //line_rend.startColor = Color.blue;
-        #endregion
 
-        #region SLOPE ANGLE BOUNDS
-        Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
-        Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
-        #endregion
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.yellow;
 
-        #region CEILING ANGLE BOUNDS
-        Quaternion rot3 = Quaternion.AngleAxis(settings.ceiling_angle, Vector3.forward);
-        Quaternion rot4 = Quaternion.AngleAxis((-settings.ceiling_angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
-        #endregion
+    //    #region SLOPE ANGLE BOUNDS
+    //    Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
+    //    Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
+    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
+    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+    //    #endregion
 
-        #region WALL JUMP ANGLE
-        Gizmos.color = Color.blue;
-        float angle = settings.wall_jump_angle * Mathf.RoundToInt(detection.x);
-        Quaternion rot5 = Quaternion.AngleAxis(angle, Vector3.forward);
-        Gizmos.DrawLine(transform.position, transform.position + (rot5 * Vector3.up));
+    //    #region CEILING ANGLE BOUNDS
+    //    Quaternion rot3 = Quaternion.AngleAxis(settings.ceiling_angle, Vector3.forward);
+    //    Quaternion rot4 = Quaternion.AngleAxis((-settings.ceiling_angle), Vector3.forward);
+    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
+    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
+    //    #endregion
 
-        #endregion
+    //    #region WALL JUMP ANGLE
+    //    Gizmos.color = Color.blue;
+    //    float angle = settings.wall_jump_angle * Mathf.RoundToInt(detection.x);
+    //    Quaternion rot5 = Quaternion.AngleAxis(angle, Vector3.forward);
+    //    Gizmos.DrawLine(transform.position, transform.position + (rot5 * Vector3.up));
 
-        #region PLAYER BOUNDS
-        if (show_bounds)
-        {
-            Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.4f);
-            Gizmos.DrawCube(transform.position + Player_Bounds.center, Player_Bounds.size);
-            Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
-            Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
-        }
-        #endregion
-    }
+    //    #endregion
+
+    //    #region PLAYER BOUNDS
+    //    if (show_bounds)
+    //    {
+    //        Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.4f);
+    //        Gizmos.DrawCube(transform.position + Player_Bounds.center, Player_Bounds.size);
+    //        Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+    //        Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
+    //    }
+    //    #endregion
+    //}
 }
 
 public class Jump
