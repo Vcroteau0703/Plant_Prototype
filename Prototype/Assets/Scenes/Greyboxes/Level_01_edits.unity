@@ -94018,7 +94018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: setting_presets.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: setting_presets.Array.data[0]
@@ -94028,6 +94028,10 @@ PrefabInstance:
       propertyPath: setting_presets.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: f405d4c2b3b809b4d84a1db6e87f5a35, type: 2}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: setting_presets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fb758f22eb675d46b5e44598e0b2d45, type: 2}
     - target: {fileID: 6061469062083727003, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: m_RootOrder
       value: 6
