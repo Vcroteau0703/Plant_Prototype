@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player_Controller : MonoBehaviour
+public class Test_Controller : MonoBehaviour
 {
-    public static Player_Controller instance;
+    public static Test_Controller instance;
     //Class References
     private Controls controls;
     private Rigidbody rb;
@@ -46,15 +46,86 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Enable();
     }
 
-    #region MOVEMENT/AIR CONTROL
+    #region INPUT REQUESTS
     private void Request_Movement(InputAction.CallbackContext context)
-    {       
+    {
         Vector2 temp = context.ReadValue<Vector2>();
-        float x =  Mathf.Abs(temp.x) > (settings.horizontal_deadzone / 100f) ? temp.x : 0.0f;
-        float y = Mathf.Abs(temp.y) > (settings.vertical_deadzone / 100f) ? temp.y : 0.0f;      
+        float x = Mathf.Abs(temp.x) > (settings.horizontal_deadzone / 100f) ? temp.x : 0.0f;
+        float y = Mathf.Abs(temp.y) > (settings.vertical_deadzone / 100f) ? temp.y : 0.0f;
         direction = new Vector2(x, y);
     }
+    private void Request_Jump(InputAction.CallbackContext context)
+    {
+        groundLock = false;
+        switch (current_state)
+        {
+            case State.Grounded:
+                if(Jump.Phase == Jump.State.Waiting) { Jump_01(0); }           
+                break;
+            case State.Cling:
+                if (Wall_Jump.Phase == Jump.State.Waiting) { Jump_02(); }
+                break;
+        }
+    }
 
+
+    #endregion
+
+    #region MOVEMENT
+
+    public void State_Control()
+    {
+        switch(current_state)
+        {
+            case State.Grounded:
+                if(direction.x != 0) { Move(); }
+                break;
+            case State.Cling:
+                Cling();
+                break;
+            case State.Aerial:
+                Aerial();
+                break;
+        }
+    }
+
+    public void Move()
+    {
+        float speed = -direction.x * settings.move_speed;
+        float diff = Mathf.Abs(rb.velocity.x) - Mathf.Abs(speed);
+        rb.AddForce(speed * diff * settings.acceleration * Vector3.right);
+    }
+
+    public void Cling()
+    {
+
+    }
+
+    public void Aerial()
+    {
+
+    }
+
+    public void Jump_01(float time)
+    {
+        time += Time.fixedDeltaTime;
+        float force = (settings.jump_height / time) * Mathf.Sqrt(settings.jump_power / 10f) - settings.weight;
+        Vector2 dir = (force * Vector3.up) + ((rb.velocity.x + time) * Vector3.right);
+        rb.AddForce(dir, ForceMode.Acceleration);
+        Jump.Phase = Jump.State.Performing;
+        if(current_state != State.Aerial || controls.Player.Jump.phase == InputActionPhase.Waiting) { Jump.Phase = Jump.State.Waiting; return; }
+        Jump_01(time);
+    }
+
+    public void Jump_02()
+    {
+        Wall_Jump.Phase = Jump.State.Performing;
+        if (current_state != State.Aerial)
+            Jump_02();
+    }
+
+
+    #endregion
 
 
     private void Movement()
@@ -112,26 +183,8 @@ public class Player_Controller : MonoBehaviour
         }
         Debug.DrawRay(transform.position, transform.position - (transform.position - (Vector3)detection), Color.red, 1f);
     }
-    #endregion
 
     #region JUMP
-
-    #region INPUT ACTION
-    private void Request_Jump(InputAction.CallbackContext context)
-    {
-        groundLock = false;
-        if (Jump.Enabled == false && Wall_Jump.Enabled == false) { return; }
-        switch (current_state)
-        {
-            case State.Grounded:
-                StartCoroutine(Vertical_Jump_Action()); animator.Play("Jump_01");
-                break;
-            case State.Cling:
-                StartCoroutine(Wall_Jump_Action()); animator.SetTrigger("Jump_03");
-                break;
-        }
-    }
-    #endregion
 
     #region VERTICAL JUMP
     private IEnumerator Vertical_Jump_Action()
@@ -149,7 +202,8 @@ public class Player_Controller : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
             Jump.Phase = Jump.State.Performing;
-            if (current_state != State.Aerial && Jump.Enabled){Jump.Phase = Jump.State.Waiting; break; }}
+            if (current_state != State.Aerial && Jump.Enabled){Jump.Phase = Jump.State.Waiting; break; }
+        }
     }
     public IEnumerator Jump_Buffer(float amount)
     {
@@ -216,15 +270,8 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Switch_Controls.performed += Switch_Settings;
-        //controls.Player.Pause.performed += Request_Pause;
     }
 
-    private void Request_Pause(InputAction.CallbackContext context)
-    {
-        ActionWindow.ButtonFunction function = Application.Quit;
-        Notification_System.Send_ActionWindow("Do you want to exit the game?", "Exit", function);
-    }
-   
     private void Animation_Driver()
     {
         animator.SetFloat("Speed_X", Mathf.Abs((int)((direction.x % 1) + (direction.x / 1))));
@@ -253,7 +300,6 @@ public class Player_Controller : MonoBehaviour
             Reset_Animation_Parameters();
         }
     }
-
     private void Reset_Animation_Parameters()
     {
         animator.speed = 1;
@@ -262,7 +308,6 @@ public class Player_Controller : MonoBehaviour
         //animator.ResetTrigger("Jump");
         //animator.ResetTrigger("Wall_Jump");
     }
-
     private void Flip(int direction)
     {
         switch (direction) {
@@ -276,13 +321,6 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
-
-    //private void Rotation()
-    //{
-    //    float angle = Vector3.Angle(detection, -Vector3.up);
-    //    Debug.Log("Angle: " + angle);
-    //    transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -angle);
-    //}
 
     private IEnumerator Delay_State(State state, float t)
     {
@@ -327,7 +365,6 @@ public class Player_Controller : MonoBehaviour
         else if(angle > 180 - settings.ceiling_angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
         else if(angle > settings.slope_angle && angle < 180 - settings.ceiling_angle && height > settings.min_climb_height) { current_state = State.Cling; Wall_Grab(); } // WALL 
         else { current_state = State.Waiting; } // WAITING (DEFAULT)
-
         //Debug.DrawLine(transform.position, transform.position + (p - transform.position).normalized, Color.green);
     }
 
@@ -347,65 +384,10 @@ public class Player_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Rotation();
-        Movement();
-        Animation_Driver();        
+        State_Control();
     }
     private void OnDisable()
     {
         controls.Player.Disable();
-    }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.yellow;
-
-    //    #region SLOPE ANGLE BOUNDS
-    //    Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
-    //    Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
-    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
-    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
-    //    #endregion
-
-    //    #region CEILING ANGLE BOUNDS
-    //    Quaternion rot3 = Quaternion.AngleAxis(settings.ceiling_angle, Vector3.forward);
-    //    Quaternion rot4 = Quaternion.AngleAxis((-settings.ceiling_angle), Vector3.forward);
-    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
-    //    Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
-    //    #endregion
-
-    //    #region WALL JUMP ANGLE
-    //    Gizmos.color = Color.blue;
-    //    float angle = settings.wall_jump_angle * Mathf.RoundToInt(detection.x);
-    //    Quaternion rot5 = Quaternion.AngleAxis(angle, Vector3.forward);
-    //    Gizmos.DrawLine(transform.position, transform.position + (rot5 * Vector3.up));
-
-    //    #endregion
-
-    //    #region PLAYER BOUNDS
-    //    if (show_bounds)
-    //    {
-    //        Gizmos.color = new Color(1.0f, 0.0f, 0.85f, 0.4f);
-    //        Gizmos.DrawCube(transform.position + Player_Bounds.center, Player_Bounds.size);
-    //        Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
-    //        Gizmos.DrawWireCube(transform.position + Player_Bounds.center, Player_Bounds.size);
-    //    }
-    //    #endregion
-    //}
-}
-
-public class Jump
-{
-    private bool m_enabled = true;
-    public bool Enabled { get { return m_enabled; } set { m_enabled = value; } }
-
-    public enum State { Started, Performing, Canceled, Waiting = default }
-    private State phase = default;
-    public State Phase { get { return phase; } set { phase = value; } }
-    
-
-    public Jump()
-    {
-        m_enabled = true;
     }
 }

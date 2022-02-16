@@ -19,10 +19,12 @@ public class Player_Control_Settings : ScriptableObject
     public float coyote_jump_delay = 0.15f;
     [Header("Air Control Settings")]
     public float air_control = 1.0f;
+    public float horizontal_momentum = 5.0f;
     public float max_air_speed = 10.0f;
     public float max_fall_speed = 20.0f;
     [Header("Wall Jump Settings")]
     public float wall_jump_power = 10.0f;
+    public float wall_jump_height = 10.0f;
     public float wall_grab_strength = 20.0f;
     public float wall_jump_buffer = 0.15f;
     public float wall_jump_angle = 45.0f;
