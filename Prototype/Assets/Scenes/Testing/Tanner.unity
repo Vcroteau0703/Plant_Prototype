@@ -4305,7 +4305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125947885}
   m_LocalRotation: {x: 0.01743584, y: 0.043612767, z: -0.0007612654, w: 0.9988961}
-  m_LocalPosition: {x: -11.521028, y: 0.92899704, z: -9.955878}
+  m_LocalPosition: {x: -10.650001, y: 0.5800009, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1912492883}
@@ -8277,8 +8277,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264133528}
-  m_LocalRotation: {x: 0.01743584, y: 0.043612767, z: -0.0007612654, w: 0.9988961}
-  m_LocalPosition: {x: -11.475655, y: 3.9632797, z: -9.955878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.600096, y: 3.9173079, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1699723098}
@@ -40314,7 +40314,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031750247}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a4f25e1df484c3246934f458b1a572de, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -40330,13 +40330,13 @@ Rigidbody:
   m_GameObject: {fileID: 1031750247}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 5
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!212 &1031750251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64361,7 +64361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1690994982
 Transform:
   m_ObjectHideFlags: 0
@@ -74034,6 +74034,7 @@ GameObject:
   - component: {fileID: 1912492883}
   - component: {fileID: 1912492885}
   - component: {fileID: 1912492884}
+  - component: {fileID: 1912492886}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -74068,12 +74069,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.1
-  m_LookaheadSmoothing: 0.2
-  m_LookaheadIgnoreY: 0
+  m_LookaheadTime: 0.2
+  m_LookaheadSmoothing: 1
+  m_LookaheadIgnoreY: 1
   m_XDamping: 2
   m_YDamping: 2
-  m_ZDamping: 1
+  m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
@@ -74110,6 +74111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1912492886
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912492882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c41ac9245b87c4192012080077d830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Damping: 2
 --- !u!43 &1913364683
 Mesh:
   m_ObjectHideFlags: 0
