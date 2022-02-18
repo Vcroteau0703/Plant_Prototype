@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
   m_Name: Default Control Settings
   m_EditorClassIdentifier: 
-  move_speed: 8
-  acceleration: 1.6
+  move_speed: 19
+  acceleration: 1.4
+  friction: 0.1
   walkable:
     serializedVersion: 2
     m_Bits: 321
@@ -34,8 +35,8 @@ MonoBehaviour:
     buffer: 0
     phase: 0
   coyote_jump_delay: 0.2
-  Air_Speed: 5
-  Air_Control: 1
+  Air_Speed: 15
+  Air_Control: 0.8
   Air_Accel: 1
   Fall_Speed: -30
   landing_slide_duration: 0.2

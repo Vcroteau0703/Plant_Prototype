@@ -406,7 +406,7 @@ public class Jump
     public float angle;
     public float buffer;
 
-    public enum State { Waiting = default, Started, Performing, Canceled }
+    public enum State { Canceled = default, Waiting, Started, Performing }
     public State phase = default;
     public Jump()
     {

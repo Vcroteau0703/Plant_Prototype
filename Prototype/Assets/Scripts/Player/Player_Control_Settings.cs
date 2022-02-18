@@ -9,7 +9,7 @@ public class Player_Control_Settings : ScriptableObject
     [Header("Movement Settings")]
     public float move_speed = 1.0f;
     public float acceleration = 2.0f;
-    //public float friction = 0.4f;
+    public float friction = 0.4f;
     public LayerMask walkable;
     [Header("Jump Settings")]
     public Jump Jump = new Jump();
@@ -25,6 +25,8 @@ public class Player_Control_Settings : ScriptableObject
     public float landing_slide_speed = 5.0f;
     public float wall_slide_speed = 5.0f;
     public float wall_slide_smoothing = 0.1f;
+    public float cling_strength = 1.0f;
+    public float cling_release_power = 1.0f;
     [Header("Detection Settings")]
     public float slope_angle = 30f;
     public float ceiling_angle = 30f;
