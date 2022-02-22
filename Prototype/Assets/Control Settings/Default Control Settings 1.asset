@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
-  m_Name: Default Control Settings
+  m_Name: Default Control Settings 1
   m_EditorClassIdentifier: 
-  move_speed: 16
+  move_speed: 18
   acceleration: 1.6
-  friction: 0.3
+  friction: 0.6
   walkable:
     serializedVersion: 2
     m_Bits: 321
   Jump:
     delay: 0
-    initial_power: 8
-    max_height: 5
-    floatiness: 0.1
+    initial_power: 12
+    max_height: 4
+    floatiness: 0.03
     angle: 0
     buffer: 0
     phase: 1
   Wall_Jump:
     delay: 0
-    initial_power: 10
+    initial_power: 16
     max_height: 5
-    floatiness: 0.01
+    floatiness: 0.001
     angle: 35
     buffer: 0.2
     phase: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Air_Speed: 10
   Air_Control: 0.8
   Air_Accel: 1
-  Fall_Speed: -20
+  Fall_Speed: -40
   landing_slide_duration: 0.2
   landing_slide_speed: 10
   wall_slide_speed: 25

@@ -24,6 +24,7 @@ public class Test_Controller : MonoBehaviour
     public bool isControlling = true;
     public bool groundLock = true;
     private float coyote_time;
+    public float exp = 2f;
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
     public State current_state;
     private State last_state = default;
@@ -93,15 +94,19 @@ public class Test_Controller : MonoBehaviour
 
     public void State_Control()
     {
-        switch(current_state)
+
+        switch (current_state)
         {
             case State.Grounded:
-                //Ground_Lock();
-                //settings.Jump.phase = Jump.State.Waiting;
+                if(settings.Jump.phase == Jump.State.Canceled){
+                    settings.Jump.phase = Jump.State.Waiting;
+                }                           
                 coyote_time = 0;
-                if (direction.x != 0) { Move(); }
+                if (direction.x != 0 && isControlling) { Move(); }
+                else { col.material.dynamicFriction = 5f; }
                 break;
             case State.Cling:
+                if (isControlling){ rb.velocity = new Vector2(rb.velocity.x, 0); settings.Wall_Jump.phase = Jump.State.Waiting;}
                 Cling();
                 break;
             case State.Aerial:
@@ -112,18 +117,30 @@ public class Test_Controller : MonoBehaviour
     }
 
     public void Move()
-    {
+    {      
+        col.material.dynamicFriction = 0.1f;
+        float ground_clamp = -0.75f;
+
+        Vector2 dir = Quaternion.AngleAxis(90, Vector3.forward) * detection;
+
         float speed = direction.x * settings.move_speed;
         float diff = speed - rb.velocity.x;
-        float force = Mathf.Pow(Mathf.Abs(diff), settings.acceleration) * direction.x;        
-        rb.AddForce(force * Vector3.right);
+        float force = Mathf.Pow(Mathf.Abs(diff), settings.acceleration) * direction.x;
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
+
+        rb.AddForce(force * dir + ground_clamp * Vector2.up);
         float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.friction)) : 0;
         friction_force *= Mathf.Sign(rb.velocity.x);
-        rb.AddForce(Vector3.right * -friction_force, ForceMode.Impulse);
+        rb.AddForce(dir * -friction_force, ForceMode.Impulse);
+        Debug.DrawLine(transform.position, (Vector2)transform.position + dir, Color.red);
     }
     private float slide_time = 0;
     public void Cling()
     {
+        if(direction.y < 0){
+            transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (settings.wall_slide_speed / 10), settings.wall_slide_smoothing);
+        }
+
         Flip((int)((detection.x % 1) + (detection.x / 1)));
         rb.useGravity = false;
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
@@ -156,11 +173,12 @@ public class Test_Controller : MonoBehaviour
     public IEnumerator Jump_01(Jump jump, float time)
     {
         jump.phase = Jump.State.Started;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(jump.initial_power * Vector3.up, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
             time += Time.deltaTime;
-            float force = -Mathf.Pow(time, 2) + (jump.initial_power*0.90f/ (1/jump.floatiness));
+            float force = -Mathf.Pow(time, exp) + (jump.initial_power*0.90f/ (1/jump.floatiness));
             if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);    
             yield return new WaitForFixedUpdate();
@@ -170,37 +188,43 @@ public class Test_Controller : MonoBehaviour
 
     public IEnumerator Jump_02(Jump jump, float time)
     {
+        StartCoroutine(Jump_02_Buffer());
         jump.phase = Jump.State.Started;
-        Debug.Log("Wall Jump");
+        rb.velocity = new Vector2(rb.velocity.x, 0);
         float angle = jump.angle * detection.x;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
         rb.AddForce(jump.initial_power * (rot * Vector3.up), ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
-            Debug.Log("LOOP");
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.initial_power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
-        Debug.Log("Jump Stop");
         jump.phase = Jump.State.Canceled;
     }
 
-
+    public IEnumerator Jump_02_Buffer()
+    {
+        isControlling = false;
+        yield return new WaitForSeconds(settings.Wall_Jump.buffer);
+        isControlling = true;
+    }
     #endregion
 
     private void Ground_Lock()
-    {       
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.position - (transform.position - (Vector3)detection), out hit, 1f))
+    {      
+        RaycastHit hit;       
+        Vector2 dir = detection != Vector2.zero ? detection : Vector2.down;
+        Debug.DrawRay(transform.position, transform.position - (transform.position - (Vector3)dir * 1.5f), Color.red, 1.5f);
+        if (Physics.Raycast(transform.position, transform.position - (transform.position - (Vector3)dir * 1.5f), out hit, 1.5f))
         {
-            if(hit.distance < 0.1f) { return; }
+            //if(((hit.distance - col.bounds.extents.y) * Vector3.down).y < 0.01f) { return; }          
             transform.position += (hit.distance - col.bounds.extents.y) * Vector3.down;
-        }
-        Debug.DrawRay(transform.position, transform.position - (transform.position - (Vector3)detection), Color.red, 1f);
+            Debug.Log((hit.distance - col.bounds.extents.y) * Vector3.down);
+        }     
     }
 
     #region UTILITY
@@ -283,8 +307,8 @@ public class Test_Controller : MonoBehaviour
 
         if (angle < settings.slope_angle) { current_state = State.Grounded; } // GROUND
         else if(angle > 180 - settings.ceiling_angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        else if(angle > settings.slope_angle && angle < 180 - settings.ceiling_angle && height > settings.min_climb_height) { current_state = State.Cling; } // WALL 
-        else { current_state = State.Waiting; } // WAITING (DEFAULT)
+        else if(angle > 90 - settings.cling_angle && angle < 90 + settings.cling_angle && height > settings.min_climb_height) { current_state = State.Cling; } // WALL 
+        else { current_state = State.Aerial; } // WAITING (DEFAULT)
         Debug.DrawLine(transform.position, transform.position + (average - transform.position).normalized, Color.green);
     }
     private void OnCollisionEnter(Collision collision)
@@ -305,6 +329,41 @@ public class Test_Controller : MonoBehaviour
         settings = setting_presets[index];
         Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+
+        #region SLOPE ANGLE BOUNDS
+        Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
+        Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+        #endregion
+
+        #region CEILING ANGLE BOUNDS
+        Quaternion rot3 = Quaternion.AngleAxis(settings.ceiling_angle, Vector3.forward);
+        Quaternion rot4 = Quaternion.AngleAxis((-settings.ceiling_angle), Vector3.forward);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
+        #endregion
+
+        Gizmos.color = Color.red;
+
+        #region CLING ANGLE BOUNDS
+        Quaternion rot5 = Quaternion.AngleAxis(settings.cling_angle, Vector3.forward);
+        Quaternion rot6 = Quaternion.AngleAxis((-settings.cling_angle), Vector3.forward);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot5 * Vector2.right));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot6 * Vector2.right));
+
+        Quaternion rot7 = Quaternion.AngleAxis(settings.cling_angle, Vector3.forward);
+        Quaternion rot8 = Quaternion.AngleAxis((-settings.cling_angle), Vector3.forward);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot5 * Vector2.left));
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot6 * Vector2.left));
+
+        #endregion
+    }
+
 
     #endregion
 

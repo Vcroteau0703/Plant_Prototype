@@ -30,6 +30,7 @@ public class Player_Control_Settings : ScriptableObject
     [Header("Detection Settings")]
     public float slope_angle = 30f;
     public float ceiling_angle = 30f;
+    public float cling_angle = 30f;
     public float min_climb_height = 1f;
     [Header("Input Settings")]
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
