@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
+  m_Name: Cam
+  m_EditorClassIdentifier: 
+  move_speed: 8
+  move_smoothing: 0.2
+  downforce: 7
+  walkable:
+    serializedVersion: 2
+    m_Bits: 321
+  jump_power: 350
+  floatiness: 0.5
+  weight: 20
+  coyote_jump_delay: 0.15
+  air_control: 1
+  max_air_speed: 6
+  max_fall_speed: 10
+  wall_jump_power: 450
+  wall_grab_strength: 15
+  wall_jump_angle: 42.5
+  wall_release_strength: 5.5
+  landing_slide_duration: 0.2
+  landing_slide_speed: 10
+  wall_slide_speed: 25
+  wall_slide_smoothing: 0.02
+  slope_angle: 60
+  ceiling_angle: 80
+  min_climb_height: 0.25
+  horizontal_deadzone: 50
+  vertical_deadzone: 50
