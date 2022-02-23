@@ -28,10 +28,10 @@ MonoBehaviour:
     phase: 1
   Wall_Jump:
     delay: 0
-    initial_power: 10
+    initial_power: 20
     max_height: 5
     floatiness: 0.01
-    angle: 35
+    angle: 20
     buffer: 0.2
     phase: 1
   coyote_jump_delay: 0.2
@@ -39,10 +39,10 @@ MonoBehaviour:
   Air_Control: 0.8
   Air_Accel: 1
   Fall_Speed: -20
-  landing_slide_duration: 0.2
-  landing_slide_speed: 10
-  wall_slide_speed: 25
-  wall_slide_smoothing: 0.01
+  slide_friction: 100
+  max_slide_speed: 8
+  slide_threshhold: -1
+  slide_acceleration: 1
   cling_strength: 12
   cling_release_power: 0.2
   slope_angle: 40

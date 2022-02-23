@@ -1,33 +1,35 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
 {
+    #region DECLARATIONS
+    // SINGLETON INSTANCE //
     public static Player_Controller instance;
-    //Class References
+
+    //CLASS REFERENCES //
     private Controls controls;
     private Rigidbody rb;
     private Collider col;
     private Animator animator;
-
+    public Control_Management c_manager;
     public Player_Control_Settings settings;
-    public Bounds Player_Bounds;
-    public bool show_bounds;
-
-    [Header("Debug")]
     public Player_Control_Settings[] setting_presets;
+
+    // DEBUG INFO //
+    [Header("Debug")]
     private Vector2 direction;
-    public Vector2 momentum;
     private Vector2 detection;
-    public bool isControlling = true;
-    public bool groundLock = true;
-    public float coyote_time;
-    public float exp = 2f;
+    private float coyote_time;
+    private float slide_speed = 0;
+
+    // PLAYER STATES //
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
+    [Header("States")]
     public State current_state;
-    private State last_state = default;
+    public State last_state = default;
+    #endregion
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class Player_Controller : MonoBehaviour
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;
+        c_manager.Enable_All();
     }
     private void OnEnable()
     {
@@ -42,6 +45,18 @@ public class Player_Controller : MonoBehaviour
         controls = controls == null ? new Controls() : controls;
         Subscribe_Actions();
         controls.Player.Enable();
+    }
+    private void FixedUpdate()
+    {
+        State_Control();
+    }
+    private void Update()
+    {
+        Animation_Driver();
+    }
+    private void OnDisable()
+    {
+        controls.Player.Disable();
     }
 
     #region INPUT REQUESTS
@@ -54,7 +69,6 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        groundLock = false;
         switch (current_state)
         {
             case State.Grounded:
@@ -65,14 +79,14 @@ public class Player_Controller : MonoBehaviour
                 }
                 break;
             case State.Cling:
-                if (settings.Wall_Jump.phase == Jump.State.Waiting && coyote_time > settings.coyote_jump_delay)
+                if (settings.Wall_Jump.phase == Jump.State.Waiting && coyote_time > settings.Coyote_Delay)
                 {
                     settings.Wall_Jump.phase = Jump.State.Started;
                     StartCoroutine(Jump_02(settings.Wall_Jump, 0));
                 }
                 break;
             case State.Aerial:
-                if (coyote_time < settings.coyote_jump_delay && settings.Jump.phase == Jump.State.Waiting)
+                if (coyote_time < settings.Coyote_Delay && settings.Jump.phase == Jump.State.Waiting)
                 {
                     settings.Jump.phase = Jump.State.Started;
                     StartCoroutine(Jump_01(settings.Jump, 0));
@@ -91,12 +105,9 @@ public class Player_Controller : MonoBehaviour
             settings.Wall_Jump.phase = Jump.State.Canceled;
         }
     }
-
-
     #endregion
 
     #region MOVEMENT
-
     public void State_Control()
     {
         Flip((int)((direction.x % 1) + (direction.x / 1)));
@@ -108,13 +119,13 @@ public class Player_Controller : MonoBehaviour
                     settings.Jump.phase = Jump.State.Waiting;
                 }
                 coyote_time = 0;
-                if (direction.x != 0 && isControlling) { Move(); }
+                if (direction.x != 0 && c_manager.Moving.Enabled) { Move(); }
                 else { col.material.dynamicFriction = 5f; }
                 break;
             case State.Cling:
                 coyote_time += Time.deltaTime;
-                if (isControlling) { rb.velocity = new Vector2(rb.velocity.x, 0); settings.Wall_Jump.phase = Jump.State.Waiting; }
                 Cling();
+                if (c_manager.Aerials.Enabled) { rb.velocity = new Vector2(rb.velocity.x, 0); settings.Wall_Jump.phase = Jump.State.Waiting; }             
                 break;
             case State.Aerial:
                 coyote_time += Time.deltaTime;
@@ -122,53 +133,60 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
-
     public void Move()
-    {      
+    {
+        if (!c_manager.Moving.Enabled) { return; }
         col.material.dynamicFriction = 0.1f;
         float ground_clamp = -0.75f;
 
         Vector2 dir = Quaternion.AngleAxis(90, Vector3.forward) * detection;
 
-        float speed = direction.x * settings.move_speed;
+        float speed = direction.x * settings.Move_Speed;
         float diff = speed - rb.velocity.x;
-        float force = Mathf.Pow(Mathf.Abs(diff), settings.acceleration) * direction.x;
+        float force = Mathf.Pow(Mathf.Abs(diff), settings.Acceleration) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
 
         rb.AddForce(force * dir + ground_clamp * Vector2.up);
-        float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.friction)) : 0;
+        float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.Friction)) : 0;
         friction_force *= Mathf.Sign(rb.velocity.x);
         rb.AddForce(dir * -friction_force, ForceMode.Impulse);
         Debug.DrawLine(transform.position, (Vector2)transform.position + dir, Color.red);
-    }
-    private float slide_time = 0;
+    }   
     public void Cling()
     {
         if (direction.y < 0)
         {
-            transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (settings.wall_slide_speed / 10), settings.wall_slide_smoothing);
+            float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
+            slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
         }
         rb.useGravity = false;
         Flip((int)((detection.x % 1) + (detection.x / 1)));
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
-        rb.AddForce(dir * settings.cling_strength, ForceMode.Force);
-        if (slide_time < settings.landing_slide_duration)
-        {
-            transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * (settings.landing_slide_speed / 10), settings.wall_slide_smoothing);
-            slide_time += Time.deltaTime;
-        }
+        rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
+
+        transform.position += Vector3.down * slide_speed * Time.deltaTime;
+        if(slide_speed > 0){slide_speed -= Time.deltaTime * settings.Slide_Friction;}
+        else { slide_speed = 0; }
+        
+
+        //if (slide_time < settings.landing_slide_duration)
+        //{
+        //    transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * ( / 10), settings.wall_slide_smoothing);
+        //    slide_time += Time.deltaTime;
+        //}
 
         if (current_state == State.Cling)
         {
-            rb.AddForce(direction.x * settings.cling_release_power * Vector3.right, ForceMode.Impulse);
+            rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
         }
     }
-
     public void Aerial()
     {
+        slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
+        if (c_manager.Aerials.Enabled == false) { return; }
         float speed = direction.x * settings.Air_Speed;
         float diff = speed - rb.velocity.x;
-        float force = Mathf.Pow(Mathf.Abs(diff), settings.acceleration) * direction.x;
+        float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
         if (rb.velocity.y < 1 || settings.Jump.phase == Jump.State.Canceled || settings.Wall_Jump.phase == Jump.State.Canceled)
@@ -177,24 +195,22 @@ public class Player_Controller : MonoBehaviour
         }
         else { Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z); }
     }
-
     public IEnumerator Jump_01(Jump jump, float time)
     {
         Debug.Log("Jump_01");
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.AddForce(jump.initial_power * Vector3.up, ForceMode.Impulse);
+        rb.AddForce(jump.power * Vector3.up, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
             time += Time.deltaTime;
-            float force = -Mathf.Pow(time, exp) + (jump.initial_power * 0.90f / (1 / jump.floatiness));
+            float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
         jump.phase = Jump.State.Canceled;
     }
-
     public IEnumerator Jump_02(Jump jump, float time)
     {
         Debug.Log("Jump_02");
@@ -204,26 +220,26 @@ public class Player_Controller : MonoBehaviour
         float angle = jump.angle * detection.x;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        rb.AddForce(jump.initial_power * (rot * Vector3.up), ForceMode.Impulse);
+        rb.AddForce(jump.power * (rot * Vector3.up), ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
             time += Time.deltaTime;
-            float force = -Mathf.Pow(time, 2) + (jump.initial_power * 0.90f / (1 / jump.floatiness));
+            float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
         jump.phase = Jump.State.Canceled;
     }
-
     public IEnumerator Jump_02_Buffer()
     {
-        isControlling = false;
+        c_manager.Aerials.Disable();
         yield return new WaitForSeconds(settings.Wall_Jump.buffer);
-        isControlling = true;
+        c_manager.Aerials.Enable();
     }
     #endregion
 
+    #region DEPRECATED FUNCTIONS
     private void Ground_Lock()
     {
         RaycastHit hit;
@@ -236,6 +252,7 @@ public class Player_Controller : MonoBehaviour
             Debug.Log((hit.distance - col.bounds.extents.y) * Vector3.down);
         }
     }
+    #endregion
 
     #region UTILITY
     private void Subscribe_Actions()
@@ -289,7 +306,6 @@ public class Player_Controller : MonoBehaviour
         }
         current_state = State.Aerial;
         rb.useGravity = true;
-        slide_time = 0;
         detection = Vector3.zero;
     }
     private void OnCollisionStay(Collision collision)
@@ -316,15 +332,15 @@ public class Player_Controller : MonoBehaviour
         detection = dir;
         float height = collision.GetContact(0).otherCollider.bounds.size.y;
 
-        if (angle < settings.slope_angle) { current_state = State.Grounded; } // GROUND
-        else if (angle > 180 - settings.ceiling_angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        else if (angle > 90 - settings.cling_angle && angle < 90 + settings.cling_angle && height > settings.min_climb_height && coyote_time > settings.coyote_jump_delay) { current_state = State.Cling; } // WALL 
+
+        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
+        else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && height > settings.Cling_Threshold && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // WALL 
         else { current_state = State.Aerial; } // WAITING (DEFAULT)
         Debug.DrawLine(transform.position, transform.position + (average - transform.position).normalized, Color.green);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        slide_time = 0;
         settings.Jump.phase = Jump.State.Waiting;
         settings.Wall_Jump.phase = Jump.State.Waiting;
     }
@@ -346,62 +362,30 @@ public class Player_Controller : MonoBehaviour
         Gizmos.color = Color.yellow;
 
         #region SLOPE ANGLE BOUNDS
-        Quaternion rot1 = Quaternion.AngleAxis(settings.slope_angle, Vector3.forward);
-        Quaternion rot2 = Quaternion.AngleAxis((-settings.slope_angle), Vector3.forward);
+        Quaternion rot1 = Quaternion.AngleAxis(settings.Slope_Angle, Vector3.forward);
+        Quaternion rot2 = Quaternion.AngleAxis((-settings.Slope_Angle), Vector3.forward);
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
         #endregion
 
         #region CEILING ANGLE BOUNDS
-        Quaternion rot3 = Quaternion.AngleAxis(settings.ceiling_angle, Vector3.forward);
-        Quaternion rot4 = Quaternion.AngleAxis((-settings.ceiling_angle), Vector3.forward);
+        Quaternion rot3 = Quaternion.AngleAxis(settings.Ceiling_Angle, Vector3.forward);
+        Quaternion rot4 = Quaternion.AngleAxis((-settings.Ceiling_Angle), Vector3.forward);
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
         #endregion
 
         Gizmos.color = Color.red;
-
-        #region CLING ANGLE BOUNDS
-        Quaternion rot5 = Quaternion.AngleAxis(settings.cling_angle, Vector3.forward);
-        Quaternion rot6 = Quaternion.AngleAxis((-settings.cling_angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot5 * Vector2.right));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot6 * Vector2.right));
-
-        Quaternion rot7 = Quaternion.AngleAxis(settings.cling_angle, Vector3.forward);
-        Quaternion rot8 = Quaternion.AngleAxis((-settings.cling_angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot5 * Vector2.left));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot6 * Vector2.left));
-
-        #endregion
     }
 
 
     #endregion
-
-    private void FixedUpdate()
-    {
-        State_Control();
-    }
-    private void Update()
-    {
-        Animation_Driver();
-    }
-    private void OnDisable()
-    {
-        controls.Player.Disable();
-        //settings.Jump.phase = Jump.State.Waiting;
-        //settings.Wall_Jump.phase = Jump.State.Waiting;
-    }
 }
 
 [System.Serializable]
 public class Jump
 {
-    private bool m_enabled = true;
-    public bool Enabled { get { return m_enabled; } set { m_enabled = value; } }
-
-    public float delay;
-    public float initial_power;
+    public float power;
     public float max_height;
     public float floatiness;
     public float angle;
@@ -411,7 +395,43 @@ public class Jump
     public State phase = default;
     public Jump()
     {
-        m_enabled = true;
         phase = default;
     }
+}
+
+[System.Serializable]
+public class Control_Management
+{
+    public Control_State Moving, Gliding, Jumping, Aerials;
+    public void Disable_All() 
+    {
+        Moving.Disable();
+        Gliding.Disable();
+        Jumping.Disable();
+        Aerials.Disable();
+    }
+    public void Enable_All()
+    {
+        Moving.Enable();
+        Gliding.Enable();
+        Jumping.Enable();
+        Aerials.Enable();
+    }
+}
+
+[System.Serializable]
+public class Control_State
+{
+    public bool m_enabled;
+    public bool Enabled { get { return m_enabled; } }
+
+    public void Enable()
+    {
+        m_enabled = true;
+    }
+    public void Disable()
+    {
+        m_enabled = false;
+    }
+
 }
