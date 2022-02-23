@@ -114,10 +114,10 @@ public class Player_Controller : MonoBehaviour
         switch (current_state)
         {
             case State.Grounded:
-                if (settings.Jump.phase == Jump.State.Canceled)
-                {
-                    settings.Jump.phase = Jump.State.Waiting;
-                }
+                //if (settings.Jump.phase == Jump.State.Canceled)
+                //{
+                //    settings.Jump.phase = Jump.State.Waiting;
+                //}
                 coyote_time = 0;
                 if (direction.x != 0 && c_manager.Moving.Enabled) { Move(); }
                 else { col.material.dynamicFriction = 5f; }
