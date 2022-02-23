@@ -2,48 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.Playables;
 
 public class Greenify : MonoBehaviour
 {
-    public Color grassStartColor;
-    public Color grassEndColor;
-    public Color groundStartColor;
-    public Color groundEndColor;
+    [ColorUsage(true, true)]
+    public Color waterStartEmission;
+    [ColorUsage(true, true)]
+    public Color waterEndEmission;
     public Color waterStartColor;
     public Color waterEndColor;
     public float time;
-    public Material grass;
+    //public Material grass;
     public Material water;
-    public Material ground;
-    public GameObject cutscene;
-    public GameObject cutscene2;
-    public GameObject[] waterObj;
+   // public Material ground;
+    public PlayableDirector cutscene;
+    //public GameObject cutscene2;
+    public Hazard[] waterObj;
 
     private void Awake()
     {
-        grass.color = grassStartColor;
-        ground.color = groundStartColor;
-        water.color = waterStartColor;
+        water.SetColor("_Emission", waterStartEmission);
+        water.SetColor("_BaseColor", waterStartColor);
+        //StartTheColorChange();
     }
 
     [YarnCommand("change_world")]
     public void StartTheColorChange()
     {
-        cutscene2.SetActive(true);
-        StartCoroutine(ColorChange(grassStartColor, grassEndColor, time, grass));
-        StartCoroutine(ColorChange(groundStartColor, groundEndColor, time, ground));
+        StartCoroutine(EmissionChange(waterStartEmission, waterEndEmission, time, water));
         StartCoroutine(ColorChange(waterStartColor, waterEndColor, time, water));
+        ActivateCutscene();
     }
 
     public void ActivateCutscene()
     {
         for(int i = 0; i < waterObj.Length; i++)
         {
-            waterObj[i].tag = "Untagged";
+            waterObj[i].ChangeDamage(0);
         }
-        cutscene.SetActive(true);
+        cutscene.Play();
     }
 
+
+    public IEnumerator EmissionChange(Color startColor, Color endColor, float cycleTime, Material mat)
+    {
+        float currentTime = 0;
+        while (currentTime < cycleTime)
+        {
+            currentTime += Time.deltaTime;
+            float t = currentTime / cycleTime;
+            Color currentColor = Color.Lerp(startColor, endColor, t);
+            mat.SetColor("_Emission", currentColor);
+            yield return null;
+        }
+    }
 
     public IEnumerator ColorChange(Color startColor, Color endColor, float cycleTime, Material mat)
     {
@@ -53,10 +66,9 @@ public class Greenify : MonoBehaviour
             currentTime += Time.deltaTime;
             float t = currentTime / cycleTime;
             Color currentColor = Color.Lerp(startColor, endColor, t);
-            mat.color = currentColor;
+            water.SetColor("_BaseColor", currentColor);
             yield return null;
         }
-        ActivateCutscene();
         //StopAllCoroutines();
     }
 }

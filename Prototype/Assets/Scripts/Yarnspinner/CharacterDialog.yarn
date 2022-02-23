@@ -10,21 +10,21 @@ Maybe there's something around here you can move.
 
 ===
 title: Dialogue2
-position: 399,316.5
+position: 90,49
 ---
 
-Scared Plant: You found her! Thank you so much!
-<<change_world GreenifyObj>>
+<<change_world GreenifyDirector>>
+I've been stuck up here for so long... Thank you for helping me.
+
 
 ===
 title: AfterTransformation
-position: 285,222.5
+position: 213,26
 ---
-Scared Plant: This place is so much greener now! How did you do that?
 
--> I'm the chosen one
-    Scared Plant: ... I'm not so sure about that
--> I don't know
-    Scared Plant: Strange
--> ...
+===
+title: Node
+position: 198,116.5
+---
+
 ===

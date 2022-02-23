@@ -40,7 +40,7 @@ public class Player_Controller : MonoBehaviour
         col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;      
     }
-    private void OnEnable()
+    public void OnEnable()
     {
         settings = setting_presets.Length > 0 ? setting_presets[0] : settings;
         controls = controls == null ? new Controls() : controls;
@@ -303,7 +303,7 @@ public class Player_Controller : MonoBehaviour
         Movement();
         Animation_Driver();
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         controls.Player.Disable();
     }

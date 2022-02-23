@@ -1493,8 +1493,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1999.0,
-            "y": -1385.9998779296875,
+            "x": 1997.0,
+            "y": -1386.0001220703125,
             "width": 126.0,
             "height": 34.0
         }
@@ -2731,7 +2731,7 @@
     },
     "m_Name": "Emission",
     "m_DefaultReferenceName": "Color_2e5deff3eab44bd7a055ce29b410523b",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Emission",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -5128,7 +5128,7 @@
     },
     "m_Name": "BaseColor",
     "m_DefaultReferenceName": "Color_73b225a9be71487f9d664dd3ead0670c",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_BaseColor",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
