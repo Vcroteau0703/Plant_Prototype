@@ -5,7 +5,6 @@ using UnityEngine;
 public class Hazard : MonoBehaviour
 {
     public int damage;
-
     private void Awake()
     {
         //if (!GetComponent<Collider>()){ Debug.LogError("MISSING COMPONENT: " + this.gameObject.name + " is missing a collider."); };
@@ -16,5 +15,10 @@ public class Hazard : MonoBehaviour
         {
             a.Damage(damage);
         }
+    }
+
+    public void ChangeDamage(int dmg)
+    {
+        damage = dmg;
     }
 }
