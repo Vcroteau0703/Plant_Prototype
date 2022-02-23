@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Cinemachine;
+
+public class Parallax : MonoBehaviour
+{
+    private float length, startpos;
+    public float parallaxFactor;
+    public GameObject cam;
+    public float PixelsPerUnit;
+    public Vector3 newPosition;
+    public Vector3 updatedPos;
+    public float leftBounds;
+    public float rightBounds;
+    public bool isSky;
+
+    private void Awake()
+    {
+        startpos = transform.position.x;
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float distance = cam.transform.position.x * parallaxFactor;
+
+        if (isSky)
+        {
+            float distanceY = cam.transform.position.y * parallaxFactor;
+            newPosition = new Vector3(startpos + distance, startpos + distanceY, transform.position.z);
+        }
+        else
+        {
+            newPosition = new Vector3(startpos + distance, transform.position.y, transform.position.z);
+        }
+
+
+        updatedPos = PixelPerfectClamp(newPosition, PixelsPerUnit);
+
+        //updatedPos.x = Mathf.Clamp(updatedPos.x, leftBounds, rightBounds);
+
+        transform.position = updatedPos;
+    }
+
+    private Vector3 PixelPerfectClamp(Vector3 locationVector, float pixelsPerUnit)
+    {
+        Vector3 vectorInPixels = new Vector3(Mathf.CeilToInt(locationVector.x * pixelsPerUnit), Mathf.CeilToInt(locationVector.y * pixelsPerUnit), Mathf.CeilToInt(locationVector.z * pixelsPerUnit));
+        return vectorInPixels / pixelsPerUnit;
+    }
+}

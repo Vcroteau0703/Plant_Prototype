@@ -1,0 +1,3804 @@
+fileFormatVersion: 2
+guid: 3d777d6779963df45b92ff935bfbd516
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5129343052001095310
+    second: WallClingSprig_0
+  - first:
+      213: 6045951544245865675
+    second: WallClingSprig_1
+  - first:
+      213: -6258008269161873999
+    second: WallClingSprig_2
+  - first:
+      213: -7193666190208477997
+    second: WallClingSprig_3
+  - first:
+      213: 5321847140303646882
+    second: WallClingSprig_4
+  - first:
+      213: 773145217719591626
+    second: WallClingSprig_5
+  - first:
+      213: -4374144523303598063
+    second: WallClingSprig_6
+  - first:
+      213: -8762863598177641110
+    second: WallClingSprig_7
+  - first:
+      213: 6576064848751743967
+    second: WallClingSprig_8
+  - first:
+      213: 2683965545213311750
+    second: WallClingSprig_9
+  - first:
+      213: 4752074736966217171
+    second: WallClingSprig_10
+  - first:
+      213: -711482419320859883
+    second: WallClingSprig_11
+  - first:
+      213: -3724325200008235293
+    second: WallClingSprig_12
+  - first:
+      213: 6236198172318756370
+    second: WallClingSprig_13
+  - first:
+      213: -2010431203857404650
+    second: WallClingSprig_14
+  - first:
+      213: -86823280159896266
+    second: WallClingSprig_15
+  - first:
+      213: -5480087263369230436
+    second: WallClingSprig_16
+  - first:
+      213: 3748558038522591258
+    second: WallClingSprig_17
+  - first:
+      213: 741990519183381667
+    second: WallClingSprig_18
+  - first:
+      213: 6635361456528232639
+    second: WallClingSprig_19
+  - first:
+      213: -1828709965641865081
+    second: WallClingSprig_20
+  - first:
+      213: 231419718368232490
+    second: WallClingSprig_21
+  - first:
+      213: -4697065668094593276
+    second: WallClingSprig_22
+  - first:
+      213: -2311677715700309691
+    second: WallClingSprig_23
+  - first:
+      213: 9136539472025445108
+    second: WallClingSprig_24
+  - first:
+      213: 1764555100659747311
+    second: WallClingSprig_25
+  - first:
+      213: 3473833715041196915
+    second: WallClingSprig_26
+  - first:
+      213: 5744927720592410483
+    second: WallClingSprig_27
+  - first:
+      213: -5531745391325269343
+    second: WallClingSprig_28
+  - first:
+      213: -7971708277067222757
+    second: WallClingSprig_29
+  - first:
+      213: 5647420736338891760
+    second: WallClingSprig_30
+  - first:
+      213: 509666272055162405
+    second: WallClingSprig_31
+  - first:
+      213: 4259176798079182914
+    second: WallClingSprig_32
+  - first:
+      213: -1189264701569553904
+    second: WallClingSprig_33
+  - first:
+      213: -8776406866702263206
+    second: WallClingSprig_34
+  - first:
+      213: -8694158873432076064
+    second: WallClingSprig_35
+  - first:
+      213: 4457249632272042273
+    second: WallClingSprig_36
+  - first:
+      213: -6999772588678570376
+    second: WallClingSprig_37
+  - first:
+      213: 6101270510556935259
+    second: WallClingSprig_38
+  - first:
+      213: -606290722797898915
+    second: WallClingSprig_39
+  - first:
+      213: 5149741598711281775
+    second: WallClingSprig_40
+  - first:
+      213: -592180142608106585
+    second: WallClingSprig_41
+  - first:
+      213: 8845442313784386281
+    second: WallClingSprig_42
+  - first:
+      213: -1098674281306696813
+    second: WallClingSprig_43
+  - first:
+      213: -3315453981504888004
+    second: WallClingSprig_44
+  - first:
+      213: -4949546327534420055
+    second: WallClingSprig_45
+  - first:
+      213: -5491701774334316939
+    second: WallClingSprig_46
+  - first:
+      213: -6840236720750858759
+    second: WallClingSprig_47
+  - first:
+      213: 5499865107301686776
+    second: WallClingSprig_48
+  - first:
+      213: -3635388246650024509
+    second: WallClingSprig_49
+  - first:
+      213: 8705153293370141
+    second: WallClingSprig_50
+  - first:
+      213: 4961232516372655300
+    second: WallClingSprig_51
+  - first:
+      213: -2707260652253592513
+    second: WallClingSprig_52
+  - first:
+      213: 612081996414191554
+    second: WallClingSprig_53
+  - first:
+      213: 3484502057023178297
+    second: WallClingSprig_54
+  - first:
+      213: 1503302462462969825
+    second: WallClingSprig_55
+  - first:
+      213: 7314979405148612646
+    second: WallClingSprig_56
+  - first:
+      213: -1245062816496101942
+    second: WallClingSprig_57
+  - first:
+      213: 85859752350764653
+    second: WallClingSprig_58
+  - first:
+      213: 7805793472046732638
+    second: WallClingSprig_59
+  - first:
+      213: -3822975665025778375
+    second: WallClingSprig_60
+  - first:
+      213: -6022348764790176456
+    second: WallClingSprig_61
+  - first:
+      213: 3559067131167270205
+    second: WallClingSprig_62
+  - first:
+      213: -4619722803760577011
+    second: WallClingSprig_63
+  - first:
+      213: 4978262675057648859
+    second: WallClingSprig_64
+  - first:
+      213: -1869727833707349144
+    second: WallClingSprig_65
+  - first:
+      213: -4389281043758912690
+    second: WallClingSprig_66
+  - first:
+      213: 229298274411599651
+    second: WallClingSprig_67
+  - first:
+      213: -7357944948428032442
+    second: WallClingSprig_68
+  - first:
+      213: 6219900694417010364
+    second: WallClingSprig_69
+  - first:
+      213: 5553375927153542248
+    second: WallClingSprig_70
+  - first:
+      213: -2678231879714639910
+    second: WallClingSprig_71
+  - first:
+      213: -8215602822904707867
+    second: WallClingSprig_72
+  - first:
+      213: -4045467366605538683
+    second: WallClingSprig_73
+  - first:
+      213: 4415343347023890078
+    second: WallClingSprig_74
+  - first:
+      213: -3684104153764389010
+    second: WallClingSprig_75
+  - first:
+      213: 1310066618777192032
+    second: WallClingSprig_76
+  - first:
+      213: 5944690622784280000
+    second: WallClingSprig_77
+  - first:
+      213: 6166517829493699551
+    second: WallClingSprig_78
+  - first:
+      213: 2847042419291936503
+    second: WallClingSprig_79
+  - first:
+      213: 7731620045925780466
+    second: WallClingSprig_80
+  - first:
+      213: -5538003396265169888
+    second: WallClingSprig_81
+  - first:
+      213: -4357700746429326621
+    second: WallClingSprig_82
+  - first:
+      213: 4841283693386754791
+    second: WallClingSprig_83
+  - first:
+      213: 1919807169990532137
+    second: WallClingSprig_84
+  - first:
+      213: -1834888738118711511
+    second: WallClingSprig_85
+  - first:
+      213: -8220611549266301694
+    second: WallClingSprig_86
+  - first:
+      213: 8749732517757961233
+    second: WallClingSprig_87
+  - first:
+      213: 6863103686129526126
+    second: WallClingSprig_88
+  - first:
+      213: 796420870164971997
+    second: WallClingSprig_89
+  - first:
+      213: 807367387375080985
+    second: WallClingSprig_90
+  - first:
+      213: 3227774671809552434
+    second: WallClingSprig_91
+  - first:
+      213: 2825726291064952887
+    second: WallClingSprig_92
+  - first:
+      213: 3781489597129183460
+    second: WallClingSprig_93
+  - first:
+      213: -6337004870969344721
+    second: WallClingSprig_94
+  - first:
+      213: -2852791034082190374
+    second: WallClingSprig_95
+  - first:
+      213: -5947391660437550930
+    second: WallClingSprig_96
+  - first:
+      213: 5868529551977801492
+    second: WallClingSprig_97
+  - first:
+      213: 5027730645900392487
+    second: WallClingSprig_98
+  - first:
+      213: 2997178857970034870
+    second: WallClingSprig_99
+  - first:
+      213: 8905331329851926037
+    second: WallClingSprig_100
+  - first:
+      213: -383076349393326571
+    second: WallClingSprig_101
+  - first:
+      213: 5037423842501519172
+    second: WallClingSprig_102
+  - first:
+      213: 1231703635432552485
+    second: WallClingSprig_103
+  - first:
+      213: -54478193052047600
+    second: WallClingSprig_104
+  - first:
+      213: 7506164916387354056
+    second: WallClingSprig_105
+  - first:
+      213: -7611154500266888457
+    second: WallClingSprig_106
+  - first:
+      213: -1138566606533199810
+    second: WallClingSprig_107
+  - first:
+      213: -6104430481745990277
+    second: WallClingSprig_108
+  - first:
+      213: -6353504508907844353
+    second: WallClingSprig_109
+  - first:
+      213: -3899824076912255473
+    second: WallClingSprig_110
+  - first:
+      213: -4197187464236384200
+    second: WallClingSprig_111
+  - first:
+      213: -4513602678026519948
+    second: WallClingSprig_112
+  - first:
+      213: 6793245467083654787
+    second: WallClingSprig_113
+  - first:
+      213: 1588744150700141064
+    second: WallClingSprig_114
+  - first:
+      213: 9092573563468920928
+    second: WallClingSprig_115
+  - first:
+      213: -1195576050241752130
+    second: WallClingSprig_116
+  - first:
+      213: 3394260062856437835
+    second: WallClingSprig_117
+  - first:
+      213: 6843171391347406825
+    second: WallClingSprig_118
+  - first:
+      213: 4556193797564559541
+    second: WallClingSprig_119
+  - first:
+      213: -1108599680160055306
+    second: WallClingSprig_120
+  - first:
+      213: -3235556799754520508
+    second: WallClingSprig_121
+  - first:
+      213: -5225295523587887955
+    second: WallClingSprig_122
+  - first:
+      213: 1410420016200573094
+    second: WallClingSprig_123
+  - first:
+      213: -5126569467339196476
+    second: WallClingSprig_124
+  - first:
+      213: 7247845458021649907
+    second: WallClingSprig_125
+  - first:
+      213: 4803901419055043223
+    second: WallClingSprig_126
+  - first:
+      213: 5079601486002770186
+    second: WallClingSprig_127
+  - first:
+      213: 6313921448539797728
+    second: WallClingSprig_128
+  - first:
+      213: -1330664624645325007
+    second: WallClingSprig_129
+  - first:
+      213: 3785758437380382875
+    second: WallClingSprig_130
+  - first:
+      213: -3569129482049549477
+    second: WallClingSprig_131
+  - first:
+      213: -6977058446006888073
+    second: WallClingSprig_132
+  - first:
+      213: 7700826811273511636
+    second: WallClingSprig_133
+  - first:
+      213: -8782305692763445949
+    second: WallClingSprig_134
+  - first:
+      213: 2823641917843916330
+    second: WallClingSprig_135
+  - first:
+      213: 1501575143447603993
+    second: WallClingSprig_136
+  - first:
+      213: 3373425315304115260
+    second: WallClingSprig_137
+  - first:
+      213: 3938100626677182332
+    second: WallClingSprig_138
+  - first:
+      213: -4205592479498510530
+    second: WallClingSprig_139
+  - first:
+      213: -2729705852521826662
+    second: WallClingSprig_140
+  - first:
+      213: 789647280362604125
+    second: WallClingSprig_141
+  - first:
+      213: -7027689709211001855
+    second: WallClingSprig_142
+  - first:
+      213: -1985777593898184405
+    second: WallClingSprig_143
+  - first:
+      213: 1222754244631489297
+    second: WallClingSprig_144
+  - first:
+      213: 4850423870437712058
+    second: WallClingSprig_145
+  - first:
+      213: -2933481954594145022
+    second: WallClingSprig_146
+  - first:
+      213: -1588171268374236032
+    second: WallClingSprig_147
+  - first:
+      213: -5443173177300481422
+    second: WallClingSprig_148
+  - first:
+      213: -2815084883547684311
+    second: WallClingSprig_149
+  - first:
+      213: -8054658659668534233
+    second: WallClingSprig_150
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallClingSprig_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ea4a154561f2740800000000000000
+      internalID: 5129343052001095310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcccffb85e887e350800000000000000
+      internalID: 6045951544245865675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd3623b2a61729a0800000000000000
+      internalID: -6258008269161873999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4d2e3b6b6fa2c90800000000000000
+      internalID: -7193666190208477997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a03aba17cffad940800000000000000
+      internalID: 5321847140303646882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2e7fdaa73caba00800000000000000
+      internalID: 773145217719591626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_6
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118c4443bbaeb43c0800000000000000
+      internalID: -4374144523303598063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d9b6f2cfd046680800000000000000
+      internalID: -8762863598177641110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3d7c17320e24b50800000000000000
+      internalID: 6576064848751743967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bb3df617c5f3520800000000000000
+      internalID: 2683965545213311750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_10
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddaaf2bbc2c2f140800000000000000
+      internalID: 4752074736966217171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_11
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513d17c528e4026f0800000000000000
+      internalID: -711482419320859883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_12
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6397186f9805cc0800000000000000
+      internalID: -3724325200008235293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_13
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eeff9623d6b8650800000000000000
+      internalID: 6236198172318756370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_14
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61de7b8c8738914e0800000000000000
+      internalID: -2010431203857404650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_15
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dc5dbcfaa8bcef0800000000000000
+      internalID: -86823280159896266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_16
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c970cb03ba1d2f3b0800000000000000
+      internalID: -5480087263369230436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_17
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18f212ecad850430800000000000000
+      internalID: 3748558038522591258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_18
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a412aa22741c4a00800000000000000
+      internalID: 741990519183381667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_19
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 2231.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb01facc61a851c50800000000000000
+      internalID: 6635361456528232639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78823b4a9fd1f96e0800000000000000
+      internalID: -1828709965641865081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a240c5bf10b263300800000000000000
+      internalID: 231419718368232490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407f98639aba0deb0800000000000000
+      internalID: -4697065668094593276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_23
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5412f788d554befd0800000000000000
+      internalID: -2311677715700309691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2696a0e328bce70800000000000000
+      internalID: 9136539472025445108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_25
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe98d69d385fc7810800000000000000
+      internalID: 1764555100659747311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_26
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b5ec1db59853030800000000000000
+      internalID: 3473833715041196915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_27
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377843ee2551abf40800000000000000
+      internalID: 5744927720592410483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_28
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2372200ea4b33b0800000000000000
+      internalID: -5531745391325269343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_29
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11fd54de8dce5190800000000000000
+      internalID: -7971708277067222757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_30
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f397a60d3baf5e40800000000000000
+      internalID: 5647420736338891760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_31
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52678db26c2b21700800000000000000
+      internalID: 509666272055162405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_32
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24868155bb2ab1b30800000000000000
+      internalID: 4259176798079182914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_33
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a290f0e02ee7fe0800000000000000
+      internalID: -1189264701569553904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_34
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c99e14470f33680800000000000000
+      internalID: -8776406866702263206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_35
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e055487194285780800000000000000
+      internalID: -8694158873432076064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_36
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129c0decce45bdd30800000000000000
+      internalID: 4457249632272042273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_37
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e1c4fbaefcbde90800000000000000
+      internalID: -6999772588678570376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_38
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54ff4414311ca450800000000000000
+      internalID: 6101270510556935259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_39
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 1913.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d533405ccc50697f0800000000000000
+      internalID: -606290722797898915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68fc3413be877740800000000000000
+      internalID: 5149741598711281775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_41
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abbdcc3c4728c7f0800000000000000
+      internalID: -592180142608106585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_42
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2e3525be251ca70800000000000000
+      internalID: 8845442313784386281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_43
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3935bdaef89b0c0f0800000000000000
+      internalID: -1098674281306696813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_44
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c332f3b7b242df1d0800000000000000
+      internalID: -3315453981504888004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_45
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afb8f3c6ddaf4bb0800000000000000
+      internalID: -4949546327534420055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_46
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eab60255e89c3b0800000000000000
+      internalID: -5491701774334316939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_47
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdef0091f89211a0800000000000000
+      internalID: -6840236720750858759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_48
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd5841fc22735c40800000000000000
+      internalID: 5499865107301686776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_49
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd8bc996a18c8dc0800000000000000
+      internalID: -3635388246650024509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_50
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1344c17a4dee1000800000000000000
+      internalID: 8705153293370141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_51
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc628a10b6d9d440800000000000000
+      internalID: 4961232516372655300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_52
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34480cc7c0ed6ad0800000000000000
+      internalID: -2707260652253592513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_53
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c70ea1355d8e7800800000000000000
+      internalID: 612081996414191554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_54
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9360cffb8207b5030800000000000000
+      internalID: 3484502057023178297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_55
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e74311ff9dccd410800000000000000
+      internalID: 1503302462462969825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_56
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6286e273307048560800000000000000
+      internalID: 7314979405148612646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_57
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5d3bb07f5a8bee0800000000000000
+      internalID: -1245062816496101942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_58
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ece576df8013100800000000000000
+      internalID: 85859752350764653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_59
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 1595.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5598635ecfb35c60800000000000000
+      internalID: 7805793472046732638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dfc2d33ef02fac0800000000000000
+      internalID: -3822975665025778375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_61
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8354b29c4b15c6ca0800000000000000
+      internalID: -6022348764790176456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_62
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d356ef4f2b8546130800000000000000
+      internalID: 3559067131167270205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_63
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d064419169273efb0800000000000000
+      internalID: -4619722803760577011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_64
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4a569e687561540800000000000000
+      internalID: 4978262675057648859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_65
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b763501746d06e0800000000000000
+      internalID: -1869727833707349144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_66
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4be46765242613c0800000000000000
+      internalID: -4389281043758912690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_67
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327d9e1d091ae2300800000000000000
+      internalID: 229298274411599651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_68
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6463110bd0453e990800000000000000
+      internalID: -7357944948428032442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_69
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe6ee42ab6815650800000000000000
+      internalID: 6219900694417010364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_70
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86441329bfd811d40800000000000000
+      internalID: 5553375927153542248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_71
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf6b779b4205dad0800000000000000
+      internalID: -2678231879714639910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_72
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4811db2c05cfd80800000000000000
+      internalID: -8215602822904707867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_73
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aba072ddc9bd7c0800000000000000
+      internalID: -4045467366605538683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_74
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e964eb07163764d30800000000000000
+      internalID: 4415343347023890078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_75
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f15579ace6fdcc0800000000000000
+      internalID: -3684104153764389010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_76
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066cf4416aa4e2210800000000000000
+      internalID: 1310066618777192032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_77
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c517a600a8cf7250800000000000000
+      internalID: 5944690622784280000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_78
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3b5185b4fd39550800000000000000
+      internalID: 6166517829493699551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_79
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 1277.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f65d5efef9b28720800000000000000
+      internalID: 2847042419291936503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb02b7c77b3c4b60800000000000000
+      internalID: 7731620045925780466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_81
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c25b0b04f0523b0800000000000000
+      internalID: -5538003396265169888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_82
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea10ab52465683c0800000000000000
+      internalID: -4357700746429326621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_83
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea65317ed1bf2340800000000000000
+      internalID: 4841283693386754791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_84
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c9884137684aa10800000000000000
+      internalID: 1919807169990532137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_85
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927c1121a6a2986e0800000000000000
+      internalID: -1834888738118711511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_86
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d2281c9558aed80800000000000000
+      internalID: -8220611549266301694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_87
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114c5a8ed5b4d6970800000000000000
+      internalID: 8749732517757961233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_88
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65ac64b074ae3f50800000000000000
+      internalID: 6863103686129526126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_89
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd104e1df847d0b00800000000000000
+      internalID: 796420870164971997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_90
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9161ab77c58543b00800000000000000
+      internalID: 807367387375080985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_91
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230263866fb5bcc20800000000000000
+      internalID: 3227774671809552434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_92
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7389863271ff63720800000000000000
+      internalID: 2825726291064952887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_93
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e058bed0cc8a7430800000000000000
+      internalID: 3781489597129183460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_94
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2db3fd05af6e08a0800000000000000
+      internalID: -6337004870969344721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_95
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb9c135ba9d868d0800000000000000
+      internalID: -2852791034082190374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_96
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8cf73abce967da0800000000000000
+      internalID: -5947391660437550930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_97
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417e483e884317150800000000000000
+      internalID: 5868529551977801492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_98
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728fc37626616c540800000000000000
+      internalID: 5027730645900392487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_99
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 959.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b86d95aa4e189920800000000000000
+      internalID: 2997178857970034870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5162bfa79a7169b70800000000000000
+      internalID: 8905331329851926037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_101
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51eae80071a0faaf0800000000000000
+      internalID: -383076349393326571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_102
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447e26b9b4688e540800000000000000
+      internalID: 5037423842501519172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_103
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528b38a3ee3e71110800000000000000
+      internalID: 1231703635432552485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_104
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017a02f3f547e3ff0800000000000000
+      internalID: -54478193052047600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_105
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c594cad8314b2860800000000000000
+      internalID: 7506164916387354056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_106
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2f9f0ce4fbf5690800000000000000
+      internalID: -7611154500266888457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_107
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38777824bff230f0800000000000000
+      internalID: -1138566606533199810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_108
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7da67bc1d4b84ba0800000000000000
+      internalID: -6104430481745990277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_109
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc84bbbf41d3d7a0800000000000000
+      internalID: -6353504508907844353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_110
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e11290aaa01e9c0800000000000000
+      internalID: -3899824076912255473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_111
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830c77a2d3890c5c0800000000000000
+      internalID: -4197187464236384200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_112
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a3af647467c51c0800000000000000
+      internalID: -4513602678026519948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_113
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386cd8992c4764e50800000000000000
+      internalID: 6793245467083654787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_114
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a2675336a5c0610800000000000000
+      internalID: 1588744150700141064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_115
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0683ca04b7f4f2e70800000000000000
+      internalID: 9092573563468920928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_116
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3306faae5786fe0800000000000000
+      internalID: -1195576050241752130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_117
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b406ad92b85da1f20800000000000000
+      internalID: 3394260062856437835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_118
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7b06eaf14d7fe50800000000000000
+      internalID: 6843171391347406825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_119
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 641.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b07caf7e1ada3f30800000000000000
+      internalID: 4556193797564559541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffb2f9e6767d90f0800000000000000
+      internalID: -1108599680160055306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_121
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448380cbb3ef813d0800000000000000
+      internalID: -3235556799754520508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_122
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacea16f7650c77b0800000000000000
+      internalID: -5225295523587887955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_123
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a06cb13881d29310800000000000000
+      internalID: 1410420016200573094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_124
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c732ee2b34cad8b0800000000000000
+      internalID: -5126569467339196476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_125
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd0f481b05859460800000000000000
+      internalID: 7247845458021649907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_126
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79255c273e2eaa240800000000000000
+      internalID: 4803901419055043223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_127
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01ddbd73ae5e7640800000000000000
+      internalID: 5079601486002770186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_128
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e83fe7da1e8f9750800000000000000
+      internalID: 6313921448539797728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_129
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f36d4f297888de0800000000000000
+      internalID: -1330664624645325007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_130
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90ee71bd37b98430800000000000000
+      internalID: 3785758437380382875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_131
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b001965a7e77ec0800000000000000
+      internalID: -3569129482049549477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_132
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779de943f428c2f90800000000000000
+      internalID: -6977058446006888073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_133
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d203c22f25deda60800000000000000
+      internalID: 7700826811273511636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_134
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345a1f9c08bfe1680800000000000000
+      internalID: -8782305692763445949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_135
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a264dfd2d579f2720800000000000000
+      internalID: 2823641917843916330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_136
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b20c423aaa6d410800000000000000
+      internalID: 1501575143447603993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_137
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c030b7370d0de20800000000000000
+      internalID: 3373425315304115260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_138
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f26dea7a1f6a630800000000000000
+      internalID: 3938100626677182332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_139
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 323.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fdf6d0cebb2a5c0800000000000000
+      internalID: -4205592479498510530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96b12f5df22e1ad0800000000000000
+      internalID: -2729705852521826662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_141
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56cddb840465fa00800000000000000
+      internalID: 789647280362604125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_142
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c5fca9171a87e90800000000000000
+      internalID: -7027689709211001855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_143
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21d4c8acc91174e0800000000000000
+      internalID: -1985777593898184405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_144
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b6cdec18818f010800000000000000
+      internalID: 1222754244631489297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_145
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0e38fbfca205340800000000000000
+      internalID: 4850423870437712058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_146
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20db56d54bd2a47d0800000000000000
+      internalID: -2933481954594145022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_147
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084721a55aea5f9e0800000000000000
+      internalID: -1588171268374236032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_148
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a021c95d6f574b0800000000000000
+      internalID: -5443173177300481422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_149
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922819f963fcee8d0800000000000000
+      internalID: -2815084883547684311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallClingSprig_150
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5.25
+        width: 600
+        height: 318.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cde6bdf9a183090800000000000000
+      internalID: -8054658659668534233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c0fd71b3da6a0224fb90bb79abee855a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1476 @@
+fileFormatVersion: 2
+guid: 919f24ad68e9a4f47bc58e81a3c5210f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3786581846855832180
+    second: SprigJumpSprites 1_0
+  - first:
+      213: -2564598340786735020
+    second: SprigJumpSprites 1_1
+  - first:
+      213: -827849263036217229
+    second: SprigJumpSprites 1_2
+  - first:
+      213: 7349972522459785803
+    second: SprigJumpSprites 1_3
+  - first:
+      213: 1469958073330901425
+    second: SprigJumpSprites 1_4
+  - first:
+      213: 5059469477630563933
+    second: SprigJumpSprites 1_5
+  - first:
+      213: 1977034123972499827
+    second: SprigJumpSprites 1_6
+  - first:
+      213: -1075155479244397768
+    second: SprigJumpSprites 1_7
+  - first:
+      213: -8306176839031192341
+    second: SprigJumpSprites 1_8
+  - first:
+      213: -877663183581689778
+    second: SprigJumpSprites 1_9
+  - first:
+      213: 6660409043975222313
+    second: SprigJumpSprites 1_10
+  - first:
+      213: -9087258366033694065
+    second: SprigJumpSprites 1_11
+  - first:
+      213: 7189579600231332251
+    second: SprigJumpSprites 1_12
+  - first:
+      213: 4170091832634159094
+    second: SprigJumpSprites 1_13
+  - first:
+      213: 1828150114084708531
+    second: SprigJumpSprites 1_14
+  - first:
+      213: 8150729206296753354
+    second: SprigJumpSprites 1_15
+  - first:
+      213: -5383939512764262648
+    second: SprigJumpSprites 1_16
+  - first:
+      213: -322580022507663511
+    second: SprigJumpSprites 1_17
+  - first:
+      213: -4262839996004358580
+    second: SprigJumpSprites 1_18
+  - first:
+      213: -4568672429522228074
+    second: SprigJumpSprites 1_19
+  - first:
+      213: 1656334183837343604
+    second: SprigJumpSprites 1_20
+  - first:
+      213: -4359752828400422673
+    second: SprigJumpSprites 1_21
+  - first:
+      213: -3664116691469299004
+    second: SprigJumpSprites 1_22
+  - first:
+      213: 7520940441063148011
+    second: SprigJumpSprites 1_23
+  - first:
+      213: -6125842561329731554
+    second: SprigJumpSprites 1_24
+  - first:
+      213: 8972260055229604921
+    second: SprigJumpSprites 1_25
+  - first:
+      213: 8932607270485676171
+    second: SprigJumpSprites 1_26
+  - first:
+      213: -8962164428398708832
+    second: SprigJumpSprites 1_27
+  - first:
+      213: -4366375426886920029
+    second: SprigJumpSprites 1_28
+  - first:
+      213: 3286382372509559691
+    second: SprigJumpSprites 1_29
+  - first:
+      213: -2700253120670910420
+    second: SprigJumpSprites 1_30
+  - first:
+      213: 16867363863974213
+    second: SprigJumpSprites 1_31
+  - first:
+      213: -421188017013139635
+    second: SprigJumpSprites 1_32
+  - first:
+      213: -8989853105514493170
+    second: SprigJumpSprites 1_33
+  - first:
+      213: -9122628186345552177
+    second: SprigJumpSprites 1_34
+  - first:
+      213: 8894208113773651642
+    second: SprigJumpSprites 1_35
+  - first:
+      213: -8926504068946358206
+    second: SprigJumpSprites 1_36
+  - first:
+      213: -1876780948765037284
+    second: SprigJumpSprites 1_37
+  - first:
+      213: -306792465797698655
+    second: SprigJumpSprites 1_38
+  - first:
+      213: 4898792958716449476
+    second: SprigJumpSprites 1_39
+  - first:
+      213: -947460029696395736
+    second: SprigJumpSprites 1_40
+  - first:
+      213: -5271461501609599397
+    second: SprigJumpSprites 1_41
+  - first:
+      213: -1817382407833674700
+    second: SprigJumpSprites 1_42
+  - first:
+      213: -303051864471068387
+    second: SprigJumpSprites 1_43
+  - first:
+      213: -2129321069053039903
+    second: SprigJumpSprites 1_44
+  - first:
+      213: 9176211881255047436
+    second: SprigJumpSprites 1_45
+  - first:
+      213: 2380623280073061790
+    second: SprigJumpSprites 1_46
+  - first:
+      213: 1228921148259404594
+    second: SprigJumpSprites 1_47
+  - first:
+      213: 2991295778068647021
+    second: SprigJumpSprites 1_48
+  - first:
+      213: 3024994859638119396
+    second: SprigJumpSprites 1_49
+  - first:
+      213: 572725778037253626
+    second: SprigJumpSprites 1_50
+  - first:
+      213: -3013914066669797223
+    second: SprigJumpSprites 1_51
+  - first:
+      213: -450798533228769925
+    second: SprigJumpSprites 1_52
+  - first:
+      213: 7770225661447473229
+    second: SprigJumpSprites 1_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_0
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1641
+        width: 160
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d27395fdb537bc0800000000000000
+      internalID: -3786581846855832180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_1
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1638
+        width: 158
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458b9d99567b86cd0800000000000000
+      internalID: -2564598340786735020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_2
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1636
+        width: 162
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378482d3b73e284f0800000000000000
+      internalID: -827849263036217229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_3
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 1635
+        width: 168
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ae81e3119500660800000000000000
+      internalID: 7349972522459785803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_4
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1634
+        width: 176
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b12b9b5417566410800000000000000
+      internalID: 1469958073330901425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_5
+      rect:
+        serializedVersion: 2
+        x: 3201
+        y: 1633
+        width: 183
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56d9160fa8d63640800000000000000
+      internalID: 5059469477630563933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_6
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 1632
+        width: 189
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379d43c9f06df6b10800000000000000
+      internalID: 1977034123972499827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_7
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 1631
+        width: 199
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833a25db9c74411f0800000000000000
+      internalID: -1075155479244397768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_8
+      rect:
+        serializedVersion: 2
+        x: 4990
+        y: 1631
+        width: 206
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be408f34c288abc80800000000000000
+      internalID: -8306176839031192341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_9
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 1629
+        width: 215
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48cc2e0cf9e1d3f0800000000000000
+      internalID: -877663183581689778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_10
+      rect:
+        serializedVersion: 2
+        x: 6181
+        y: 1629
+        width: 221
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92431f4bcb68e6c50800000000000000
+      internalID: 6660409043975222313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_11
+      rect:
+        serializedVersion: 2
+        x: 6780
+        y: 1635
+        width: 224
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f827d5699a293e180800000000000000
+      internalID: -9087258366033694065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_12
+      rect:
+        serializedVersion: 2
+        x: 7381
+        y: 1640
+        width: 225
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99fe2ced8486c360800000000000000
+      internalID: 7189579600231332251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_13
+      rect:
+        serializedVersion: 2
+        x: 7983
+        y: 1645
+        width: 227
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffaaec7d642fd930800000000000000
+      internalID: 4170091832634159094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_14
+      rect:
+        serializedVersion: 2
+        x: 8588
+        y: 1651
+        width: 224
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0eb12c7d4ee5910800000000000000
+      internalID: 1828150114084708531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_15
+      rect:
+        serializedVersion: 2
+        x: 9194
+        y: 1652
+        width: 220
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac438b957053d1170800000000000000
+      internalID: 8150729206296753354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_16
+      rect:
+        serializedVersion: 2
+        x: 9802
+        y: 1652
+        width: 214
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8071f79d9876845b0800000000000000
+      internalID: -5383939512764262648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_17
+      rect:
+        serializedVersion: 2
+        x: 10410
+        y: 1653
+        width: 208
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f0bcabd27f58bf0800000000000000
+      internalID: -322580022507663511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_18
+      rect:
+        serializedVersion: 2
+        x: 11018
+        y: 1654
+        width: 201
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4625dfeb9957d4c0800000000000000
+      internalID: -4262839996004358580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_19
+      rect:
+        serializedVersion: 2
+        x: 11621
+        y: 1654
+        width: 197
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ce43791a0d890c0800000000000000
+      internalID: -4568672429522228074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_20
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1338
+        width: 198
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f16f02a2b7cf610800000000000000
+      internalID: 1656334183837343604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_21
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1338
+        width: 196
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe030bac6eb0f73c0800000000000000
+      internalID: -4359752828400422673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_22
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 1339
+        width: 197
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2946d4841762dc0800000000000000
+      internalID: -3664116691469299004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_23
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 1339
+        width: 197
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be94076cb7fbf5860800000000000000
+      internalID: 7520940441063148011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_24
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1341
+        width: 197
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18e8f585a2acfaa0800000000000000
+      internalID: -6125842561329731554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_25
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 1341
+        width: 197
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9342360bbfed38c70800000000000000
+      internalID: 8972260055229604921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_26
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 1342
+        width: 197
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80de5b4cfef6fb70800000000000000
+      internalID: 8932607270485676171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_27
+      rect:
+        serializedVersion: 2
+        x: 4413
+        y: 1342
+        width: 198
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a737aa9feeff9380800000000000000
+      internalID: -8962164428398708832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_28
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 1344
+        width: 198
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8196ceea48763c0800000000000000
+      internalID: -4366375426886920029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_29
+      rect:
+        serializedVersion: 2
+        x: 5614
+        y: 1344
+        width: 195
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ba9851b539b9d20800000000000000
+      internalID: 3286382372509559691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_30
+      rect:
+        serializedVersion: 2
+        x: 6215
+        y: 1344
+        width: 193
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2835c2e716c68ad0800000000000000
+      internalID: -2700253120670910420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_31
+      rect:
+        serializedVersion: 2
+        x: 6817
+        y: 1345
+        width: 190
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541d86f27cceb3000800000000000000
+      internalID: 16867363863974213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_32
+      rect:
+        serializedVersion: 2
+        x: 7419
+        y: 1345
+        width: 187
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47d746eab3a72af0800000000000000
+      internalID: -421188017013139635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_33
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 1346
+        width: 186
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bcdd61b30ad3380800000000000000
+      internalID: -8989853105514493170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_34
+      rect:
+        serializedVersion: 2
+        x: 8621
+        y: 1348
+        width: 183
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc648ee8ff9e56180800000000000000
+      internalID: -9122628186345552177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_35
+      rect:
+        serializedVersion: 2
+        x: 9222
+        y: 1348
+        width: 181
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab620ebe7239e6b70800000000000000
+      internalID: 8894208113773651642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_36
+      rect:
+        serializedVersion: 2
+        x: 9824
+        y: 1348
+        width: 178
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2409f5c08dfae1480800000000000000
+      internalID: -8926504068946358206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_37
+      rect:
+        serializedVersion: 2
+        x: 10425
+        y: 1349
+        width: 175
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1da3a3bba554f5e0800000000000000
+      internalID: -1876780948765037284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_38
+      rect:
+        serializedVersion: 2
+        x: 11027
+        y: 1349
+        width: 172
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abac58b0ed0ebbf0800000000000000
+      internalID: -306792465797698655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_39
+      rect:
+        serializedVersion: 2
+        x: 11629
+        y: 1349
+        width: 170
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c29a74bd320cf340800000000000000
+      internalID: 4898792958716449476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_40
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1032
+        width: 172
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826b0137f12f9d2f0800000000000000
+      internalID: -947460029696395736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_41
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1032
+        width: 173
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e996591b108d6b0800000000000000
+      internalID: -5271461501609599397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_42
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1030
+        width: 174
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c9708345c57c6e0800000000000000
+      internalID: -1817382407833674700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_43
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1029
+        width: 176
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11aea55fe75bcbf0800000000000000
+      internalID: -303051864471068387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_44
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 1029
+        width: 177
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaa652f4c12372e0800000000000000
+      internalID: -2129321069053039903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_45
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 1027
+        width: 177
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c011ded9614785f70800000000000000
+      internalID: 9176211881255047436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_46
+      rect:
+        serializedVersion: 2
+        x: 3813
+        y: 1026
+        width: 178
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95b7c8924ca90120800000000000000
+      internalID: 2380623280073061790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_47
+      rect:
+        serializedVersion: 2
+        x: 4411
+        y: 1024
+        width: 179
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b87f2f5410e0110800000000000000
+      internalID: 1228921148259404594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_48
+      rect:
+        serializedVersion: 2
+        x: 5009
+        y: 1023
+        width: 180
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c48ed59a7338920800000000000000
+      internalID: 2991295778068647021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_49
+      rect:
+        serializedVersion: 2
+        x: 5607
+        y: 1023
+        width: 181
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebdc183cc0faf920800000000000000
+      internalID: 3024994859638119396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_50
+      rect:
+        serializedVersion: 2
+        x: 6204
+        y: 1021
+        width: 182
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5ae998f0bb2f700800000000000000
+      internalID: 572725778037253626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_51
+      rect:
+        serializedVersion: 2
+        x: 6802
+        y: 1020
+        width: 183
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9900890ff1d6c26d0800000000000000
+      internalID: -3013914066669797223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_52
+      rect:
+        serializedVersion: 2
+        x: 7400
+        y: 1019
+        width: 184
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dc1a95f117eb9f0800000000000000
+      internalID: -450798533228769925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigJumpSprites 1_53
+      rect:
+        serializedVersion: 2
+        x: 7999
+        y: 1018
+        width: 184
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d488337121365db60800000000000000
+      internalID: 7770225661447473229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5318ad98a6393cb409a345c185a13af6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
