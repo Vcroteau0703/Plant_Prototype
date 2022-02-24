@@ -16,9 +16,9 @@ MonoBehaviour:
   Acceleration: 1.6
   Friction: 0.4
   Jump:
-    power: 12
+    power: 10
     max_height: 4
-    floatiness: 0.02
+    floatiness: 0.05
     angle: 0
     buffer: 0
     phase: 1
@@ -26,19 +26,19 @@ MonoBehaviour:
     power: 12
     max_height: 4
     floatiness: 0.03
-    angle: 30
+    angle: 36
     buffer: 0.2
     phase: 1
   Coyote_Delay: 0.15
   Air_Speed: 9
   Air_Control: 1
   Air_Accel: 1.4
-  Fall_Speed: -30
-  Slide_Friction: 6
+  Fall_Speed: -20
+  Slide_Friction: 7
   Max_Slide_Speed: 4
   Slide_Threshhold: 3
   Slide_Accel: 12
-  Cling_Power: 12
+  Cling_Power: 15
   Eject_Power: 0.4
   Slope_Angle: 30
   Ceiling_Angle: 30
