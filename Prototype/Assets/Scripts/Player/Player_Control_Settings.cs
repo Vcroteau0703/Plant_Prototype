@@ -7,29 +7,32 @@ public class Player_Control_Settings : ScriptableObject
 {
     #region MOVEMENT VARIABLES
     [Header("Movement Settings")]
-    public float Move_Speed = 1.0f;
-    public float Acceleration = 2.0f;
-    public float Friction = 0.4f;
+    public float move_speed = 1.0f;
+    public float move_smoothing = 0.5f;
+    public float downforce = 1f;
+    public LayerMask walkable;
     [Header("Jump Settings")]
-    public Jump Jump = new Jump();
-    public Jump Wall_Jump = new Jump();
-    public float Coyote_Delay = 0.15f;
+    public float jump_power = 1.0f;
+    public float floatiness, weight;
+    public float coyote_jump_delay = 0.15f;
     [Header("Air Control Settings")]
-    public float Air_Speed = 1.0f;
-    public float Air_Control = 1.0f;
-    public float Air_Accel = 1.0f;
-    public float Fall_Speed = 1.0f;
+    public float air_control = 1.0f;
+    public float max_air_speed = 10.0f;
+    public float max_fall_speed = 20.0f;
+    [Header("Wall Jump Settings")]
+    public float wall_jump_power = 10.0f;
+    public float wall_grab_strength = 20.0f;
+    public float wall_jump_angle = 45.0f;
+    public float wall_release_strength = 5.0f;
     [Header("Wall Slide Settings")]
-    public float Slide_Friction = 1.0f;
-    public float Max_Slide_Speed = 8.0f;
-    public float Slide_Threshhold = 1.0f;
-    public float Slide_Accel = 1.0f;
-    public float Cling_Power = 1.0f;
-    public float Eject_Power = 1.0f;
+    public float landing_slide_duration = 2.0f;
+    public float landing_slide_speed = 5.0f;
+    public float wall_slide_speed = 5.0f;
+    public float wall_slide_smoothing = 0.1f;
     [Header("Detection Settings")]
-    public float Slope_Angle = 30f;
-    public float Ceiling_Angle = 30f;
-    public float Cling_Threshold = 1f;
+    public float slope_angle = 30f;
+    public float ceiling_angle = 30f;
+    public float min_climb_height = 1f;
     [Header("Input Settings")]
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
     [Range(0f, 100f)] public float vertical_deadzone = 20f;

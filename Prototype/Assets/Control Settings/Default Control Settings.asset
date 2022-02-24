@@ -12,42 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
   m_Name: Default Control Settings
   m_EditorClassIdentifier: 
-  move_speed: 16
-  acceleration: 1.6
-  friction: 0.3
+  move_speed: 8
+  move_smoothing: 1
+  downforce: 7
   walkable:
     serializedVersion: 2
     m_Bits: 321
-  Jump:
-    delay: 0
-    initial_power: 8
-    max_height: 5
-    floatiness: 0.1
-    angle: 0
-    buffer: 0
-    phase: 1
-  Wall_Jump:
-    delay: 0
-    initial_power: 20
-    max_height: 5
-    floatiness: 0.01
-    angle: 20
-    buffer: 0.2
-    phase: 1
+  jump_power: 350
+  floatiness: 0.5
+  weight: 20
   coyote_jump_delay: 0.2
-  Air_Speed: 10
-  Air_Control: 0.8
-  Air_Accel: 1
-  Fall_Speed: -20
-  slide_friction: 100
-  max_slide_speed: 8
-  slide_threshhold: -1
-  slide_acceleration: 1
-  cling_strength: 12
-  cling_release_power: 0.2
-  slope_angle: 40
-  ceiling_angle: 30
-  cling_angle: 40
+  air_control: 1
+  max_air_speed: 6
+  max_fall_speed: 10
+  wall_jump_power: 450
+  wall_grab_strength: 15
+  wall_jump_angle: 42.5
+  wall_release_strength: 5.5
+  landing_slide_duration: 0.2
+  landing_slide_speed: 10
+  wall_slide_speed: 25
+  wall_slide_smoothing: 0.02
+  slope_angle: 60
+  ceiling_angle: 45
   min_climb_height: 1
   horizontal_deadzone: 20
   vertical_deadzone: 20
