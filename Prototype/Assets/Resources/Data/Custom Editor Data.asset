@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748430c2f364b0a4c9e159e7710d8a20, type: 3}
+  m_Name: Custom Editor Data
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 0}
+  wind_volume: {fileID: 9036507292203216751, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
