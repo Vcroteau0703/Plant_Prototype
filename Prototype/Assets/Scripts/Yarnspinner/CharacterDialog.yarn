@@ -4,9 +4,11 @@ position: 1,-1
 ---
 
 Help! Help!
+<<Camera_Pan CameraDuringDialog>>
 I don't think I can make the jump down from here. Please can you come help me down. 
 Oh right, I don't think you can get up here.
 Maybe there's something around here you can move.
+<<Camera_Pan CameraAfterDialog>>
 
 ===
 title: Dialogue2

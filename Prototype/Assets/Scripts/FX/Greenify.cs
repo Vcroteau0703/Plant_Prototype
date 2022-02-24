@@ -18,12 +18,13 @@ public class Greenify : MonoBehaviour
    // public Material ground;
     public PlayableDirector cutscene;
     //public GameObject cutscene2;
-    public Hazard[] waterObj;
+    public GameObject[] hazards;
 
     private void Awake()
     {
         water.SetColor("_Emission", waterStartEmission);
         water.SetColor("_BaseColor", waterStartColor);
+
         //StartTheColorChange();
     }
 
@@ -37,9 +38,13 @@ public class Greenify : MonoBehaviour
 
     public void ActivateCutscene()
     {
-        for(int i = 0; i < waterObj.Length; i++)
+        for(int i = 0; i < hazards.Length; i++)
         {
-            waterObj[i].ChangeDamage(0);
+            hazards[i].GetComponent<Hazard>().ChangeDamage(0);
+        }
+        for (int i = 0; i < hazards.Length; i++)
+        {
+            hazards[i].GetComponent<MeshCollider>().enabled = false;
         }
         cutscene.Play();
     }
