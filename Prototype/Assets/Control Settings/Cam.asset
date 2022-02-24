@@ -35,6 +35,6 @@ MonoBehaviour:
   wall_slide_smoothing: 0.02
   slope_angle: 60
   ceiling_angle: 80
-  min_climb_height: 1
+  min_climb_height: 0.25
   horizontal_deadzone: 50
   vertical_deadzone: 50
