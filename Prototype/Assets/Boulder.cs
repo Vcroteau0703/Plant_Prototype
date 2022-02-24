@@ -7,11 +7,6 @@ public class Boulder : Hazard
 {
     public PlayableDirector director;
 
-    private void Awake()
-    {
-        director = transform.GetComponent<PlayableDirector>();
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out IDamagable a))
