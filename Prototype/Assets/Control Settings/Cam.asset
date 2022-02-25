@@ -12,29 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
   m_Name: Cam
   m_EditorClassIdentifier: 
-  move_speed: 8
-  move_smoothing: 0.2
-  downforce: 7
-  walkable:
-    serializedVersion: 2
-    m_Bits: 321
-  jump_power: 350
-  floatiness: 0.5
-  weight: 20
-  coyote_jump_delay: 0.15
-  air_control: 1
-  max_air_speed: 6
-  max_fall_speed: 10
-  wall_jump_power: 450
-  wall_grab_strength: 15
-  wall_jump_angle: 42.5
-  wall_release_strength: 5.5
-  landing_slide_duration: 0.2
-  landing_slide_speed: 10
-  wall_slide_speed: 25
-  wall_slide_smoothing: 0.02
-  slope_angle: 60
-  ceiling_angle: 70
-  min_climb_height: 1
+  Move_Speed: 18
+  Acceleration: 1.6
+  Friction: 0.4
+  Jump:
+    power: 12
+    max_height: 4
+    floatiness: 0.02
+    angle: 0
+    buffer: 0
+    phase: 1
+  Wall_Jump:
+    power: 12
+    max_height: 4
+    floatiness: 0.03
+    angle: 38
+    buffer: 0.2
+    phase: 1
+  Coyote_Delay: 0.15
+  Air_Speed: 11
+  Air_Control: 1
+  Air_Accel: 1.4
+  Fall_Speed: -30
+  Slide_Friction: 15
+  Max_Slide_Speed: 4
+  Slide_Threshhold: 3
+  Slide_Accel: 27
+  Cling_Power: 15
+  Eject_Power: 0.4
+  Slope_Angle: 60
+  Ceiling_Angle: 45
+  Cling_Threshold: 0.25
   horizontal_deadzone: 50
   vertical_deadzone: 50
