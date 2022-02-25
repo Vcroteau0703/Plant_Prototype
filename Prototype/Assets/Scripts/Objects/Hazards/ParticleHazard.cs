@@ -18,6 +18,7 @@ public class ParticleHazard : Hazard
         {
             a.Damage(damage);
         }
+
     }
 
 }
