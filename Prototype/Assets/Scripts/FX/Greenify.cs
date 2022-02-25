@@ -44,7 +44,7 @@ public class Greenify : MonoBehaviour
         }
         for (int i = 0; i < hazards.Length; i++)
         {
-            hazards[i].GetComponent<MeshCollider>().enabled = false;
+            hazards[i].GetComponent<MeshCollider>().isTrigger = true;
         }
         cutscene.Play();
     }

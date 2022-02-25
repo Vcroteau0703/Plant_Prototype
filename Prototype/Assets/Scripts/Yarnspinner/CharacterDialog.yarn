@@ -15,14 +15,19 @@ title: Dialogue2
 position: 90,49
 ---
 
-<<change_world GreenifyDirector>>
 I've been stuck up here for so long... Thank you for helping me.
+Woah do you feel that?
+<<change_world GreenifyDirector>>
 
 
 ===
 title: AfterTransformation
 position: 213,26
 ---
+
+<<Camera_Pan CameraDuringDialog>>
+Hey a path opened over here!
+<<Camera_Pan CameraAfterDialog>>
 
 ===
 title: Node
