@@ -30,6 +30,8 @@ public class Player_Control_Settings : ScriptableObject
     public float Slope_Angle = 30f;
     public float Ceiling_Angle = 30f;
     public float Cling_Threshold = 1f;
+    [Header("Ceiling Settings")]
+    public float Bonk_Power = 2f;
     [Header("Input Settings")]
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
     [Range(0f, 100f)] public float vertical_deadzone = 20f;
