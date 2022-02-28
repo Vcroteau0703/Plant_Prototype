@@ -13,7 +13,6 @@ public class ParticleHazard : Hazard
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.tag);
         if (other.gameObject.TryGetComponent(out IDamagable a))
         {
             a.Damage(damage);

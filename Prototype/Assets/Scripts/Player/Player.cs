@@ -10,8 +10,8 @@ public class Player : MonoBehaviour, IDamagable
     public void Damage(int amount)
     {
         health -= amount;
-        if (health < 0) { health = 0; Respawn();}
-        else if(health == 0) { Respawn(); } 
+        if (health < 0) { health = 0; Respawn(); }
+        else if (health == 0) { Respawn(); }
     }
 
     public void Respawn()
@@ -22,13 +22,21 @@ public class Player : MonoBehaviour, IDamagable
             if (m.TryGetComponent(out ICheckpoint c))
             {
                 x = c.Get_Active_Checkpoint();
-                if(x != null) {
+                if (x != null) {
                     health = max_health;
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    transform.position = x.transform.position; 
-                    return; 
+                    transform.position = x.transform.position;
+                    return;
                 }
             }
+        }
+    }
+
+    public void Heal(int amount)
+    {
+        if(health < max_health)
+        {
+            health += amount;
         }
     }
 }

@@ -9,9 +9,9 @@ public class Hazard : MonoBehaviour
     {
         //if (!GetComponent<Collider>()){ Debug.LogError("MISSING COMPONENT: " + this.gameObject.name + " is missing a collider."); };
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.TryGetComponent(out IDamagable a))
+        if (other.gameObject.TryGetComponent(out IDamagable a))
         {
             a.Damage(damage);
         }

@@ -24,8 +24,6 @@ public class Greenify : MonoBehaviour
     {
         water.SetColor("_Emission", waterStartEmission);
         water.SetColor("_BaseColor", waterStartColor);
-
-        //StartTheColorChange();
     }
 
     [YarnCommand("change_world")]
@@ -41,11 +39,7 @@ public class Greenify : MonoBehaviour
         for(int i = 0; i < hazards.Length; i++)
         {
             hazards[i].GetComponent<Hazard>().ChangeDamage(0);
-        }
-        for (int i = 0; i < hazards.Length; i++)
-        {
-            hazards[i].GetComponent<MeshCollider>().convex = true;
-            hazards[i].GetComponent<MeshCollider>().isTrigger = true;
+            hazards[i].GetComponent<Heal_Volume>().enabled = true;
         }
         cutscene.Play();
     }
