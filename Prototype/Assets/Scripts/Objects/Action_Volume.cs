@@ -7,7 +7,7 @@ public class Action_Volume : MonoBehaviour
     public LayerMask Layer_Filter;
 
     public delegate void Action(GameObject actor);
-    public static Action action;
+    public Action action;
 
     public enum Trigger_Type { 
         Trigger_Stay, 
@@ -15,7 +15,7 @@ public class Action_Volume : MonoBehaviour
         Trigger_Exit, 
         Collision_Stay, 
         Collision_Enter, 
-        Collision_Exit  
+        Collision_Exit
     }
 
     public Trigger_Type trigger_type;

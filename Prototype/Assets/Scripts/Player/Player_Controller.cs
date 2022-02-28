@@ -89,6 +89,13 @@ public class Player_Controller : MonoBehaviour
                     StartCoroutine(Jump_02(settings.Wall_Jump, 0));
                 }
                 break;
+            case State.Sliding:
+                if (settings.Wall_Jump.phase == Jump.State.Waiting && coyote_time > settings.Coyote_Delay)
+                {
+                    settings.Wall_Jump.phase = Jump.State.Started;
+                    StartCoroutine(Jump_02(settings.Wall_Jump, 0));
+                }
+                break;
             case State.Aerial:
                 if (coyote_time < settings.Coyote_Delay && settings.Jump.phase == Jump.State.Waiting)
                 {
@@ -124,18 +131,23 @@ public class Player_Controller : MonoBehaviour
                 break;
             case State.Cling:
                 coyote_time += Time.deltaTime;
-                Cling();
+                if (c_manager.Cling.Enabled) { Cling(); }
                 if (c_manager.Aerials.Enabled) { rb.velocity = new Vector2(rb.velocity.x, 0); settings.Wall_Jump.phase = Jump.State.Waiting; }             
                 break;
             case State.Aerial:
+                rb.useGravity = true;
                 coyote_time += Time.deltaTime;
-                Aerial();
+                if (c_manager.Aerials.Enabled) { Aerial(); }
                 break;
             case State.Ceiling:
-                Ceiling();
+                if (c_manager.Ceiling.Enabled) { Ceiling(); }
                 break;
             case State.Gliding:
+                if (c_manager.Gliding.Enabled) { Ceiling(); }
                 Glide();
+                break;
+            case State.Sliding:
+                if (c_manager.Sliding.Enabled && c_manager.Cling.Enabled) { Slide(); Cling(); }
                 break;
 
         }
@@ -162,31 +174,28 @@ public class Player_Controller : MonoBehaviour
     }   
     public void Cling()
     {
-        if (direction.y < 0)
-        {
-            float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
-            slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
-        }
+        //CLING
         rb.useGravity = false;
         Flip((int)((detection.x % 1) + (detection.x / 1)));
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
         rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
 
+        //SLIDE CHECK
+        if (direction.y < 0) { current_state = State.Sliding; return; }
+
+        //WALL EJECT
+        rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
+
+        // AUTO SLIDE + FRICTION
         transform.position += Vector3.down * slide_speed * Time.deltaTime;
         if(slide_speed > 0){slide_speed -= Time.deltaTime * settings.Slide_Friction;}
         else { slide_speed = 0; }
-        
 
-        //if (slide_time < settings.landing_slide_duration)
-        //{
-        //    transform.position = Vector2.Lerp(transform.position, (Vector2)transform.position + Vector2.down * ( / 10), settings.wall_slide_smoothing);
-        //    slide_time += Time.deltaTime;
-        //}
+        //STATE CHANGE
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+        else { current_state = State.Aerial; }
 
-        if (current_state == State.Cling)
-        {
-            rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
-        }
     }
     public void Aerial()
     {
@@ -212,7 +221,7 @@ public class Player_Controller : MonoBehaviour
     }
     public void Ceiling()
     {
-        rb.AddForce(-transform.up * 2, ForceMode.Impulse);
+        rb.AddForce(-transform.up * settings.Bonk_Power, ForceMode.Impulse);
         current_state = State.Aerial;
     }
     public void Glide()
@@ -226,6 +235,23 @@ public class Player_Controller : MonoBehaviour
         float angle = Vector3.Angle(detection, -Vector3.up);
         if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
         else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+    }
+    public void Slide()
+    {
+        if (direction.y < 0 && controls.Player.Jump.phase != InputActionPhase.Started)
+        {
+            Debug.Log("SLIDE");
+            float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
+            slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
+            transform.position += Vector3.down * slide_speed * Time.deltaTime;
+            return;
+        }
+
+        
+        //STATE CHANGE
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+        else { current_state = State.Aerial; }
     }
     public IEnumerator Jump_01(Jump jump, float time)
     {
@@ -268,6 +294,13 @@ public class Player_Controller : MonoBehaviour
         c_manager.Aerials.Disable();
         yield return new WaitForSeconds(settings.Wall_Jump.buffer);
         c_manager.Aerials.Enable();
+    }
+
+    public IEnumerator Gravity_Buffer(float time)
+    {
+        rb.useGravity = false;
+        yield return new WaitForSeconds(time);
+        rb.useGravity = true;
     }
     #endregion
 
@@ -431,13 +464,16 @@ public class Jump
 [System.Serializable]
 public class Control_Management
 {
-    public Control_State Moving, Gliding, Jumping, Aerials;
+    public Control_State Moving, Gliding, Jumping, Aerials, Sliding, Cling, Ceiling;
     public void Disable_All() 
     {
         Moving.Disable();
         Gliding.Disable();
         Jumping.Disable();
         Aerials.Disable();
+        Sliding.Disable();
+        Cling.Disable();
+        Ceiling.Disable();
     }
     public void Enable_All()
     {
@@ -445,6 +481,9 @@ public class Control_Management
         Gliding.Enable();
         Jumping.Enable();
         Aerials.Enable();
+        Sliding.Enable();
+        Cling.Enable();
+        Ceiling.Enable();
     }
 }
 
