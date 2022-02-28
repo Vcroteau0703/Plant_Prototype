@@ -1,0 +1,1164 @@
+fileFormatVersion: 2
+guid: 0daa637178fe8bb4fb06e2e856224c35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4006053813331647105
+    second: SprigGLIDE_0
+  - first:
+      213: -2849970494549416061
+    second: SprigGLIDE_1
+  - first:
+      213: -6057016159922665422
+    second: SprigGLIDE_2
+  - first:
+      213: 1015876869525500105
+    second: SprigGLIDE_3
+  - first:
+      213: -1772017848668272484
+    second: SprigGLIDE_4
+  - first:
+      213: 4480383365233384664
+    second: SprigGLIDE_5
+  - first:
+      213: 5490365050947942139
+    second: SprigGLIDE_6
+  - first:
+      213: 5793435322035016543
+    second: SprigGLIDE_7
+  - first:
+      213: -7622613119547777230
+    second: SprigGLIDE_8
+  - first:
+      213: 4287146016481818236
+    second: SprigGLIDE_9
+  - first:
+      213: 6563383798374836236
+    second: SprigGLIDE_10
+  - first:
+      213: -4496720908770632104
+    second: SprigGLIDE_11
+  - first:
+      213: -5005110109640437342
+    second: SprigGLIDE_12
+  - first:
+      213: 5511270338195984592
+    second: SprigGLIDE_13
+  - first:
+      213: -7171377979174133202
+    second: SprigGLIDE_14
+  - first:
+      213: -3347893358798409236
+    second: SprigGLIDE_15
+  - first:
+      213: 4060792280650817525
+    second: SprigGLIDE_16
+  - first:
+      213: -1276395873717630209
+    second: SprigGLIDE_17
+  - first:
+      213: 8035882202823723272
+    second: SprigGLIDE_18
+  - first:
+      213: 7573478255698365232
+    second: SprigGLIDE_19
+  - first:
+      213: 3394620176142102219
+    second: SprigGLIDE_20
+  - first:
+      213: -6567226191753286248
+    second: SprigGLIDE_21
+  - first:
+      213: -5235373370091036527
+    second: SprigGLIDE_22
+  - first:
+      213: 2419625160966773486
+    second: SprigGLIDE_23
+  - first:
+      213: 6344752527428009089
+    second: SprigGLIDE_24
+  - first:
+      213: -8876039870066704123
+    second: SprigGLIDE_25
+  - first:
+      213: 681594880624831016
+    second: SprigGLIDE_26
+  - first:
+      213: 6312759251211449592
+    second: SprigGLIDE_27
+  - first:
+      213: 2666044698488317525
+    second: SprigGLIDE_28
+  - first:
+      213: -3025702791710453091
+    second: SprigGLIDE_29
+  - first:
+      213: 4329597972404270956
+    second: SprigGLIDE_30
+  - first:
+      213: -6891525952174021699
+    second: SprigGLIDE_31
+  - first:
+      213: 8283329435311238594
+    second: SprigGLIDE_32
+  - first:
+      213: -4918863295173810402
+    second: SprigGLIDE_33
+  - first:
+      213: -386563468399925354
+    second: SprigGLIDE_34
+  - first:
+      213: -1405478879323780407
+    second: SprigGLIDE_35
+  - first:
+      213: 8823768478628010995
+    second: SprigGLIDE_36
+  - first:
+      213: -3358337714514073289
+    second: SprigGLIDE_37
+  - first:
+      213: 924387440474704251
+    second: SprigGLIDE_38
+  - first:
+      213: -5997730813389440058
+    second: SprigGLIDE_39
+  - first:
+      213: 2334910186368414690
+    second: SprigGLIDE_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SprigGLIDE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a5bbed7bc589730800000000000000
+      internalID: 4006053813331647105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387a90c5feed278d0800000000000000
+      internalID: -2849970494549416061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238420dd4e721fba0800000000000000
+      internalID: -6057016159922665422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c07a9761ae191e00800000000000000
+      internalID: 1015876869525500105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98c97ab7278867e0800000000000000
+      internalID: -1772017848668272484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc1e4ebee48d2e30800000000000000
+      internalID: 4480383365233384664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_6
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6b8f4bce1b13c40800000000000000
+      internalID: 5490365050947942139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53191ffaba666050800000000000000
+      internalID: 5793435322035016543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f5f1d01c9073690800000000000000
+      internalID: -7622613119547777230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7631a476900f7b30800000000000000
+      internalID: 4287146016481818236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08afa25ac2d51b50800000000000000
+      internalID: 6563383798374836236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e97aa78207891c0800000000000000
+      internalID: -4496720908770632104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a15a2d9fd64a8ab0800000000000000
+      internalID: -5005110109640437342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_13
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d091513c27fb7c40800000000000000
+      internalID: 5511270338195984592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22644939b52a7c90800000000000000
+      internalID: -7171377979174133202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_15
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce17ee26ab4e981d0800000000000000
+      internalID: -3347893358798409236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_16
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff17d27015da5830800000000000000
+      internalID: 4060792280650817525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_17
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa494a27b4594ee0800000000000000
+      internalID: -1276395873717630209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_18
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809013c9940358f60800000000000000
+      internalID: 8035882202823723272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_19
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bcb09f8566a1960800000000000000
+      internalID: 7573478255698365232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcee252901d1c1f20800000000000000
+      internalID: 3394620176142102219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d67e0c2968cd4a0800000000000000
+      internalID: -6567226191753286248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1902f2978a73857b0800000000000000
+      internalID: -5235373370091036527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_23
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea9501a34c349120800000000000000
+      internalID: 2419625160966773486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cbb19cec61d0850800000000000000
+      internalID: 6344752527428009089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_25
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5014874f3c8f1d480800000000000000
+      internalID: -8876039870066704123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_26
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a2e54cee2857900800000000000000
+      internalID: 681594880624831016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_27
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4f401b71d6b9750800000000000000
+      internalID: 6312759251211449592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_28
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556a5b82781bff420800000000000000
+      internalID: 2666044698488317525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_29
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92d030875b8206d0800000000000000
+      internalID: -3025702791710453091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67786daa62d51c30800000000000000
+      internalID: 4329597972404270956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_31
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3284cc8a16c50a0800000000000000
+      internalID: -6891525952174021699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_32
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd63450c3c44f270800000000000000
+      internalID: 8283329435311238594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_33
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e172570f4efacbbb0800000000000000
+      internalID: -4918863295173810402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_34
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69721e6d296a2aaf0800000000000000
+      internalID: -386563468399925354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_35
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca8792e76cbe7ce0800000000000000
+      internalID: -1405478879323780407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_36
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb59e45ea2547a70800000000000000
+      internalID: 8823768478628010995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_37
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739679254a9c461d0800000000000000
+      internalID: -3358337714514073289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_38
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79c350ca7514dc00800000000000000
+      internalID: 924387440474704251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_39
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbf1814a97c3cca0800000000000000
+      internalID: -5997730813389440058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigGLIDE_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e33ee09174476020800000000000000
+      internalID: 2334910186368414690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0525d01df2bba7f4ab4c8da41191135e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
