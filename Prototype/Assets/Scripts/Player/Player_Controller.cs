@@ -20,12 +20,12 @@ public class Player_Controller : MonoBehaviour
     // DEBUG INFO //
     [Header("Debug")]
     private Vector2 direction;
-    private Vector2 detection;
+    public Vector2 detection;
     private float coyote_time;
     private float slide_speed = 0;
 
     // PLAYER STATES //
-    public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial }
+    public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial, Gliding, Sliding }
     [Header("States")]
     public State current_state;
     public State last_state = default;
@@ -45,6 +45,10 @@ public class Player_Controller : MonoBehaviour
         controls = controls == null ? new Controls() : controls;
         Subscribe_Actions();
         controls.Player.Enable();
+    }
+    private void Start()
+    {
+        current_state = State.Aerial;
     }
     private void FixedUpdate()
     {
@@ -107,19 +111,15 @@ public class Player_Controller : MonoBehaviour
     }
     #endregion
 
-    #region MOVEMENT
+    #region STATE CONTROL
     public void State_Control()
     {
         Flip((int)((direction.x % 1) + (direction.x / 1)));
         switch (current_state)
         {
             case State.Grounded:
-                //if (settings.Jump.phase == Jump.State.Canceled)
-                //{
-                //    settings.Jump.phase = Jump.State.Waiting;
-                //}
                 coyote_time = 0;
-                if (direction.x != 0 && c_manager.Moving.Enabled) { Move(); }
+                if (c_manager.Moving.Enabled) { Move(); }
                 else { col.material.dynamicFriction = 5f; }
                 break;
             case State.Cling:
@@ -131,6 +131,13 @@ public class Player_Controller : MonoBehaviour
                 coyote_time += Time.deltaTime;
                 Aerial();
                 break;
+            case State.Ceiling:
+                Ceiling();
+                break;
+            case State.Gliding:
+                Glide();
+                break;
+
         }
     }
     public void Move()
@@ -150,7 +157,8 @@ public class Player_Controller : MonoBehaviour
         float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.Friction)) : 0;
         friction_force *= Mathf.Sign(rb.velocity.x);
         rb.AddForce(dir * -friction_force, ForceMode.Impulse);
-        Debug.DrawLine(transform.position, (Vector2)transform.position + dir, Color.red);
+
+        if(detection == Vector2.zero) { Debug.Log("Aerial"); current_state = State.Aerial; }
     }   
     public void Cling()
     {
@@ -194,6 +202,30 @@ public class Player_Controller : MonoBehaviour
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
         else { Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z); }
+
+        //STATE CHANGE//
+        if(detection == Vector2.zero) { return; }
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (angle < settings.Slope_Angle) { Debug.Log("GROUND"); current_state = State.Grounded; } // GROUND
+        else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+    }
+    public void Ceiling()
+    {
+        rb.AddForce(-transform.up * 2, ForceMode.Impulse);
+        current_state = State.Aerial;
+    }
+    public void Glide()
+    {
+        rb.AddForce(2 * transform.up, ForceMode.Force);
+
+        if (controls.Player.Jump.phase == InputActionPhase.Performed){
+            current_state = State.Aerial;
+        }
+
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
     }
     public IEnumerator Jump_01(Jump jump, float time)
     {
@@ -304,9 +336,10 @@ public class Player_Controller : MonoBehaviour
         {
             Flip((int)((-detection.x % 1) + (-detection.x / 1)));
         }
-        current_state = State.Aerial;
+        //current_state = State.Aerial;
         rb.useGravity = true;
-        detection = Vector3.zero;
+        detection = Vector2.zero;
+        Debug.Log("EXIT");
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -333,10 +366,10 @@ public class Player_Controller : MonoBehaviour
         float height = collision.GetContact(0).otherCollider.bounds.size.y;
 
 
-        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
-        else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && height > settings.Cling_Threshold && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // WALL 
-        else { current_state = State.Aerial; } // WAITING (DEFAULT)
+        //if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
+        //else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
+        //else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && height > settings.Cling_Threshold && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // WALL 
+        //else { current_state = State.Aerial; } // WAITING (DEFAULT)
         Debug.DrawLine(transform.position, transform.position + (average - transform.position).normalized, Color.green);
     }
     private void OnCollisionEnter(Collision collision)
@@ -356,7 +389,6 @@ public class Player_Controller : MonoBehaviour
         settings = setting_presets[index];
         Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
@@ -374,14 +406,11 @@ public class Player_Controller : MonoBehaviour
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
         #endregion
-
-        Gizmos.color = Color.red;
     }
-
-
     #endregion
 }
 
+#region CLASSES
 [System.Serializable]
 public class Jump
 {
@@ -435,3 +464,4 @@ public class Control_State
     }
 
 }
+#endregion
