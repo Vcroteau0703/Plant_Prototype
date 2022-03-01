@@ -1,94 +1,70 @@
 fileFormatVersion: 2
-guid: 0afe8a723e6224a4186875085bada5bf
+guid: e935e7189c7465848bba7f476bf2bf1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6844550583558661416
-    second: SprigAirNewGame_0
+      213: 4009045816356677047
+    second: SprigImpliedJump_0
   - first:
-      213: 6847119992047640646
-    second: SprigAirNewGame_1
+      213: 1187536979493118215
+    second: SprigImpliedJump_1
   - first:
-      213: -7895092798095481027
-    second: SprigAirNewGame_2
+      213: 2647865643200514598
+    second: SprigImpliedJump_2
   - first:
-      213: 1995945042462937335
-    second: SprigAirNewGame_3
+      213: 1894650491864810833
+    second: SprigImpliedJump_3
   - first:
-      213: -4613393455551917695
-    second: SprigAirNewGame_4
+      213: -1836671394783673747
+    second: SprigImpliedJump_4
   - first:
-      213: 1351250866284940175
-    second: SprigAirNewGame_5
+      213: -1305118167789911915
+    second: SprigImpliedJump_5
   - first:
-      213: 8746248847191118784
-    second: SprigAirNewGame_6
+      213: 2433789409672610010
+    second: SprigImpliedJump_6
   - first:
-      213: 8198163279073982792
-    second: SprigAirNewGame_7
+      213: -6760404674097054702
+    second: SprigImpliedJump_7
   - first:
-      213: 3860390809607542709
-    second: SprigAirNewGame_8
+      213: 5630642263373609100
+    second: SprigImpliedJump_8
   - first:
-      213: -5816707137223422076
-    second: SprigAirNewGame_9
+      213: -3636138986594207122
+    second: SprigImpliedJump_9
   - first:
-      213: -8815857665375334275
-    second: SprigAirNewGame_10
+      213: 6914909110314041268
+    second: SprigImpliedJump_10
   - first:
-      213: 5219826196369829651
-    second: SprigAirNewGame_11
+      213: 4898569432350778163
+    second: SprigImpliedJump_11
   - first:
-      213: 148324795780878406
-    second: SprigAirNewGame_12
+      213: -8666331464347647303
+    second: SprigImpliedJump_12
   - first:
-      213: -8606573809458889574
-    second: SprigAirNewGame_13
+      213: 4110763019968864956
+    second: SprigImpliedJump_13
   - first:
-      213: 7186752074816413830
-    second: SprigAirNewGame_14
+      213: 5695341607995142564
+    second: SprigImpliedJump_14
   - first:
-      213: -428038157913897974
-    second: SprigAirNewGame_15
+      213: -254838765293023682
+    second: SprigImpliedJump_15
   - first:
-      213: 1618130089309190059
-    second: SprigAirNewGame_16
+      213: 1046078870382398320
+    second: SprigImpliedJump_16
   - first:
-      213: 4537937623895453640
-    second: SprigAirNewGame_17
+      213: 4700345375459055941
+    second: SprigImpliedJump_17
   - first:
-      213: 1833780685285705276
-    second: SprigAirNewGame_18
+      213: 8747914884158022507
+    second: SprigImpliedJump_18
   - first:
-      213: 5303474980665719419
-    second: SprigAirNewGame_19
+      213: 844341083003639384
+    second: SprigImpliedJump_19
   - first:
-      213: 1139359496443673517
-    second: SprigAirNewGame_20
-  - first:
-      213: 6337772078528369450
-    second: SprigAirNewGame_21
-  - first:
-      213: -8792759288137505865
-    second: SprigAirNewGame_22
-  - first:
-      213: -4248845626361346233
-    second: SprigAirNewGame_23
-  - first:
-      213: -2963725574056526210
-    second: SprigAirNewGame_24
-  - first:
-      213: -5538643099650321118
-    second: SprigAirNewGame_25
-  - first:
-      213: 3929512031380734427
-    second: SprigAirNewGame_26
-  - first:
-      213: 783918408862568673
-    second: SprigAirNewGame_27
-  - first:
-      213: -4621640652914642914
-    second: SprigAirNewGame_28
+      213: -4018766410032203013
+    second: SprigImpliedJump_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -250,301 +226,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SprigAirNewGame_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8da1bcb12854301a0800000000000000
-      internalID: -6844550583558661416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_1
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 640a97cea5bd50f50800000000000000
-      internalID: 6847119992047640646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_2
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3726cc1eeefe6290800000000000000
-      internalID: -7895092798095481027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_3
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f0943fe07503bb10800000000000000
-      internalID: 1995945042462937335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_4
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18157b0581fe9ffb0800000000000000
-      internalID: -4613393455551917695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_5
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8b4a5fe08b90c210800000000000000
-      internalID: 1351250866284940175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_6
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 1144
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c31ff5acfae06970800000000000000
-      internalID: 8746248847191118784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8493bdb011ab5c170800000000000000
-      internalID: 8198163279073982792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_8
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b717d4fcfcd29530800000000000000
-      internalID: 3860390809607542709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_9
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f815b4da7e64fa0800000000000000
-      internalID: -5816707137223422076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_10
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7016e86928c7a580800000000000000
-      internalID: -8815857665375334275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_11
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31fe6ef054c807840800000000000000
-      internalID: 5219826196369829651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_12
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 640d6ebad94fe0200800000000000000
-      internalID: 148324795780878406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_13
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 858
-        width: 600
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9cb50a48be4f8880800000000000000
-      internalID: -8606573809458889574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigAirNewGame_14
+      name: SprigImpliedJump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -558,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 680eb3c5fe87cb360800000000000000
-      internalID: 7186752074816413830
+      spriteID: 7b5a43cddedf2a730800000000000000
+      internalID: 4009045816356677047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_15
+      name: SprigImpliedJump_1
       rect:
         serializedVersion: 2
         x: 600
@@ -579,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a04ca3f209d4f0af0800000000000000
-      internalID: -428038157913897974
+      spriteID: 701e35c479afa7010800000000000000
+      internalID: 1187536979493118215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_16
+      name: SprigImpliedJump_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -600,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba735a53eb0c47610800000000000000
-      internalID: 1618130089309190059
+      spriteID: 62a8de306cb1fb420800000000000000
+      internalID: 2647865643200514598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_17
+      name: SprigImpliedJump_3
       rect:
         serializedVersion: 2
         x: 1800
@@ -621,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cf2b25d93ef9fe30800000000000000
-      internalID: 4537937623895453640
+      spriteID: 1550f1585962b4a10800000000000000
+      internalID: 1894650491864810833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_18
+      name: SprigImpliedJump_4
       rect:
         serializedVersion: 2
         x: 2400
@@ -642,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c364d6641d5e27910800000000000000
-      internalID: 1833780685285705276
+      spriteID: d624cc8f815d286e0800000000000000
+      internalID: -1836671394783673747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_19
+      name: SprigImpliedJump_5
       rect:
         serializedVersion: 2
         x: 3000
@@ -663,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a70c9556ab99940800000000000000
-      internalID: 5303474980665719419
+      spriteID: 59049f2f0f943ede0800000000000000
+      internalID: -1305118167789911915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_20
+      name: SprigImpliedJump_6
       rect:
         serializedVersion: 2
         x: 3600
@@ -684,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab3ef8ec61dfcf00800000000000000
-      internalID: 1139359496443673517
+      spriteID: ad0c4a5c29e86c120800000000000000
+      internalID: 2433789409672610010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_21
+      name: SprigImpliedJump_7
       rect:
         serializedVersion: 2
         x: 0
@@ -705,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a239210602a44f750800000000000000
-      internalID: 6337772078528369450
+      spriteID: 21cfd8e54c73e22a0800000000000000
+      internalID: -6760404674097054702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_22
+      name: SprigImpliedJump_8
       rect:
         serializedVersion: 2
         x: 600
@@ -726,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b32c037308d9f580800000000000000
-      internalID: -8792759288137505865
+      spriteID: c887fad5e4f042e40800000000000000
+      internalID: 5630642263373609100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_23
+      name: SprigImpliedJump_9
       rect:
         serializedVersion: 2
         x: 1200
@@ -747,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74782470a611905c0800000000000000
-      internalID: -4248845626361346233
+      spriteID: e6a7a165bd6d98dc0800000000000000
+      internalID: -3636138986594207122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_24
+      name: SprigImpliedJump_10
       rect:
         serializedVersion: 2
         x: 1800
@@ -768,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7ebe9afa4bbed6d0800000000000000
-      internalID: -2963725574056526210
+      spriteID: 4bf7166f231b6ff50800000000000000
+      internalID: 6914909110314041268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_25
+      name: SprigImpliedJump_11
       rect:
         serializedVersion: 2
         x: 2400
@@ -789,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2259ca32279c223b0800000000000000
-      internalID: -5538643099650321118
+      spriteID: 333eadae1f63bf340800000000000000
+      internalID: 4898569432350778163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_26
+      name: SprigImpliedJump_12
       rect:
         serializedVersion: 2
         x: 3000
@@ -810,14 +492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd182138f5e688630800000000000000
-      internalID: 3929512031380734427
+      spriteID: 9b284c903710bb780800000000000000
+      internalID: -8666331464347647303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_27
+      name: SprigImpliedJump_13
       rect:
         serializedVersion: 2
         x: 3600
@@ -831,14 +513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e09425b3a901ea00800000000000000
-      internalID: 783918408862568673
+      spriteID: cb26e09df2d5c0930800000000000000
+      internalID: 4110763019968864956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SprigAirNewGame_28
+      name: SprigImpliedJump_14
       rect:
         serializedVersion: 2
         x: 0
@@ -852,8 +534,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e10b48b0052acdfb0800000000000000
-      internalID: -4621640652914642914
+      spriteID: 4a17d0b640be90f40800000000000000
+      internalID: 5695341607995142564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ec5bf3e71a67cf0800000000000000
+      internalID: -254838765293023682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b4f24b03b648e00800000000000000
+      internalID: 1046078870382398320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_17
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54913e9273bfa3140800000000000000
+      internalID: 4700345375459055941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_18
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63679b1d36d66970800000000000000
+      internalID: 8747914884158022507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_19
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85653b1ddb3b7bb00800000000000000
+      internalID: 844341083003639384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprigImpliedJump_20
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa32ce0e397a38c0800000000000000
+      internalID: -4018766410032203013
       vertices: []
       indices: 
       edges: []
@@ -861,7 +669,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e11b20b194778714b9ff74e36e88a8ba
+    spriteID: b6da2e2597198ab41aefdfa800185340
     internalID: 0
     vertices: []
     indices: 
