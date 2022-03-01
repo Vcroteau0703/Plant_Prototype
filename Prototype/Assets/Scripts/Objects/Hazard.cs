@@ -11,7 +11,7 @@ public class Hazard : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out IDamagable a))
+        if (other.gameObject.transform.parent.TryGetComponent(out IDamagable a))
         {
             a.Damage(damage);
         }

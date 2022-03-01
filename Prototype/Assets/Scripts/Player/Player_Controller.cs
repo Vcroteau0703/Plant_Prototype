@@ -37,7 +37,16 @@ public class Player_Controller : MonoBehaviour
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;
-        c_manager.Enable_All();
+        //c_manager.Enable_All();
+    }
+    // Putting these here to allow me to call them within cutscenes and dialog
+    public void EnableCling()
+    {
+        c_manager.Cling.Enable();
+    }
+    public void EnableGlide()
+    {
+        c_manager.Gliding.Enable();
     }
     private void OnEnable()
     {
@@ -53,10 +62,11 @@ public class Player_Controller : MonoBehaviour
     private void FixedUpdate()
     {
         State_Control();
+        Animation_Driver();
     }
     private void Update()
     {
-        Animation_Driver();
+        //Animation_Driver();
     }
     private void OnDisable()
     {
