@@ -23,12 +23,13 @@ public class Player_Controller : MonoBehaviour
     public Vector2 detection;
     private float coyote_time;
     private float slide_speed = 0;
+    private float aerial_time;
+    public float target_gravity = -9.81f;
 
     // PLAYER STATES //
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial, Gliding, Sliding }
     [Header("States")]
     public State current_state;
-    public State last_state = default;
     #endregion
 
     private void Awake()
@@ -97,8 +98,7 @@ public class Player_Controller : MonoBehaviour
                 }
                 break;
             case State.Aerial:
-                if (coyote_time < settings.Coyote_Delay && settings.Jump.phase == Jump.State.Waiting)
-                {
+                if (coyote_time < settings.Coyote_Delay && settings.Jump.phase == Jump.State.Waiting) {
                     settings.Jump.phase = Jump.State.Started;
                     StartCoroutine(Jump_01(settings.Jump, 0));
                 }
@@ -114,6 +114,27 @@ public class Player_Controller : MonoBehaviour
         if (settings.Wall_Jump.phase == Jump.State.Started)
         {
             settings.Wall_Jump.phase = Jump.State.Canceled;
+        }
+
+        switch (current_state)
+        {
+            default:
+                return;
+
+            case State.Gliding:
+                current_state = State.Aerial;
+                break;
+        }
+    }
+    private void Request_Glide(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {         
+            current_state = State.Gliding;
+        }
+        else if (detection == Vector2.zero && current_state == State.Gliding)
+        {
+            current_state = State.Aerial;
         }
     }
     #endregion
@@ -143,8 +164,7 @@ public class Player_Controller : MonoBehaviour
                 if (c_manager.Ceiling.Enabled) { Ceiling(); }
                 break;
             case State.Gliding:
-                if (c_manager.Gliding.Enabled) { Ceiling(); }
-                Glide();
+                if (c_manager.Gliding.Enabled) { Glide(); Aerial(); }
                 break;
             case State.Sliding:
                 if (c_manager.Sliding.Enabled && c_manager.Cling.Enabled) { Slide(); Cling(); }
@@ -170,7 +190,7 @@ public class Player_Controller : MonoBehaviour
         friction_force *= Mathf.Sign(rb.velocity.x);
         rb.AddForce(dir * -friction_force, ForceMode.Impulse);
 
-        if(detection == Vector2.zero) { Debug.Log("Aerial"); current_state = State.Aerial; }
+        if(detection == Vector2.zero) { current_state = State.Aerial; }
     }   
     public void Cling()
     {
@@ -199,23 +219,27 @@ public class Player_Controller : MonoBehaviour
     }
     public void Aerial()
     {
+        aerial_time += Time.deltaTime;
         slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
-        if (c_manager.Aerials.Enabled == false) { return; }
         float speed = direction.x * settings.Air_Speed;
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
-        if (rb.velocity.y < 1 || settings.Jump.phase == Jump.State.Canceled || settings.Wall_Jump.phase == Jump.State.Canceled)
+        if (rb.velocity.y < -10f)
         {
+            Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
+        }
+        else if (rb.velocity.y < 1 || settings.Jump.phase == Jump.State.Canceled || settings.Wall_Jump.phase == Jump.State.Canceled)
+        {          
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
-        else { Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z); }
 
         //STATE CHANGE//
         if(detection == Vector2.zero) { return; }
+        aerial_time = 0;
         float angle = Vector3.Angle(detection, -Vector3.up);
-        if (angle < settings.Slope_Angle) { Debug.Log("GROUND"); current_state = State.Grounded; } // GROUND
+        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
         else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
         else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
     }
@@ -226,11 +250,11 @@ public class Player_Controller : MonoBehaviour
     }
     public void Glide()
     {
-        rb.AddForce(2 * transform.up, ForceMode.Force);
+        Debug.Log("GLIDE");
+        rb.AddForce(transform.up * -Physics.gravity.y/(10/settings.Glide_Power), ForceMode.Force);
+        rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -1 / settings.Glide_Power, float.PositiveInfinity), rb.velocity.z);
 
-        if (controls.Player.Jump.phase == InputActionPhase.Performed){
-            current_state = State.Aerial;
-        }
+        if(detection == Vector2.zero) {return;}
 
         float angle = Vector3.Angle(detection, -Vector3.up);
         if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
@@ -240,7 +264,6 @@ public class Player_Controller : MonoBehaviour
     {
         if (direction.y < 0 && controls.Player.Jump.phase != InputActionPhase.Started)
         {
-            Debug.Log("SLIDE");
             float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
             slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
             transform.position += Vector3.down * slide_speed * Time.deltaTime;
@@ -255,7 +278,6 @@ public class Player_Controller : MonoBehaviour
     }
     public IEnumerator Jump_01(Jump jump, float time)
     {
-        Debug.Log("Jump_01");
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(jump.power * Vector3.up, ForceMode.Impulse);
@@ -263,7 +285,10 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
+            if (force < 0.1f) { 
+                jump.phase = Jump.State.Canceled;
+                if(controls.Player.Glide.phase == InputActionPhase.Performed) { current_state = State.Gliding; }
+                break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
@@ -271,7 +296,6 @@ public class Player_Controller : MonoBehaviour
     }
     public IEnumerator Jump_02(Jump jump, float time)
     {
-        Debug.Log("Jump_02");
         StartCoroutine(Jump_02_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -283,7 +307,10 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            if (force < 0.1f) { jump.phase = Jump.State.Canceled; break; }
+            if (force < 0.1f) { 
+                jump.phase = Jump.State.Canceled;
+                if (controls.Player.Glide.phase == InputActionPhase.Performed) { current_state = State.Gliding; }
+                break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
@@ -294,13 +321,6 @@ public class Player_Controller : MonoBehaviour
         c_manager.Aerials.Disable();
         yield return new WaitForSeconds(settings.Wall_Jump.buffer);
         c_manager.Aerials.Enable();
-    }
-
-    public IEnumerator Gravity_Buffer(float time)
-    {
-        rb.useGravity = false;
-        yield return new WaitForSeconds(time);
-        rb.useGravity = true;
     }
     #endregion
 
@@ -326,6 +346,9 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Movement;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Jump.canceled += Request_Cancel_Jump;
+        controls.Player.Glide.started += Request_Glide;
+        controls.Player.Glide.canceled += Request_Glide;
+
         controls.Player.Switch_Controls.performed += Switch_Settings;
     }
     private void Animation_Driver()
@@ -362,17 +385,10 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
-
     private void OnCollisionExit(Collision collision)
     {
-        if (last_state == State.Cling)
-        {
-            Flip((int)((-detection.x % 1) + (-detection.x / 1)));
-        }
-        //current_state = State.Aerial;
         rb.useGravity = true;
         detection = Vector2.zero;
-        Debug.Log("EXIT");
     }
     private void OnCollisionStay(Collision collision)
     {
