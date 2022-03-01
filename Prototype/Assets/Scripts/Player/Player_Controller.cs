@@ -19,7 +19,7 @@ public class Player_Controller : MonoBehaviour
 
     // DEBUG INFO //
     [Header("Debug")]
-    private Vector2 direction;
+    public Vector2 direction;
     public Vector2 detection;
     private float coyote_time;
     private float slide_speed = 0;
@@ -353,23 +353,18 @@ public class Player_Controller : MonoBehaviour
     }
     private void Animation_Driver()
     {
-        switch (current_state)
-        {
-            case State.Grounded:
-                if (direction.x != 0) { animator.Play("Walk", 0); }
-                else { animator.speed = 1; animator.Play("Idle"); }
-                break;
-            case State.Aerial:
-                if (rb.velocity.y < 0) { animator.Play("Fall", 0); }
-                else { animator.Play("Aerial", 0); }
-                break;
-            case State.Cling:
-                animator.speed = 1;
-                animator.Play("Cling", 0);
-                break;
-            case State.Ceiling:
-                break;
-        }
+        animator.SetInteger("DIR_X", (int)direction.x);
+        animator.SetInteger("DIR_Y", (int)direction.y);
+        animator.SetFloat("VELOCITY_Y", Mathf.Round(rb.velocity.y));
+        animator.SetFloat("VELOCITY_X", Mathf.Round(rb.velocity.x));
+        animator.SetFloat("WALK_SPEED", rb.velocity.x * direction.x);
+
+        animator.SetBool("GROUND", current_state == State.Grounded);
+        animator.SetBool("AERIAL", current_state == State.Aerial);
+        animator.SetBool("CLING", current_state == State.Cling);
+        animator.SetBool("GLIDE", current_state == State.Gliding);
+        animator.SetBool("CEILING", current_state == State.Ceiling);
+        animator.SetBool("SLIDE", current_state == State.Sliding);
     }
     private void Flip(int direction)
     {
