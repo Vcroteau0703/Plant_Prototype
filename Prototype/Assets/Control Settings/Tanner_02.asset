@@ -34,6 +34,7 @@ MonoBehaviour:
   Air_Control: 1
   Air_Accel: 1.4
   Fall_Speed: -20
+  Glide_Power: 2
   Slide_Friction: 7
   Max_Slide_Speed: 4
   Slide_Threshhold: 3

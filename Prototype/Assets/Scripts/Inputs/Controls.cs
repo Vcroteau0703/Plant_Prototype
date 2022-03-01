@@ -81,6 +81,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Glide"",
+                    ""type"": ""Button"",
+                    ""id"": ""d63dee59-ccd7-41da-8fd9-7efd81b91ea5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)""
                 }
             ],
             ""bindings"": [
@@ -389,6 +397,28 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Switch_Controls"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd4cf36f-e38f-492b-b41b-9337fd69b4b1"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Glide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70a4dc35-1989-4b22-9b7c-b558061e8e8f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Glide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -974,6 +1004,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Player_Confirm = m_Player.FindAction("Confirm", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Switch_Controls = m_Player.FindAction("Switch_Controls", throwIfNotFound: true);
+        m_Player_Glide = m_Player.FindAction("Glide", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1043,6 +1074,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Confirm;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Switch_Controls;
+    private readonly InputAction m_Player_Glide;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -1055,6 +1087,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Confirm => m_Wrapper.m_Player_Confirm;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Switch_Controls => m_Wrapper.m_Player_Switch_Controls;
+        public InputAction @Glide => m_Wrapper.m_Player_Glide;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1088,6 +1121,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Switch_Controls.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitch_Controls;
                 @Switch_Controls.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitch_Controls;
                 @Switch_Controls.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitch_Controls;
+                @Glide.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGlide;
+                @Glide.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGlide;
+                @Glide.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGlide;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1116,6 +1152,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Switch_Controls.started += instance.OnSwitch_Controls;
                 @Switch_Controls.performed += instance.OnSwitch_Controls;
                 @Switch_Controls.canceled += instance.OnSwitch_Controls;
+                @Glide.started += instance.OnGlide;
+                @Glide.performed += instance.OnGlide;
+                @Glide.canceled += instance.OnGlide;
             }
         }
     }
@@ -1280,6 +1319,7 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnConfirm(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnSwitch_Controls(InputAction.CallbackContext context);
+        void OnGlide(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

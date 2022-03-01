@@ -185,66 +185,6 @@ TextureImporter:
   - first:
       213: 4118440153634151278
     second: SprigFallSprites_60
-  - first:
-      213: 4815412851803401561
-    second: SprigFallSprites_61
-  - first:
-      213: -1695300206054788264
-    second: SprigFallSprites_62
-  - first:
-      213: 8380137206971024259
-    second: SprigFallSprites_63
-  - first:
-      213: 8693276200249776
-    second: SprigFallSprites_64
-  - first:
-      213: -3295745809527314602
-    second: SprigFallSprites_65
-  - first:
-      213: -4742747739577499655
-    second: SprigFallSprites_66
-  - first:
-      213: 4123315317688853695
-    second: SprigFallSprites_67
-  - first:
-      213: 8314146147506832252
-    second: SprigFallSprites_68
-  - first:
-      213: 1654385579359447827
-    second: SprigFallSprites_69
-  - first:
-      213: 3129270886151766469
-    second: SprigFallSprites_70
-  - first:
-      213: -5903907280896887375
-    second: SprigFallSprites_71
-  - first:
-      213: -5276226080086669103
-    second: SprigFallSprites_72
-  - first:
-      213: 1857584980267233583
-    second: SprigFallSprites_73
-  - first:
-      213: -1415391380977236448
-    second: SprigFallSprites_74
-  - first:
-      213: -2366651013298312190
-    second: SprigFallSprites_75
-  - first:
-      213: 2875421446305525905
-    second: SprigFallSprites_76
-  - first:
-      213: 7535105693555572073
-    second: SprigFallSprites_77
-  - first:
-      213: -744664264953627351
-    second: SprigFallSprites_78
-  - first:
-      213: 5564020523430613680
-    second: SprigFallSprites_79
-  - first:
-      213: 5979236181586721486
-    second: SprigFallSprites_80
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -409,10 +349,10 @@ TextureImporter:
       name: SprigFallSprites_0
       rect:
         serializedVersion: 2
-        x: 177
-        y: 2617
-        width: 261
-        height: 206
+        x: 0
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,10 +370,10 @@ TextureImporter:
       name: SprigFallSprites_1
       rect:
         serializedVersion: 2
-        x: 777
-        y: 2617
-        width: 261
-        height: 206
+        x: 600
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +391,10 @@ TextureImporter:
       name: SprigFallSprites_2
       rect:
         serializedVersion: 2
-        x: 1376
-        y: 2615
-        width: 261
-        height: 208
+        x: 1200
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +412,10 @@ TextureImporter:
       name: SprigFallSprites_3
       rect:
         serializedVersion: 2
-        x: 1975
-        y: 2614
-        width: 261
-        height: 209
+        x: 1800
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +433,10 @@ TextureImporter:
       name: SprigFallSprites_4
       rect:
         serializedVersion: 2
-        x: 2575
-        y: 2614
-        width: 260
-        height: 209
+        x: 2400
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,10 +454,10 @@ TextureImporter:
       name: SprigFallSprites_5
       rect:
         serializedVersion: 2
-        x: 3175
-        y: 2612
-        width: 259
-        height: 211
+        x: 3000
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +475,10 @@ TextureImporter:
       name: SprigFallSprites_6
       rect:
         serializedVersion: 2
-        x: 3774
-        y: 2612
-        width: 259
-        height: 211
+        x: 3600
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,10 +496,10 @@ TextureImporter:
       name: SprigFallSprites_7
       rect:
         serializedVersion: 2
-        x: 4373
-        y: 2611
-        width: 260
-        height: 212
+        x: 4200
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +517,10 @@ TextureImporter:
       name: SprigFallSprites_8
       rect:
         serializedVersion: 2
-        x: 4973
-        y: 2611
-        width: 259
-        height: 212
+        x: 4800
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +538,10 @@ TextureImporter:
       name: SprigFallSprites_9
       rect:
         serializedVersion: 2
-        x: 5573
-        y: 2609
-        width: 258
-        height: 214
+        x: 5400
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,10 +559,10 @@ TextureImporter:
       name: SprigFallSprites_10
       rect:
         serializedVersion: 2
-        x: 6172
-        y: 2609
-        width: 258
-        height: 214
+        x: 6000
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +580,10 @@ TextureImporter:
       name: SprigFallSprites_11
       rect:
         serializedVersion: 2
-        x: 6771
-        y: 2608
-        width: 258
-        height: 215
+        x: 6600
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,10 +601,10 @@ TextureImporter:
       name: SprigFallSprites_12
       rect:
         serializedVersion: 2
-        x: 7371
-        y: 2608
-        width: 257
-        height: 215
+        x: 7200
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,10 +622,10 @@ TextureImporter:
       name: SprigFallSprites_13
       rect:
         serializedVersion: 2
-        x: 7971
-        y: 2608
-        width: 256
-        height: 215
+        x: 7800
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +643,10 @@ TextureImporter:
       name: SprigFallSprites_14
       rect:
         serializedVersion: 2
-        x: 8570
-        y: 2606
-        width: 255
-        height: 217
+        x: 8400
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +664,10 @@ TextureImporter:
       name: SprigFallSprites_15
       rect:
         serializedVersion: 2
-        x: 9169
-        y: 2606
-        width: 255
-        height: 217
+        x: 9000
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,10 +685,10 @@ TextureImporter:
       name: SprigFallSprites_16
       rect:
         serializedVersion: 2
-        x: 9770
-        y: 2605
-        width: 253
-        height: 218
+        x: 9600
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,10 +706,10 @@ TextureImporter:
       name: SprigFallSprites_17
       rect:
         serializedVersion: 2
-        x: 10369
-        y: 2605
-        width: 253
-        height: 218
+        x: 10200
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,10 +727,10 @@ TextureImporter:
       name: SprigFallSprites_18
       rect:
         serializedVersion: 2
-        x: 10969
-        y: 2605
-        width: 252
-        height: 218
+        x: 10800
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -808,10 +748,10 @@ TextureImporter:
       name: SprigFallSprites_19
       rect:
         serializedVersion: 2
-        x: 11569
-        y: 2604
-        width: 252
-        height: 219
+        x: 11400
+        y: 858
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +769,10 @@ TextureImporter:
       name: SprigFallSprites_20
       rect:
         serializedVersion: 2
-        x: 168
-        y: 2286
-        width: 252
-        height: 218
+        x: 0
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,10 +790,10 @@ TextureImporter:
       name: SprigFallSprites_21
       rect:
         serializedVersion: 2
-        x: 768
-        y: 2286
-        width: 252
-        height: 218
+        x: 600
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,10 +811,10 @@ TextureImporter:
       name: SprigFallSprites_22
       rect:
         serializedVersion: 2
-        x: 1369
-        y: 2286
-        width: 252
-        height: 218
+        x: 1200
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -892,10 +832,10 @@ TextureImporter:
       name: SprigFallSprites_23
       rect:
         serializedVersion: 2
-        x: 1970
-        y: 2286
-        width: 251
-        height: 218
+        x: 1800
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,10 +853,10 @@ TextureImporter:
       name: SprigFallSprites_24
       rect:
         serializedVersion: 2
-        x: 2570
-        y: 2286
-        width: 252
-        height: 218
+        x: 2400
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +874,10 @@ TextureImporter:
       name: SprigFallSprites_25
       rect:
         serializedVersion: 2
-        x: 3171
-        y: 2287
-        width: 252
-        height: 217
+        x: 3000
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +895,10 @@ TextureImporter:
       name: SprigFallSprites_26
       rect:
         serializedVersion: 2
-        x: 3771
-        y: 2287
-        width: 252
-        height: 217
+        x: 3600
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,10 +916,10 @@ TextureImporter:
       name: SprigFallSprites_27
       rect:
         serializedVersion: 2
-        x: 4372
-        y: 2287
-        width: 252
-        height: 217
+        x: 4200
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +937,10 @@ TextureImporter:
       name: SprigFallSprites_28
       rect:
         serializedVersion: 2
-        x: 4972
-        y: 2287
-        width: 252
-        height: 217
+        x: 4800
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1018,10 +958,10 @@ TextureImporter:
       name: SprigFallSprites_29
       rect:
         serializedVersion: 2
-        x: 5573
-        y: 2289
-        width: 252
-        height: 215
+        x: 5400
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,10 +979,10 @@ TextureImporter:
       name: SprigFallSprites_30
       rect:
         serializedVersion: 2
-        x: 6174
-        y: 2289
-        width: 252
-        height: 215
+        x: 6000
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,10 +1000,10 @@ TextureImporter:
       name: SprigFallSprites_31
       rect:
         serializedVersion: 2
-        x: 6774
-        y: 2289
-        width: 252
-        height: 215
+        x: 6600
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1081,10 +1021,10 @@ TextureImporter:
       name: SprigFallSprites_32
       rect:
         serializedVersion: 2
-        x: 7375
-        y: 2289
-        width: 252
-        height: 215
+        x: 7200
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1102,10 +1042,10 @@ TextureImporter:
       name: SprigFallSprites_33
       rect:
         serializedVersion: 2
-        x: 7975
-        y: 2289
-        width: 252
-        height: 215
+        x: 7800
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1123,10 +1063,10 @@ TextureImporter:
       name: SprigFallSprites_34
       rect:
         serializedVersion: 2
-        x: 8576
-        y: 2290
-        width: 252
-        height: 214
+        x: 8400
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1144,10 +1084,10 @@ TextureImporter:
       name: SprigFallSprites_35
       rect:
         serializedVersion: 2
-        x: 9178
-        y: 2290
-        width: 250
-        height: 214
+        x: 9000
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1165,10 +1105,10 @@ TextureImporter:
       name: SprigFallSprites_36
       rect:
         serializedVersion: 2
-        x: 9779
-        y: 2290
-        width: 250
-        height: 214
+        x: 9600
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,10 +1126,10 @@ TextureImporter:
       name: SprigFallSprites_37
       rect:
         serializedVersion: 2
-        x: 10379
-        y: 2290
-        width: 251
-        height: 214
+        x: 10200
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1207,10 +1147,10 @@ TextureImporter:
       name: SprigFallSprites_38
       rect:
         serializedVersion: 2
-        x: 10980
-        y: 2292
-        width: 250
-        height: 212
+        x: 10800
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1228,10 +1168,10 @@ TextureImporter:
       name: SprigFallSprites_39
       rect:
         serializedVersion: 2
-        x: 11582
-        y: 2292
-        width: 249
-        height: 212
+        x: 11400
+        y: 572
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1249,10 +1189,10 @@ TextureImporter:
       name: SprigFallSprites_40
       rect:
         serializedVersion: 2
-        x: 182
-        y: 1974
-        width: 249
-        height: 212
+        x: 0
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1270,10 +1210,10 @@ TextureImporter:
       name: SprigFallSprites_41
       rect:
         serializedVersion: 2
-        x: 782
-        y: 1974
-        width: 248
-        height: 212
+        x: 600
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1291,10 +1231,10 @@ TextureImporter:
       name: SprigFallSprites_42
       rect:
         serializedVersion: 2
-        x: 1381
-        y: 1972
-        width: 247
-        height: 214
+        x: 1200
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1312,10 +1252,10 @@ TextureImporter:
       name: SprigFallSprites_43
       rect:
         serializedVersion: 2
-        x: 1980
-        y: 1971
-        width: 247
-        height: 215
+        x: 1800
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1333,10 +1273,10 @@ TextureImporter:
       name: SprigFallSprites_44
       rect:
         serializedVersion: 2
-        x: 2578
-        y: 1971
-        width: 248
-        height: 215
+        x: 2400
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1354,10 +1294,10 @@ TextureImporter:
       name: SprigFallSprites_45
       rect:
         serializedVersion: 2
-        x: 3177
-        y: 1970
-        width: 248
-        height: 216
+        x: 3000
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1375,10 +1315,10 @@ TextureImporter:
       name: SprigFallSprites_46
       rect:
         serializedVersion: 2
-        x: 3776
-        y: 1969
-        width: 247
-        height: 217
+        x: 3600
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1396,10 +1336,10 @@ TextureImporter:
       name: SprigFallSprites_47
       rect:
         serializedVersion: 2
-        x: 4375
-        y: 1969
-        width: 247
-        height: 217
+        x: 4200
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,10 +1357,10 @@ TextureImporter:
       name: SprigFallSprites_48
       rect:
         serializedVersion: 2
-        x: 4974
-        y: 1968
-        width: 246
-        height: 218
+        x: 4800
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1438,10 +1378,10 @@ TextureImporter:
       name: SprigFallSprites_49
       rect:
         serializedVersion: 2
-        x: 5574
-        y: 1968
-        width: 245
-        height: 218
+        x: 5400
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1459,10 +1399,10 @@ TextureImporter:
       name: SprigFallSprites_50
       rect:
         serializedVersion: 2
-        x: 6174
-        y: 1968
-        width: 244
-        height: 218
+        x: 6000
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1480,10 +1420,10 @@ TextureImporter:
       name: SprigFallSprites_51
       rect:
         serializedVersion: 2
-        x: 6773
-        y: 1967
-        width: 243
-        height: 219
+        x: 6600
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1501,10 +1441,10 @@ TextureImporter:
       name: SprigFallSprites_52
       rect:
         serializedVersion: 2
-        x: 7372
-        y: 1966
-        width: 243
-        height: 220
+        x: 7200
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1522,10 +1462,10 @@ TextureImporter:
       name: SprigFallSprites_53
       rect:
         serializedVersion: 2
-        x: 7971
-        y: 1966
-        width: 242
-        height: 220
+        x: 7800
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1543,10 +1483,10 @@ TextureImporter:
       name: SprigFallSprites_54
       rect:
         serializedVersion: 2
-        x: 8572
-        y: 1965
-        width: 240
-        height: 221
+        x: 8400
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1564,10 +1504,10 @@ TextureImporter:
       name: SprigFallSprites_55
       rect:
         serializedVersion: 2
-        x: 9171
-        y: 1965
-        width: 238
-        height: 221
+        x: 9000
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1585,10 +1525,10 @@ TextureImporter:
       name: SprigFallSprites_56
       rect:
         serializedVersion: 2
-        x: 9770
-        y: 1964
-        width: 238
-        height: 222
+        x: 9600
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1606,10 +1546,10 @@ TextureImporter:
       name: SprigFallSprites_57
       rect:
         serializedVersion: 2
-        x: 10370
-        y: 1963
-        width: 236
-        height: 223
+        x: 10200
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1627,10 +1567,10 @@ TextureImporter:
       name: SprigFallSprites_58
       rect:
         serializedVersion: 2
-        x: 10970
-        y: 1963
-        width: 235
-        height: 223
+        x: 10800
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1648,10 +1588,10 @@ TextureImporter:
       name: SprigFallSprites_59
       rect:
         serializedVersion: 2
-        x: 11570
-        y: 1962
-        width: 233
-        height: 224
+        x: 11400
+        y: 286
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1669,10 +1609,10 @@ TextureImporter:
       name: SprigFallSprites_60
       rect:
         serializedVersion: 2
-        x: 169
-        y: 1644
-        width: 233
-        height: 224
+        x: 0
+        y: 0
+        width: 600
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1686,430 +1626,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_61
-      rect:
-        serializedVersion: 2
-        x: 770
-        y: 1644
-        width: 234
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95da79eb978c3d240800000000000000
-      internalID: 4815412851803401561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_62
-      rect:
-        serializedVersion: 2
-        x: 1370
-        y: 1646
-        width: 236
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8533576d1751978e0800000000000000
-      internalID: -1695300206054788264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_63
-      rect:
-        serializedVersion: 2
-        x: 1970
-        y: 1647
-        width: 238
-        height: 221
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 383ca8ec36a3c4470800000000000000
-      internalID: 8380137206971024259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_64
-      rect:
-        serializedVersion: 2
-        x: 2570
-        y: 1649
-        width: 240
-        height: 219
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b9a9d71d72ee1000800000000000000
-      internalID: 8693276200249776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_65
-      rect:
-        serializedVersion: 2
-        x: 3171
-        y: 1649
-        width: 241
-        height: 219
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6576429d5a82342d0800000000000000
-      internalID: -3295745809527314602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_66
-      rect:
-        serializedVersion: 2
-        x: 3771
-        y: 1650
-        width: 243
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ff323b1f006e2eb0800000000000000
-      internalID: -4742747739577499655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_67
-      rect:
-        serializedVersion: 2
-        x: 4372
-        y: 1651
-        width: 244
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb465c76f65f83930800000000000000
-      internalID: 4123315317688853695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_68
-      rect:
-        serializedVersion: 2
-        x: 4971
-        y: 1653
-        width: 247
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c73c3d4fed7c16370800000000000000
-      internalID: 8314146147506832252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_69
-      rect:
-        serializedVersion: 2
-        x: 5572
-        y: 1653
-        width: 249
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31baf3b4bee85f610800000000000000
-      internalID: 1654385579359447827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_70
-      rect:
-        serializedVersion: 2
-        x: 6172
-        y: 1654
-        width: 251
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c14c079a476d6b20800000000000000
-      internalID: 3129270886151766469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_71
-      rect:
-        serializedVersion: 2
-        x: 6773
-        y: 1656
-        width: 252
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b57c47bb9b111ea0800000000000000
-      internalID: -5903907280896887375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_72
-      rect:
-        serializedVersion: 2
-        x: 7373
-        y: 1657
-        width: 254
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d848c5b55417c6b0800000000000000
-      internalID: -5276226080086669103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_73
-      rect:
-        serializedVersion: 2
-        x: 7974
-        y: 1657
-        width: 255
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f21fde892b777c910800000000000000
-      internalID: 1857584980267233583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_74
-      rect:
-        serializedVersion: 2
-        x: 8574
-        y: 1659
-        width: 257
-        height: 209
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 026c3beb9058b5ce0800000000000000
-      internalID: -1415391380977236448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_75
-      rect:
-        serializedVersion: 2
-        x: 9175
-        y: 1660
-        width: 258
-        height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20c29054177f72fd0800000000000000
-      internalID: -2366651013298312190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_76
-      rect:
-        serializedVersion: 2
-        x: 9775
-        y: 1662
-        width: 260
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 190b49e129c87e720800000000000000
-      internalID: 2875421446305525905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_77
-      rect:
-        serializedVersion: 2
-        x: 10375
-        y: 1662
-        width: 262
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96d3761a4b2129860800000000000000
-      internalID: 7535105693555572073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_78
-      rect:
-        serializedVersion: 2
-        x: 10976
-        y: 1663
-        width: 263
-        height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92df282ebcb6aa5f0800000000000000
-      internalID: -744664264953627351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_79
-      rect:
-        serializedVersion: 2
-        x: 11576
-        y: 1665
-        width: 264
-        height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b29016cf2f573d40800000000000000
-      internalID: 5564020523430613680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SprigFallSprites_80
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 1347
-        width: 265
-        height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecab3a7b0a38af250800000000000000
-      internalID: 5979236181586721486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 089886478cec7604285e57bcfedf1b72
+    spriteID: 10e5e21e33716e84a8ff2dbf33d45ece
     internalID: 0
     vertices: []
     indices: 

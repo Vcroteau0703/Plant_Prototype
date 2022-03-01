@@ -230,7 +230,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1144
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -251,7 +251,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 600
-        y: 1144
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -272,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1200
-        y: 1144
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -293,7 +293,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1800
-        y: 1144
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -314,7 +314,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2400
-        y: 1144
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -334,8 +334,8 @@ TextureImporter:
       name: SprigLandingSprites_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 858
+        x: 3000
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -355,8 +355,8 @@ TextureImporter:
       name: SprigLandingSprites_6
       rect:
         serializedVersion: 2
-        x: 600
-        y: 858
+        x: 3600
+        y: 572
         width: 600
         height: 286
       alignment: 0
@@ -376,8 +376,8 @@ TextureImporter:
       name: SprigLandingSprites_7
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 858
+        x: 0
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -397,8 +397,8 @@ TextureImporter:
       name: SprigLandingSprites_8
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 858
+        x: 600
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -418,8 +418,8 @@ TextureImporter:
       name: SprigLandingSprites_9
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 858
+        x: 1200
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -439,8 +439,8 @@ TextureImporter:
       name: SprigLandingSprites_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 572
+        x: 1800
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -460,8 +460,8 @@ TextureImporter:
       name: SprigLandingSprites_11
       rect:
         serializedVersion: 2
-        x: 600
-        y: 572
+        x: 2400
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -481,8 +481,8 @@ TextureImporter:
       name: SprigLandingSprites_12
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 572
+        x: 3000
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -502,8 +502,8 @@ TextureImporter:
       name: SprigLandingSprites_13
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 572
+        x: 3600
+        y: 286
         width: 600
         height: 286
       alignment: 0
@@ -523,8 +523,8 @@ TextureImporter:
       name: SprigLandingSprites_14
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 572
+        x: 0
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -544,8 +544,8 @@ TextureImporter:
       name: SprigLandingSprites_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 286
+        x: 600
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -565,8 +565,8 @@ TextureImporter:
       name: SprigLandingSprites_16
       rect:
         serializedVersion: 2
-        x: 600
-        y: 286
+        x: 1200
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -586,8 +586,8 @@ TextureImporter:
       name: SprigLandingSprites_17
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 286
+        x: 1800
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -607,8 +607,8 @@ TextureImporter:
       name: SprigLandingSprites_18
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 286
+        x: 2400
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -628,8 +628,8 @@ TextureImporter:
       name: SprigLandingSprites_19
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 286
+        x: 3000
+        y: 0
         width: 600
         height: 286
       alignment: 0
@@ -649,7 +649,7 @@ TextureImporter:
       name: SprigLandingSprites_20
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3600
         y: 0
         width: 600
         height: 286
@@ -669,7 +669,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5db897c80c781104f910f82ebb71b037
+    spriteID: b02dc89145c7cc749bb1753c627fefae
     internalID: 0
     vertices: []
     indices: 
