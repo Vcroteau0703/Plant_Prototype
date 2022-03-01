@@ -128,7 +128,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Glide(InputAction.CallbackContext context)
     {
-        if (context.started && rb.velocity.y < 2f)
+        if (context.started)
         {         
             current_state = State.Gliding;
         }
@@ -252,6 +252,7 @@ public class Player_Controller : MonoBehaviour
     {
         Debug.Log("GLIDE");
         rb.AddForce(transform.up * -Physics.gravity.y/(10/settings.Glide_Power), ForceMode.Force);
+        rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -1 / settings.Glide_Power, float.PositiveInfinity), rb.velocity.z);
 
         if(detection == Vector2.zero) {return;}
 

@@ -21,7 +21,7 @@ MonoBehaviour:
     floatiness: 0.05
     angle: 0
     buffer: 0
-    phase: 0
+    phase: 1
   Wall_Jump:
     power: 12
     max_height: 4
@@ -34,7 +34,7 @@ MonoBehaviour:
   Air_Control: 1
   Air_Accel: 1.4
   Fall_Speed: -20
-  Glide_Power: 9
+  Glide_Power: 2
   Slide_Friction: 7
   Max_Slide_Speed: 4
   Slide_Threshhold: 3
