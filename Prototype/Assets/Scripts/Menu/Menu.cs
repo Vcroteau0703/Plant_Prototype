@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
     public TMP_InputField saveNameInputField;
+    public GameObject First_Selected;
+
+    private void OnEnable()
+    {
+        EventSystem sys = EventSystem.current;
+        sys.SetSelectedGameObject(First_Selected, new BaseEventData(sys));
+    }
+
     public void EnableButton(Button button)
     {
         if (saveNameInputField.text.Length > 0)
@@ -20,7 +29,7 @@ public class Menu : MonoBehaviour
     public void CreateNewSave()
     {
         SaveSystem.CreateNewSave(saveNameInputField.text);
-        Laucher.LoadScene("Chris_test");
+        Laucher.LoadScene("Level_01_edits");
     }
 
     public void LoadScene(string sceneName)

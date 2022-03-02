@@ -34,6 +34,7 @@ MonoBehaviour:
   Air_Control: 1
   Air_Accel: 1.4
   Fall_Speed: -30
+  Glide_Power: 1
   Slide_Friction: 15
   Max_Slide_Speed: 4
   Slide_Threshhold: 3
@@ -41,7 +42,8 @@ MonoBehaviour:
   Cling_Power: 15
   Eject_Power: 0.4
   Slope_Angle: 60
-  Ceiling_Angle: 45
+  Ceiling_Angle: 50
   Cling_Threshold: 0.25
+  Bonk_Power: 2
   horizontal_deadzone: 50
   vertical_deadzone: 50
