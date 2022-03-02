@@ -7,9 +7,16 @@ public class Termite : Hazard
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out IDamagable a))
+        if (collision.gameObject.TryGetComponent(out Player p))
         {
-            a.Damage(damage);
+            if (p.sapActive)
+            {
+                gameObject.SetActive(false);
+            }
+            else if (collision.gameObject.TryGetComponent(out IDamagable a))
+            {
+                a.Damage(damage);
+            }
         }
     }
 }
