@@ -248,6 +248,8 @@ public class Player_Controller : MonoBehaviour
         float speed = direction.x * settings.Air_Speed;
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
+        Debug.Log("Force: " + force);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
         if (rb.velocity.y < -10f)
