@@ -2,17 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sap_Volume : MonoBehaviour
+public class Sap_Volume : Action_Volume
 {
-    // Start is called before the first frame update
-    void Start()
+    public int sapCooldown;
+
+    public Collider col;
+
+    private void Awake()
     {
-        
+        col = TryGetComponent(out Collider c) ? c : null;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        //action 
     }
+
+    public IEnumerator ActivateSap()
+    {
+        // make termites collectable and disable their hazard damage
+
+        // set movement settings to slower ones
+        yield return new WaitForSeconds(sapCooldown);
+    }
+
 }
