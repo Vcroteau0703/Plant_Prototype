@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IDamagable
     public int max_health = 1;
     public Color[] healthColors;
     private SpriteRenderer sprigSprite;
+    internal bool sapActive = false;
 
     private void Awake()
     {
