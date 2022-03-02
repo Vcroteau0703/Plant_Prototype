@@ -7,20 +7,29 @@ public class Player : MonoBehaviour, IDamagable
     public int health = 1;
     public int max_health = 1;
     public Color[] healthColors;
+
     private SpriteRenderer sprigSprite;
+    private Color sprigColor;
+
     internal bool sapActive = false;
+    private bool damageActive = true;
 
     private void Awake()
     {
         sprigSprite = GetComponent<SpriteRenderer>();
+        sprigColor = sprigSprite.color;
     }
 
     public void Damage(int amount)
     {
-        health -= amount;
-        if (health < 0) { health = 0; Respawn(); }
-        else if (health == 0) { Respawn(); }
-        ChangeSprigColor(health);
+        if (damageActive)
+        {
+            health -= amount;
+            if (health < 0) { health = 0; Respawn(); }
+            else if (health == 0) { Respawn(); }
+            damageActive = false;
+            ChangeSprigColor(health);
+        }
     }
 
     public void Respawn()
@@ -46,7 +55,8 @@ public class Player : MonoBehaviour, IDamagable
     {
         if(currHealth >= 0)
         {
-            sprigSprite.color = healthColors[currHealth - 1];
+            sprigSprite.color = sprigColor = healthColors[currHealth - 1];
+            StartCoroutine(IFrames(10, 0.2f));
         }
     }
 
@@ -59,8 +69,28 @@ public class Player : MonoBehaviour, IDamagable
         }
     }
 
-    public IEnumerator IFrames()
-    {
-        yield return new WaitForSeconds(3);
+    public IEnumerator IFrames(int flashCycles, float cycleTime)
+    { 
+        float a = 1f, b = 0.5f;
+        while (flashCycles > 0)
+        {
+            Debug.Log(flashCycles);
+            float currentTime = 0;
+            while (currentTime < cycleTime)
+            {
+                currentTime += Time.deltaTime;
+                float t = currentTime / cycleTime;
+                float currAlpha = Mathf.Lerp(a, b, t);
+                sprigColor.a = currAlpha;
+                sprigSprite.color = sprigColor;
+                yield return null;
+            }
+            // swapping a and b
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            flashCycles--;
+        }
+        damageActive = true;
     }
 }

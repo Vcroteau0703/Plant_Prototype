@@ -10,6 +10,8 @@ public class Sap_Volume : Action_Volume
 
     public Collider col;
 
+    private Player_Control_Settings originalSettings;
+
     private void Awake()
     {
         col = TryGetComponent(out Collider c) ? c : null;
@@ -28,18 +30,30 @@ public class Sap_Volume : Action_Volume
 
     public IEnumerator ActivateSap(Player player)
     {
-        Player_Control_Settings originalSettings = player.gameObject.GetComponent<Player_Controller>().settings;
-        // make termites collectable and disable their hazard damage
-        player.sapActive = true;
-        player.transform.GetChild(2).gameObject.SetActive(true);
-        player.gameObject.GetComponent<Player_Controller>().settings = sapSettings;
-        // set slow movement settings
+        if (player.sapActive)
+        {
+            yield return new WaitForSeconds(sapCooldown);
+            player.sapActive = false;
+            player.transform.GetChild(2).gameObject.SetActive(false);
+            player.gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+        }
+        else
+        {
+            originalSettings = player.gameObject.GetComponent<Player_Controller>().settings;
 
-        yield return new WaitForSeconds(sapCooldown);
+            // make termites collectable and disable their hazard damage
+            player.sapActive = true;
+            player.transform.GetChild(2).gameObject.SetActive(true);
+            // set slow movement settings
+            player.gameObject.GetComponent<Player_Controller>().settings = sapSettings;
 
-        player.sapActive = false;
-        player.transform.GetChild(2).gameObject.SetActive(false);
-        player.gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+            yield return new WaitForSeconds(sapCooldown);
+
+            player.sapActive = false;
+            player.transform.GetChild(2).gameObject.SetActive(false);
+            player.gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+        }
+        
     }
 
 }
