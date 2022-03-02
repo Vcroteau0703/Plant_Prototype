@@ -70847,11 +70847,39 @@ PrefabInstance:
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: settings
       value: 
-      objectReference: {fileID: 11400000, guid: 331647834571ca74291ca7acc907cf45, type: 2}
+      objectReference: {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Cling.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Moving.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Aerials.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Ceiling.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Gliding.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Jumping.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: c_manager.Sliding.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: setting_presets.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 331647834571ca74291ca7acc907cf45, type: 2}
+      objectReference: {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
     - target: {fileID: 6061469062083727003, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: m_RootOrder
       value: 5

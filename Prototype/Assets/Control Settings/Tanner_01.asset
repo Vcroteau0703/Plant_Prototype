@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
-  m_Name: Tanner_02
+  m_Name: Tanner_01
   m_EditorClassIdentifier: 
   Move_Speed: 18
   Acceleration: 1.6
@@ -21,14 +21,14 @@ MonoBehaviour:
     floatiness: 0.05
     angle: 0
     buffer: 0
-    phase: 1
+    phase: 0
   Wall_Jump:
     power: 12
     max_height: 4
     floatiness: 0.03
     angle: 36
     buffer: 0.2
-    phase: 1
+    phase: 0
   Coyote_Delay: 0.15
   Air_Speed: 9
   Air_Control: 1
