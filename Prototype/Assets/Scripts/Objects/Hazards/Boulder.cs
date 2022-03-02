@@ -12,7 +12,7 @@ public class Boulder : Hazard
         if (collision.gameObject.TryGetComponent(out IDamagable a))
         {
             a.Damage(damage);
-            if(damage > 0)
+            if(damage > 0 && director != null)
             {
                 ResetCutscene();
             }
