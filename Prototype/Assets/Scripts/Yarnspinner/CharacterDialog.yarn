@@ -5,7 +5,7 @@ position: 1,-1
 
 Help! Help!
 <<Camera_Pan CameraDuringDialog>>
-I don't think I can make the jump down from here. Please can you come help me down. 
+I don't think I can make the jump down from here. Can you come help me down?
 Oh right, I don't think you can get up here.
 Maybe there's something around here you can move.
 <<Camera_Pan CameraAfterDialog>>
@@ -34,7 +34,8 @@ title: Node
 position: 198,116.5
 ---
 
-Let me teach you something...
+I think that water over there is safe to go in now!
+As thanks, let me teach you something...
 *Sprig has learned Wall Cling!*
 
 ===

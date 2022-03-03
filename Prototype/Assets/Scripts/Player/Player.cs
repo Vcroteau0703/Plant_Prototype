@@ -43,7 +43,6 @@ public class Player : MonoBehaviour, IDamagable
                 if (x != null) {
                     health = max_health;
                     ChangeSprigColor(health);
-                    //damageActive = true;
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     transform.position = x.transform.position;
                     return;
