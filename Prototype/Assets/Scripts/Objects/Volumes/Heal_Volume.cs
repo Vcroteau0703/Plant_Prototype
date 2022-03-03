@@ -18,6 +18,7 @@ public class Heal_Volume : Action_Volume
 
     public void Heal_Player(GameObject actor)
     {
+        Debug.Log("Got Here 1");
         Player player = actor.GetComponent<Player>();
         player.Heal(1);
     }

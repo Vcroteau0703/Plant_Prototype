@@ -22,12 +22,12 @@ public class Player : MonoBehaviour, IDamagable
 
     public void Damage(int amount)
     {
-        if (damageActive)
+        if (damageActive && amount != 0)
         {
             health -= amount;
             if (health < 0) { health = 0; Respawn(); }
             else if (health == 0) { Respawn(); }
-            damageActive = false;
+            else { damageActive = false; }
             ChangeSprigColor(health);
         }
     }
@@ -43,6 +43,7 @@ public class Player : MonoBehaviour, IDamagable
                 if (x != null) {
                     health = max_health;
                     ChangeSprigColor(health);
+                    //damageActive = true;
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     transform.position = x.transform.position;
                     return;
@@ -67,6 +68,7 @@ public class Player : MonoBehaviour, IDamagable
     {
         if(health < max_health)
         {
+            Debug.Log("got here");
             health += amount;
             ChangeSprigColor(health);
         }

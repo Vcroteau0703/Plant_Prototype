@@ -44,6 +44,6 @@ MonoBehaviour:
   Slope_Angle: 30
   Ceiling_Angle: 30
   Cling_Threshold: 1
-  Bonk_Power: 2
+  Bonk_Power: 1.5
   horizontal_deadzone: 20
   vertical_deadzone: 20
