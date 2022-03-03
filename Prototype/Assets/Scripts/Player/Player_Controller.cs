@@ -142,7 +142,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Glide(InputAction.CallbackContext context)
     {
-        if (context.started && rb.velocity.y < 0.1f)
+        if (context.started && rb.velocity.y < 0.1f && c_manager.Gliding.Enabled)
         {         
             current_state = State.Gliding;
         }
@@ -257,7 +257,6 @@ public class Player_Controller : MonoBehaviour
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
-        Debug.Log("Force: " + force);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
         if (rb.velocity.y < -10f)
@@ -331,7 +330,10 @@ public class Player_Controller : MonoBehaviour
             if (force < 0.1f)
             {
                 jump.phase = Jump.State.Canceled;
-                if (controls.Player.Glide.phase == InputActionPhase.Performed) { prev_state = State.Aerial; current_state = State.Gliding; }
+                if (controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) {
+                    prev_state = State.Aerial;
+                    current_state = State.Gliding;
+                }
                 break;
             }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
@@ -354,7 +356,10 @@ public class Player_Controller : MonoBehaviour
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f) { 
                 jump.phase = Jump.State.Canceled;
-                if (controls.Player.Glide.phase == InputActionPhase.Performed) { prev_state = State.Aerial; current_state = State.Gliding; }
+                if (controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) {
+                    prev_state = State.Aerial; 
+                    current_state = State.Gliding; 
+                }
                 break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
