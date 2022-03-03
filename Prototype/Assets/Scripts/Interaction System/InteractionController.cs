@@ -92,7 +92,7 @@ public class InteractionController : MonoBehaviour
                 InteractionID id = closestItem.GetComponent<InteractionID>(); //get the ID
                 DisplayInteractText(id.textPosition, id.InteractText); //display the interaction prompt on that item
             }
-            else { HideText(); } // if the system found no interactable items disable text
+            else { closestItem = null; HideText(); } // if the system found no interactable items disable text
         }
     }
     public GameObject GetClosestItem(Vector2 playerPos, List<GameObject> items) // iterates through our interactable items that we found in ScanInteractArea() and returns the closest one

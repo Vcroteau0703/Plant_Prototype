@@ -30,6 +30,7 @@ public class Player_Controller : MonoBehaviour
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial, Gliding, Sliding }
     [Header("States")]
     public State current_state;
+    public State prev_state;
     #endregion
 
     private void Awake()
@@ -67,7 +68,9 @@ public class Player_Controller : MonoBehaviour
     }
     private void Update()
     {
-        //Animation_Driver();
+        Debug.Log("Current State is: " + current_state.ToString());
+        target_gravity = Physics.gravity.y;
+        Animation_Driver();
     }
     private void OnDisable()
     {
@@ -84,6 +87,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
+        if (!c_manager.Jumping.Enabled) { return; }
         switch (current_state)
         {
             case State.Grounded:
@@ -138,11 +142,11 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Glide(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && rb.velocity.y < 0.1f)
         {         
             current_state = State.Gliding;
         }
-        else if (detection == Vector2.zero && current_state == State.Gliding)
+        else if (detection == Vector2.zero && current_state == State.Gliding && context.canceled)
         {
             current_state = State.Aerial;
         }
@@ -157,29 +161,32 @@ public class Player_Controller : MonoBehaviour
         {
             case State.Grounded:
                 coyote_time = 0;
-                if (c_manager.Moving.Enabled) { Move(); }
-                else { col.material.dynamicFriction = 5f; }
+                if (c_manager.Moving.Enabled) { Move(); return; }
+                //Swap_States(ref current_state, ref prev_state);
                 break;
             case State.Cling:
                 coyote_time += Time.deltaTime;
-                if (c_manager.Cling.Enabled) { Cling(); }
-                if (c_manager.Aerials.Enabled) { rb.velocity = new Vector2(rb.velocity.x, 0); settings.Wall_Jump.phase = Jump.State.Waiting; }             
+                if (c_manager.Cling.Enabled) { Cling(); return; }
+                Swap_States(ref current_state, ref prev_state);
                 break;
             case State.Aerial:
                 rb.useGravity = true;
                 coyote_time += Time.deltaTime;
-                if (c_manager.Aerials.Enabled) { Aerial(); }
+                if (c_manager.Aerials.Enabled) { Aerial(); return; }
+                //Swap_States(ref current_state, ref prev_state);
                 break;
             case State.Ceiling:
-                if (c_manager.Ceiling.Enabled) { Ceiling(); }
+                if (c_manager.Ceiling.Enabled) { Ceiling(); return; }
+                //Swap_States(ref current_state, ref prev_state);
                 break;
             case State.Gliding:
-                if (c_manager.Gliding.Enabled) { Glide(); Aerial(); }
+                if (c_manager.Gliding.Enabled) { Glide(); Aerial(); return; }
+                Swap_States(ref current_state, ref prev_state);
                 break;
             case State.Sliding:
-                if (c_manager.Sliding.Enabled && c_manager.Cling.Enabled) { Slide(); Cling(); }
+                if (c_manager.Sliding.Enabled && c_manager.Cling.Enabled) { Slide(); Cling(); return; }
+                Swap_States(ref current_state, ref prev_state);
                 break;
-
         }
     }
     public void Move()
@@ -190,20 +197,31 @@ public class Player_Controller : MonoBehaviour
 
         Vector2 dir = Quaternion.AngleAxis(90, Vector3.forward) * detection;
 
+        float angle = Get_Detection_Angle();
+        Vector2 temp = Quaternion.AngleAxis(angle, Vector3.forward) * Vector3.right;
+        Debug.DrawLine(transform.position, (Vector2)transform.position + new Vector2(temp.x * direction.x, temp.y));
+
+
         float speed = direction.x * settings.Move_Speed;
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Acceleration) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
 
-        rb.AddForce(force * dir + ground_clamp * Vector2.up);
+        rb.AddForce(new Vector2(temp.x * force, temp.y) + ground_clamp * Vector2.up);
         float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.Friction)) : 0;
         friction_force *= Mathf.Sign(rb.velocity.x);
-        rb.AddForce(dir * -friction_force, ForceMode.Impulse);
+        rb.AddForce(temp * -friction_force, ForceMode.Impulse);
 
-        if(detection == Vector2.zero) { current_state = State.Aerial; }
+        if(detection == Vector2.zero) { prev_state = State.Grounded; current_state = State.Aerial; }
     }   
     public void Cling()
     {
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (angle < settings.Slope_Angle && settings.Wall_Jump.phase == Jump.State.Waiting && direction.x == 0)
+        {
+            current_state = State.Grounded; return;
+        }
+
         //CLING
         rb.useGravity = false;
         Flip((int)((detection.x % 1) + (detection.x / 1)));
@@ -211,10 +229,15 @@ public class Player_Controller : MonoBehaviour
         rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
 
         //SLIDE CHECK
-        if (direction.y < 0) { current_state = State.Sliding; return; }
+        if (direction.y < 0 && current_state != State.Sliding && detection != Vector2.zero && c_manager.Sliding.Enabled) { 
+            current_state = State.Sliding; return;
+        }
 
         //WALL EJECT
         rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
+
+        //SLIDE STATE LOCK
+        if(current_state == State.Sliding) { return; }
 
         // AUTO SLIDE + FRICTION
         transform.position += Vector3.down * slide_speed * Time.deltaTime;
@@ -222,9 +245,8 @@ public class Player_Controller : MonoBehaviour
         else { slide_speed = 0; }
 
         //STATE CHANGE
-        float angle = Vector3.Angle(detection, -Vector3.up);
         if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
-        else { current_state = State.Aerial; }
+        else { prev_state = State.Cling; current_state = State.Aerial; }
 
     }
     public void Aerial()
@@ -234,6 +256,8 @@ public class Player_Controller : MonoBehaviour
         float speed = direction.x * settings.Air_Speed;
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
+        Debug.Log("Force: " + force);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
         if (rb.velocity.y < -10f)
@@ -244,47 +268,56 @@ public class Player_Controller : MonoBehaviour
         {          
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
+        else
+        {
+            Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
+        }
 
         //STATE CHANGE//
         if(detection == Vector2.zero) { return; }
         aerial_time = 0;
         float angle = Vector3.Angle(detection, -Vector3.up);
-        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
-        else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+        if (angle < settings.Slope_Angle) { prev_state = State.Aerial; current_state = State.Grounded; } // GROUND
+        else if (angle > 180 - settings.Ceiling_Angle) { prev_state = State.Aerial; current_state = State.Ceiling; rb.useGravity = true; } // CEILING
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay && c_manager.Cling.Enabled) { prev_state = State.Aerial; current_state = State.Cling; } // CLING 
     }
     public void Ceiling()
     {
         rb.AddForce(-transform.up * settings.Bonk_Power, ForceMode.Impulse);
         current_state = State.Aerial;
+        prev_state = State.Ceiling;
     }
     public void Glide()
     {
-        Debug.Log("GLIDE");
         rb.AddForce(transform.up * -Physics.gravity.y/(10/settings.Glide_Power), ForceMode.Force);
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -1 / settings.Glide_Power, float.PositiveInfinity), rb.velocity.z);
 
         if(detection == Vector2.zero) {return;}
 
         float angle = Vector3.Angle(detection, -Vector3.up);
-        if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
-        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
+        if (angle < settings.Slope_Angle){ prev_state = State.Gliding; current_state = State.Grounded; } // GROUND
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay && c_manager.Cling.Enabled) { prev_state = State.Gliding; current_state = State.Cling; } // CLING 
     }
     public void Slide()
     {
-        if (direction.y < 0 && controls.Player.Jump.phase != InputActionPhase.Started)
+        float angle = Vector3.Angle(detection, -Vector3.up);
+        if (direction.y < 0 && detection != Vector2.zero)
         {
             float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
             slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
             transform.position += Vector3.down * slide_speed * Time.deltaTime;
             return;
         }
-
-        
-        //STATE CHANGE
-        float angle = Vector3.Angle(detection, -Vector3.up);
-        if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // CLING 
-        else { current_state = State.Aerial; }
+        else if(detection == Vector2.zero)
+        {
+            current_state = State.Aerial;
+            prev_state = State.Sliding;
+        }
+        else if(angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay)
+        {
+            current_state = State.Cling; // CLING
+            prev_state = State.Sliding;
+        }
     }
     public IEnumerator Jump_01(Jump jump, float time)
     {
@@ -295,10 +328,12 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            if (force < 0.1f) { 
+            if (force < 0.1f)
+            {
                 jump.phase = Jump.State.Canceled;
-                if(controls.Player.Glide.phase == InputActionPhase.Performed) { current_state = State.Gliding; }
-                break; }
+                if (controls.Player.Glide.phase == InputActionPhase.Performed) { prev_state = State.Aerial; current_state = State.Gliding; }
+                break;
+            }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
@@ -319,7 +354,7 @@ public class Player_Controller : MonoBehaviour
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f) { 
                 jump.phase = Jump.State.Canceled;
-                if (controls.Player.Glide.phase == InputActionPhase.Performed) { current_state = State.Gliding; }
+                if (controls.Player.Glide.phase == InputActionPhase.Performed) { prev_state = State.Aerial; current_state = State.Gliding; }
                 break; }
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
@@ -390,6 +425,28 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
+    private float Get_Detection_Angle()
+    {
+        float angle;
+        switch (current_state) 
+        {
+            case State.Grounded:
+                angle = Mathf.Clamp(Vector3.Angle(detection, -Vector3.up), 0, settings.Slope_Angle);
+                break;
+            default:
+                angle = Vector3.Angle(detection, -Vector3.up);
+                break;
+        }
+
+        return angle;
+    }
+    private void Swap_States(ref State a, ref State b)
+    {
+        State temp = a;       
+        a = b;
+        b = temp;       
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         rb.useGravity = true;
@@ -418,13 +475,6 @@ public class Player_Controller : MonoBehaviour
         float angle = Vector3.Angle(dir, -Vector3.up);
         detection = dir;
         float height = collision.GetContact(0).otherCollider.bounds.size.y;
-
-
-        //if (angle < settings.Slope_Angle) { current_state = State.Grounded; } // GROUND
-        //else if (angle > 180 - settings.Ceiling_Angle) { current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        //else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && height > settings.Cling_Threshold && coyote_time > settings.Coyote_Delay) { current_state = State.Cling; } // WALL 
-        //else { current_state = State.Aerial; } // WAITING (DEFAULT)
-        Debug.DrawLine(transform.position, transform.position + (average - transform.position).normalized, Color.green);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -445,6 +495,11 @@ public class Player_Controller : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + detection);
+
+
         Gizmos.color = Color.yellow;
 
         #region SLOPE ANGLE BOUNDS
@@ -474,12 +529,8 @@ public class Jump
     public float angle;
     public float buffer;
 
-    public enum State { Canceled = default, Waiting, Started, Performing }
-    public State phase = default;
-    public Jump()
-    {
-        phase = default;
-    }
+    public enum State { Waiting = default, Canceled, Started, Performing }
+    public State phase;
 }
 
 [System.Serializable]
