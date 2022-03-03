@@ -12,6 +12,14 @@ public class Player : MonoBehaviour, IDamagable
 
     private void Awake()
     {
+        Portal_Data data = SaveSystem.Load<Portal_Data>("/Portal.data");
+        foreach (Portal_Volume v in FindObjectsOfType<Portal_Volume>())
+        {
+            if (data == null) { break; }
+            else if (v.Portal_ID == data.destination) { 
+                transform.position = v.transform.position;
+            }
+        }
         sprigSprite = GetComponent<SpriteRenderer>();
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public static class SaveSystem
 {
-    public static string CurrentSave;
+    public static string CurrentSave = "";
 
     public static string[] GetSaveNames()
     {
@@ -33,7 +33,6 @@ public static class SaveSystem
         string p_Player = Path.Combine(CurrentSave, "Player");
         Directory.CreateDirectory(p_Player);
     }
-
     public static void DeleteSave(string name)
     {
         string path = Path.Combine(Application.persistentDataPath, name);
@@ -51,92 +50,43 @@ public static class SaveSystem
         Directory.Delete(path);
     }
 
-    //#region Player
-    //public static void SavePlayerData(PlayerData data)
-    //{       
-    //    BinaryFormatter formatter = new BinaryFormatter();
-    //    string path = Path.Combine(CurrentSave, "Player")  + "/player.data";
-    //    FileStream stream = new FileStream(path, FileMode.Create);
-    //    formatter.Serialize(stream, data);
-    //    stream.Close();
-    //}
-    //public static PlayerData LoadPlayerData()
-    //{
-    //    string path = Path.Combine(CurrentSave, "Player") + "/player.data";
-    //    if (File.Exists(path))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        FileStream stream = new FileStream(path, FileMode.Open);
 
-    //        PlayerData data = formatter.Deserialize(stream) as PlayerData;
-    //        stream.Close();
+    /* PATH FORMATING
+     * 
+     * Path parameter will be added on to the Current Save path:
+     * 
+     * Current Save: Application.persistentDataPath/"Save Name"
+     * 
+     * EX. /Player/Player.data
+     * EX. /Levels/Level_01.data
+     */
 
-    //        return data;
-    //    }
-    //    else
-    //    {
-    //        return null;
-    //    }
-    //}
-    //#endregion
+    public static void Save<T>(T data, string path)
+    {        
+        BinaryFormatter formatter = new BinaryFormatter();
+        string p = Application.persistentDataPath + CurrentSave + path;
+        Debug.Log(p);
+        FileStream stream = new FileStream(p, FileMode.Create);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
 
-    //#region NPC
-    //public static void SaveNPCData(NPCData data)
-    //{
-    //    string level = Path.Combine(CurrentSave, "Levels", data.scene);
-    //    if (!Directory.Exists(level)){
-    //        Directory.CreateDirectory(level);
-    //    }
-    //    string p_NPC = Path.Combine(level, "NPC");     
-    //    if (!Directory.Exists(p_NPC)){
-    //        Directory.CreateDirectory(p_NPC);
-    //    }
+    public static T Load<T>(string path)
+    {
+        string p = Application.persistentDataPath + CurrentSave + path;
+        if (File.Exists(p))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(p, FileMode.Open);
 
-    //    BinaryFormatter formatter = new BinaryFormatter();
-    //    string path = p_NPC + "/" + data.name + ".data";
-    //    FileStream stream = new FileStream(path, FileMode.Create);
-    //    formatter.Serialize(stream, data);
-    //    stream.Close();
-    //}
-    //public static NPCData LoadNPCData(string scene, string name)
-    //{
-    //    string NPC = Path.Combine(CurrentSave, "Levels", scene, "NPC");
-    //    string path = NPC + "/" + name + ".data";
-    //    if (File.Exists(path))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        FileStream stream = new FileStream(path, FileMode.Open);
+            T data = (T)formatter.Deserialize(stream);
+            stream.Close();
 
-    //        NPCData data = formatter.Deserialize(stream) as NPCData;
-    //        stream.Close();
-
-    //        return data;
-    //    }
-    //    else
-    //    {
-    //        return null;
-    //    }
-    //}
-
-    //public static NPCData[] LoadAllNPCData(string scene)
-    //{
-    //    string path = Path.Combine(CurrentSave, "Levels", scene, "NPC");
-    //    if (!Directory.Exists(path))
-    //    {
-    //        return null;
-    //    }
-    //    DirectoryInfo dir = new DirectoryInfo(path);
-    //    FileInfo[] info = dir.GetFiles();
-
-    //    NPCData[] dataFiles = new NPCData[info.Length];
-
-    //    for (int i = 0; i < info.Length; i++)
-    //    {
-    //        string name = info[i].Name.Replace(".data", null);
-    //        dataFiles[i] = LoadNPCData(scene, name);
-    //    }
-    //    return dataFiles;
-
-    //}
-    //#endregion
+            return data;
+        }
+        else
+        {
+            return default;
+        }
+    }
 }
