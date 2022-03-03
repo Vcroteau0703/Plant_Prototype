@@ -16,7 +16,7 @@ MonoBehaviour:
   Acceleration: 1.6
   Friction: 0.4
   Jump:
-    power: 10
+    power: 12
     max_height: 15
     floatiness: 0.03
     angle: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   Wall_Jump:
     power: 12
     max_height: 15
-    floatiness: 0.04
+    floatiness: 0.03
     angle: 36
     buffer: 0
     phase: 0
