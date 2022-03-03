@@ -56,7 +56,10 @@ public class Player : MonoBehaviour, IDamagable
         if(currHealth >= 0)
         {
             sprigSprite.color = sprigColor = healthColors[currHealth - 1];
-            StartCoroutine(IFrames(10, 0.2f));
+            if(currHealth != max_health)
+            {
+                StartCoroutine(IFrames(10, 0.2f));
+            }
         }
     }
 
@@ -74,7 +77,6 @@ public class Player : MonoBehaviour, IDamagable
         float a = 1f, b = 0.5f;
         while (flashCycles > 0)
         {
-            Debug.Log(flashCycles);
             float currentTime = 0;
             while (currentTime < cycleTime)
             {
