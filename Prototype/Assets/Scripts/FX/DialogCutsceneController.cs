@@ -18,6 +18,7 @@ public class DialogCutsceneController : MonoBehaviour
     {
         cutscene.Pause();       
         cutscene.time = 0;
+        Debug.Log("Got here");
         cutscene.Play();
     }
 }
