@@ -3,11 +3,12 @@ tags:
 position: 1,-1
 ---
 
-Help! Help!
+Hey wait! Up here!
 <<Camera_Pan CameraDuringDialog>>
-I don't think I can make the jump down from here. Can you come help me down?
-Oh right, I don't think you can get up here.
-Maybe there's something around here you can move.
+<<wait 1.5>>
+Could you help me?
+I climbed all the way up here, but now I...er...can't get down.
+Maybe there's something around here you can move?
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -15,8 +16,9 @@ title: Dialogue2
 position: 90,49
 ---
 
-I've been stuck up here for so long... Thank you for helping me.
-Woah do you feel that?
+Woah, close call! Thank you so much!
+I could've waited for my mom, but she's just taking forever to get here.
+Wait...do you feel that?
 <<change_world GreenifyDirector>>
 
 
@@ -26,7 +28,7 @@ position: 213,26
 ---
 
 <<Camera_Pan CameraDuringDialog>>
-Hey a path opened over here!
+Hey, down here!
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -34,8 +36,26 @@ title: Node
 position: 198,116.5
 ---
 
-I think that water over there is safe to go in now!
-As thanks, let me teach you something...
+So, what's your name?
+...
+"Sprig?" Heh, that's a funny name for a plant!
+...
+Your brothers?
+Well, there's some bad rumors about the caves under the tree.
+Anyone who goes in never comes out, so I wouldn't check there if I were you.
+But, if your brothers are there, then I guess you don't really have a choice.
+Good luck!
+...
+Oh wait, you don't know how to scale walls, do you?
+Here, I'll teach you.
+<<wait 1.5>>
 *Sprig has learned Wall Cling!*
+*Jump up walls to climb them, and hold down to slide.*
+<<wait 0.5>>
+Aaaaaand there. That should be pretty easy now.
+I'll wait here outside the scary cave.
+N-Not that I'm scared or anything, I just want to...er...
+...make sure the coast is clear!
+...yeah.
 
 ===
