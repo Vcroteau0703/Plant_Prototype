@@ -16,7 +16,7 @@ public class Player : MonoBehaviour, IDamagable
 
     private void Awake()
     {
-        Portal_Data data = SaveSystem.Load<Portal_Data>("/Portal.data");
+        Portal_Data data = SaveSystem.Load<Portal_Data>("/Temp/Portal.data");
         foreach (Portal_Volume v in FindObjectsOfType<Portal_Volume>())
         {
             if (data == null) { break; }

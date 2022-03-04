@@ -26,12 +26,13 @@ public static class SaveSystem
         CurrentSave = directory.FullName;
 
         string p_Levels = Path.Combine(CurrentSave, "Levels");
-        Directory.CreateDirectory(p_Levels);
-
-        
+        Directory.CreateDirectory(p_Levels);       
 
         string p_Player = Path.Combine(CurrentSave, "Player");
         Directory.CreateDirectory(p_Player);
+
+        string p_Temp = Path.Combine(CurrentSave, "Temp");
+        Directory.CreateDirectory(p_Temp);
     }
     public static void DeleteSave(string name)
     {
@@ -64,7 +65,8 @@ public static class SaveSystem
     public static void Save<T>(T data, string path)
     {        
         BinaryFormatter formatter = new BinaryFormatter();
-        string p = Application.persistentDataPath + CurrentSave + path;
+        string p = CurrentSave == "" ? Application.persistentDataPath + "/Default" + path : CurrentSave + path;
+        if (!Directory.Exists(Application.persistentDataPath + "/Default")) { CreateNewSave("Default");  }
         Debug.Log(p);
         FileStream stream = new FileStream(p, FileMode.Create);
         formatter.Serialize(stream, data);
@@ -73,7 +75,7 @@ public static class SaveSystem
 
     public static T Load<T>(string path)
     {
-        string p = Application.persistentDataPath + CurrentSave + path;
+        string p = CurrentSave == "" ? Application.persistentDataPath + "/Default" + path : CurrentSave + path;
         Debug.Log(p);
         if (File.Exists(p))
         {
