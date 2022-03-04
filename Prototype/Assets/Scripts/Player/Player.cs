@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IDamagable
         {
             if (data == null) { break; }
             else if (v.Portal_ID == data.destination) { 
-                transform.position = v.transform.position;
+                transform.position = v.transform.position + (Vector3)v.Spawn_Offset;
             }
         }
         sprigSprite = GetComponent<SpriteRenderer>();

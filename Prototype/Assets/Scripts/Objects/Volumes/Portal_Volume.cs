@@ -9,12 +9,14 @@ public class Portal_Volume : Action_Volume
     public string Portal_ID;
     public string Linked_ID;
 
-    public Vector2 Spawn_Offset;
+    public Vector2 Size = Vector2.one;
 
-    public Texture2D Icon_Texture;
+    public Vector2 Spawn_Offset;
 
     private Portal_Data data = new Portal_Data();
     public Portal_Data Data { get { return data; } }
+
+    private BoxCollider col;
 
     private void OnEnable()
     {
@@ -28,7 +30,6 @@ public class Portal_Volume : Action_Volume
             temp.destination = "";
             data = temp;
             SaveSystem.Save(data, "/Portal.data");
-            return; 
         } 
         data.destination = Linked_ID;
         SaveSystem.Save(data, "/Portal.data");
@@ -37,17 +38,21 @@ public class Portal_Volume : Action_Volume
 
     private void OnDrawGizmos()
     {
+        if(col == null && TryGetComponent(out BoxCollider c)){col = c;}
+        col.size = Size;
+
         Gizmos.color = Color.blue * new Color(1,1,1,0.5f);
-        Gizmos.DrawCube(transform.position, new Vector3(2, 2, 2));
+        Gizmos.DrawCube(transform.position, Size);
         Gizmos.color = Color.black;
-        Gizmos.DrawWireCube(transform.position, new Vector3(2, 2, 2));
+        Gizmos.DrawWireCube(transform.position, Size);
         Gizmos.DrawIcon(transform.position, "Import@2x", true, Color.white);
 
         Gizmos.color = Color.blue * new Color(1, 1, 1, 0.5f);
-        Gizmos.DrawCube(transform.position + (Vector3)Spawn_Offset, new Vector3(1, 1, 1));
+        Gizmos.DrawCube(transform.position + (Vector3)Spawn_Offset, new Vector3(1, 2.2f, 1));
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireCube(transform.position + (Vector3)Spawn_Offset, new Vector3(1, 2.2f, 1));
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)Spawn_Offset);
-        //Gizmos.DrawIcon(transform.position + (Vector3)Spawn_Offset, "Sprig.png", true, Color.yellow);
-        Gizmos.DrawGUITexture(new Rect(transform.position.x, transform.position.y, 1000, 1000), Icon_Texture);
+        Gizmos.DrawIcon(transform.position + (Vector3)Spawn_Offset, "AvatarSelector@2x", true, new Color(0f,1f,0.2f));
     }
 }
 

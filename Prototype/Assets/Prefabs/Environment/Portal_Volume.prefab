@@ -48,8 +48,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   trigger_type: 1
-  Portal_ID: Tree_01
-  Linked_ID: Fields_02
+  Scene_ID: 2
+  Portal_ID: Fields_02
+  Linked_ID: Tree_01
+  Size: {x: 2.2, y: 2.2}
+  Spawn_Offset: {x: -2.15, y: 0}
 --- !u!65 &-7589077908461943329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61,5 +64,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 2.2, y: 2.2, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
