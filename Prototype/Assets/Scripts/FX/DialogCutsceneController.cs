@@ -16,9 +16,7 @@ public class DialogCutsceneController : MonoBehaviour
     [YarnCommand("Camera_Pan")]
     public void StartCutscene()
     {
-        cutscene.Pause();       
-        cutscene.time = 0;
-        Debug.Log("Got here");
+        cutscene.Stop();       
         cutscene.Play();
     }
 }
