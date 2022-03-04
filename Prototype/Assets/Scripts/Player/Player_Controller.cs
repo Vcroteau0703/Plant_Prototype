@@ -68,7 +68,6 @@ public class Player_Controller : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("Current State is: " + current_state.ToString());
         target_gravity = Physics.gravity.y;
         Animation_Driver();
     }
@@ -430,6 +429,10 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
+    private void Flip()
+    {
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
     private float Get_Detection_Angle()
     {
         float angle;
@@ -454,6 +457,7 @@ public class Player_Controller : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
+        if(Mathf.Abs(direction.x) < 0.2f && (current_state == State.Cling || current_state == State.Sliding) ) { Flip(); }
         rb.useGravity = true;
         detection = Vector2.zero;
     }
