@@ -25,14 +25,14 @@ public class Portal_Volume : Action_Volume
 
     private void Travel(GameObject actor)
     {
-        Portal_Data temp = SaveSystem.Load<Portal_Data>("/Portal.data");
+        Portal_Data temp = SaveSystem.Load<Portal_Data>("/Temp/Portal.data");
         if(temp != null && temp.destination != "") {
             temp.destination = "";
             data = temp;
-            SaveSystem.Save(data, "/Portal.data");
+            SaveSystem.Save(data, "/Temp/Portal.data");
         } 
         data.destination = Linked_ID;
-        SaveSystem.Save(data, "/Portal.data");
+        SaveSystem.Save(data, "/Temp/Portal.data");
         SceneManager.LoadScene(Scene_ID);
     }
 
