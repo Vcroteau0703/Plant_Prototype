@@ -338,17 +338,18 @@ public class Player_Controller : MonoBehaviour
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
-        jump.phase = Jump.State.Canceled;
+        jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
     }
     public IEnumerator Jump_02(Jump jump, float time)
     {
         StartCoroutine(Jump_02_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
-        float angle = jump.angle * detection.x;
-        Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        rb.AddForce(jump.power * (rot * Vector3.up), ForceMode.Impulse);
+        float angle = detection.x > 0 ? Get_Detection_Angle() + 90 + settings.Wall_Jump.angle : (Get_Detection_Angle() + 90 + +settings.Wall_Jump.angle) * -1;
+        Vector2 dir = Quaternion.AngleAxis(angle, Vector3.forward) * -Vector2.up;
+
+        rb.AddForce(jump.power * dir, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
             time += Time.deltaTime;
@@ -363,7 +364,7 @@ public class Player_Controller : MonoBehaviour
             rb.AddForce(force * Vector3.up, ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
         }
-        jump.phase = Jump.State.Canceled;
+        jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
     }
     public IEnumerator Jump_02_Buffer()
     {
@@ -514,15 +515,15 @@ public class Player_Controller : MonoBehaviour
         #region SLOPE ANGLE BOUNDS
         Quaternion rot1 = Quaternion.AngleAxis(settings.Slope_Angle, Vector3.forward);
         Quaternion rot2 = Quaternion.AngleAxis((-settings.Slope_Angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
         #endregion
 
         #region CEILING ANGLE BOUNDS
         Quaternion rot3 = Quaternion.AngleAxis(settings.Ceiling_Angle, Vector3.forward);
         Quaternion rot4 = Quaternion.AngleAxis((-settings.Ceiling_Angle), Vector3.forward);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
         #endregion
     }
     #endregion
