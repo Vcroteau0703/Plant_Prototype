@@ -27,7 +27,7 @@ MonoBehaviour:
     max_height: 4
     floatiness: 0.03
     angle: 38
-    buffer: 0.2
+    buffer: 0
     phase: 0
   Coyote_Delay: 0.15
   Air_Speed: 11
@@ -39,11 +39,11 @@ MonoBehaviour:
   Max_Slide_Speed: 4
   Slide_Threshhold: 3
   Slide_Accel: 27
-  Cling_Power: 15
-  Eject_Power: 0.4
+  Cling_Power: 30
+  Eject_Power: 0.8
   Slope_Angle: 60
   Ceiling_Angle: 50
   Cling_Threshold: 0.25
-  Bonk_Power: 2
+  Bonk_Power: 1.5
   horizontal_deadzone: 50
   vertical_deadzone: 50
