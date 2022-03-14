@@ -90,7 +90,7 @@ public class Greenify : MonoBehaviour, ISavable
     {
         GreenifyData data = SaveSystem.Load<GreenifyData>("/Level01_green.data");
 
-        if (data.isDone)
+        if (data != null && data.isDone)
         {
             water.SetColor("_Emission", waterEndEmission);
             water.SetColor("_BaseColor", waterEndColor);
