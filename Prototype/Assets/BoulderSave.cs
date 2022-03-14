@@ -19,7 +19,7 @@ public class BoulderSave : MonoBehaviour, ISavable
 
         SaveSystem.Save<BoulderData>(data, "/Level01_boulder.data");
 
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void Load()
@@ -29,6 +29,7 @@ public class BoulderSave : MonoBehaviour, ISavable
         if(data != null && data.isDone)
         {
             cutscene.initialTime = 250f;
+            cutscene.Play();
         }
     }
 

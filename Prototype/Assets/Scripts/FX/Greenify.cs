@@ -84,7 +84,7 @@ public class Greenify : MonoBehaviour, ISavable
 
         SaveSystem.Save<GreenifyData>(data, "/Level01_green.data");
 
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
     public void Load()
     {
@@ -100,6 +100,7 @@ public class Greenify : MonoBehaviour, ISavable
                 hazards[i].GetComponent<Hazard>().ChangeDamage(0);
                 hazards[i].GetComponent<Heal_Volume>().enabled = true;
             }
+            cutscene.Play();
         }
         else
         {
