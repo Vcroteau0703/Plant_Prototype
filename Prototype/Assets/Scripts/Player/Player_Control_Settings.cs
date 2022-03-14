@@ -20,7 +20,7 @@ public class Player_Control_Settings : ScriptableObject
     public float Air_Accel = 1.0f;
     public float Fall_Speed = 1.0f;
     [Header("Glide Settings")]
-    [Range(1, 10)] public float Glide_Power = 1.1f;
+    [Range(0, 1)] public float Glide_Power = 1.1f;
     [Header("Wall Slide Settings")]
     public float Slide_Friction = 1.0f;
     public float Max_Slide_Speed = 8.0f;

@@ -16,7 +16,7 @@ MonoBehaviour:
   Acceleration: 1.6
   Friction: 0.4
   Jump:
-    power: 12
+    power: 10
     max_height: 15
     floatiness: 0.03
     angle: 0
