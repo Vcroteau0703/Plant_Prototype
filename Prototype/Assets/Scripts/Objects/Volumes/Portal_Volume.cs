@@ -33,6 +33,7 @@ public class Portal_Volume : Action_Volume
         } 
         data.destination = Linked_ID;
         SaveSystem.Save(data, "/Temp/Portal.data");
+        GameManager.SaveGame();
         SceneManager.LoadScene(Scene_ID);
     }
 

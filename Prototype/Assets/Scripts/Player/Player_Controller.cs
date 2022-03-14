@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player_Controller : MonoBehaviour
+public class Player_Controller : MonoBehaviour, ISavable
 {
     #region DECLARATIONS
     // SINGLETON INSTANCE //
@@ -39,8 +39,16 @@ public class Player_Controller : MonoBehaviour
         rb = TryGetComponent(out Rigidbody r) ? r : null;
         col = TryGetComponent(out Collider c) ? c : null;
         animator = TryGetComponent(out Animator a) ? a : null;
+        Control_Management manager_data = SaveSystem.Load<Control_Management>("/Player/Control_Manager.data");
+        c_manager = manager_data != null ? manager_data : c_manager;
         //c_manager.Enable_All();
     }
+
+    public void Save()
+    {
+        SaveSystem.Save(c_manager, "/Player/Control_Manager.data");
+    }
+
     // Putting these here to allow me to call them within cutscenes and dialog
     public void EnableCling()
     {
