@@ -273,11 +273,15 @@ public class Player_Controller : MonoBehaviour
 
         //STATE CHANGE//
         if(detection == Vector2.zero) { return; }
-        aerial_time = 0;
         float angle = Vector3.Angle(detection, -Vector3.up);
-        if (angle < settings.Slope_Angle) { prev_state = State.Aerial; current_state = State.Grounded; } // GROUND
+        if (angle < settings.Slope_Angle) { prev_state = State.Aerial; current_state = State.Grounded; aerial_time = 0; } // GROUND
         else if (angle > 180 - settings.Ceiling_Angle) { prev_state = State.Aerial; current_state = State.Ceiling; rb.useGravity = true; } // CEILING
-        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay && c_manager.Cling.Enabled) { prev_state = State.Aerial; current_state = State.Cling; } // CLING 
+        else if (angle > settings.Slope_Angle && angle < 180 - settings.Ceiling_Angle && coyote_time > settings.Coyote_Delay && c_manager.Cling.Enabled && aerial_time > 0.5f) 
+        { 
+            prev_state = State.Aerial;
+            current_state = State.Cling;
+            aerial_time = 0;
+        } // CLING 
     }
     public void Ceiling()
     {
@@ -328,7 +332,7 @@ public class Player_Controller : MonoBehaviour
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f)
             {
-                jump.phase = Jump.State.Canceled;
+                jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
                 if (controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) {
                     prev_state = State.Aerial;
                     current_state = State.Gliding;
@@ -348,14 +352,15 @@ public class Player_Controller : MonoBehaviour
 
         float angle = detection.x > 0 ? Get_Detection_Angle() + 90 + settings.Wall_Jump.angle : (Get_Detection_Angle() + 90 + +settings.Wall_Jump.angle) * -1;
         Vector2 dir = Quaternion.AngleAxis(angle, Vector3.forward) * -Vector2.up;
+        Debug.Log(angle);
 
         rb.AddForce(jump.power * dir, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            if (force < 0.1f) { 
-                jump.phase = Jump.State.Canceled;
+            if (force < 0.1f) {
+                jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
                 if (controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) {
                     prev_state = State.Aerial; 
                     current_state = State.Gliding; 
@@ -488,6 +493,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("ENTER");
         settings.Jump.phase = Jump.State.Waiting;
         settings.Wall_Jump.phase = Jump.State.Waiting;
     }
@@ -525,8 +531,14 @@ public class Player_Controller : MonoBehaviour
         //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
         //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
         #endregion
+
+        float angle = detection.x > 0 ? Get_Detection_Angle() + 90 + settings.Wall_Jump.angle : (Get_Detection_Angle() + 90 + +settings.Wall_Jump.angle) * -1;
+        Vector2 dir = Quaternion.AngleAxis(angle, Vector3.forward) * -Vector2.up;
+
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)dir);
     }
     #endregion
+
 }
 
 #region CLASSES
