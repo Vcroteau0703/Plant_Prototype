@@ -4,7 +4,7 @@ using UnityEngine;
 using Yarn.Unity;
 using UnityEngine.Playables;
 
-public class Greenify : MonoBehaviour
+public class Greenify : MonoBehaviour, ISavable
 {
     [ColorUsage(true, true)]
     public Color waterStartEmission;
@@ -19,11 +19,11 @@ public class Greenify : MonoBehaviour
     public PlayableDirector cutscene;
     //public GameObject cutscene2;
     public GameObject[] hazards;
+    public bool greenDone = false;
 
     private void Awake()
     {
-        water.SetColor("_Emission", waterStartEmission);
-        water.SetColor("_BaseColor", waterStartColor);
+        Load();
     }
 
     [YarnCommand("change_world")]
@@ -42,6 +42,7 @@ public class Greenify : MonoBehaviour
             hazards[i].GetComponent<Heal_Volume>().enabled = true;
         }
         cutscene.Play();
+        greenDone = true;
     }
 
 
@@ -71,4 +72,50 @@ public class Greenify : MonoBehaviour
         }
         //StopAllCoroutines();
     }
+
+    public void Save()
+    {
+        GreenifyData data = SaveSystem.Load<GreenifyData>("/Level01_green.data");
+
+        if (data == null && greenDone)
+        {
+            data = new GreenifyData();
+            data.isDone = true;
+            SaveSystem.Save<GreenifyData>(data, "/Level01_green.data");
+        }
+
+        //throw new System.NotImplementedException();
+    }
+    public void Load()
+    {
+        GreenifyData data = SaveSystem.Load<GreenifyData>("/Level01_green.data");
+
+        if (data != null && data.isDone)
+        {
+            Debug.Log(data.isDone);
+            water.SetColor("_Emission", waterEndEmission);
+            water.SetColor("_BaseColor", waterEndColor);
+            cutscene.initialTime = 1137f;
+            for (int i = 0; i < hazards.Length; i++)
+            {
+                hazards[i].GetComponent<Hazard>().ChangeDamage(0);
+                hazards[i].GetComponent<Heal_Volume>().enabled = true;
+            }
+            cutscene.Play();
+        }
+        else
+        {
+            water.SetColor("_Emission", waterStartEmission);
+            water.SetColor("_BaseColor", waterStartColor);
+
+        }
+    }
+
+
+}
+[System.Serializable]
+public class GreenifyData
+{
+    public bool isDone = false;
+
 }
