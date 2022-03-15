@@ -12,8 +12,14 @@ public class FileLoad : MonoBehaviour
     public void LoadSave()
     {
         SaveSystem.CurrentSave = Path.Combine(Application.persistentDataPath, fileName.text);
-        //PlayerData data = SaveSystem.LoadPlayerData();
-        //Laucher.LoadScene(data.currentScene);
+        Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
+        if(data == null)
+        {
+            ActionWindow.ButtonFunction function = Delete;
+            Notification_System.Send_ActionWindow("Player.data does not exist in " + fileName.text + ". File might be corrupt or lost, Would you like to delete the save?", "Delete", function);
+            return;
+        }
+        Laucher.LoadScene(data.scene);
     }
 
     public void DeleteSave()
