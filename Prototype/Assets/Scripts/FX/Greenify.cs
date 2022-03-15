@@ -75,14 +75,14 @@ public class Greenify : MonoBehaviour, ISavable
 
     public void Save()
     {
-        GreenifyData data = new GreenifyData();
+        GreenifyData data = SaveSystem.Load<GreenifyData>("/Level01_green.data");
 
-        if (greenDone)
+        if (data == null && greenDone)
         {
+            data = new GreenifyData();
             data.isDone = true;
+            SaveSystem.Save<GreenifyData>(data, "/Level01_green.data");
         }
-
-        SaveSystem.Save<GreenifyData>(data, "/Level01_green.data");
 
         //throw new System.NotImplementedException();
     }
@@ -92,6 +92,7 @@ public class Greenify : MonoBehaviour, ISavable
 
         if (data != null && data.isDone)
         {
+            Debug.Log(data.isDone);
             water.SetColor("_Emission", waterEndEmission);
             water.SetColor("_BaseColor", waterEndColor);
             cutscene.initialTime = 1137f;

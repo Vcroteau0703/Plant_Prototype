@@ -10,14 +10,16 @@ public class BoulderSave : MonoBehaviour, ISavable
 
     public void Save()
     {
-        BoulderData data = new BoulderData();
+        BoulderData data = SaveSystem.Load<BoulderData>("/Level01_boulder.data");
 
-        if (isDone)
+        if (data == null && isDone)
         {
+            data = new BoulderData();
             data.isDone = true;
+            SaveSystem.Save<BoulderData>(data, "/Level01_boulder.data");
         }
 
-        SaveSystem.Save<BoulderData>(data, "/Level01_boulder.data");
+        //SaveSystem.Save<BoulderData>(data, "/Level01_boulder.data");
 
         //throw new System.NotImplementedException();
     }

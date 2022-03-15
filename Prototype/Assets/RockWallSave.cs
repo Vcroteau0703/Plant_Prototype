@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class RockWallSave : MonoBehaviour
+public class RockWallSave : MonoBehaviour, ISavable
 {
     public PlayableDirector cutscene;
     public bool isDone = false;
 
     public void Save()
     {
-        RockWallData data = new RockWallData();
+        RockWallData data = SaveSystem.Load<RockWallData>("/Level01_RockWall.data");
 
-        if (isDone)
+        if (data == null && isDone)
         {
+            data = new RockWallData();
             data.isDone = true;
+            SaveSystem.Save<RockWallData>(data, "/Level01_RockWall.data");
         }
 
-        SaveSystem.Save<RockWallData>(data, "/Level01_RockWall.data");
-
-        //throw new System.NotImplementedException();
     }
 
     public void Load()

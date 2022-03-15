@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IDamagable
 {
+    public Player_Control_Settings sapSettings;
+
+    private Player_Control_Settings originalSettings;
+
     public int health = 1;
     public int max_health = 1;
     public Color[] healthColors;
@@ -26,6 +30,7 @@ public class Player : MonoBehaviour, IDamagable
         }
         sprigSprite = GetComponent<SpriteRenderer>();
         sprigColor = sprigSprite.color;
+        originalSettings = gameObject.GetComponent<Player_Controller>().settings;
     }
 
     public void Damage(int amount)
@@ -51,12 +56,29 @@ public class Player : MonoBehaviour, IDamagable
                 if (x != null) {
                     health = max_health;
                     ChangeSprigColor(health);
+                    SapEffectOff();
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     transform.position = x.transform.position;
                     return;
                 }
             }
         }
+    }
+
+    public void SapEffectOn()
+    {
+        // make termites collectable and disable their hazard damage
+        sapActive = true;
+        transform.GetChild(2).gameObject.SetActive(true);
+        // set slow movement settings
+        gameObject.GetComponent<Player_Controller>().settings = sapSettings;
+    }
+
+    public void SapEffectOff()
+    {
+        sapActive = false;
+        transform.GetChild(2).gameObject.SetActive(false);
+        gameObject.GetComponent<Player_Controller>().settings = originalSettings;
     }
 
     public void ChangeSprigColor(int currHealth)
@@ -71,12 +93,11 @@ public class Player : MonoBehaviour, IDamagable
         }
     }
 
-    public void Heal(int amount)
+    public void Heal()
     {
         if(health < max_health)
         {
-            Debug.Log("got here");
-            health += amount;
+            health = max_health;
             ChangeSprigColor(health);
         }
     }

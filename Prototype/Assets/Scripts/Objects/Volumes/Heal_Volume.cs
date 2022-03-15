@@ -20,6 +20,6 @@ public class Heal_Volume : Action_Volume
     {
         Debug.Log("Got Here 1");
         Player player = actor.GetComponent<Player>();
-        player.Heal(1);
+        player.Heal();
     }
 }

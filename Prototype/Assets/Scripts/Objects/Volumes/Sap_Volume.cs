@@ -6,11 +6,7 @@ public class Sap_Volume : Action_Volume
 {
     public int sapCooldown;
 
-    public Player_Control_Settings sapSettings;
-
     public Collider col;
-
-    private Player_Control_Settings originalSettings;
 
     private void Awake()
     {
@@ -33,25 +29,13 @@ public class Sap_Volume : Action_Volume
         if (player.sapActive)
         {
             yield return new WaitForSeconds(sapCooldown);
-            player.sapActive = false;
-            player.transform.GetChild(2).gameObject.SetActive(false);
-            player.gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+            player.SapEffectOff();
         }
         else
         {
-            originalSettings = player.gameObject.GetComponent<Player_Controller>().settings;
-
-            // make termites collectable and disable their hazard damage
-            player.sapActive = true;
-            player.transform.GetChild(2).gameObject.SetActive(true);
-            // set slow movement settings
-            player.gameObject.GetComponent<Player_Controller>().settings = sapSettings;
-
+            player.SapEffectOn();
             yield return new WaitForSeconds(sapCooldown);
-
-            player.sapActive = false;
-            player.transform.GetChild(2).gameObject.SetActive(false);
-            player.gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+            player.SapEffectOff();
         }
         
     }
