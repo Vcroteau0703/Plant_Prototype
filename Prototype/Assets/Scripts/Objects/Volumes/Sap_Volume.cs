@@ -5,7 +5,6 @@ using UnityEngine;
 public class Sap_Volume : Action_Volume
 {
     public int sapCooldown;
-
     public Collider col;
 
     private void Awake()
@@ -21,10 +20,15 @@ public class Sap_Volume : Action_Volume
     public void StartSap(GameObject actor)
     {
         Player player = actor.GetComponent<Player>();
-        if (!player.sapActive)
+        if (player.sapActive)
+        {
+            StopAllCoroutines();
+        }
+        else
         {
             player.SapEffectOn();
         }
+
     }
 
     private void OnTriggerExit(Collider other)
