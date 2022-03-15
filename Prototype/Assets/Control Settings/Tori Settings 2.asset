@@ -28,13 +28,13 @@ MonoBehaviour:
     floatiness: 0.03
     angle: 36
     buffer: 0
-    phase: 0
+    phase: 1
   Coyote_Delay: 0.15
   Air_Speed: 10
   Air_Control: 1
   Air_Accel: 1.4
   Fall_Speed: -25
-  Glide_Power: 1.1
+  Glide_Power: 0.5
   Slide_Friction: 7
   Max_Slide_Speed: 4
   Slide_Threshhold: 1

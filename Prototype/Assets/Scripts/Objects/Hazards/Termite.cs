@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Termite : Hazard
 {
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.TryGetComponent(out Player p))
+        if (other.transform.parent.TryGetComponent<Player>(out Player p))
         {
             if (p.sapActive)
             {
                 gameObject.SetActive(false);
             }
-            else if (collision.gameObject.TryGetComponent(out IDamagable a))
+            else if (other.gameObject.TryGetComponent(out IDamagable a))
             {
                 a.Damage(damage);
             }
