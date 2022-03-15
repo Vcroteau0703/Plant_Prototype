@@ -2,37 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aerial_Behaviour : StateMachineBehaviour
+public class Fall_Behaviour : StateMachineBehaviour
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-
-    public AnimationClip Implied_Wall_Jump, Implied_Jump, Normal_Aerial;
+    public AnimationClip Aerial_to_Fall, Normal_Fall;
     protected AnimatorOverrideController animatorOverrideController;
 
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
         AnimatorTransitionInfo transition = animator.GetAnimatorTransitionInfo(layerIndex);
 
         animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
 
-        if (transition.IsName("IDLE -> AERIAL") || (transition.IsName("WALK -> AERIAL")))
+        if (transition.IsName("AERIAL -> FALL") || transition.IsName("CLING -> FALL") || transition.IsName("GLIDE -> FALL"))
         {
-            animatorOverrideController["Aerial"] = Implied_Jump;
+            animatorOverrideController["Fall"] = Aerial_to_Fall;
         }
-
-        //Debug.Log(animator.GetAnimatorTransitionInfo(layerIndex).IsName("IDLE -> AERIAL"));
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (stateInfo.IsName("AERIAL"))
+        if (stateInfo.IsName("FALL"))
         {
-            if (animatorOverrideController["Aerial"] == Implied_Jump && stateInfo.normalizedTime >= 1.5f)
+            if (animatorOverrideController["Fall"] == Aerial_to_Fall && stateInfo.normalizedTime >= 1.5f)
             {
-                animatorOverrideController["Aerial"] = Normal_Aerial;
+                animatorOverrideController["Fall"] = Normal_Fall;
             }
         }
     }
@@ -46,8 +42,6 @@ public class Aerial_Behaviour : StateMachineBehaviour
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
-    //    Debug.Log(animator.GetAnimatorTransitionInfo(layerIndex).IsName("IDLE -> AERIAL"));
-
     //    // Implement code that processes and affects root motion
     //}
 

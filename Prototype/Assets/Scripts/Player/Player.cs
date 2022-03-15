@@ -29,16 +29,19 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         Player_Data player = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (player != null){
             health = player.health;
-            float[] checkpoint = player.checkpoint.position;
-            transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
+            if (SceneManager.GetActiveScene().name == player.scene)
+            {
+                float[] checkpoint = player.checkpoint.position;
+                transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
+            }
         }
         sprigSprite = GetComponent<SpriteRenderer>();
         sprigColor = sprigSprite.color;
+        ChangeSprigColor(health);
     }
 
     public void Save()
     {
-        Debug.Log("Player Saved");
         Player_Data data = new Player_Data(this);
         SaveSystem.Save(data, "/Player/Player.data");
     }

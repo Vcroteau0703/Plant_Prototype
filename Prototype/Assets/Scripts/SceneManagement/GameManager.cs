@@ -7,14 +7,15 @@ public class GameManager : MonoBehaviour
 {
     public static void SaveGame(bool show_notify)
     {
-        GameObject[] sceneObjects = FindObjectsOfType<GameObject>();
-        for (int i = 0; i < sceneObjects.Length; i++)
+        MonoBehaviour[] monos = FindObjectsOfType<MonoBehaviour>(true);
+        foreach (MonoBehaviour m in monos)
         {
-            if (sceneObjects[i].TryGetComponent(out ISavable obj))
+            foreach(ISavable a in m.GetComponents<ISavable>())
             {
-                obj.Save();
+                a.Save();
             }
         }
+
         if (show_notify)
         {
             Notification_System.Send_SystemNotify("The game has been saved");
@@ -22,12 +23,12 @@ public class GameManager : MonoBehaviour
     }
     public static void SaveGame()
     {
-        GameObject[] sceneObjects = FindObjectsOfType<GameObject>();
-        for (int i = 0; i < sceneObjects.Length; i++)
+        MonoBehaviour[] monos = FindObjectsOfType<MonoBehaviour>(true);
+        foreach (MonoBehaviour m in monos)
         {
-            if (sceneObjects[i].TryGetComponent(out ISavable obj))
+            foreach (ISavable a in m.GetComponents<ISavable>())
             {
-                obj.Save();
+                a.Save();
             }
         }
         Notification_System.Send_SystemNotify("The game has been saved");       
