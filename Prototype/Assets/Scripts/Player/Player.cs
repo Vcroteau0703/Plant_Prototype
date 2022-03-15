@@ -69,19 +69,13 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
         if (x != null)
         {
-            Checkpoint x = null;
-            if (m.TryGetComponent(out ICheckpoint c))
-            {
-                x = c.Get_Active_Checkpoint();
-                if (x != null) {
-                    health = max_health;
-                    ChangeSprigColor(health);
-                    GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    transform.position = x.transform.position;
-                    return;
-                }
-            }
+            health = max_health;
+            ChangeSprigColor(health);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            transform.position = x.transform.position;
+            return;
         }
+    
     }
 
     public void SapEffectOn()
