@@ -21,23 +21,24 @@ public class Sap_Volume : Action_Volume
     public void StartSap(GameObject actor)
     {
         Player player = actor.GetComponent<Player>();
-        StartCoroutine(ActivateSap(player));
-    }
-
-    public IEnumerator ActivateSap(Player player)
-    {
-        if (player.sapActive)
-        {
-            yield return new WaitForSeconds(sapCooldown);
-            player.SapEffectOff();
-        }
-        else
+        if (!player.sapActive)
         {
             player.SapEffectOn();
-            yield return new WaitForSeconds(sapCooldown);
-            player.SapEffectOff();
         }
-        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.TryGetComponent<Player>(out Player player))
+        {
+            StartCoroutine(SapTimer(player));
+        }
+    }
+
+    public IEnumerator SapTimer(Player player)
+    {
+        yield return new WaitForSeconds(sapCooldown);
+        player.SapEffectOff();
     }
 
 }
