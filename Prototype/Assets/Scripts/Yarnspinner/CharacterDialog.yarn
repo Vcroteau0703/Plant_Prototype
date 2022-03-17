@@ -37,15 +37,18 @@ position: 198,116.5
 ---
 
 So, what's your name?
-...
+-> Sprig!
+-> ...Sprig.
 "Sprig?" Heh, that's a funny name for a plant!
-...
-Your brothers?
+So, what are you up to?
+-> I need to find my brothers.
+-> Do you know where to find lost plants?
 Well, there's some bad rumors about the caves under the tree up ahead.
 Anyone who goes in never comes out, so I wouldn't check there if I were you.
-But, if your brothers are there, then I guess you don't really have a choice.
+But, if those plants are there, then I guess you don't really have a choice.
 Good luck!
-...
+-> ...
+-> I can't make that jump.
 Oh, you don't know how to scale walls, do you?
 Here, I'll teach you.
 <<wait 1.5>>
