@@ -74,8 +74,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             transform.position = x.transform.position;
             return;
-        }
-    
+        }   
     }
 
     public void SapEffectOn()

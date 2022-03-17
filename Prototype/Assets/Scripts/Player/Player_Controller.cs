@@ -9,7 +9,7 @@ public class Player_Controller : MonoBehaviour, ISavable
     public static Player_Controller instance;
 
     //CLASS REFERENCES //
-    private Controls controls;
+    public Controls controls;
     private Rigidbody rb;
     private Collider col;
     private Animator animator;
