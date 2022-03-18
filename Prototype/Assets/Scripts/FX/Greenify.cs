@@ -34,6 +34,11 @@ public class Greenify : MonoBehaviour, ISavable
         ActivateCutscene();
     }
 
+    public void CutsceneFinished()
+    {
+        cutscene.Pause();
+    }
+
     public void ActivateCutscene()
     {
         for(int i = 0; i < hazards.Length; i++)
@@ -102,6 +107,7 @@ public class Greenify : MonoBehaviour, ISavable
                 hazards[i].GetComponent<Heal_Volume>().enabled = true;
             }
             cutscene.Play();
+            cutscene.Pause();
         }
         else
         {

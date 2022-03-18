@@ -54,6 +54,10 @@ public class Player_Controller : MonoBehaviour, ISavable
     {
         c_manager.Cling.Enable();
     }
+    public void DisableCling()
+    {
+        c_manager.Cling.Disable();
+    }
     public void EnableGlide()
     {
         c_manager.Gliding.Enable();
