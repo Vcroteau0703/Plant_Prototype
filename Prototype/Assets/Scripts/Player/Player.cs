@@ -5,18 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour, IDamagable
 {
     public Player_Control_Settings sapSettings;
-
     private Player_Control_Settings originalSettings;
 
     public int health = 1;
     public int max_health = 1;
-    public Color[] healthColors;
 
     private SpriteRenderer sprigSprite;
     private Color sprigColor;
 
     internal bool sapActive = false;
     private bool damageActive = true;
+
+    public HealthUI healthUI;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour, IDamagable
             if (health < 0) { health = 0; Respawn(); }
             else if (health == 0) { Respawn(); }
             else { damageActive = false; }
-            ChangeSprigColor(health);
+            UpdateHealthUI(health);
         }
     }
 
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour, IDamagable
                 x = c.Get_Active_Checkpoint();
                 if (x != null) {
                     health = max_health;
-                    ChangeSprigColor(health);
+                    UpdateHealthUI(health);
                     SapEffectOff();
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     transform.position = x.transform.position;
@@ -81,11 +81,11 @@ public class Player : MonoBehaviour, IDamagable
         gameObject.GetComponent<Player_Controller>().settings = originalSettings;
     }
 
-    public void ChangeSprigColor(int currHealth)
+    public void UpdateHealthUI(int currHealth)
     {
         if(currHealth >= 0)
         {
-            sprigSprite.color = sprigColor = healthColors[currHealth - 1];
+            healthUI.UpdateUI(currHealth);
             if(currHealth != max_health)
             {
                 StartCoroutine(IFrames(10, 0.2f));
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour, IDamagable
         if(health < max_health)
         {
             health = max_health;
-            ChangeSprigColor(health);
+            UpdateHealthUI(health);
         }
     }
 
