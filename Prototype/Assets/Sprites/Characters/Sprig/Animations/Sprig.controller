@@ -158,6 +158,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-5103607787325581332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7103f902cc4969f458c82c0a58dfbac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aerial_to_Fall: {fileID: 7400000, guid: d76b0c754a31b9649b46dd8875857135, type: 2}
+  Normal_Fall: {fileID: 7400000, guid: 7fe7da66f00bb76469eceaa3685e34d2, type: 2}
 --- !u!1102 &-4791094160880646582
 AnimatorState:
   serializedVersion: 6
@@ -177,7 +191,7 @@ AnimatorState:
   - {fileID: 755003234292779120}
   - {fileID: 678146253659706561}
   m_StateMachineBehaviours:
-  - {fileID: 7489419503219784809}
+  - {fileID: 2392866118208156519}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -500,67 +514,67 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: DIR_Y
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VELOCITY_X
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VELOCITY_Y
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: WALK_SPEED
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: GROUND
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: AERIAL
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: CLING
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: GLIDE
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: CEILING
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: SLIDE
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -625,6 +639,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &699567767755670735
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d4fdac8a65bed468c8b7086fc63b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Initial_Walk: {fileID: 7400000, guid: 3d8793e189da9d943827d957dae50445, type: 2}
+  Normal_Walk: {fileID: 7400000, guid: af9c2926547778c4497291fcb6ddaaf2, type: 2}
 --- !u!1101 &755003234292779120
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -665,7 +693,8 @@ AnimatorState:
   - {fileID: -8382401876086802154}
   - {fileID: 3973314063063033026}
   - {fileID: 7921664875760612322}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -5103607787325581332}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -734,6 +763,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &2392866118208156519
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dccd2231761a5d4c9f2aa2bb557fde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Implied_Wall_Jump: {fileID: 7400000, guid: 3d8793e189da9d943827d957dae50445, type: 2}
+  Implied_Jump: {fileID: 7400000, guid: 1d0aa5468fcd6364a820e0d8700d33e6, type: 2}
+  Normal_Aerial: {fileID: 7400000, guid: c0d896a214983cb4f8afba5f1dd37138, type: 2}
 --- !u!1101 &3973314063063033026
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -772,7 +816,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: 4458828889920668405}
   - {fileID: -417155033997209255}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 699567767755670735}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1144,21 +1189,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &7489419503219784809
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dccd2231761a5d4c9f2aa2bb557fde0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Aerial_to_Fall: {fileID: 0}
-  Implied_Jump: {fileID: 0}
-  Normal_Aerial: {fileID: 0}
 --- !u!1102 &7707293785193339601
 AnimatorState:
   serializedVersion: 6

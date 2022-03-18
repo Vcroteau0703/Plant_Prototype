@@ -76,7 +76,6 @@ public static class SaveSystem
     public static T Load<T>(string path)
     {
         string p = CurrentSave == "" ? Application.persistentDataPath + "/Default" + path : CurrentSave + path;
-        Debug.Log(p);
         if (File.Exists(p))
         {
             BinaryFormatter formatter = new BinaryFormatter();

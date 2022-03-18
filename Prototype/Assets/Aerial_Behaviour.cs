@@ -6,29 +6,36 @@ public class Aerial_Behaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 
-    public AnimationClip Aerial_to_Fall, Implied_Jump, Normal_Aerial;
+    public AnimationClip Implied_Wall_Jump, Implied_Jump, Normal_Aerial;
     protected AnimatorOverrideController animatorOverrideController;
 
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    AnimatorTransitionInfo transition = animator.GetAnimatorTransitionInfo(layerIndex);
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        
+        AnimatorTransitionInfo transition = animator.GetAnimatorTransitionInfo(layerIndex);
 
-    //    animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-    //    animator.runtimeAnimatorController = animatorOverrideController;
+        animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        animator.runtimeAnimatorController = animatorOverrideController;
 
-    //    if (transition.IsName("IDLE -> AERIAL") || (transition.IsName("WALK -> AERIAL")) 
-    //    {
-    //        animatorOverrideController["AERIAL"] = 
-    //    }
-    //    else if (transition.IsName("")) { }
+        if (transition.IsName("IDLE -> AERIAL") || (transition.IsName("WALK -> AERIAL")))
+        {
+            animatorOverrideController["Aerial"] = Implied_Jump;
+        }
 
-    //    //Debug.Log(animator.GetAnimatorTransitionInfo(layerIndex).IsName("IDLE -> AERIAL"));
-    //}
+        //Debug.Log(animator.GetAnimatorTransitionInfo(layerIndex).IsName("IDLE -> AERIAL"));
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (stateInfo.IsName("AERIAL"))
+        {
+            if (animatorOverrideController["Aerial"] == Implied_Jump && stateInfo.normalizedTime >= 1.5f)
+            {
+                animatorOverrideController["Aerial"] = Normal_Aerial;
+            }
+        }
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

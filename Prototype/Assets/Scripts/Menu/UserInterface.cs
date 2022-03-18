@@ -10,11 +10,18 @@ using UnityEngine.InputSystem;
 
 public class UserInterface : MonoBehaviour
 {
+    public static UserInterface instance;
+
     public Canvas canvas;
 
     public GameObject pauseMenu;
 
     private Controls inputs;
+
+    private void OnEnable()
+    {
+        instance = this;
+    }
 
     private void Awake()
     {
@@ -40,6 +47,19 @@ public class UserInterface : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
+
+    public void Pause()
+    {
+        if (!pauseMenu.activeInHierarchy)
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+            return;
+        }
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
     private void OnDisable()
     {
         Time.timeScale = 1;

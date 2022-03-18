@@ -25,9 +25,16 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
         }
     }
 
-    public Checkpoint Get_Active_Checkpoint()
+    public static Checkpoint Get_Active_Checkpoint()
     {
-        if(state == State.Active) { return this; }
+        foreach (MonoBehaviour m in FindObjectsOfType<MonoBehaviour>())
+        {
+            Checkpoint x = null;
+            if (m.TryGetComponent(out Checkpoint c))
+            {
+                if(c.state == State.Active) { return c; }
+            }
+        }
         return null;
     }
 
@@ -61,5 +68,19 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
             Gizmos.color = Color.black;
             Gizmos.DrawWireCube(transform.position + bounds.center, bounds.size);
         }
+    }
+}
+
+[System.Serializable]
+public class Checkpoint_Data
+{
+    public float[] position;
+
+    public Checkpoint_Data(Checkpoint c)
+    {
+        position = new float[3];
+        position[0] = c.transform.position.x;
+        position[1] = c.transform.position.y;
+        position[2] = c.transform.position.z;
     }
 }
