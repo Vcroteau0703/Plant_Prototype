@@ -235,17 +235,6 @@
                 },
                 {
                     "name": "",
-                    "id": "2af67739-c751-4755-9128-1e2fbc9c0f67",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "159f9dca-56c6-4008-b7bf-25ef25a31920",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -259,17 +248,6 @@
                     "name": "",
                     "id": "adea8ba8-54de-4ced-9956-760c3c2535a2",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7a28e494-e695-4f7e-afba-026e63e77ab3",
-                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -313,7 +291,7 @@
                 {
                     "name": "",
                     "id": "275bf37f-3a7a-4dd4-8de8-5b3daa62c1b4",
-                    "path": "<XInputController>/buttonWest",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox Controller",
@@ -335,7 +313,7 @@
                 {
                     "name": "",
                     "id": "21a0c821-a70b-4410-ae0a-64d4468cdb0d",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox Controller",
@@ -357,7 +335,7 @@
                 {
                     "name": "",
                     "id": "48fe2a14-e4f1-4166-9880-c56c11f0436d",
-                    "path": "<XInputController>/start",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox Controller",
@@ -379,7 +357,7 @@
                 {
                     "name": "",
                     "id": "d1088907-56d9-44d3-84d2-da31f4e74136",
-                    "path": "<XInputController>/buttonNorth",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
