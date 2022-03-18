@@ -32,6 +32,8 @@ public class Wind_Volume : Action_Volume
         Vector3 start = pos - (col.bounds.extents.y * Vector3.up);
         float y_diff = Mathf.Abs(Mathf.Clamp(actor.transform.position.y - start.y, 0.01f, float.PositiveInfinity));
         float force = Mathf.Pow(-Physics.gravity.y * intesity / y_diff * accel, power);
+        Debug.Log(force);
+        force = Mathf.Clamp(force, 0, -Physics.gravity.y * intesity);
         rb.GetComponent<Rigidbody>().AddForce(force * transform.up, ForceMode.Force);
     }
 }
