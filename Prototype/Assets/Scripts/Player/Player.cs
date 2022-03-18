@@ -42,7 +42,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         sprigSprite = GetComponent<SpriteRenderer>();
         sprigColor = sprigSprite.color;
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
-        ChangeSprigColor(health);
+        UpdateHealthUI(health);
     }
 
     public void Save()
