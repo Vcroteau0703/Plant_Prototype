@@ -104,6 +104,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-6930401911889829584
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprig Glides
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 098f8cb454e3d424d8936b6e66f07b1a, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-5364974492578952776
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -337,7 +363,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: aa54543cbd251de4990749ff2e51dd0e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 098f8cb454e3d424d8936b6e66f07b1a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -816,8 +842,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 4458828889920668405}
   - {fileID: -417155033997209255}
-  m_StateMachineBehaviours:
-  - {fileID: 699567767755670735}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -883,6 +908,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 6320395441817170197}
     m_Position: {x: -256.46265, y: -414.03763, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6930401911889829584}
+    m_Position: {x: -221.46265, y: -349.03763, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

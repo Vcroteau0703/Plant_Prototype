@@ -1,94 +1,130 @@
 fileFormatVersion: 2
-guid: 8b73c9f2d96c9784da3d57285638adf7
+guid: 8c34832c60fc9c741b3cd56633684ac3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7670683892062294009
-    second: AirToFall_0
+      213: 8835309589458289823
+    second: GLIDESPRIG_0
   - first:
-      213: 6706255133499964823
-    second: AirToFall_1
+      213: -3931640188679137500
+    second: GLIDESPRIG_1
   - first:
-      213: 6932807770612856833
-    second: AirToFall_2
+      213: -3653189083855626994
+    second: GLIDESPRIG_2
   - first:
-      213: 1727046874693344434
-    second: AirToFall_3
+      213: -8722145888903089660
+    second: GLIDESPRIG_3
   - first:
-      213: -8603837604253049958
-    second: AirToFall_4
+      213: 6631175566083030543
+    second: GLIDESPRIG_4
   - first:
-      213: -6686510756644998769
-    second: AirToFall_5
+      213: -8990897460605509115
+    second: GLIDESPRIG_5
   - first:
-      213: 7973888271114246187
-    second: AirToFall_6
+      213: 2973829176733025603
+    second: GLIDESPRIG_6
   - first:
-      213: -8508167333783563598
-    second: AirToFall_7
+      213: 832444899365609722
+    second: GLIDESPRIG_7
   - first:
-      213: 1909798167661395266
-    second: AirToFall_8
+      213: 287410084878080360
+    second: GLIDESPRIG_8
   - first:
-      213: 6449600007296661222
-    second: AirToFall_9
+      213: 9063894653707285331
+    second: GLIDESPRIG_9
   - first:
-      213: -753307633594962078
-    second: AirToFall_10
+      213: -5617664261245647599
+    second: GLIDESPRIG_10
   - first:
-      213: 8767674000636285408
-    second: AirToFall_11
+      213: -4532693482855115292
+    second: GLIDESPRIG_11
   - first:
-      213: -7103875652539090960
-    second: AirToFall_12
+      213: 6707457250520923647
+    second: GLIDESPRIG_12
   - first:
-      213: -1721785415770810864
-    second: AirToFall_13
+      213: 3305969196579875363
+    second: GLIDESPRIG_13
   - first:
-      213: -5494839896116001552
-    second: AirToFall_14
+      213: -8811689868309574805
+    second: GLIDESPRIG_14
   - first:
-      213: 5363675597587332791
-    second: AirToFall_15
+      213: 2868253073147885537
+    second: GLIDESPRIG_15
   - first:
-      213: 7904044366611191062
-    second: AirToFall_16
+      213: 1025500800132321299
+    second: GLIDESPRIG_16
   - first:
-      213: 1450937164714199962
-    second: AirToFall_17
+      213: 3342602637907559063
+    second: GLIDESPRIG_17
   - first:
-      213: -8190397383333213762
-    second: AirToFall_18
+      213: -4799740861025115464
+    second: GLIDESPRIG_18
   - first:
-      213: -2848180704622294303
-    second: AirToFall_19
+      213: -2072399246205901410
+    second: GLIDESPRIG_19
   - first:
-      213: 767437808318486018
-    second: AirToFall_20
+      213: 8638143126859783609
+    second: GLIDESPRIG_20
   - first:
-      213: 479784294162512720
-    second: AirToFall_21
+      213: -3706298970602007384
+    second: GLIDESPRIG_21
   - first:
-      213: -8224690318866984738
-    second: AirToFall_22
+      213: 2993013173546363491
+    second: GLIDESPRIG_22
   - first:
-      213: 4202309932508197161
-    second: AirToFall_23
+      213: -3051243848987661719
+    second: GLIDESPRIG_23
   - first:
-      213: 5617356282658500601
-    second: AirToFall_24
+      213: -1156864968819071045
+    second: GLIDESPRIG_24
   - first:
-      213: 3905367963010992198
-    second: AirToFall_25
+      213: -1223256846307860821
+    second: GLIDESPRIG_25
   - first:
-      213: 8259003877866955674
-    second: AirToFall_26
+      213: 6885765472786134940
+    second: GLIDESPRIG_26
   - first:
-      213: -318112688861074045
-    second: AirToFall_27
+      213: -4281527413946583334
+    second: GLIDESPRIG_27
   - first:
-      213: 3284751991722398982
-    second: AirToFall_28
+      213: 1551497042910374931
+    second: GLIDESPRIG_28
+  - first:
+      213: -6420863217145252507
+    second: GLIDESPRIG_29
+  - first:
+      213: 4827196527406816469
+    second: GLIDESPRIG_30
+  - first:
+      213: -6161029807187067330
+    second: GLIDESPRIG_31
+  - first:
+      213: 5952681512788928730
+    second: GLIDESPRIG_32
+  - first:
+      213: -9126434393279975848
+    second: GLIDESPRIG_33
+  - first:
+      213: -5601630418736585325
+    second: GLIDESPRIG_34
+  - first:
+      213: -4896145839740124961
+    second: GLIDESPRIG_35
+  - first:
+      213: -4229919185877190656
+    second: GLIDESPRIG_36
+  - first:
+      213: 5820611070407811224
+    second: GLIDESPRIG_37
+  - first:
+      213: 1589002048555523669
+    second: GLIDESPRIG_38
+  - first:
+      213: -4108020969412989765
+    second: GLIDESPRIG_39
+  - first:
+      213: -170190324702340935
+    second: GLIDESPRIG_40
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -250,7 +286,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AirToFall_0
+      name: GLIDESPRIG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -264,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 700f05524a14c8590800000000000000
-      internalID: -7670683892062294009
+      spriteID: f94834892435d9a70800000000000000
+      internalID: 8835309589458289823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_1
+      name: GLIDESPRIG_1
       rect:
         serializedVersion: 2
         x: 600
@@ -285,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79db76d3387611d50800000000000000
-      internalID: 6706255133499964823
+      spriteID: 427512144120079c0800000000000000
+      internalID: -3931640188679137500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_2
+      name: GLIDESPRIG_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -306,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 108727f8fe7463060800000000000000
-      internalID: 6932807770612856833
+      spriteID: e0d537732e34d4dc0800000000000000
+      internalID: -3653189083855626994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_3
+      name: GLIDESPRIG_3
       rect:
         serializedVersion: 2
         x: 1800
@@ -327,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bc9b847bf3b7f710800000000000000
-      internalID: 1727046874693344434
+      spriteID: 4023cc4a686b4f680800000000000000
+      internalID: -8722145888903089660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_4
+      name: GLIDESPRIG_4
       rect:
         serializedVersion: 2
         x: 2400
@@ -348,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9b5955b847099880800000000000000
-      internalID: -8603837604253049958
+      spriteID: f0ef0ab3b0ba60c50800000000000000
+      internalID: 6631175566083030543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_5
+      name: GLIDESPRIG_5
       rect:
         serializedVersion: 2
         x: 3000
@@ -369,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81b85bb4edb433a0800000000000000
-      internalID: -6686510756644998769
+      spriteID: 502a5a8356ae93380800000000000000
+      internalID: -8990897460605509115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_6
+      name: GLIDESPRIG_6
       rect:
         serializedVersion: 2
         x: 3600
@@ -390,14 +426,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b281b669221f8ae60800000000000000
-      internalID: 7973888271114246187
+      spriteID: 3454dd551e9254920800000000000000
+      internalID: 2973829176733025603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_7
+      name: GLIDESPRIG_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0e5c9b9307d8b00800000000000000
+      internalID: 832444899365609722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869d50e03f51df300800000000000000
+      internalID: 287410084878080360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1144
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353f8cb3a2c69cd70800000000000000
+      internalID: 9063894653707285331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_10
       rect:
         serializedVersion: 2
         x: 0
@@ -411,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b29f3c53eaece980800000000000000
-      internalID: -8508167333783563598
+      spriteID: 115cb093e1c0a02b0800000000000000
+      internalID: -5617664261245647599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_8
+      name: GLIDESPRIG_11
       rect:
         serializedVersion: 2
         x: 600
@@ -432,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24d3620a057f08a10800000000000000
-      internalID: 1909798167661395266
+      spriteID: 4e551b6ea43a811c0800000000000000
+      internalID: -4532693482855115292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_9
+      name: GLIDESPRIG_12
       rect:
         serializedVersion: 2
         x: 1200
@@ -453,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e636420905918950800000000000000
-      internalID: 6449600007296661222
+      spriteID: ffdfa6be4dca51d50800000000000000
+      internalID: 6707457250520923647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_10
+      name: GLIDESPRIG_13
       rect:
         serializedVersion: 2
         x: 1800
@@ -474,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26f6bfcc2b6bb85f0800000000000000
-      internalID: -753307633594962078
+      spriteID: 32ae680f77921ed20800000000000000
+      internalID: 3305969196579875363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_11
+      name: GLIDESPRIG_14
       rect:
         serializedVersion: 2
         x: 2400
@@ -495,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e19a5aec090da970800000000000000
-      internalID: 8767674000636285408
+      spriteID: b6bcf7840c696b580800000000000000
+      internalID: -8811689868309574805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_12
+      name: GLIDESPRIG_15
       rect:
         serializedVersion: 2
         x: 3000
@@ -516,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f77cd16bb6f96d90800000000000000
-      internalID: -7103875652539090960
+      spriteID: 1e7f6ee29f41ec720800000000000000
+      internalID: 2868253073147885537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_13
+      name: GLIDESPRIG_16
       rect:
         serializedVersion: 2
         x: 3600
@@ -537,14 +636,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0165889694dfa18e0800000000000000
-      internalID: -1721785415770810864
+      spriteID: 31014cc5b8f4b3e00800000000000000
+      internalID: 1025500800132321299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_14
+      name: GLIDESPRIG_17
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79283c9a36f436e20800000000000000
+      internalID: 3342602637907559063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_18
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2aba4fd15e36db0800000000000000
+      internalID: -4799740861025115464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_19
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 858
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e952c199ddb5d33e0800000000000000
+      internalID: -2072399246205901410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_20
       rect:
         serializedVersion: 2
         x: 0
@@ -558,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f48c563a386eb3b0800000000000000
-      internalID: -5494839896116001552
+      spriteID: 9bd95733869d0e770800000000000000
+      internalID: 8638143126859783609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_15
+      name: GLIDESPRIG_21
       rect:
         serializedVersion: 2
         x: 600
@@ -579,14 +741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bebf9cb98a9f6a40800000000000000
-      internalID: 5363675597587332791
+      spriteID: 8a41fd919b4909cc0800000000000000
+      internalID: -3706298970602007384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_16
+      name: GLIDESPRIG_22
       rect:
         serializedVersion: 2
         x: 1200
@@ -600,14 +762,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61599c8597ec0bd60800000000000000
-      internalID: 7904044366611191062
+      spriteID: 36aab49af91598920800000000000000
+      internalID: 2993013173546363491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_17
+      name: GLIDESPRIG_23
       rect:
         serializedVersion: 2
         x: 1800
@@ -621,14 +783,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9bc336f9a3c22410800000000000000
-      internalID: 1450937164714199962
+      spriteID: 96aaef1b2edc7a5d0800000000000000
+      internalID: -3051243848987661719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_18
+      name: GLIDESPRIG_24
       rect:
         serializedVersion: 2
         x: 2400
@@ -642,14 +804,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9822579fcd55e80800000000000000
-      internalID: -8190397383333213762
+      spriteID: bb72270b07df1ffe0800000000000000
+      internalID: -1156864968819071045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_19
+      name: GLIDESPRIG_25
       rect:
         serializedVersion: 2
         x: 3000
@@ -663,14 +825,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eacddc4dba3978d0800000000000000
-      internalID: -2848180704622294303
+      spriteID: bae51ce116e160fe0800000000000000
+      internalID: -1223256846307860821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_20
+      name: GLIDESPRIG_26
       rect:
         serializedVersion: 2
         x: 3600
@@ -684,14 +846,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2061700ee9c76aa00800000000000000
-      internalID: 767437808318486018
+      spriteID: c97311417372f8f50800000000000000
+      internalID: 6885765472786134940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_21
+      name: GLIDESPRIG_27
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6fd936085f494c0800000000000000
+      internalID: -4281527413946583334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_28
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cedb02756088510800000000000000
+      internalID: 1551497042910374931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_29
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 572
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5657fa65ce284e6a0800000000000000
+      internalID: -6420863217145252507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_30
       rect:
         serializedVersion: 2
         x: 0
@@ -705,14 +930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05b3e56064988a600800000000000000
-      internalID: 479784294162512720
+      spriteID: 5dc15158aa5adf240800000000000000
+      internalID: 4827196527406816469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_22
+      name: GLIDESPRIG_31
       rect:
         serializedVersion: 2
         x: 600
@@ -726,14 +951,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed0d6543bb70cdd80800000000000000
-      internalID: -8224690318866984738
+      spriteID: e3e750c6800af7aa0800000000000000
+      internalID: -6161029807187067330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_23
+      name: GLIDESPRIG_32
       rect:
         serializedVersion: 2
         x: 1200
@@ -747,14 +972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9213f3b6e9a915a30800000000000000
-      internalID: 4202309932508197161
+      spriteID: ad8a1d61c4c2c9250800000000000000
+      internalID: 5952681512788928730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_24
+      name: GLIDESPRIG_33
       rect:
         serializedVersion: 2
         x: 1800
@@ -768,14 +993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ff2bace6cbd4fd40800000000000000
-      internalID: 5617356282658500601
+      spriteID: 85ea3a2f544685180800000000000000
+      internalID: -9126434393279975848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_25
+      name: GLIDESPRIG_34
       rect:
         serializedVersion: 2
         x: 2400
@@ -789,14 +1014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64806788877a23630800000000000000
-      internalID: 3905367963010992198
+      spriteID: 395ee2810d20342b0800000000000000
+      internalID: -5601630418736585325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_26
+      name: GLIDESPRIG_35
       rect:
         serializedVersion: 2
         x: 3000
@@ -810,14 +1035,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9365d2d440ed9270800000000000000
-      internalID: 8259003877866955674
+      spriteID: fd088c5bc456d0cb0800000000000000
+      internalID: -4896145839740124961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_27
+      name: GLIDESPRIG_36
       rect:
         serializedVersion: 2
         x: 3600
@@ -831,14 +1056,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38d24e5e136d59bf0800000000000000
-      internalID: -318112688861074045
+      spriteID: 0083e2959ee4c45c0800000000000000
+      internalID: -4229919185877190656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AirToFall_28
+      name: GLIDESPRIG_37
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8902d5bfde6f6c050800000000000000
+      internalID: 5820611070407811224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_38
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e158bb1f44d0610800000000000000
+      internalID: 1589002048555523669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_39
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 286
+        width: 600
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc684c81b06df6c0800000000000000
+      internalID: -4108020969412989765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLIDESPRIG_40
       rect:
         serializedVersion: 2
         x: 0
@@ -852,8 +1140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605ded97888c59d20800000000000000
-      internalID: 3284751991722398982
+      spriteID: 9b898e72dcc53adf0800000000000000
+      internalID: -170190324702340935
       vertices: []
       indices: 
       edges: []
@@ -861,7 +1149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0aaa4f2abdffe0c4585a0bf788ddda6f
+    spriteID: aa550f59c424352429d72e7cb896b58e
     internalID: 0
     vertices: []
     indices: 

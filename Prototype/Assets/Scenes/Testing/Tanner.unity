@@ -7489,7 +7489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264133528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2651148, y: 3.8076267, z: -10}
+  m_LocalPosition: {x: -3.2644749, y: 3.8505669, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1699723098}
@@ -35334,6 +35334,10 @@ PrefabInstance:
       propertyPath: First_Selected
       value: 
       objectReference: {fileID: 737376888}
+    - target: {fileID: 1741496361404442151, guid: aa1cd256696967e42bfdd3766f42a559, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.28003
+      objectReference: {fileID: 0}
     - target: {fileID: 3872984704894447145, guid: aa1cd256696967e42bfdd3766f42a559, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.4528302
@@ -72285,6 +72289,10 @@ PrefabInstance:
     - target: {fileID: 6061469062083726999, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061469062083727000, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6061469062083727002, guid: 70cbc16931828a2429d3b5aec9b2ae3d, type: 3}
       propertyPath: settings
