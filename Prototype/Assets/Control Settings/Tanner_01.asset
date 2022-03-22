@@ -26,7 +26,7 @@ MonoBehaviour:
     power: 12
     max_height: 4
     floatiness: 0.03
-    angle: 36
+    angle: 25
     buffer: 0.2
     phase: 0
   Coyote_Delay: 0.15
@@ -47,3 +47,6 @@ MonoBehaviour:
   Bonk_Power: 2
   horizontal_deadzone: 20
   vertical_deadzone: 20
+  Ground: 0.5
+  Wall: 0.3
+  Ceiling: 0.5
