@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 325790905}
   - component: {fileID: 325790907}
   - component: {fileID: 325790906}
+  - component: {fileID: 60393417855992164}
   m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
@@ -4805,6 +4806,21 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &60393417855992164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325790904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0dae3a52d116e4fb162133a951ed6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshhold: 0
+  ps: {fileID: 325790907}
+  connected_rb: {fileID: 6061469062083727005}
 --- !u!1 &1443263008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,27 +4920,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   c_manager:
     Moving:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Gliding:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Jumping:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Aerials:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Sliding:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Cling:
-      m_enabled: 0
+      m_enabled: 1
+      m_priority: 0
     Ceiling:
-      m_enabled: 0
-  settings: {fileID: 11400000, guid: f405d4c2b3b809b4d84a1db6e87f5a35, type: 2}
+      m_enabled: 1
+      m_priority: 0
+  settings: {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
   setting_presets:
-  - {fileID: 11400000, guid: 778839e93402dba40874164cd50b9a1c, type: 2}
-  - {fileID: 11400000, guid: f405d4c2b3b809b4d84a1db6e87f5a35, type: 2}
-  - {fileID: 11400000, guid: 9fb758f22eb675d46b5e44598e0b2d45, type: 2}
+  - {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  walkable:
+    serializedVersion: 2
+    m_Bits: 65
   direction: {x: 0, y: 0}
   detection: {x: 0, y: 0}
+  aerial_time: 0
   target_gravity: -9.81
+  friction: 0
   current_state: 0
   prev_state: 0
 --- !u!212 &6061469062083727000
@@ -5039,15 +5067,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1da87061a56014fa27f8ce169db72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sapSettings: {fileID: 0}
   health: 5
   max_health: 5
-  healthColors:
-  - {r: 1, g: 0.5613208, b: 0.5613208, a: 1}
-  - {r: 1, g: 0.7688679, b: 0.7688679, a: 1}
-  - {r: 1, g: 0.8915094, b: 0.8915094, a: 1}
-  - {r: 1, g: 0.9386792, b: 0.9386792, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  flashCycles: 6
+  healthUI: {fileID: 0}
 --- !u!114 &7987982498921918015
 MonoBehaviour:
   m_ObjectHideFlags: 0

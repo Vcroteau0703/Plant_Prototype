@@ -24,9 +24,10 @@ public class Player_Controller : MonoBehaviour, ISavable
     public Vector2 direction;
     public Vector2 detection;
     private float coyote_time;
-    private float slide_speed = 0;
+    public float slide_speed = 0;
     public float aerial_time;
     public float target_gravity = -9.81f;
+    public float friction = 0;
 
     // PLAYER STATES //
     public enum State { Waiting = default, Grounded, Ceiling, Cling, Aerial, Gliding, Sliding }
@@ -84,7 +85,9 @@ public class Player_Controller : MonoBehaviour, ISavable
     {
         target_gravity = Physics.gravity.y;
         Animation_Driver();
-        Get_State();
+        Debug.Log(current_state);
+        friction = col.material.dynamicFriction;
+        
     }
     private void OnDisable()
     {
@@ -101,6 +104,7 @@ public class Player_Controller : MonoBehaviour, ISavable
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
+        rb.isKinematic = false;
         if (!c_manager.Jumping.Enabled) { return; }
         switch (current_state)
         {
@@ -150,6 +154,7 @@ public class Player_Controller : MonoBehaviour, ISavable
                 return;
 
             case State.Gliding:
+                Debug.Log("Aerial_02");
                 current_state = State.Aerial;
                 break;
         }
@@ -162,6 +167,7 @@ public class Player_Controller : MonoBehaviour, ISavable
         }
         else if (detection == Vector2.zero && current_state == State.Gliding && context.canceled)
         {
+            Debug.Log("Aerial_01");
             current_state = State.Aerial;
         }
     }
@@ -217,6 +223,7 @@ public class Player_Controller : MonoBehaviour, ISavable
 
 
         float speed = direction.x * settings.Move_Speed;
+        Debug.Log("Speed: " + speed);
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Acceleration) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
@@ -237,15 +244,15 @@ public class Player_Controller : MonoBehaviour, ISavable
         //}
 
         //CLING
-        rb.useGravity = false;
+        col.material.dynamicFriction = settings.Wall_Jump.phase == Jump.State.Waiting ? 100f : 0f;
         Flip((int)((detection.x % 1) + (detection.x / 1)));
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
         rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
 
-        //SLIDE CHECK
-        if (direction.y < 0 && current_state != State.Sliding && detection != Vector2.zero && c_manager.Sliding.Enabled) { 
-            current_state = State.Sliding; return;
-        }
+        ////SLIDE CHECK
+        //if (direction.y < 0 && current_state != State.Sliding && detection != Vector2.zero && c_manager.Sliding.Enabled) { 
+        //    current_state = State.Sliding; return;
+        //}
 
         //WALL EJECT
         rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
@@ -262,6 +269,7 @@ public class Player_Controller : MonoBehaviour, ISavable
     }
     public void Aerial()
     {
+        col.material.dynamicFriction = 0;
         aerial_time += Time.deltaTime;
         slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
         float speed = direction.x * settings.Air_Speed;
@@ -304,6 +312,7 @@ public class Player_Controller : MonoBehaviour, ISavable
             float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
             slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
             transform.position += Vector3.down * slide_speed * Time.deltaTime;
+            Update_State();
             return;
         }
         Update_State();
@@ -444,33 +453,32 @@ public class Player_Controller : MonoBehaviour, ISavable
     private void OnCollisionExit(Collision collision)
     {
         if (Mathf.Abs(direction.x) < 0.2f && (current_state == State.Cling || current_state == State.Sliding)) { Flip(); }
-        rb.useGravity = true;
         detection = Vector2.zero;
     }
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    Vector3[] points = new Vector3[collision.contactCount];
+    private void OnCollisionStay(Collision collision)
+    {
+        Vector3[] points = new Vector3[collision.contactCount];
 
-    //    for (int i = 0; i < collision.contactCount; i++)
-    //    {
-    //        points[i] = collision.GetContact(i).point;
-    //    }
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            points[i] = collision.GetContact(i).point;
+        }
 
-    //    float x = 0, y = 0;
-    //    foreach (Vector3 point in points)
-    //    {
-    //        x += point.x;
-    //        y += point.y;
-    //    }
+        float x = 0, y = 0;
+        foreach (Vector3 point in points)
+        {
+            x += point.x;
+            y += point.y;
+        }
 
-    //    Vector3 average = new Vector3(x / points.Length, y / points.Length, 0);
+        Vector3 average = new Vector3(x / points.Length, y / points.Length, 0);
 
-    //    //Vector3 p = collision.GetContact(0).point;
-    //    Vector3 dir = average - transform.position;
-    //    float angle = Vector3.Angle(dir, -Vector3.up);
-    //    detection = dir;
-    //    float height = collision.GetContact(0).otherCollider.bounds.size.y;
-    //}
+        //Vector3 p = collision.GetContact(0).point;
+        Vector3 dir = average - transform.position;
+        float angle = Vector3.Angle(dir, -Vector3.up);
+        detection = dir;
+        float height = collision.GetContact(0).otherCollider.bounds.size.y;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("ENTER");
@@ -482,57 +490,71 @@ public class Player_Controller : MonoBehaviour, ISavable
     {
         State final_state = State.Waiting;
         Vector3 bounds = col.bounds.size;
+        Vector3 slope_height = new Vector3(0, settings.Ground, 0);
+        Vector3 wall_angle = new Vector3(settings.Wall, 0, 0);
+        Vector3 ceiling = new Vector3(0, settings.Ceiling, 0);
 
-        Ray down_01 = new Ray(transform.position + new Vector3(bounds.x / 2, -bounds.y / 2, 0), -transform.up * 0.1f);
-        Ray down_02 = new Ray(transform.position + new Vector3(-bounds.x / 2, -bounds.y / 2, 0), -transform.up * 0.1f);
+        Ray down_01 = new Ray(transform.position + new Vector3(bounds.x / 2, -bounds.y / 2, 0) + slope_height, -transform.up * (0.1f + slope_height.y));
+        Ray down_02 = new Ray(transform.position + new Vector3(-bounds.x / 2, -bounds.y / 2, 0) + slope_height, -transform.up * (0.1f + slope_height.y));
 
-        Ray left_01 = new Ray(transform.position + new Vector3(-bounds.x / 2, bounds.y / 2, 0), -transform.right * 0.1f);
-        Ray left_02 = new Ray(transform.position + new Vector3(-bounds.x / 2, -bounds.y / 2, 0), -transform.right * 0.1f);
+        Ray left_01 = new Ray(transform.position + new Vector3(-bounds.x / 2, bounds.y / 2, 0) + wall_angle, -transform.right * (0.1f + wall_angle.x));
+        Ray left_02 = new Ray(transform.position + new Vector3(-bounds.x / 2, -bounds.y / 2, 0) + wall_angle, -transform.right * (0.1f + wall_angle.x));
 
-        Ray right_01 = new Ray(transform.position + new Vector3(bounds.x / 2, bounds.y / 2, 0), transform.right * 0.1f);
-        Ray right_02 = new Ray(transform.position + new Vector3(bounds.x / 2, -bounds.y / 2, 0), transform.right * 0.1f);
+        Ray right_01 = new Ray(transform.position + new Vector3(bounds.x / 2, bounds.y / 2, 0) - wall_angle, transform.right * (0.1f + wall_angle.x));
+        Ray right_02 = new Ray(transform.position + new Vector3(bounds.x / 2, -bounds.y / 2, 0) - wall_angle, transform.right * (0.1f + wall_angle.x));
 
-        Ray up_01 = new Ray(transform.position + new Vector3(-bounds.x / 2, bounds.y / 2, 0), transform.up * 0.1f);
-        Ray up_02 = new Ray(transform.position + new Vector3(bounds.x / 2, bounds.y / 2, 0), transform.up * 0.1f);
+        Ray up_01 = new Ray(transform.position + new Vector3(-bounds.x / 2, bounds.y / 2, 0) - ceiling, transform.up * (0.1f + ceiling.y));
+        Ray up_02 = new Ray(transform.position + new Vector3(bounds.x / 2, bounds.y / 2, 0) - ceiling, transform.up * (0.1f + ceiling.y));
 
         #region DEBUG
-        Debug.DrawRay(down_01.origin, down_01.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(down_02.origin, down_02.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(left_01.origin, left_01.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(left_02.origin, left_02.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(right_01.origin, right_01.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(right_02.origin, right_02.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(up_01.origin, up_01.direction * 0.1f, Color.magenta);
-        Debug.DrawRay(up_02.origin, up_02.direction * 0.1f, Color.magenta);
+        Debug.DrawRay(down_01.origin, down_01.direction * (0.1f + slope_height.y), Color.magenta);
+        Debug.DrawRay(down_02.origin, down_02.direction * (0.1f + slope_height.y), Color.magenta);
+        Debug.DrawRay(left_01.origin, left_01.direction * (0.1f + wall_angle.x), Color.magenta);
+        Debug.DrawRay(left_02.origin, left_02.direction * (0.1f + wall_angle.x), Color.magenta);
+        Debug.DrawRay(right_01.origin, right_01.direction * (0.1f + wall_angle.x), Color.magenta);
+        Debug.DrawRay(right_02.origin, right_02.direction * (0.1f + wall_angle.x), Color.magenta);
+        Debug.DrawRay(up_01.origin, up_01.direction * (0.1f + ceiling.y), Color.magenta);
+        Debug.DrawRay(up_02.origin, up_02.direction * (0.1f + ceiling.y), Color.magenta);
         #endregion
 
         RaycastHit hit;
-        if ((Physics.Raycast(down_01, out hit, 0.1f, walkable) || Physics.Raycast(down_02, out hit, 0.1f, walkable)) && settings.Jump.phase == Jump.State.Waiting)
+        if ((Physics.Raycast(down_01, out hit, 0.1f + slope_height.y, walkable) || Physics.Raycast(down_02, out hit, 0.1f + slope_height.y, walkable)) && settings.Jump.phase == Jump.State.Waiting)
         {
-            Debug.Log("Ground");
-            final_state = State.Grounded;
+            float angle = Get_Detection_Angle();
+            final_state = angle < 25 && (current_state != State.Cling || current_state != State.Sliding) ? State.Grounded : current_state;
+            slide_speed = final_state == State.Grounded ? 0 : settings.Max_Slide_Speed;
+            Debug.Log("SLIDE is 0");
             return final_state;
         }
 
-        if (Physics.Raycast(left_01, out hit, 0.1f, walkable) || Physics.Raycast(left_02, out hit, 0.1f, walkable)) {
-            Debug.Log("Cling/Slide[L]: " + hit.collider.gameObject.name);
+        if ((Physics.Raycast(left_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(left_02, out hit, 0.1f + wall_angle.x, walkable))
+            && current_state != State.Ceiling && aerial_time > 0.5f )  {
+            //Debug.Log("Cling/Slide[L]: " + hit.collider.gameObject.name);
             final_state = direction.y < 0 ? State.Sliding : State.Cling;
         }
 
-        if (Physics.Raycast(right_01, out hit, 0.1f, walkable) || Physics.Raycast(right_02, out hit, 0.1f, walkable)) {
-            Debug.Log("Cling/Slide[R]: " + hit.collider.gameObject.name);
+        if ((Physics.Raycast(right_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(right_02, out hit, 0.1f + wall_angle.x, walkable))
+            && current_state != State.Ceiling && aerial_time > 0.5f) {
+            //Debug.Log("Cling/Slide[R]: " + hit.collider.gameObject.name);
             final_state = direction.y < 0 ? State.Sliding : State.Cling;
         }
 
-        if (Physics.Raycast(up_01, out hit, 0.1f, walkable) || Physics.Raycast(up_02, out hit, 0.1f, walkable)) {
-            Debug.Log("Ceiling");
+        if (Physics.Raycast(up_01, out hit, 0.1f + ceiling.y, walkable) || Physics.Raycast(up_02, out hit, 0.1f + ceiling.y, walkable)) {
+            //Debug.Log("Ceiling");
             final_state = current_state == State.Aerial ? State.Ceiling : final_state;
         }
 
         if (final_state == State.Waiting)
         {
-            Debug.Log("Glide/Aerial");
-            final_state = (rb.velocity.y < 0 && controls.Player.Glide.phase == InputActionPhase.Performed) ? State.Gliding : State.Aerial; 
+            final_state = (rb.velocity.y < 0 && controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) ? State.Gliding : State.Aerial; 
+            //if(final_state == State.Aerial)
+            //{
+            //    Debug.Log("Aerial");
+            //}
+            //else
+            //{
+            //    Debug.Log("Glide");
+            //}
         }
 
         return final_state;
@@ -558,34 +580,34 @@ public class Player_Controller : MonoBehaviour, ISavable
         settings = setting_presets[index];
         Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
     }
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
 
-    //    Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + detection);
+        Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + detection);
 
 
-    //    Gizmos.color = Color.yellow;
+        Gizmos.color = Color.yellow;
 
-    //    #region SLOPE ANGLE BOUNDS
-    //    Quaternion rot1 = Quaternion.AngleAxis(settings.Slope_Angle, Vector3.forward);
-    //    Quaternion rot2 = Quaternion.AngleAxis((-settings.Slope_Angle), Vector3.forward);
-    //    //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
-    //    //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
-    //    #endregion
+        #region SLOPE ANGLE BOUNDS
+        Quaternion rot1 = Quaternion.AngleAxis(settings.Slope_Angle, Vector3.forward);
+        Quaternion rot2 = Quaternion.AngleAxis((-settings.Slope_Angle), Vector3.forward);
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot1 * Vector2.down));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot2 * Vector2.down));
+        #endregion
 
-    //    #region CEILING ANGLE BOUNDS
-    //    Quaternion rot3 = Quaternion.AngleAxis(settings.Ceiling_Angle, Vector3.forward);
-    //    Quaternion rot4 = Quaternion.AngleAxis((-settings.Ceiling_Angle), Vector3.forward);
-    //    //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
-    //    //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
-    //    #endregion
+        #region CEILING ANGLE BOUNDS
+        Quaternion rot3 = Quaternion.AngleAxis(settings.Ceiling_Angle, Vector3.forward);
+        Quaternion rot4 = Quaternion.AngleAxis((-settings.Ceiling_Angle), Vector3.forward);
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot3 * Vector2.up));
+        //Gizmos.DrawLine(transform.position, (Vector2)transform.position + (Vector2)(rot4 * Vector2.up));
+        #endregion
 
-    //    float angle = detection.x > 0 ? Get_Detection_Angle() + 90 + settings.Wall_Jump.angle : (Get_Detection_Angle() + 90 + +settings.Wall_Jump.angle) * -1;
-    //    Vector2 dir = Quaternion.AngleAxis(angle, Vector3.forward) * -Vector2.up;
+        float angle = detection.x > 0 ? Get_Detection_Angle() + 90 + settings.Wall_Jump.angle : (Get_Detection_Angle() + 90 + +settings.Wall_Jump.angle) * -1;
+        Vector2 dir = Quaternion.AngleAxis(angle, Vector3.forward) * -Vector2.up;
 
-    //    Gizmos.DrawLine(transform.position, transform.position + (Vector3)dir);
-    //}
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)dir);
+    }
     #endregion
 
 }
