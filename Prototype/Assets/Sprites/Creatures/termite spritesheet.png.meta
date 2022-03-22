@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: f89d5c6b86c20ba448cef21dc82b2450
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1289463618941400694
+    second: termite spritesheet_0
+  - first:
+      213: -2535925855124439151
+    second: termite spritesheet_1
+  - first:
+      213: 2342711747465951335
+    second: termite spritesheet_2
+  - first:
+      213: 7095721149837902112
+    second: termite spritesheet_3
+  - first:
+      213: 280141824362227885
+    second: termite spritesheet_4
+  - first:
+      213: -4932049679345634117
+    second: termite spritesheet_5
+  - first:
+      213: 6326147196665275288
+    second: termite spritesheet_7
+  - first:
+      213: 4458143399347276306
+    second: termite spritesheet_8
+  - first:
+      213: -7853589411526800274
+    second: termite spritesheet_9
+  - first:
+      213: -1290299950713672937
+    second: termite spritesheet_10
+  - first:
+      213: -163740517214076357
+    second: termite spritesheet_12
+  - first:
+      213: -3095482542504425697
+    second: termite spritesheet_13
+  - first:
+      213: 9059224373930552158
+    second: termite spritesheet_14
+  - first:
+      213: -8671453187936874346
+    second: termite spritesheet_15
+  - first:
+      213: 5153789330349600380
+    second: termite spritesheet_16
+  - first:
+      213: 7788503741906756307
+    second: termite spritesheet_17
+  - first:
+      213: -7245167013439008911
+    second: termite spritesheet_19
+  - first:
+      213: -5246725778751138627
+    second: termite spritesheet_20
+  - first:
+      213: 6819462122236008344
+    second: termite spritesheet_21
+  - first:
+      213: -3146949421611827158
+    second: termite spritesheet_22
+  - first:
+      213: -6797008854977483143
+    second: termite spritesheet_23
+  - first:
+      213: 9021701564843605643
+    second: termite spritesheet_33
+  - first:
+      213: -6408815136710761387
+    second: termite spritesheet_34
+  - first:
+      213: -6492185535098974521
+    second: termite spritesheet_35
+  - first:
+      213: -7775659170505756429
+    second: termite spritesheet_37
+  - first:
+      213: -3170834407679274220
+    second: termite spritesheet_38
+  - first:
+      213: 6141032663885496357
+    second: termite spritesheet_39
+  - first:
+      213: 3037606087681016627
+    second: termite spritesheet_6
+  - first:
+      213: -4034719326204172242
+    second: termite spritesheet_11
+  - first:
+      213: -4116933585087439036
+    second: termite spritesheet_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 750
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: termite spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a894532aba7ea1ee0800000000000000
+      internalID: -1289463618941400694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768b7de0cebf28020800000000000000
+      internalID: 2342711747465951335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02180518ac0197260800000000000000
+      internalID: 7095721149837902112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da827d7418343e300800000000000000
+      internalID: 280141824362227885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb43600a2f6dd8bb0800000000000000
+      internalID: -4932049679345634117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8932116ab5dfac750800000000000000
+      internalID: 6326147196665275288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ac8db2dc18edd30800000000000000
+      internalID: 4458143399347276306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c0d225a02720390800000000000000
+      internalID: -7853589411526800274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71be108f70fe71ee0800000000000000
+      internalID: -1290299950713672937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32cd1cfdd64abdf0800000000000000
+      internalID: -163740517214076357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17c9953703aa05d0800000000000000
+      internalID: -3095482542504425697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5be0bcf194d8bd70800000000000000
+      internalID: 9059224373930552158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6901896d44fc8a780800000000000000
+      internalID: -8671453187936874346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eafaa0710f58740800000000000000
+      internalID: 5153789330349600380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1143
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2272453e2561c60800000000000000
+      internalID: 7788503741906756307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f0791ecfef37b90800000000000000
+      internalID: -7245167013439008911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db457abd3b2ef27b0800000000000000
+      internalID: -5246725778751138627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897db1b4ba893ae50800000000000000
+      internalID: 6819462122236008344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20c4be9c2ac354d0800000000000000
+      internalID: -3146949421611827158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ee1ef557c2ca1a0800000000000000
+      internalID: -6797008854977483143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2613
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f3494eed49eccd0800000000000000
+      internalID: -2535925855124439151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3338acf84aeb72a20800000000000000
+      internalID: 3037606087681016627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1878
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e286231562cc108c0800000000000000
+      internalID: -4034719326204172242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termite spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 600
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fdcf087b6bdd6c0800000000000000
+      internalID: -4116933585087439036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8778ecdce7d865044981a98b6afa48f1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
