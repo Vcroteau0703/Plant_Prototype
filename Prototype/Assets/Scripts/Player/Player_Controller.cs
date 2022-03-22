@@ -244,7 +244,7 @@ public class Player_Controller : MonoBehaviour, ISavable
         //}
 
         //CLING
-        col.material.dynamicFriction = settings.Wall_Jump.phase == Jump.State.Waiting ? 100f : 0f;
+        col.material.dynamicFriction = settings.Wall_Jump.phase != Jump.State.Started ? 100f : 0f;
         Flip((int)((detection.x % 1) + (detection.x / 1)));
         Vector2 dir = transform.position - (transform.position - (Vector3)detection);
         rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
@@ -457,6 +457,11 @@ public class Player_Controller : MonoBehaviour, ISavable
     }
     private void OnCollisionStay(Collision collision)
     {
+        if(current_state == State.Cling && settings.Wall_Jump.phase == Jump.State.Canceled)
+        {
+            settings.Wall_Jump.phase = Jump.State.Waiting;
+        }
+
         Vector3[] points = new Vector3[collision.contactCount];
 
         for (int i = 0; i < collision.contactCount; i++)
@@ -523,20 +528,19 @@ public class Player_Controller : MonoBehaviour, ISavable
             float angle = Get_Detection_Angle();
             final_state = angle < 25 && (current_state != State.Cling || current_state != State.Sliding) ? State.Grounded : current_state;
             slide_speed = final_state == State.Grounded ? 0 : settings.Max_Slide_Speed;
-            Debug.Log("SLIDE is 0");
             return final_state;
         }
 
         if ((Physics.Raycast(left_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(left_02, out hit, 0.1f + wall_angle.x, walkable))
-            && current_state != State.Ceiling && aerial_time > 0.5f )  {
+            && current_state != State.Ceiling && aerial_time > 0.5f && c_manager.Cling.Enabled)  {
             //Debug.Log("Cling/Slide[L]: " + hit.collider.gameObject.name);
-            final_state = direction.y < 0 ? State.Sliding : State.Cling;
+            final_state = direction.y < 0 && c_manager.Sliding.Enabled ? State.Sliding : State.Cling;
         }
 
         if ((Physics.Raycast(right_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(right_02, out hit, 0.1f + wall_angle.x, walkable))
-            && current_state != State.Ceiling && aerial_time > 0.5f) {
+            && current_state != State.Ceiling && aerial_time > 0.5f && c_manager.Cling.Enabled) {
             //Debug.Log("Cling/Slide[R]: " + hit.collider.gameObject.name);
-            final_state = direction.y < 0 ? State.Sliding : State.Cling;
+            final_state = direction.y < 0 && c_manager.Sliding.Enabled ? State.Sliding : State.Cling;
         }
 
         if (Physics.Raycast(up_01, out hit, 0.1f + ceiling.y, walkable) || Physics.Raycast(up_02, out hit, 0.1f + ceiling.y, walkable)) {
