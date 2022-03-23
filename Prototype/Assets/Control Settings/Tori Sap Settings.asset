@@ -23,12 +23,12 @@ MonoBehaviour:
     buffer: 0
     phase: 0
   Wall_Jump:
-    power: 12
+    power: 10
     max_height: 15
     floatiness: 0.03
     angle: 36
     buffer: 0
-    phase: 0
+    phase: 1
   Coyote_Delay: 0.15
   Air_Speed: 7
   Air_Control: 1
