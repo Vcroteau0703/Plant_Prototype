@@ -27,7 +27,7 @@ MonoBehaviour:
     max_height: 4
     floatiness: 0.03
     angle: 25
-    buffer: 0.2
+    buffer: 0.1
     phase: 0
   Coyote_Delay: 0.15
   Air_Speed: 9
