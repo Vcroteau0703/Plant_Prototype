@@ -10,6 +10,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
     public int health = 1;
     public int max_health = 1;
+    public int invCycles;
 
     private SpriteRenderer sprigSprite;
     private Color sprigColor;
@@ -101,7 +102,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             healthUI.UpdateUI(currHealth);
             if(currHealth != max_health)
             {
-                StartCoroutine(IFrames(10, 0.2f));
+                StartCoroutine(IFrames(invCycles, 0.2f));
             }
         }
     }
