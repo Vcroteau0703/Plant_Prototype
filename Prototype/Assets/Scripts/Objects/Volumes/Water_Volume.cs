@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heal_Volume : Action_Volume
+public class Water_Volume : Action_Volume
 {
     public Collider col;
 
@@ -13,13 +13,15 @@ public class Heal_Volume : Action_Volume
 
     private void OnEnable()
     {
-        action = Heal_Player;
+        action = Deactivate_Sap;
     }
 
-    public void Heal_Player(GameObject actor)
+    public void Deactivate_Sap(GameObject actor)
     {
-        Debug.Log("Got Here 1");
         Player player = actor.GetComponent<Player>();
-        player.Heal();
+        if (player.sapActive)
+        {
+            player.SapEffectOff();
+        }
     }
 }
