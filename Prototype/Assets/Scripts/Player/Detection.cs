@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Detection : MonoBehaviour
 {
@@ -66,7 +67,45 @@ public class Detection : MonoBehaviour
         return Vector3.right;
     }
 
+    /// <summary>Returns true if an object is found during a detection scan.</summary>
+    public bool Is_Detecting()
+    {
+        foreach(Detection_Cast c in casts)
+        {
+            if(c.target != null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public Detection_Cast Get_Detection(string name)
+    {
+        foreach(Detection_Cast c in casts)
+        {
+            if(c.name == name)
+            {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public List<Detection_Cast> Get_All_Detections()
+    {
+        List<Detection_Cast> result = new List<Detection_Cast>();
+
+        foreach (Detection_Cast c in casts)
+        {
+            if (c.target != null)
+            {
+                result.Add(c);
+            }
+        }
+
+        return result;
+    }
 }
 
 [System.Serializable]
@@ -76,14 +115,26 @@ public class Detection_Cast
     public GameObject target;
     public Vector3 center, halfExtends;
     public LayerMask mask;
+    public UnityEvent OnDetectionEnter;
+    public UnityEvent OnDetectionExit;
 
     public void Cast(Vector3 position)
     {
         Collider[] hit = Physics.OverlapBox(position + center, halfExtends, Quaternion.identity, mask);
-        target = hit.Length >= 1 ? hit[0].gameObject : null;
-        if(target != null)
+        GameObject found = hit.Length >= 1 ? hit[0].gameObject : null;
+        
+        if(found != target)
         {
-            Debug.Log("Found: " + target);
+            target = found;
+            if(target == null)
+            {
+                OnDetectionExit.Invoke();
+            }
+            else
+            {
+                OnDetectionEnter.Invoke();
+            }
+            
         }
     }
 

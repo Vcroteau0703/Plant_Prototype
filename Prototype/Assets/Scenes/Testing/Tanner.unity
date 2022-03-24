@@ -14237,6 +14237,200 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8911763670111210379, guid: 50fdbc3eb5b4a6e48b93dfa8568cc5f7, type: 3}
   m_PrefabInstance: {fileID: 460637513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &461688540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4841292781099324094, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
+  m_PrefabInstance: {fileID: 1928033892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &461688541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461688540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8694d0614daa44cb14aea931973447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvoking: 0
+  states:
+  - name: Idle
+    enabled: 1
+    active: 1
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Moving
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Move
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Cling
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Cling
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Slide
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Slide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Aerial
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Aerial
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Gliding
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Glide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Wall Jump
+    enabled: 1
+    active: 0
+    looping: 0
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Wall_Jump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Jump
+    enabled: 1
+    active: 0
+    looping: 0
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 461688543}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Vertical_Jump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &461688543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8153676909111123882, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
+  m_PrefabInstance: {fileID: 1928033892}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461688540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534430b34e876a043997b41f78aca379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &465367207
 Mesh:
   m_ObjectHideFlags: 0
@@ -69424,26 +69618,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2686934931841054104, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
-      propertyPath: casts.Array.data[0].name
-      value: Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686934931841054104, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
-      propertyPath: casts.Array.data[1].name
-      value: Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686934931841054104, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
-      propertyPath: casts.Array.data[2].name
-      value: Down
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686934931841054104, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
-      propertyPath: casts.Array.data[3].name
-      value: Up
-      objectReference: {fileID: 0}
     - target: {fileID: 4841292781099324094, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
       propertyPath: m_Name
       value: Sprig
       objectReference: {fileID: 0}
+    - target: {fileID: 8153676909111123882, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
+      propertyPath: state_controller
+      value: 
+      objectReference: {fileID: 461688541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
 --- !u!1 &1932449545

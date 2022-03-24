@@ -23,7 +23,7 @@ public class Wind_Volume : Action_Volume
     public void Wind_Force(GameObject actor)
     {
         if(actor.TryGetComponent(out Player_Controller p)){
-            if (p.current_state != Player_Controller.State.Gliding) { return; }
+            if (p.state_controller.Get_Active_State().name == "Glide") { return; }
         }
 
         Rigidbody rb = actor.GetComponent<Rigidbody>();
