@@ -44,7 +44,6 @@ public class Greenify : MonoBehaviour, ISavable
         for(int i = 0; i < hazards.Length; i++)
         {
             hazards[i].GetComponent<Hazard>().ChangeDamage(0);
-            hazards[i].GetComponent<Water_Volume>().enabled = true;
         }
         cutscene.Play();
         greenDone = true;
