@@ -3130,7 +3130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125947885}
   m_LocalRotation: {x: 0.01743584, y: 0.043612767, z: -0.0007612654, w: 0.9988961}
-  m_LocalPosition: {x: 0.7288408, y: 0.022619247, z: -10}
+  m_LocalPosition: {x: -0.77346706, y: -0.9591999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1912492883}
@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1525067693}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 7
@@ -7488,8 +7488,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264133528}
-  m_LocalRotation: {x: 0.01743584, y: 0.043612767, z: -0.0007612654, w: 0.9988961}
-  m_LocalPosition: {x: 0.7850275, y: 3.7799435, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.70275784, y: 3.769312, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1699723098}
@@ -7654,7 +7654,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 11.421186
   orthographic: 1
   orthographic size: 7
   m_Depth: -1
@@ -55629,6 +55629,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1525067693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2126591705620906729, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
+  m_PrefabInstance: {fileID: 1928033892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1536701012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69488,6 +69493,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4451836552326410636, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a4f25e1df484c3246934f458b1a572de, type: 2}
     - target: {fileID: 4841292781099324094, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
       propertyPath: m_Name
       value: Sprig
@@ -69592,7 +69601,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 241961520, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c2c285704e86a7742b68f2a1d871d5a5, type: 3}
 --- !u!1 &1932449545
 GameObject:

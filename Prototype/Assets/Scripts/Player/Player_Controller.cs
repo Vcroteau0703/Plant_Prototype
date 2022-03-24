@@ -211,12 +211,11 @@ public class Player_Controller : MonoBehaviour, ISavable
     public void Move()
     {
         if (!c_manager.Moving.Enabled) { return; }
-        detection.collider.material.dynamicFriction = 0.1f;
+        detection.collider.material.dynamicFriction = 0f;
         float ground_clamp = -0.75f;
 
         Vector2 dir = detection.Get_Slope_Direction();
         Vector2 pos = detection.collider.transform.position;
-        Debug.DrawLine(pos, pos + new Vector2(dir.x * direction.x, dir.y));
 
         float speed = direction.x * settings.Move_Speed;
         float diff = speed - rb.velocity.x;
