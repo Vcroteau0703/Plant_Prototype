@@ -5,13 +5,13 @@ using UnityEngine;
 public class Detection : MonoBehaviour
 {
     public LayerMask detectable;
-    public List<Detection_Cast> casts = new List<Detection_Cast>();
+    public List<Detection_Cast> casts;
     public Collider collider;
 
     private void Update()
     {
         foreach(Detection_Cast c in casts){
-            c.Cast();
+            c.Cast(collider.transform.position);
         }
     }
 
@@ -20,7 +20,12 @@ public class Detection : MonoBehaviour
         Gizmos.color = new Color(0,0,1, 0.4f);
         foreach (Detection_Cast c in casts)
         {
-            Gizmos.DrawCube(c.center, c.halfExtends * 2);
+            Gizmos.color = new Color(0, 0, 1, 0.4f);
+            if (c.target != null)
+            {
+                Gizmos.color = new Color(0, 1, 1, 0.4f);
+            }
+            Gizmos.DrawCube(collider.transform.position + c.center, c.halfExtends * 2);
         }
 
         Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
@@ -65,17 +70,21 @@ public class Detection : MonoBehaviour
 }
 
 [System.Serializable]
-public struct Detection_Cast
+public class Detection_Cast
 {
+    public string name;
     public GameObject target;
-    public Vector3 center, halfExtends, direction;
-    public float distance;
+    public Vector3 center, halfExtends;
     public LayerMask mask;
 
-    public void Cast()
+    public void Cast(Vector3 position)
     {
-        RaycastHit[] hit = Physics.BoxCastAll(center, halfExtends, direction, Quaternion.identity, distance, mask);
-        target = hit[0].collider.gameObject;
+        Collider[] hit = Physics.OverlapBox(position + center, halfExtends, Quaternion.identity, mask);
+        target = hit.Length >= 1 ? hit[0].gameObject : null;
+        if(target != null)
+        {
+            Debug.Log("Found: " + target);
+        }
     }
 
 }
