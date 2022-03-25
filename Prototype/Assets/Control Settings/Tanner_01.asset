@@ -21,14 +21,14 @@ MonoBehaviour:
     floatiness: 0.05
     angle: 0
     buffer: 0
-    phase: 0
+    phase: 1
   Wall_Jump:
     power: 12
     max_height: 4
     floatiness: 0.03
     angle: 25
-    buffer: 0.1
-    phase: 0
+    buffer: 0
+    phase: 1
   Coyote_Delay: 0.15
   Air_Speed: 9
   Air_Control: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
   Slide_Threshhold: 3
   Slide_Accel: 12
   Cling_Power: 15
-  Eject_Power: 0.4
+  Eject_Power: 5
   Slope_Angle: 30
   Ceiling_Angle: 30
   Cling_Threshold: 1

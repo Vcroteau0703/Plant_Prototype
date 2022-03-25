@@ -466,6 +466,12 @@ MonoBehaviour:
     mask:
       serializedVersion: 2
       m_Bits: 65
+    OnDetectionEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDetectionExit:
+      m_PersistentCalls:
+        m_Calls: []
   - name: Right
     target: {fileID: 0}
     center: {x: 0.85, y: 0, z: 0}
@@ -473,6 +479,12 @@ MonoBehaviour:
     mask:
       serializedVersion: 2
       m_Bits: 65
+    OnDetectionEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDetectionExit:
+      m_PersistentCalls:
+        m_Calls: []
   - name: Down
     target: {fileID: 0}
     center: {x: 0, y: -1, z: 0}
@@ -480,6 +492,12 @@ MonoBehaviour:
     mask:
       serializedVersion: 2
       m_Bits: 65
+    OnDetectionEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDetectionExit:
+      m_PersistentCalls:
+        m_Calls: []
   - name: Up
     target: {fileID: 0}
     center: {x: 0, y: 1, z: 0}
@@ -487,6 +505,12 @@ MonoBehaviour:
     mask:
       serializedVersion: 2
       m_Bits: 65
+    OnDetectionEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDetectionExit:
+      m_PersistentCalls:
+        m_Calls: []
   collider: {fileID: 4451836552326410636}
 --- !u!1 &4841292781099324094
 GameObject:
@@ -503,6 +527,7 @@ GameObject:
   - component: {fileID: 8153676909111123882}
   - component: {fileID: 241961521}
   - component: {fileID: 241961526}
+  - component: {fileID: 461688541}
   m_Layer: 7
   m_Name: Sprig
   m_TagString: Untagged
@@ -648,36 +673,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 241961521}
   detection: {fileID: 2686934931841054104}
-  c_manager:
-    Moving:
-      m_enabled: 1
-    Gliding:
-      m_enabled: 1
-    Jumping:
-      m_enabled: 1
-    Aerials:
-      m_enabled: 1
-    Sliding:
-      m_enabled: 1
-    Cling:
-      m_enabled: 1
-    Ceiling:
-      m_enabled: 1
-  settings: {fileID: 11400000, guid: 1fca834b58a7c2b40bbe6819f8f2594c, type: 2}
+  state_controller: {fileID: 461688541}
+  settings: {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
   setting_presets:
-  - {fileID: 11400000, guid: 1fca834b58a7c2b40bbe6819f8f2594c, type: 2}
+  - {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
   - {fileID: 11400000, guid: 778839e93402dba40874164cd50b9a1c, type: 2}
   walkable:
     serializedVersion: 2
     m_Bits: 65
   direction: {x: 0, y: 0}
-  touching: {x: 0, y: 0}
   slide_speed: 0
   aerial_time: 0
   target_gravity: -9.81
   friction: 0
-  current_state: 0
-  prev_state: 0
 --- !u!54 &241961521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -710,6 +718,206 @@ MonoBehaviour:
   health: 5
   max_health: 5
   healthUI: {fileID: 0}
+--- !u!114 &461688541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841292781099324094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8694d0614daa44cb14aea931973447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvoking: 0
+  states:
+  - name: Idle
+    enabled: 1
+    active: 1
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Moving
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Move
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Cling
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Cling
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Slide
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Slide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Aerial
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Aerial
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Gliding
+    enabled: 1
+    active: 0
+    looping: 1
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Glide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Wall Jump
+    enabled: 1
+    active: 0
+    looping: 0
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Wall_Jump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Jump
+    enabled: 1
+    active: 0
+    looping: 0
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Vertical_Jump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Eject
+    enabled: 1
+    active: 0
+    looping: 0
+    OnStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Eject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStateExit:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &5020844046622353769
 GameObject:
   m_ObjectHideFlags: 0

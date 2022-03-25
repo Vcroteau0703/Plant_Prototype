@@ -77,14 +77,15 @@ public class Player_Controller : MonoBehaviour
     }
 
     #region INPUT REQUESTS
-    private void Request_Movement(InputAction.CallbackContext context)
+    private void Request_Move(InputAction.CallbackContext context)
     {
         Vector2 temp = context.ReadValue<Vector2>();
         float x = Mathf.Abs(temp.x) > (settings.horizontal_deadzone / 100f) ? temp.x : 0.0f;
         float y = Mathf.Abs(temp.y) > (settings.vertical_deadzone / 100f) ? temp.y : 0.0f;
         direction = new Vector2(x, y);
+        Flip((int)((direction.x % 1) + (direction.x / 1)));
 
-        if(direction != Vector2.zero){
+        if (direction != Vector2.zero){
             state_controller.Request_State("Moving");
         }
         else{
@@ -93,7 +94,6 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        //rb.isKinematic = false;
         bool left = detection.Get_Detection("Left").target;
         bool right = detection.Get_Detection("Right").target;
         bool down = detection.Get_Detection("Down").target;
@@ -140,15 +140,53 @@ public class Player_Controller : MonoBehaviour
                 break;
         }    
     }
+    private int index = 0;
+    private void Switch_Settings(InputAction.CallbackContext context)
+    {
+        index = setting_presets.Length - 1 > index ? index += 1 : 0;
+        settings = settings == null ? setting_presets[index] : settings;
+        Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
+    }
     #endregion
 
     #region STATE CONTROL
     public void State_Control()
     {
-        Flip((int)((direction.x % 1) + (direction.x / 1)));
+        bool left = detection.Get_Detection("Left").target;
+        bool right = detection.Get_Detection("Right").target;
+        bool down = detection.Get_Detection("Down").target;
 
-
-        
+        //Cling
+        if ((left || right) && !down)
+        {
+            if(direction.y < 0)
+            {
+                state_controller.Request_State("Slide");
+            }
+            else if ((direction.x > 0 && left) || (direction.x < 0 && right))
+            {
+                state_controller.Request_State("Eject");
+            }
+            else
+            {
+                state_controller.Request_State("Cling");
+            }
+            
+        }
+        else if (!detection.Is_Detecting() 
+            && settings.Jump.phase != Jump.State.Started 
+            && settings.Wall_Jump.phase != Jump.State.Started 
+            && state_controller.Get_Active_State().name != "Glide"){
+            state_controller.Request_State("Aerial");
+        }
+        else if(down && direction == Vector2.zero)
+        {
+            state_controller.Request_State("Idle");
+        }
+        else if(down && direction != Vector2.zero)
+        {
+            state_controller.Request_State("Moving");
+        } 
     }
 
     #endregion
@@ -156,6 +194,7 @@ public class Player_Controller : MonoBehaviour
     #region MOVEMENT
     public void Move()
     {
+        rb.isKinematic = false;
         detection.collider.material.dynamicFriction = 0f;
         float ground_clamp = -0.75f;
 
@@ -174,34 +213,51 @@ public class Player_Controller : MonoBehaviour
     }
     public void Cling()
     {
+        //rb.isKinematic = true;
         //CLING
         detection.collider.material.dynamicFriction = settings.Wall_Jump.phase != Jump.State.Started ? 100f : 0f;
-        foreach (Detection_Cast c in detection.casts)
+        foreach (Detection_Cast c in detection.Get_All_Detections())
         {
             if (c.name == "Left")
             {
-                Vector2 dir = transform.position - (transform.position + Vector3.left);
+                Vector2 dir = -detection.transform.right;
                 rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
                 Flip(-1);
             }
             else if (c.name == "Right")
             {
-                Vector2 dir = transform.position - (transform.position + Vector3.right);
+                Vector2 dir = detection.transform.right;
+                Debug.Log(dir);
                 rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
                 Flip(1);
             }
         }
 
-        //WALL EJECT
-        rb.AddForce(direction.x * settings.Eject_Power * Vector3.right, ForceMode.Impulse);
 
         // AUTO SLIDE + FRICTION
         transform.position += Vector3.down * slide_speed * Time.deltaTime;
         if (slide_speed > 0) { slide_speed -= Time.deltaTime * settings.Slide_Friction; }
         else { slide_speed = 0; }
     }
+    public void Eject()
+    {
+        Debug.Log("Eject");
+        rb.isKinematic = false;
+        //WALL EJECT
+        if (detection.Get_Detection("Right").target != null && direction.x < 0)
+        {
+            Debug.Log("Eject Left");
+            rb.AddForce(settings.Eject_Power * Vector3.left, ForceMode.Impulse);
+        }
+        else if(detection.Get_Detection("Left").target != null && direction.x > 0)
+        {
+            Debug.Log("Eject Right");
+            rb.AddForce(settings.Eject_Power * Vector3.right, ForceMode.Impulse);
+        }
+    }
     public void Aerial()
     {
+        rb.isKinematic = false;
         detection.collider.material.dynamicFriction = 0;
         aerial_time += Time.deltaTime;
         slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
@@ -211,25 +267,23 @@ public class Player_Controller : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
 
-        if (rb.velocity.y < -10f)
-        {
-            Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
-        }
-        else if (rb.velocity.y < 1 || settings.Jump.phase == Jump.State.Canceled || settings.Wall_Jump.phase == Jump.State.Canceled)
+        //if (rb.velocity.y < -10f)
+        //{
+        //    Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
+        //}
+        if (rb.velocity.y < 0.1f)
         {
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
-        }
-        else
-        {
-            Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
         }
     }
     public void Ceiling()
     {
+        rb.isKinematic = false;
         rb.AddForce(-transform.up * settings.Bonk_Power, ForceMode.Impulse);
     }
     public void Glide()
     {
+        rb.isKinematic = false;
         rb.AddForce(transform.up * -Physics.gravity.y / (10 / settings.Glide_Power), ForceMode.Force);
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -1 / settings.Glide_Power, float.PositiveInfinity), rb.velocity.z);
     }
@@ -246,10 +300,14 @@ public class Player_Controller : MonoBehaviour
     }
     public void Wall_Jump()
     {
+        rb.isKinematic = false;
+        Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
         StartCoroutine(Jump_02(settings.Wall_Jump, 0));
     }
     public void Vertical_Jump()
     {
+        rb.isKinematic = false;
+        Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
         StartCoroutine(Jump_01(settings.Jump, 0));
     }
     public IEnumerator Jump_01(Jump jump, float time)
@@ -297,7 +355,7 @@ public class Player_Controller : MonoBehaviour
         rb.AddForce(jump.power * dir, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
-            Debug.Log("JUMP_01");
+            Debug.Log("JUMP_02");
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f)
@@ -344,8 +402,8 @@ public class Player_Controller : MonoBehaviour
     #region UTILITY
     private void Subscribe_Actions()
     {
-        controls.Player.Move.performed += Request_Movement;
-        controls.Player.Move.canceled += Request_Movement;
+        controls.Player.Move.performed += Request_Move;
+        controls.Player.Move.canceled += Request_Move;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Jump.canceled += Request_Cancel_Jump;
         controls.Player.Glide.started += Request_Glide;
@@ -386,143 +444,16 @@ public class Player_Controller : MonoBehaviour
     {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }  
-    private void Swap_States(ref State a, ref State b)
-    {
-        State temp = a;       
-        a = b;
-        b = temp;       
-    }
 
     private void OnCollisionExit(Collision collision)
     {
         bool left = detection.Get_Detection("Left").target;
         bool right = detection.Get_Detection("Right").target;
 
-        if (left){ Flip(-1); }
-        else if(right) { Flip(1); }
+        if (left){ Flip(1); }
+        else if(right) { Flip(-1); }
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        //Vector3[] points = new Vector3[collision.contactCount];
-
-        //for (int i = 0; i < collision.contactCount; i++)
-        //{
-        //    points[i] = collision.GetContact(i).point;
-        //}
-
-        //float x = 0, y = 0;
-        //foreach (Vector3 point in points)
-        //{
-        //    x += point.x;
-        //    y += point.y;
-        //}
-
-        //Vector3 average = new Vector3(x / points.Length, y / points.Length, 0);
-
-        ////Vector3 p = collision.GetContact(0).point;
-        //Vector3 dir = average - detection.collider.transform.position;
-        //float angle = Vector3.Angle(dir, -Vector3.up);
-        //touching = dir;
-        //float height = collision.GetContact(0).otherCollider.bounds.size.y;
-    }
-
-    //private State Get_State()
-    //{
-    //    State final_state = State.Waiting;
-    //    Vector3 bounds = detection.collider.bounds.size;
-    //    Vector3 slope_height = new Vector3(0, settings.Ground, 0);
-    //    Vector3 wall_angle = new Vector3(settings.Wall, 0, 0);
-    //    Vector3 ceiling = new Vector3(0, settings.Ceiling, 0);
-    //    Vector3 center = detection.collider.transform.position;
-
-    //    Ray down_01 = new Ray(center + new Vector3(bounds.x / 2, -bounds.y / 2, 0) + slope_height, -detection.collider.transform.up * (0.1f + slope_height.y));
-    //    Ray down_02 = new Ray(center + new Vector3(-bounds.x / 2, -bounds.y / 2, 0) + slope_height, -detection.collider.transform.up * (0.1f + slope_height.y));
-
-    //    Ray left_01 = new Ray(center + new Vector3(-bounds.x / 2, bounds.y / 2, 0) + wall_angle, -detection.collider.transform.right * (0.1f + wall_angle.x));
-    //    Ray left_02 = new Ray(center + new Vector3(-bounds.x / 2, -bounds.y / 2, 0) + wall_angle, -detection.collider.transform.right * (0.1f + wall_angle.x));
-
-    //    Ray right_01 = new Ray(center + new Vector3(bounds.x / 2, bounds.y / 2, 0) - wall_angle, detection.collider.transform.right * (0.1f + wall_angle.x));
-    //    Ray right_02 = new Ray(center + new Vector3(bounds.x / 2, -bounds.y / 2, 0) - wall_angle, detection.collider.transform.right * (0.1f + wall_angle.x));
-
-    //    Ray up_01 = new Ray(center + new Vector3(-bounds.x / 2, bounds.y / 2, 0) - ceiling, detection.collider.transform.up * (0.1f + ceiling.y));
-    //    Ray up_02 = new Ray(center + new Vector3(bounds.x / 2, bounds.y / 2, 0) - ceiling, detection.collider.transform.up * (0.1f + ceiling.y));
-
-    //    #region DEBUG
-    //    Debug.DrawRay(down_01.origin, down_01.direction * (0.1f + slope_height.y), Color.magenta);
-    //    Debug.DrawRay(down_02.origin, down_02.direction * (0.1f + slope_height.y), Color.magenta);
-    //    Debug.DrawRay(left_01.origin, left_01.direction * (0.1f + wall_angle.x), Color.magenta);
-    //    Debug.DrawRay(left_02.origin, left_02.direction * (0.1f + wall_angle.x), Color.magenta);
-    //    Debug.DrawRay(right_01.origin, right_01.direction * (0.1f + wall_angle.x), Color.magenta);
-    //    Debug.DrawRay(right_02.origin, right_02.direction * (0.1f + wall_angle.x), Color.magenta);
-    //    Debug.DrawRay(up_01.origin, up_01.direction * (0.1f + ceiling.y), Color.magenta);
-    //    Debug.DrawRay(up_02.origin, up_02.direction * (0.1f + ceiling.y), Color.magenta);
-    //    #endregion
-
-    //    RaycastHit hit;
-    //    if ((Physics.Raycast(down_01, out hit, 0.1f + slope_height.y, walkable) || Physics.Raycast(down_02, out hit, 0.1f + slope_height.y, walkable)) && settings.Jump.phase == Jump.State.Waiting)
-    //    {
-    //        float angle = Get_Detection_Angle();
-    //        final_state = angle < 25 && (current_state != State.Cling || current_state != State.Sliding) ? State.Grounded : current_state;
-    //        slide_speed = final_state == State.Grounded ? 0 : settings.Max_Slide_Speed;
-    //        return final_state;
-    //    }
-
-    //    if ((Physics.Raycast(left_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(left_02, out hit, 0.1f + wall_angle.x, walkable))
-    //        && current_state != State.Ceiling && aerial_time > 0.5f && c_manager.Cling.Enabled)  {
-    //        //Debug.Log("Cling/Slide[L]: " + hit.collider.gameObject.name);
-    //        final_state = direction.y < 0 && c_manager.Sliding.Enabled ? State.Sliding : State.Cling;
-    //    }
-
-    //    if ((Physics.Raycast(right_01, out hit, 0.1f + wall_angle.x, walkable) || Physics.Raycast(right_02, out hit, 0.1f + wall_angle.x, walkable))
-    //        && current_state != State.Ceiling && aerial_time > 0.5f && c_manager.Cling.Enabled) {
-    //        //Debug.Log("Cling/Slide[R]: " + hit.collider.gameObject.name);
-    //        final_state = direction.y < 0 && c_manager.Sliding.Enabled ? State.Sliding : State.Cling;
-    //    }
-
-    //    if (Physics.Raycast(up_01, out hit, 0.1f + ceiling.y, walkable) || Physics.Raycast(up_02, out hit, 0.1f + ceiling.y, walkable)) {
-    //        //Debug.Log("Ceiling");
-    //        final_state = current_state == State.Aerial ? State.Ceiling : final_state;
-    //    }
-
-    //    if (final_state == State.Waiting)
-    //    {
-    //        final_state = (rb.velocity.y < 0 && controls.Player.Glide.phase == InputActionPhase.Performed && c_manager.Gliding.Enabled) ? State.Gliding : State.Aerial; 
-    //        //if(final_state == State.Aerial)
-    //        //{
-    //        //    Debug.Log("Aerial");
-    //        //}
-    //        //else
-    //        //{
-    //        //    Debug.Log("Glide");
-    //        //}
-    //    }
-
-    //    return final_state;
-    //}
-    //private void Update_State()
-    //{
-    //    State next = Get_State();
-    //    if(current_state != next)
-    //    {
-    //        prev_state = current_state;
-    //        current_state = next;
-    //    }    
-    //}
-
     #endregion
-
-    #region DEBUG
-
-    private int index = 0;
-    private void Switch_Settings(InputAction.CallbackContext context)
-    {
-        index = setting_presets.Length - 1 > index ? index += 1 : 0;
-        settings = setting_presets[index];
-        Notification_System.Send_SystemNotify("Player control settings changed to " + settings.name, Color.blue);
-    }
-
-    #endregion
-
 }
 
 #region CLASSES
