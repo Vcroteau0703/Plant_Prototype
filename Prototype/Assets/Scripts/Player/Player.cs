@@ -18,7 +18,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     internal bool sapActive = false;
     private bool damageActive = true;
 
-    public HealthUI healthUI;
+    internal GameObject HUD;
+    internal int currColl;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         sprigSprite = GetComponent<SpriteRenderer>();
         sprigColor = sprigSprite.color;
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
+        HUD = GameObject.FindGameObjectWithTag("HUD");
         UpdateHealthUI(health);
     }
 
@@ -99,20 +101,11 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     {
         if(currHealth >= 0)
         {
-            healthUI.UpdateUI(currHealth);
+            HUD.GetComponentInChildren<HealthUI>().UpdateUI(currHealth);
             if(currHealth != max_health)
             {
                 StartCoroutine(IFrames(invCycles, 0.2f));
             }
-        }
-    }
-
-    public void Heal()
-    {
-        if(health < max_health)
-        {
-            health = max_health;
-            UpdateHealthUI(health);
         }
     }
 
@@ -145,12 +138,14 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 public class Player_Data
 {
     public int health;
+    public int currColl;
     public string scene;
     public Checkpoint_Data checkpoint;
 
     public Player_Data(Player player)
     {
         health = player.health;
+        currColl = player.currColl;
         scene = SceneManager.GetActiveScene().name;
 
         Checkpoint c = Checkpoint.Get_Active_Checkpoint();
