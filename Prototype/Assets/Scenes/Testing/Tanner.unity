@@ -35900,7 +35900,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh112580
+  m_Name: pb_Mesh22468
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40795,11 +40795,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!65 &1128910019 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 91974241, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-  m_PrefabInstance: {fileID: 1600103785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1145794399
 GameObject:
   m_ObjectHideFlags: 0
@@ -57372,33 +57367,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 91974240, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: col
-      value: 
-      objectReference: {fileID: 1128910019}
-    - target: {fileID: 91974240, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: accel
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 91974240, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: power
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 91974240, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: intesity
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 538496279742201933, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 538496279742201933, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.14
+      value: 11.1
       objectReference: {fileID: 0}
     - target: {fileID: 538496279742201933, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.31
+      value: -15.92
       objectReference: {fileID: 0}
     - target: {fileID: 538496279742201933, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57431,14 +57410,6 @@ PrefabInstance:
     - target: {fileID: 538496279742201933, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3416204829673885357, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: cullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3416204829673885357, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
-      propertyPath: ShapeModule.m_SpriteRenderer
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9036507292203216751, guid: c80e7367563a2ef488602e843d1f0982, type: 3}
       propertyPath: m_Name

@@ -17,7 +17,6 @@ public class State_Controller : MonoBehaviour
         foreach (State s in states) {
             if (s.active && s.looping) {
                 s.OnStateEnter.Invoke();
-                Debug.Log("HELLO");
             }
             else if(s.active && !s.looping)
             {
@@ -25,6 +24,7 @@ public class State_Controller : MonoBehaviour
                 isInvoking = false;
             }
         }
+        Debug.Log(Get_Active_State().name);
     }
     public State Get_Active_State()
     {

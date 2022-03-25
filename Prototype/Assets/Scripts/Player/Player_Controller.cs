@@ -28,6 +28,9 @@ public class Player_Controller : MonoBehaviour
     public float aerial_time;
     public float target_gravity = -9.81f;
     public float friction = 0;
+
+    // DETECTION //
+    bool left, right, up, down;
     #endregion
 
     private void Awake()
@@ -69,6 +72,7 @@ public class Player_Controller : MonoBehaviour
     {
         target_gravity = Physics.gravity.y;
         Animation_Driver();
+        //Ground_Lock();
         friction = detection.collider.material.dynamicFriction;   
     }
     private void OnDisable()
@@ -85,10 +89,16 @@ public class Player_Controller : MonoBehaviour
         direction = new Vector2(x, y);
         Flip((int)((direction.x % 1) + (direction.x / 1)));
 
-        if (direction != Vector2.zero){
+        if(left || right || !down)
+        {
+            return; 
+        }
+        else if (direction != Vector2.zero){
+            detection.collider.material.dynamicFriction = 0f;
             state_controller.Request_State("Moving");
         }
         else{
+            detection.collider.material.dynamicFriction = 1.5f;
             state_controller.Request_State("Idle");
         }
     }
@@ -98,10 +108,10 @@ public class Player_Controller : MonoBehaviour
         bool right = detection.Get_Detection("Right").target;
         bool down = detection.Get_Detection("Down").target;
 
-        if (down)
+        if (down && !left && !right)
         {
             state_controller.Request_State("Jump");
-        }
+        }       
         else if (right || left)
         {
             state_controller.Request_State("Wall Jump");
@@ -117,29 +127,7 @@ public class Player_Controller : MonoBehaviour
         {
             settings.Wall_Jump.phase = Jump.State.Canceled;
         }      
-    }
-    private void Request_Glide(InputAction.CallbackContext context)
-    {
-        switch (context.phase)
-        {
-            case InputActionPhase.Started:
-                if (!detection.Is_Detecting() && rb.velocity.y < 0.1f)
-                {
-                    state_controller.Request_State("Glide");
-                }
-                break;
-
-            case InputActionPhase.Canceled:
-                if (!detection.Is_Detecting() && state_controller.Get_Active_State().name == "Glide")
-                {
-                    state_controller.Request_State("Aerial");
-                }
-                break;
-
-            default:
-                break;
-        }    
-    }
+    }  
     private int index = 0;
     private void Switch_Settings(InputAction.CallbackContext context)
     {
@@ -152,48 +140,68 @@ public class Player_Controller : MonoBehaviour
     #region STATE CONTROL
     public void State_Control()
     {
-        bool left = detection.Get_Detection("Left").target;
-        bool right = detection.Get_Detection("Right").target;
-        bool down = detection.Get_Detection("Down").target;
+        left = detection.Get_Detection("Left").target;
+        right = detection.Get_Detection("Right").target;
+        down = detection.Get_Detection("Down").target;
 
         //Cling
-        if ((left || right) && !down)
+
+        if((left || right) && aerial_time > 0.5f)
         {
-            if(direction.y < 0)
+            float angle = detection.Get_Slope_Angle();
+            if(angle == 0 || angle < 45)
             {
-                state_controller.Request_State("Slide");
+                if(direction.y < 0)
+                {
+                    state_controller.Request_State("Slide");
+                }
+                else
+                {
+                    state_controller.Request_State("Cling");
+                }
             }
-            else if ((direction.x > 0 && left) || (direction.x < 0 && right))
+            else if(direction.x != 0)
             {
-                state_controller.Request_State("Eject");
+                aerial_time = 0;
+                state_controller.Request_State("Moving");
             }
             else
             {
-                state_controller.Request_State("Cling");
+                aerial_time = 0;
+                state_controller.Request_State("Idle");
             }
-            
-        }
-        else if (!detection.Is_Detecting() 
-            && settings.Jump.phase != Jump.State.Started 
-            && settings.Wall_Jump.phase != Jump.State.Started 
-            && state_controller.Get_Active_State().name != "Glide"){
-            state_controller.Request_State("Aerial");
-        }
-        else if(down && direction == Vector2.zero)
-        {
-            state_controller.Request_State("Idle");
-        }
-        else if(down && direction != Vector2.zero)
-        {
-            state_controller.Request_State("Moving");
         } 
+        else if (down)
+        {
+            if (direction.x != 0)
+            {
+                aerial_time = 0;
+                state_controller.Request_State("Moving");
+            }
+            else
+            {
+                aerial_time = 0;
+                state_controller.Request_State("Idle");
+            }
+        }
+        else
+        {
+            if (rb.velocity.y < 0.1f && controls.Player.Glide.phase == InputActionPhase.Performed)
+            {
+                state_controller.Request_State("Gliding");
+            }
+            else if(controls.Player.Glide.phase == InputActionPhase.Waiting)
+            {
+                state_controller.Request_State("Aerial");
+            }
+        }
     }
 
     #endregion
 
     #region MOVEMENT
     public void Move()
-    {
+    {        
         rb.isKinematic = false;
         detection.collider.material.dynamicFriction = 0f;
         float ground_clamp = -0.75f;
@@ -241,22 +249,20 @@ public class Player_Controller : MonoBehaviour
     }
     public void Eject()
     {
-        Debug.Log("Eject");
         rb.isKinematic = false;
         //WALL EJECT
         if (detection.Get_Detection("Right").target != null && direction.x < 0)
         {
-            Debug.Log("Eject Left");
             rb.AddForce(settings.Eject_Power * Vector3.left, ForceMode.Impulse);
         }
         else if(detection.Get_Detection("Left").target != null && direction.x > 0)
         {
-            Debug.Log("Eject Right");
             rb.AddForce(settings.Eject_Power * Vector3.right, ForceMode.Impulse);
         }
     }
     public void Aerial()
     {
+        
         rb.isKinematic = false;
         detection.collider.material.dynamicFriction = 0;
         aerial_time += Time.deltaTime;
@@ -266,14 +272,14 @@ public class Player_Controller : MonoBehaviour
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
-
-        //if (rb.velocity.y < -10f)
-        //{
-        //    Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
-        //}
+        
         if (rb.velocity.y < 0.1f)
         {
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
+        }
+        else
+        {
+            Physics.gravity = new Vector3(Physics.gravity.x, -9.81f, Physics.gravity.z);
         }
     }
     public void Ceiling()
@@ -283,6 +289,7 @@ public class Player_Controller : MonoBehaviour
     }
     public void Glide()
     {
+        Aerial();
         rb.isKinematic = false;
         rb.AddForce(transform.up * -Physics.gravity.y / (10 / settings.Glide_Power), ForceMode.Force);
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -1 / settings.Glide_Power, float.PositiveInfinity), rb.velocity.z);
@@ -311,8 +318,7 @@ public class Player_Controller : MonoBehaviour
         StartCoroutine(Jump_01(settings.Jump, 0));
     }
     public IEnumerator Jump_01(Jump jump, float time)
-    {
-        aerial_time = 0;
+    {       
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(jump.power * Vector3.up, ForceMode.Impulse);
@@ -385,18 +391,21 @@ public class Player_Controller : MonoBehaviour
     #endregion
 
     #region DEPRECATED FUNCTIONS
-    //private void Ground_Lock()
-    //{
-    //    RaycastHit hit;
-    //    Vector2 dir = touching != Vector2.zero ? touching : Vector2.down;
-    //    Debug.DrawRay(transform.position, transform.position - (transform.position - (Vector3)dir * 1.5f), Color.red, 1.5f);
-    //    if (Physics.Raycast(transform.position, transform.position - (transform.position - (Vector3)dir * 1.5f), out hit, 1.5f))
-    //    {
-    //        //if(((hit.distance - col.bounds.extents.y) * Vector3.down).y < 0.01f) { return; }          
-    //        transform.position += (hit.distance - detection.collider.bounds.extents.y) * Vector3.down;
-    //        Debug.Log((hit.distance - detection.collider.bounds.extents.y) * Vector3.down);
-    //    }
-    //}
+    private void Ground_Lock()
+    {
+        string state = state_controller.Get_Active_State().name;
+        if(state != "Moving" && state != "Idle") { return; }
+        RaycastHit hit;
+        Vector2 dir = Quaternion.AngleAxis(-90, Vector3.forward) * detection.Get_Slope_Direction();
+        Vector2 pos = detection.transform.position;
+        Debug.DrawRay(pos, dir * 1.5f, Color.red, 1.5f);
+        if (Physics.Raycast(pos, dir * 1.5f, out hit, 1.5f))
+        {
+            if(hit.distance < 1.2f) { return; }          
+            transform.position += (hit.distance - detection.collider.bounds.extents.y) * Vector3.down;
+            Debug.Log(hit.distance);
+        }
+    }
     #endregion
 
     #region UTILITY
@@ -406,9 +415,6 @@ public class Player_Controller : MonoBehaviour
         controls.Player.Move.canceled += Request_Move;
         controls.Player.Jump.performed += Request_Jump;
         controls.Player.Jump.canceled += Request_Cancel_Jump;
-        controls.Player.Glide.started += Request_Glide;
-        controls.Player.Glide.canceled += Request_Glide;
-
         controls.Player.Switch_Controls.performed += Switch_Settings;
     }
     private void Animation_Driver()
@@ -426,7 +432,7 @@ public class Player_Controller : MonoBehaviour
         //animator.SetBool("CEILING", state_controller.Get_Active_State().name == "Aerial");
         animator.SetBool("SLIDE", state_controller.Get_Active_State().name == "Slide");
     }
-    private void Flip(int direction)
+    public void Flip(int direction)
     {
         switch (direction)
         {
@@ -440,18 +446,10 @@ public class Player_Controller : MonoBehaviour
                 break;
         }
     }
-    private void Flip()
+    public void Flip()
     {
+        if(direction.x != 0) { return; }
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-    }  
-
-    private void OnCollisionExit(Collision collision)
-    {
-        bool left = detection.Get_Detection("Left").target;
-        bool right = detection.Get_Detection("Right").target;
-
-        if (left){ Flip(1); }
-        else if(right) { Flip(-1); }
     }
     #endregion
 }
@@ -468,48 +466,5 @@ public class Jump
 
     public enum State { Waiting = default, Canceled, Started, Performing }
     public State phase;
-}
-
-[System.Serializable]
-public class Control_Management
-{
-    public Control_State Moving, Gliding, Jumping, Aerials, Sliding, Cling, Ceiling;
-    public void Disable_All() 
-    {
-        Moving.Disable();
-        Gliding.Disable();
-        Jumping.Disable();
-        Aerials.Disable();
-        Sliding.Disable();
-        Cling.Disable();
-        Ceiling.Disable();
-    }
-    public void Enable_All()
-    {
-        Moving.Enable();
-        Gliding.Enable();
-        Jumping.Enable();
-        Aerials.Enable();
-        Sliding.Enable();
-        Cling.Enable();
-        Ceiling.Enable();
-    }
-}
-
-[System.Serializable]
-public class Control_State
-{
-    [Tooltip("Enables and Disables a specific state of the character")]
-    public bool m_enabled;
-    public bool Enabled { get { return m_enabled; } }
-    public void Enable()
-    {
-        m_enabled = true;
-    }
-    public void Disable()
-    {
-        m_enabled = false;
-    }
-
 }
 #endregion
