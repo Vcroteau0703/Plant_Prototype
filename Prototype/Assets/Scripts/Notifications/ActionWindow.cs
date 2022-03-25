@@ -19,7 +19,7 @@ public class ActionWindow : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(ActionButton);
         if (Player_Controller.instance)
         {
-            Player_Controller.instance.c_manager.Disable_All();
+            Player_Controller.instance.state_controller.isInvoking = true;
         }
     }
 
@@ -40,7 +40,7 @@ public class ActionWindow : MonoBehaviour
         Destroy(gameObject, delay);
         if (Player_Controller.instance)
         {
-            Player_Controller.instance.c_manager.Enable_All();
+            Player_Controller.instance.state_controller.isInvoking = true;
         }  
     }
 }
