@@ -50,12 +50,15 @@ Good luck!
 -> ...
 -> I can't make that jump.
 Oh, you don't know how to scale walls, do you?
-Here, I'll teach you.
+<<Camera_Pan WallClimbTutorial>>
+Check this out!
 <<wait 1.5>>
-*Sprig has learned Wall Cling!*
-*Jump up walls to climb them, and hold down to slide.*
+Jumping up walls is pretty easy, I can just hang here as long as I want.
+<<Camera_Pan WallClimbTutorialMid>>
+Sliding down them is not too hard either!
 <<wait 0.5>>
-Aaaaaand there. That should be pretty easy now.
+Hope that helps!
+<<Camera_Pan WallClimbTutorialEnd>>
 I'll wait here outside the scary cave.
 N-Not that I'm scared or anything, I just want to...er...
 ...make sure the coast is clear!
