@@ -74,7 +74,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         {
             health = max_health;
             UpdateHealthUI(health);
-            SapEffectOff();
+            if (sapActive)
+            {
+                SapEffectOff();
+            }
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             transform.position = x.transform.position;
             return;
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     {
         // make termites collectable and disable their hazard damage
         sapActive = true;
-        transform.GetChild(2).gameObject.SetActive(true);
+        transform.Find("Sap").gameObject.SetActive(true);
         // set slow movement settings
         gameObject.GetComponent<Player_Controller>().settings = sapSettings;
     }
@@ -93,7 +96,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public void SapEffectOff()
     {
         sapActive = false;
-        transform.GetChild(2).gameObject.SetActive(false);
+        transform.Find("Sap").gameObject.SetActive(false);
         gameObject.GetComponent<Player_Controller>().settings = originalSettings;
     }
 
