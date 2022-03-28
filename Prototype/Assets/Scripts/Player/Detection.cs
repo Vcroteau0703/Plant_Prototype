@@ -34,18 +34,21 @@ public class Detection : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(down.point, 0.1f);
         Gizmos.DrawSphere(right.point, 0.1f);
+        Gizmos.DrawSphere(left.point, 0.1f);
     }
 
-    RaycastHit down, right;
+    RaycastHit down, right, left;
     /// <summary>Returns the incline of the current slope in degrees.</summary>
     public float Get_Slope_Angle()
     {
-        float modifier = transform.parent.localScale.x <= 0 ? -1 : 1;
         Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);      
-        Physics.Raycast(bottom, Vector3.right * modifier, out right, collider.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
 
-        float a = right.distance, b = Vector2.Distance(right.point, down.point), x;
+        float a = right.collider ? right.distance : left.distance;
+        float b = Vector2.Distance(right.point, down.point);
+        float x;
 
         float f = a / b;
         x = Mathf.Rad2Deg * Mathf.Asin(f);
@@ -53,18 +56,31 @@ public class Detection : MonoBehaviour
         return x;
     }
 
+
+
+    public float Get_Wall_Angle()
+    {
+
+    }
+
     Vector2 dir;
     /// <summary>Returns the direction of the current slope as a Vector2.</summary>
     public Vector2 Get_Slope_Direction()
     {
-        float modifier = transform.parent.localScale.x <= 0 ? -1 : 1;
         Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
-        Physics.Raycast(bottom, Vector3.right * modifier, out right, collider.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
 
         if (right.collider && down.collider)
         {
-            return (right.point - down.point).normalized * modifier;
+            Debug.Log("Right");
+            return (right.point - down.point).normalized;
+        }
+        else if(left.collider && down.collider)
+        {
+            Debug.Log("Left");
+            return (down.point - left.point).normalized;
         }
         return Vector3.right;
     }

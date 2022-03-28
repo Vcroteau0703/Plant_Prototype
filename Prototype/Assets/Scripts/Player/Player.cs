@@ -98,7 +98,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     {
         if(currHealth >= 0)
         {
-            healthUI.UpdateUI(currHealth);
+            //healthUI.UpdateUI(currHealth);
             if(currHealth != max_health)
             {
                 StartCoroutine(IFrames(10, 0.2f));

@@ -24,7 +24,7 @@ public class State_Controller : MonoBehaviour
                 isInvoking = false;
             }
         }
-        Debug.Log(Get_Active_State().name);
+        //Debug.Log(Get_Active_State().name);
     }
     public State Get_Active_State()
     {
