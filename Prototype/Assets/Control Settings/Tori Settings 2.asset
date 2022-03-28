@@ -28,7 +28,7 @@ MonoBehaviour:
     floatiness: 0.03
     angle: 36
     buffer: 0
-    phase: 0
+    phase: 1
   Coyote_Delay: 0.15
   Air_Speed: 10
   Air_Control: 1
@@ -47,6 +47,3 @@ MonoBehaviour:
   Bonk_Power: 1.5
   horizontal_deadzone: 20
   vertical_deadzone: 20
-  Ground: 0.5
-  Wall: 0.3
-  Ceiling: 0.5

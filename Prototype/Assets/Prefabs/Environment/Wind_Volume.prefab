@@ -4867,5 +4867,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   trigger_type: 0
-  col: {fileID: 91974241}
-  power: 10
+  power: 1
+  accel: 1

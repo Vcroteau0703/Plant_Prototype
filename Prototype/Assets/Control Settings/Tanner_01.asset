@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Move_Speed: 18
   Acceleration: 1.6
-  Friction: 0
+  Friction: 0.4
   Jump:
     power: 10
     max_height: 4
     floatiness: 0.05
     angle: 0
     buffer: 0
-    phase: 1
+    phase: 0
   Wall_Jump:
     power: 12
     max_height: 4
     floatiness: 0.03
-    angle: 230
-    buffer: 0.1
-    phase: 1
+    angle: 25
+    buffer: 0.2
+    phase: 0
   Coyote_Delay: 0.15
   Air_Speed: 9
   Air_Control: 1
@@ -36,11 +36,11 @@ MonoBehaviour:
   Fall_Speed: -20
   Glide_Power: 2
   Slide_Friction: 7
-  Max_Slide_Speed: 2
+  Max_Slide_Speed: 4
   Slide_Threshhold: 3
   Slide_Accel: 12
   Cling_Power: 15
-  Eject_Power: 5
+  Eject_Power: 0.4
   Slope_Angle: 30
   Ceiling_Angle: 30
   Cling_Threshold: 1
