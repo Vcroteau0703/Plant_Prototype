@@ -7,7 +7,7 @@ Hey wait! Up here!
 <<Camera_Pan CameraDuringDialog>>
 <<wait 1.5>>
 Could you help me?
-I climbed all the way up here, but now I...er...can't get down.
+I climbed all the way up here, but now I- I'm too scared of jumping down, it just looks too far... and there no wall for me to grab onto...
 Maybe there's something around here you can move?
 <<Camera_Pan CameraAfterDialog>>
 
@@ -16,11 +16,11 @@ title: Dialogue2
 position: 90,49
 ---
 
-Woah, close call! Thank you so much!
-I could've waited for my mom, but she's just taking forever to get here.
+Woah, close call! Thank you!
+I could've waited for my mom, but she's just taking forever to get here. I'm really starting to get worried... 
+I've never been left alone for this long before... She said she would be right back.
 Wait...do you feel that?
 <<change_world GreenifyDirector>>
-
 
 ===
 title: AfterTransformation
@@ -29,6 +29,7 @@ position: 213,26
 
 <<Camera_Pan CameraDuringDialog>>
 Hey, down here!
+ The water is so nice I couldn't resist.
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -36,16 +37,28 @@ title: Node
 position: 198,116.5
 ---
 
+I don't know what you did, but the water seems to be cleansed.
+Well... up here it seems to be. Before I got stuck up there I heard something strange from the caves... I think the root of the corruption is coming from there. 
+But everything is so green now, it's like a paradise!
+Maybe it was because you helped me? Not sure why I would be so important though...
 So, what's your name?
 -> Sprig!
 -> ...Sprig.
 "Sprig?" Heh, that's a funny name for a plant!
-So, what are you up to?
--> I need to find my brothers.
+Do you know what this place is? The last thing I remember is being cold and taking a nap, we all piled together to stay warm... 
+I've been so confused since I woke. I don't know if mom will be able to find me here...
+I'm really starting to miss her.
+-> Last thing I remember is returning to an empty home, there was a terrible blizzard... but I see no sign of snow here.
+    Yeah, there was a blizzard for us too... 
+-> Your guess is as good as mine.
+This place feels different... Maybe the answer lies further ahead?
+-> I need to find my siblings.
 -> Do you know where to find lost plants?
 Well, there's some bad rumors about the caves under the tree up ahead.
 Anyone who goes in never comes out, so I wouldn't check there if I were you.
 But, if those plants are there, then I guess you don't really have a choice.
+There's a tree up ahead too, poor guy needs help with a termite problem.
+He might know more about who you're looking for.
 Good luck!
 -> ...
 -> I can't make that jump.
@@ -55,11 +68,11 @@ Check this out!
 <<wait 1.5>>
 Jumping up walls is pretty easy, I can just hang here as long as I want.
 <<Camera_Pan WallClimbTutorialMid>>
-Sliding down them is not too hard either!
+Sliding down them isn't too hard either!
 <<wait 0.5>>
-Hope that helps!
+Hope that helps! You should try it out up here, seems to be safer than the cave.
 <<Camera_Pan WallClimbTutorialEnd>>
-I'll wait here outside the scary cave.
+I'll wait here. I need a minute before I go back in the cave again.
 N-Not that I'm scared or anything, I just want to...er...
 ...make sure the coast is clear!
 ...yeah.
