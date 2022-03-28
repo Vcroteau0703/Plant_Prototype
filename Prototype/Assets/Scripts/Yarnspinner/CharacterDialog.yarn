@@ -7,8 +7,8 @@ Hey wait! Up here!
 <<Camera_Pan CameraDuringDialog>>
 <<wait 1.5>>
 Could you help me?
-I climbed all the way up here, but now I- I'm too scared of jumping down, it just looks too far... and there no wall for me to grab onto...
-Maybe there's something around here you can move?
+I climbed all the way up here, but now I-I'm too scared to jump down...
+Could you give me something to land on?
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -16,9 +16,10 @@ title: Dialogue2
 position: 90,49
 ---
 
-Woah, close call! Thank you!
-I could've waited for my mom, but she's just taking forever to get here. I'm really starting to get worried... 
-I've never been left alone for this long before... She said she would be right back.
+Woah, close call! Thank you so much!
+I could've waited for my mom, but she's just taking forever to get here... 
+...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
+Just, uh, don't tell her about this.
 Wait...do you feel that?
 <<change_world GreenifyDirector>>
 
@@ -28,8 +29,7 @@ position: 213,26
 ---
 
 <<Camera_Pan CameraDuringDialog>>
-Hey, down here!
- The water is so nice I couldn't resist.
+Woah, down here! Check out the water!
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -37,43 +37,42 @@ title: Node
 position: 198,116.5
 ---
 
-I don't know what you did, but the water seems to be cleansed.
-Well... up here it seems to be. Before I got stuck up there I heard something strange from the caves... I think the root of the corruption is coming from there. 
-But everything is so green now, it's like a paradise!
-Maybe it was because you helped me? Not sure why I would be so important though...
-So, what's your name?
+I don't know what you did, but the water's clean now! At least, up here it is.
+Everything is so pretty now, it's like a paradise! I've never seen it look this good!
+Is it because you helped me? Do you have superpowers? Are you a superhero?!
+Woah, sorry, I'm talking way too fast.
+So...*ahem*... what's your name?
 -> Sprig!
 -> ...Sprig.
-"Sprig?" Heh, that's a funny name for a plant!
-Do you know what this place is? The last thing I remember is being cold and taking a nap, we all piled together to stay warm... 
-I've been so confused since I woke. I don't know if mom will be able to find me here...
-I'm really starting to miss her.
--> Last thing I remember is returning to an empty home, there was a terrible blizzard... but I see no sign of snow here.
-    Yeah, there was a blizzard for us too... 
--> Your guess is as good as mine.
-This place feels different... Maybe the answer lies further ahead?
+"Sprig?" Heh, now that's a funny name for a superhero!
+So, do you know what happened with that blizzard?
+-> No clue.
+-> It must've finally cleared up.
+Hmmm, well I think that maybe it finally cleared up?
+I don't know...But I guess it's not important, as long as its over.
+Anyways, what are you doing?
 -> I need to find my siblings.
 -> Do you know where to find lost plants?
 Well, there's some bad rumors about the caves under the tree up ahead.
-Anyone who goes in never comes out, so I wouldn't check there if I were you.
-But, if those plants are there, then I guess you don't really have a choice.
-There's a tree up ahead too, poor guy needs help with a termite problem.
-He might know more about who you're looking for.
-Good luck!
+Anyone who goes in those caves never comes out, so I wouldn't check there if I were you.
+Even if you wanted to, I don't think a plant like you can make it over the spikes.
+...But, if your lost plants are there, then I guess you'll have to find a way around that.
+Head on in! Good luck!
 -> ...
 -> I can't make that jump.
-Oh, you don't know how to scale walls, do you?
+...Oh, you don't know how to scale walls, do you?
+Don't worry, I'll show you how it's done! Been doing this since I was a baby!
 <<Camera_Pan WallClimbTutorial>>
-Check this out!
+Now, check this out!
 <<wait 1.5>>
-Jumping up walls is pretty easy, I can just hang here as long as I want.
+Jumping up walls is pretty easy, if you have good footing, you can hang for as long as you want.
 <<Camera_Pan WallClimbTutorialMid>>
-Sliding down them isn't too hard either!
+Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
 <<wait 0.5>>
-Hope that helps! You should try it out up here, seems to be safer than the cave.
+Alright, hope that helps!
 <<Camera_Pan WallClimbTutorialEnd>>
-I'll wait here. I need a minute before I go back in the cave again.
-N-Not that I'm scared or anything, I just want to...er...
+I'm gonna go over and head to the tree. Maybe I'll see you there!
+N-Not that I'm scared of the cave or anything, I just want to...er...
 ...make sure the coast is clear!
 ...yeah.
 
