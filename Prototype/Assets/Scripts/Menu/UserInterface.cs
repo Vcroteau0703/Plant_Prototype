@@ -63,9 +63,6 @@ public class UserInterface : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1;
-        if (inputs != null)
-        {
-            inputs.Player.Pause.Disable();
-        }
+        inputs.Player.Pause.Disable(); 
     }
 }
