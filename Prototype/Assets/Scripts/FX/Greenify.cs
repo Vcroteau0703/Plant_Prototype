@@ -99,14 +99,12 @@ public class Greenify : MonoBehaviour, ISavable
             Debug.Log(data.isDone);
             water.SetColor("_Emission", waterEndEmission);
             water.SetColor("_BaseColor", waterEndColor);
-            cutscene.initialTime = 1137f;
+            cutscene.initialTime = 1113f;
             for (int i = 0; i < hazards.Length; i++)
             {
                 hazards[i].GetComponent<Hazard>().ChangeDamage(0);
-                hazards[i].GetComponent<Water_Volume>().enabled = true;
             }
             cutscene.Play();
-            cutscene.Pause();
         }
         else
         {

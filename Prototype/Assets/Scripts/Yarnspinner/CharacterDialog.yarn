@@ -29,7 +29,7 @@ position: 213,26
 
 <<Camera_Pan CameraDuringDialog>>
 Hey, down here!
- The water is so nice I couldn't resist.
+The water is so nice I couldn't resist.
 <<Camera_Pan CameraAfterDialog>>
 
 ===
@@ -69,9 +69,10 @@ Check this out!
 Jumping up walls is pretty easy, I can just hang here as long as I want.
 <<Camera_Pan WallClimbTutorialMid>>
 Sliding down them isn't too hard either!
-<<wait 0.5>>
-Hope that helps! You should try it out up here, seems to be safer than the cave.
+<<wait 4.5>>
 <<Camera_Pan WallClimbTutorialEnd>>
+<<wait 1.5>>
+Hope that helps! You should try it out up here, seems to be safer than the cave.
 I'll wait here. I need a minute before I go back in the cave again.
 N-Not that I'm scared or anything, I just want to...er...
 ...make sure the coast is clear!
@@ -99,5 +100,18 @@ position: 1, -1
 It seems today...
 ...that all you see...
 ..is violence in movies...and sex on TV...
+
+===
+title: SpiderTreeDialog
+position: -253,116
+---
+
+Hey Sprig!
+You finally made it over here!
+Be careful in here, these termites don't hold back.
+-> What happened to you?
+-> Why are you orange?
+Oh it's tree sap, it makes you all sticky. Termites don't seem to like it so much tho. Maybe it'll come in handy.
+
 
 ===

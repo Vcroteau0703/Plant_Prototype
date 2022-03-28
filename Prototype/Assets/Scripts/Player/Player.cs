@@ -35,6 +35,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         Player_Data player = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (player != null){
             health = player.health;
+            currColl = player.currColl;
             if (SceneManager.GetActiveScene().name == player.scene)
             {
                 float[] checkpoint = player.checkpoint.position;

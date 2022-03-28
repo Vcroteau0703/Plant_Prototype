@@ -65,7 +65,7 @@ public class Player_Controller : MonoBehaviour, ISavable
     {
         c_manager.Gliding.Enable();
     }
-    private void OnEnable()
+    public void OnEnable()
     {
         settings = setting_presets.Length > 0 ? setting_presets[0] : settings;
         controls = controls == null ? new Controls() : controls;
@@ -89,7 +89,7 @@ public class Player_Controller : MonoBehaviour, ISavable
         friction = col.material.dynamicFriction;
         
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         controls.Player.Disable();
     }
