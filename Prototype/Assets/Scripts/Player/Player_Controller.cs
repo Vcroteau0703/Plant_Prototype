@@ -137,70 +137,92 @@ public class Player_Controller : MonoBehaviour
     #endregion
 
     #region STATE CONTROL
+
+    /*
+     * LOGIC:
+     * 
+     * [WALK/IDLE]
+     * + Down?
+     * + Direction.x 
+     * 
+     * [CLING]
+     * + Ground?
+     * + Left? or Right?
+     * 
+     * [SLIDE]
+     * + Cling?
+     * + Direction.y
+     * 
+     * [GLIDE]
+     * + Holding Space?
+     * + 
+     * 
+     */
+
     public void State_Control()
     {
         left = detection.Get_Detection("Left").target;
         right = detection.Get_Detection("Right").target;
         down = detection.Get_Detection("Down").target;
 
-        //Cling
+        State active = state_controller.Get_Active_State();
 
-        if((left || right) && aerial_time > 0.5f)
+
+        if((left || right) && aerial_time > 0.5f) // Wall
         {
-            float angle = detection.Get_Slope_Angle();
-            if(angle == 0 || angle < 45)
+            
+            float angle = detection.Get_Wall_Angle(settings.Cling_Threshold);
+            Debug.Log(angle);
+            if(angle < 30 && angle >= 0)
             {
                 if(direction.y < 0)
                 {
-                    state_controller.Request_State("Slide");
+                    state_controller.Request_State("Slide");                  
                     Debug.Log("Slide");
+                    return;
                 }
                 else
                 {
                     state_controller.Request_State("Cling");
                     Debug.Log("Cling");
+                    return;
                 }
-            }
-            else if(direction.x != 0)
-            {
-                aerial_time = 0;
-                state_controller.Request_State("Moving");
-                Debug.Log("Moving");
-            }
-            else
-            {
-                aerial_time = 0;
-                state_controller.Request_State("Idle");
-                Debug.Log("Idle");
-            }
+            }            
         } 
-        else if (down)
+
+        if (down) // Ground
         {
             if (direction.x != 0)
             {
                 aerial_time = 0;
                 state_controller.Request_State("Moving");
                 Debug.Log("Moving");
+                return;
             }
             else
             {
                 aerial_time = 0;
                 state_controller.Request_State("Idle");
                 Debug.Log("Idle");
+                return;
             }
         }
-        else
+        
+        if(detection.Is_Detecting() == false) //Air
         {
-            if (rb.velocity.y < 0.1f && controls.Player.Glide.phase == InputActionPhase.Performed)
-            {
+            State glide = state_controller.Get_State("Gliding");
+
+            if (settings.Jump.phase == Jump.State.Canceled &&
+                settings.Wall_Jump.phase == Jump.State.Canceled &&
+                controls.Player.Glide.phase == InputActionPhase.Performed){
                 state_controller.Request_State("Gliding");
                 Debug.Log("Gliding");
+                return;
             }
-            else if(settings.Jump.phase != Jump.State.Waiting || settings.Jump.phase != Jump.State.Waiting)
-            {
-                state_controller.Request_State("Aerial");
-                Debug.Log("Aerial");
-            }
+
+            state_controller.Request_State("Aerial");
+            Debug.Log("Aerial");
+            return;                     
         }
     }
 
@@ -223,8 +245,8 @@ public class Player_Controller : MonoBehaviour
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Acceleration) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
 
-        Debug.DrawLine(pos, pos + dir * force, Color.red);
-        Debug.Log("Slope Dir: " + dir * force + "Angle: " + detection.Get_Slope_Angle());
+        Debug.DrawLine(pos, pos + (dir * force).normalized, Color.red);
+        //Debug.Log("Slope Dir: " + dir * force + "Angle: " + detection.Get_Slope_Angle());
 
         rb.AddForceAtPosition(dir * force, pos, ForceMode.Force);
         float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.Friction)) : 0;
@@ -338,7 +360,6 @@ public class Player_Controller : MonoBehaviour
         {            
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            Debug.Log("JUMP_01 - " + force);
             if (force < 0.1f)
             {
                 jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;

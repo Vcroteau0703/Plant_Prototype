@@ -22,10 +22,17 @@ public class Wind_Volume : Action_Volume
     {
         Player_Controller p = actor.GetComponentInParent<Player_Controller>();
         if (p != null){
-            if (p.state_controller.Get_Active_State().name != "Gliding") { return; }
-        }
-        Rigidbody rb = p.rb;      
-        float force = rb.velocity.magnitude > power ? 0 : power;
+
+            if (p.state_controller.Get_Active_State().name != "Gliding")
+            {
+                return; 
+            }
+        }      
+        Rigidbody rb = p.rb;
+        float target = power + Mathf.Abs(Physics.gravity.y);
+        float diff = target - rb.velocity.magnitude;
+        float force = Mathf.Clamp(diff, 0, target);
+        Debug.Log("WIND: " + force);
         rb.GetComponent<Rigidbody>().AddForce(force * transform.up, ForceMode.Force);
     }
 }

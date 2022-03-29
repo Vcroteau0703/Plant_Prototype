@@ -9,11 +9,20 @@ public class Detection : MonoBehaviour
     public List<Detection_Cast> casts;
     public Collider collider;
 
+    Vector3 bottom, top;
+
+    public float threshold;
+
     private void Update()
     {
-        foreach(Detection_Cast c in casts){
+        bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
+        top = collider.transform.position + new Vector3(0, collider.bounds.extents.y, 0);
+
+        foreach (Detection_Cast c in casts){
             c.Cast(collider.transform.position);
         }
+
+        //Debug.Log(Get_Wall_Angle(threshold));
     }
 
     private void OnDrawGizmos()
@@ -29,19 +38,29 @@ public class Detection : MonoBehaviour
             Gizmos.DrawCube(collider.transform.position + c.center, c.halfExtends * 2);
         }
 
-        Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
+        if (Application.isPlaying)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawSphere(down.point, 0.1f);
+            Gizmos.DrawSphere(right.point, 0.1f);
+            Gizmos.DrawSphere(left.point, 0.1f);
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawSphere(down.point, 0.1f);
-        Gizmos.DrawSphere(right.point, 0.1f);
-        Gizmos.DrawSphere(left.point, 0.1f);
+            Gizmos.DrawLine(bottom, transform.position + new Vector3(threshold, 0, 0));
+            Gizmos.DrawLine(top, transform.position + new Vector3(threshold, 0, 0));
+            Gizmos.DrawLine(bottom, transform.position - new Vector3(threshold, 0, 0));
+            Gizmos.DrawLine(top, transform.position - new Vector3(threshold, 0, 0));
+
+            Gizmos.DrawSphere(L1.point, 0.1f);
+            Gizmos.DrawSphere(L2.point, 0.1f);
+            Gizmos.DrawSphere(R1.point, 0.1f);
+            Gizmos.DrawSphere(R2.point, 0.1f);
+        }
     }
 
     RaycastHit down, right, left;
     /// <summary>Returns the incline of the current slope in degrees.</summary>
     public float Get_Slope_Angle()
     {
-        Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);      
         Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
@@ -57,10 +76,37 @@ public class Detection : MonoBehaviour
     }
 
 
-
-    public float Get_Wall_Angle()
+    RaycastHit R1, R2, L1, L2;
+    public float Get_Wall_Angle(float threshold)
     {
+        Vector3 offset = (top - bottom) / 2;
+        float max = Vector2.Distance(top, transform.position + new Vector3(threshold, 0, 0));
+        Physics.Raycast(bottom, new Vector3(threshold, 0, 0) + offset, out R1, max, detectable);
+        Physics.Raycast(top, new Vector3(threshold, 0, 0) - offset, out R2, max, detectable);
+        Physics.Raycast(bottom, -new Vector3(threshold, 0, 0) + offset, out L1, max, detectable);
+        Physics.Raycast(top, -new Vector3(threshold, 0, 0) - offset , out L2, max, detectable);
 
+        if(L1.collider && L2.collider)
+        {
+            float a = Vector2.Distance(L1.point, L2.point);
+            float b = Mathf.Abs(L1.point.x - L2.point.x);
+            float f = b / a;
+            float x = Mathf.Rad2Deg * Mathf.Asin(f);
+            x = float.IsNaN(x) ? 0 : x;
+            return x;
+
+        }
+        else if(R1.collider && R2.collider)
+        {
+            float a = Vector2.Distance(R1.point, R2.point);
+            float b = Mathf.Abs(R1.point.x - R2.point.x);
+            float f = b / a;
+            float x = Mathf.Rad2Deg * Mathf.Asin(f);
+            x = float.IsNaN(x) ? 0 : x;
+            return x;
+        }
+
+        return -1;
     }
 
     Vector2 dir;

@@ -71,6 +71,17 @@ public class State_Controller : MonoBehaviour
             }
         }
     }
+    public State Get_State(string name)
+    {
+        foreach(State s in states)
+        {
+            if(s.name == name)
+            {
+                return s;
+            }
+        }
+        return null;
+    }
 }
 
 [System.Serializable]
