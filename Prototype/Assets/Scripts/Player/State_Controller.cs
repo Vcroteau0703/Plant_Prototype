@@ -24,7 +24,7 @@ public class State_Controller : MonoBehaviour
                 isInvoking = false;
             }
         }
-        Debug.Log(Get_Active_State().name);
+        //Debug.Log(Get_Active_State().name);
     }
     public State Get_Active_State()
     {
@@ -70,6 +70,17 @@ public class State_Controller : MonoBehaviour
                 isInvoking = true;
             }
         }
+    }
+    public State Get_State(string name)
+    {
+        foreach(State s in states)
+        {
+            if(s.name == name)
+            {
+                return s;
+            }
+        }
+        return null;
     }
 }
 
