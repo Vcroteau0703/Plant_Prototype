@@ -6,8 +6,8 @@ position: 1,-1
 Hey wait! Up here!
 <<Camera_Pan CameraDuringDialog>>
 <<wait 1.5>>
-Could you help me?
-I climbed all the way up here, but now I-I'm too scared to jump down...
+I need your help!
+I climbed all the way up here, but now I-I can't get down...
 Could you give me something to land on?
 <<Camera_Pan CameraAfterDialog>>
 
@@ -16,7 +16,7 @@ title: Dialogue2
 position: 90,49
 ---
 
-Woah, close call! Thank you so much!
+Thank you so much!
 I could've waited for my mom, but she's just taking forever to get here... 
 ...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
 Just, uh, don't tell her about this.
@@ -37,8 +37,8 @@ title: Node
 position: 198,116.5
 ---
 
-I don't know what you did, but the water's clean now! At least, up here it is.
-Everything is so pretty now, it's like a paradise! I've never seen it look this good!
+I don't know what you did, but the water's clean now! Well, at least, up here it is.
+Everything is so pretty! It's like a paradise! I've never seen it look this good!
 Is it because you helped me? Do you have superpowers? Are you a superhero?!
 Woah, sorry, I'm talking way too fast.
 So...*ahem*... what's your name?
@@ -54,10 +54,10 @@ Anyways, what are you doing?
 -> I need to find my siblings.
 -> Do you know where to find lost plants?
 Well, there's some bad rumors about the caves under the tree up ahead.
-Anyone who goes in those caves never comes out, so I wouldn't check there if I were you.
+Anyone who goes in never comes out, so I wouldn't check there if I were you.
 Even if you wanted to, I don't think a plant like you can make it over the spikes.
 ...But, if your lost plants are there, then I guess you'll have to find a way around that.
-Head on in! Good luck!
+Good luck!
 -> ...
 -> I can't make that jump.
 ...Oh, you don't know how to scale walls, do you?
@@ -65,7 +65,7 @@ Don't worry, I'll show you how it's done! Been doing this since I was a baby!
 <<Camera_Pan WallClimbTutorial>>
 Now, check this out!
 <<wait 1.5>>
-Jumping up walls is pretty easy, if you have good footing, you can hang for as long as you want.
+Jumping up walls is pretty easy. If you have good footing, you can hang for as long as you want.
 <<Camera_Pan WallClimbTutorialMid>>
 Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
 <<wait 0.5>>
