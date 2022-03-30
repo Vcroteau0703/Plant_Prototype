@@ -6,9 +6,7 @@ public class Wind_Volume : Action_Volume
 {
     public Collider col;
 
-    public float intesity = 1.0f;
     public float power = 3.0f;
-    public float accel = 1.0f;
 
     private void Awake()
     {
@@ -22,18 +20,19 @@ public class Wind_Volume : Action_Volume
 
     public void Wind_Force(GameObject actor)
     {
-        if(actor.TryGetComponent(out Player_Controller p)){
-            if (p.current_state != Player_Controller.State.Gliding) { return; }
-        }
+        Player_Controller p = actor.GetComponentInParent<Player_Controller>();
+        if (p != null){
 
-        Rigidbody rb = actor.GetComponent<Rigidbody>();
-        float y = transform.InverseTransformPoint(col.bounds.center).y;
-        Vector3 pos = transform.position + new Vector3(0, y, 0);
-        Vector3 start = pos - (col.bounds.extents.y * Vector3.up);
-        float y_diff = Mathf.Abs(Mathf.Clamp(actor.transform.position.y - start.y, 0.01f, float.PositiveInfinity));
-        float force = Mathf.Pow(-Physics.gravity.y * intesity / y_diff * accel, power);
-        Debug.Log(force);
-        force = Mathf.Clamp(force, 0, -Physics.gravity.y * intesity);
+            if (p.state_controller.Get_Active_State().name != "Gliding")
+            {
+                return; 
+            }
+        }      
+        Rigidbody rb = p.rb;
+        float target = power + Mathf.Abs(Physics.gravity.y);
+        float diff = target - rb.velocity.magnitude;
+        float force = Mathf.Clamp(diff, 0, target);
+        Debug.Log("WIND: " + force);
         rb.GetComponent<Rigidbody>().AddForce(force * transform.up, ForceMode.Force);
     }
 }
