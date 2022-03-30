@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
@@ -71,13 +71,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.8601233, y: 0.79796666, z: 1, w: -0.011445769}
+    m_Value: {x: 1, y: 0.81869876, z: 0.84024966, w: -0.59377944}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8751233, z: 0.8946228, w: -0.00000014086244}
+    m_Value: {x: 1, y: 0.7757749, z: 0.72473794, w: -0.14137593}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.998548, z: 0.9757687, w: 0.16611293}
+    m_Value: {x: 1, y: 0.8684549, z: 0.8412425, w: -0.15433952}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0

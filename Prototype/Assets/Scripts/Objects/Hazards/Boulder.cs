@@ -18,7 +18,6 @@ public class Boulder : Hazard, ISavable
             a.Damage(damage);
             if(damage > 0 && director != null)
             {
-                Debug.Log("got here");
                 ResetCutscene();
             }
         }
@@ -27,8 +26,8 @@ public class Boulder : Hazard, ISavable
     public void ResetCutscene()
     {
         director.time = 0;
-        director.Stop();
         director.Evaluate();
+        director.Stop();
         vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
 
