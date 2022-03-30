@@ -12,7 +12,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public int max_health = 1;
     public int invCycles;
 
-    private SpriteRenderer sprigSprite;
+    public SpriteRenderer[] sprigSprites;
     private Color sprigColor;
 
     internal bool sapActive = false;
@@ -42,8 +42,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
             }
         }
-        sprigSprite = GetComponent<SpriteRenderer>();
-        sprigColor = sprigSprite.color;
+        sprigColor = sprigSprites[0].color;
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
         HUD = GameObject.FindGameObjectWithTag("HUD");
         UpdateHealthUI(health);
@@ -125,7 +124,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 float t = currentTime / cycleTime;
                 float currAlpha = Mathf.Lerp(a, b, t);
                 sprigColor.a = currAlpha;
-                sprigSprite.color = sprigColor;
+                foreach(SpriteRenderer sR in sprigSprites)
+                {
+                    sR.color = sprigColor;
+                }
                 yield return null;
             }
             // swapping a and b
