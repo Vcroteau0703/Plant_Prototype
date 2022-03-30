@@ -12,7 +12,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public int max_health = 1;
     public int invCycles;
 
-    private SpriteRenderer sprigSprite;
+    public SpriteRenderer[] sprigSprites;
     private Color sprigColor;
 
     internal bool sapActive = false;
@@ -35,14 +35,14 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         Player_Data player = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (player != null){
             health = player.health;
+            currColl = player.currColl;
             if (SceneManager.GetActiveScene().name == player.scene)
             {
                 float[] checkpoint = player.checkpoint.position;
                 transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
             }
         }
-        sprigSprite = GetComponent<SpriteRenderer>();
-        sprigColor = sprigSprite.color;
+        sprigColor = sprigSprites[0].color;
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
         HUD = GameObject.FindGameObjectWithTag("HUD");
         UpdateHealthUI(health);
@@ -74,7 +74,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         {
             health = max_health;
             UpdateHealthUI(health);
-            SapEffectOff();
+            if (sapActive)
+            {
+                SapEffectOff();
+            }
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             transform.position = x.transform.position;
             return;
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     {
         // make termites collectable and disable their hazard damage
         sapActive = true;
-        transform.GetChild(2).gameObject.SetActive(true);
+        transform.Find("Sap").gameObject.SetActive(true);
         // set slow movement settings
         gameObject.GetComponent<Player_Controller>().settings = sapSettings;
     }
@@ -93,7 +96,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public void SapEffectOff()
     {
         sapActive = false;
-        transform.GetChild(2).gameObject.SetActive(false);
+        transform.Find("Sap").gameObject.SetActive(false);
         gameObject.GetComponent<Player_Controller>().settings = originalSettings;
     }
 
@@ -121,7 +124,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 float t = currentTime / cycleTime;
                 float currAlpha = Mathf.Lerp(a, b, t);
                 sprigColor.a = currAlpha;
-                sprigSprite.color = sprigColor;
+                foreach(SpriteRenderer sR in sprigSprites)
+                {
+                    sR.color = sprigColor;
+                }
                 yield return null;
             }
             // swapping a and b

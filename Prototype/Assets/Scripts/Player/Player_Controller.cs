@@ -53,7 +53,7 @@ public class Player_Controller : MonoBehaviour
     {
         state_controller.Enable_State("Glide");
     }
-    private void OnEnable()
+    public void OnEnable()
     {
         settings = setting_presets.Length > 0 ? setting_presets[0] : settings;
         controls = controls == null ? new Controls() : controls;
@@ -74,7 +74,7 @@ public class Player_Controller : MonoBehaviour
         //Ground_Lock();
         friction = detection.collider.material.dynamicFriction;   
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         controls.Player.Disable();
     }

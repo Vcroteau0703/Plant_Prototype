@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using Cinemachine;
 
-public class Boulder : Hazard
+public class Boulder : Hazard, ISavable
 {
     public PlayableDirector director;
+    public CinemachineVirtualCamera vcam;
+    public string boulderSaveID;
+    public bool isDone = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +18,7 @@ public class Boulder : Hazard
             a.Damage(damage);
             if(damage > 0 && director != null)
             {
+                Debug.Log("got here");
                 ResetCutscene();
             }
         }
@@ -22,6 +27,46 @@ public class Boulder : Hazard
     public void ResetCutscene()
     {
         director.time = 0;
-        director.Pause();
+        director.Stop();
+        director.Evaluate();
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
+
+    public void Save()
+    {
+        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
+
+        if (data == null && isDone)
+        {
+            data = new BoulderData();
+            data.isDone = true;
+            SaveSystem.Save<BoulderData>(data, boulderSaveID);
+        }
+    }
+
+    public void Load()
+    {
+        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
+
+        if (data != null && data.isDone)
+        {
+            director.initialTime = 250f;
+            director.Play();
+        }
+    }
+
+    private void Awake()
+    {
+        Load();
+    }
+
+    public void CutsceneDone(bool done)
+    {
+        isDone = done;
+    }
+}
+[System.Serializable]
+public class BoulderData
+{
+    public bool isDone = false;
 }
