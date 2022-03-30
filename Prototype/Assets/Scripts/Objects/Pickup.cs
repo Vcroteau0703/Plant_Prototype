@@ -9,7 +9,7 @@ public class Pickup : MonoBehaviour
 
     private void Awake()
     {
-        //Load();
+        //Register(this);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -18,8 +18,7 @@ public class Pickup : MonoBehaviour
         {
             player.currColl++;
             destroy = true;
-            //Save();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

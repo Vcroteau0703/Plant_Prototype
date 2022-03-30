@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using Cinemachine;
 
 public class Boulder : Hazard, ISavable
 {
     public PlayableDirector director;
+    public CinemachineVirtualCamera vcam;
     public string boulderSaveID;
     public bool isDone = false;
 
@@ -16,6 +18,7 @@ public class Boulder : Hazard, ISavable
             a.Damage(damage);
             if(damage > 0 && director != null)
             {
+                Debug.Log("got here");
                 ResetCutscene();
             }
         }
@@ -24,7 +27,9 @@ public class Boulder : Hazard, ISavable
     public void ResetCutscene()
     {
         director.time = 0;
-        director.Pause();
+        director.Stop();
+        director.Evaluate();
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
 
     public void Save()
