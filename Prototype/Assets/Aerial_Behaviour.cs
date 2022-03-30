@@ -5,7 +5,6 @@ using UnityEngine;
 public class Aerial_Behaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-
     public AnimationClip Implied_Wall_Jump, Implied_Jump, Normal_Aerial;
     protected AnimatorOverrideController animatorOverrideController;
 
