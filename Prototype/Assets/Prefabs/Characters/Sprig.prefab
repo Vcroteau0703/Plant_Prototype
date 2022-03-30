@@ -733,7 +733,14 @@ MonoBehaviour:
   sapSettings: {fileID: 0}
   health: 5
   max_health: 5
-  healthUI: {fileID: 0}
+  invCycles: 4
+  sprigSprites:
+  - {fileID: 1283036603645868746}
+  - {fileID: 3370198460975564080}
+  - {fileID: 1134059658743363697}
+  - {fileID: 3292750171011353757}
+  - {fileID: 3708509084569007970}
+  - {fileID: 2440726248223387782}
 --- !u!114 &461688541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6871,7 +6878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2702775587751434886}
   - component: {fileID: 4453254805691399277}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
