@@ -179,13 +179,11 @@ public class Player_Controller : MonoBehaviour
                 if(direction.y < 0)
                 {
                     state_controller.Request_State("Slide");                  
-                    Debug.Log("Slide");
                     return;
                 }
                 else
                 {
                     state_controller.Request_State("Cling");
-                    Debug.Log("Cling");
                     return;
                 }
             }            
@@ -199,12 +197,10 @@ public class Player_Controller : MonoBehaviour
                 settings.Wall_Jump.phase == Jump.State.Canceled &&
                 controls.Player.Glide.phase == InputActionPhase.Performed){
                 state_controller.Request_State("Gliding");
-                Debug.Log("Gliding");
                 return;
             }
 
             state_controller.Request_State("Aerial");
-            Debug.Log("Aerial");
             return;                     
         }
         if (down) // Ground
@@ -214,14 +210,12 @@ public class Player_Controller : MonoBehaviour
             {
                 aerial_time = 0;
                 state_controller.Request_State("Moving");
-                Debug.Log("Moving");
                 return;
             }
             else
             {
                 aerial_time = 0;
                 state_controller.Request_State("Idle");
-                Debug.Log("Idle");
                 return;
             }
         }
