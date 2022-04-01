@@ -14,6 +14,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
     public SpriteRenderer[] sprigSprites;
     private Color sprigColor;
+    public Color sapColor;
+    public Color SprigHurtColor;
 
     internal bool sapActive = false;
     private bool damageActive = true;
@@ -42,10 +44,9 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
             }
         }
-        sprigColor = sprigSprites[0].color;
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
         HUD = GameObject.FindGameObjectWithTag("HUD");
-        UpdateHealthUI(health);
+        HUD.GetComponentInChildren<HealthUI>().UpdateUI(health);
     }
 
     public void Save()
@@ -86,17 +87,23 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
     public void SapEffectOn()
     {
-        // make termites collectable and disable their hazard damage
         sapActive = true;
-        transform.Find("Sap").gameObject.SetActive(true);
-        // set slow movement settings
+        foreach (SpriteRenderer sR in sprigSprites)
+        {
+            sR.color = sapColor;
+        }
+        GameObject.Find("SapEffect").GetComponent<ParticleSystem>().Play();
         gameObject.GetComponent<Player_Controller>().settings = sapSettings;
     }
 
     public void SapEffectOff()
     {
         sapActive = false;
-        transform.Find("Sap").gameObject.SetActive(false);
+        foreach (SpriteRenderer sR in sprigSprites)
+        {
+            sR.color = Color.white;
+        }
+        GameObject.Find("SapEffect").GetComponent<ParticleSystem>().Stop();
         gameObject.GetComponent<Player_Controller>().settings = originalSettings;
     }
 
@@ -107,6 +114,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             HUD.GetComponentInChildren<HealthUI>().UpdateUI(currHealth);
             if(currHealth != max_health)
             {
+                if (sapActive)
+                {
+                    sprigColor = sapColor;
+                }
                 StartCoroutine(IFrames(invCycles, 0.2f));
             }
         }
@@ -122,18 +133,35 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             {
                 currentTime += Time.deltaTime;
                 float t = currentTime / cycleTime;
-                float currAlpha = Mathf.Lerp(a, b, t);
-                sprigColor.a = currAlpha;
-                foreach(SpriteRenderer sR in sprigSprites)
+                Color currColor = Color.Lerp(sprigColor, SprigHurtColor, t);
+                sprigColor = currColor;
+                foreach (SpriteRenderer sR in sprigSprites)
                 {
                     sR.color = sprigColor;
                 }
                 yield return null;
             }
-            // swapping a and b
-            a = a + b;
-            b = a - b;
-            a = a - b;
+            currentTime = 0;
+            while (currentTime < cycleTime)
+            {
+                currentTime += Time.deltaTime;
+                float t = currentTime / cycleTime;
+                if (sapActive)
+                {
+                    Color currColor = Color.Lerp(sprigColor, sapColor, t);
+                    sprigColor = currColor;
+                }
+                else
+                {
+                    Color currColor = Color.Lerp(sprigColor, Color.white, t);
+                    sprigColor = currColor;
+                }
+                foreach (SpriteRenderer sR in sprigSprites)
+                {
+                    sR.color = sprigColor;
+                }
+                yield return null;
+            }
             flashCycles--;
         }
         damageActive = true;

@@ -19,7 +19,7 @@ public class Sap_Volume : Action_Volume
 
     public void StartSap(GameObject actor)
     {
-        Player player = actor.GetComponent<Player>();
+        Player player = actor.GetComponentInParent<Player>();
         if (player.sapActive)
         {
             StopAllCoroutines();
@@ -28,12 +28,11 @@ public class Sap_Volume : Action_Volume
         {
             player.SapEffectOn();
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.TryGetComponent<Player>(out Player player))
+        if(other.transform.parent.TryGetComponent<Player>(out Player player))
         {
             StartCoroutine(SapTimer(player));
         }
