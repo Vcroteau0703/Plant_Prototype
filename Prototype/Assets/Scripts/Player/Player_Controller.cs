@@ -451,7 +451,10 @@ public class Player_Controller : MonoBehaviour
         animator.SetFloat("VELOCITY_X", Mathf.Round(rb.velocity.x));
         animator.SetFloat("WALK_SPEED", rb.velocity.x * direction.x);
 
-        animator.SetBool("GROUND", state_controller.Get_Active_State().name == "Moving" || state_controller.Get_Active_State().name == "Idle");
+        animator.SetBool("JUMP_01", state_controller.Get_Active_State().name == "Jump");
+        animator.SetBool("JUMP_02", state_controller.Get_Active_State().name == "Wall Jump");
+        animator.SetBool("MOVING", state_controller.Get_Active_State().name == "Moving");
+        animator.SetBool("IDLE", state_controller.Get_Active_State().name == "Idle");
         animator.SetBool("AERIAL", state_controller.Get_Active_State().name == "Aerial");
         animator.SetBool("CLING", state_controller.Get_Active_State().name == "Cling");
         animator.SetBool("GLIDE", state_controller.Get_Active_State().name == "Gliding");
