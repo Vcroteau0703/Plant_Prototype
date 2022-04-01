@@ -88,7 +88,9 @@ public class Player_Controller : MonoBehaviour
         direction = new Vector2(x, y);
         Flip((int)((direction.x % 1) + (direction.x / 1)));
 
-        if(left || right || !down)
+        State state = state_controller.Get_Active_State();
+
+        if(state.name != "Moving" && state.name != "Idle")
         {
             return; 
         }
@@ -103,15 +105,13 @@ public class Player_Controller : MonoBehaviour
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
-        bool left = detection.Get_Detection("Left").target;
-        bool right = detection.Get_Detection("Right").target;
-        bool down = detection.Get_Detection("Down").target;
+        State state = state_controller.Get_Active_State();
 
-        if (down && !left && !right)
+        if (state.name == "Idle" || state.name == "Moving")
         {
             state_controller.Request_State("Jump");
         }       
-        else if (right || left)
+        else if (state.name == "Cling")
         {
             state_controller.Request_State("Wall Jump");
         }
@@ -165,50 +165,31 @@ public class Player_Controller : MonoBehaviour
         right = detection.Get_Detection("Right").target;
         down = detection.Get_Detection("Down").target;
 
+        float slope = detection.Get_Slope_Angle();
+        float wall = detection.Get_Wall_Angle(settings.Cling_Threshold);
+
+
         State active = state_controller.Get_Active_State();
 
 
         if((left || right) && aerial_time > 0.5f) // Wall
-        {
-            
-            float angle = detection.Get_Wall_Angle(settings.Cling_Threshold);
-            Debug.Log(angle);
-            if(angle < 30 && angle >= 0)
+        {        
+            if(wall < 30 && wall >= 0)
             {
                 if(direction.y < 0)
                 {
                     state_controller.Request_State("Slide");                  
-                    Debug.Log("Slide");
                     return;
                 }
                 else
                 {
                     state_controller.Request_State("Cling");
-                    Debug.Log("Cling");
                     return;
                 }
             }            
         } 
-
-        if (down) // Ground
-        {
-            if (direction.x != 0)
-            {
-                aerial_time = 0;
-                state_controller.Request_State("Moving");
-                Debug.Log("Moving");
-                return;
-            }
-            else
-            {
-                aerial_time = 0;
-                state_controller.Request_State("Idle");
-                Debug.Log("Idle");
-                return;
-            }
-        }
-        
-        if(detection.Is_Detecting() == false) //Air
+     
+        if(detection.Is_Detecting() == false || slope == -1) //Air
         {
             State glide = state_controller.Get_State("Gliding");
 
@@ -216,13 +197,27 @@ public class Player_Controller : MonoBehaviour
                 settings.Wall_Jump.phase == Jump.State.Canceled &&
                 controls.Player.Glide.phase == InputActionPhase.Performed){
                 state_controller.Request_State("Gliding");
-                Debug.Log("Gliding");
                 return;
             }
 
             state_controller.Request_State("Aerial");
-            Debug.Log("Aerial");
             return;                     
+        }
+        if (down) // Ground
+        {
+            
+            if (direction.x != 0)
+            {
+                aerial_time = 0;
+                state_controller.Request_State("Moving");
+                return;
+            }
+            else
+            {
+                aerial_time = 0;
+                state_controller.Request_State("Idle");
+                return;
+            }
         }
     }
 
@@ -238,15 +233,12 @@ public class Player_Controller : MonoBehaviour
         Vector2 pos = detection.collider.transform.position;
         Vector2 dir = detection.Get_Slope_Direction();
 
-        
-
         float speed = direction.x * settings.Move_Speed;
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Acceleration) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -Mathf.Abs(force), Mathf.Abs(force)), rb.velocity.y);
 
         Debug.DrawLine(pos, pos + (dir * force).normalized, Color.red);
-        //Debug.Log("Slope Dir: " + dir * force + "Angle: " + detection.Get_Slope_Angle());
 
         rb.AddForceAtPosition(dir * force, pos, ForceMode.Force);
         float friction_force = Mathf.Abs(direction.x) < settings.horizontal_deadzone ? Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(settings.Friction)) : 0;
@@ -255,9 +247,8 @@ public class Player_Controller : MonoBehaviour
     }
     public void Cling()
     {
-        //rb.isKinematic = true;
         //CLING
-        detection.collider.material.dynamicFriction = settings.Wall_Jump.phase != Jump.State.Started ? 100f : 0f;
+        rb.isKinematic = settings.Wall_Jump.phase != Jump.State.Started ? true : false;
         foreach (Detection_Cast c in detection.Get_All_Detections())
         {
             if (c.name == "Left")
@@ -307,7 +298,7 @@ public class Player_Controller : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
         
-        if (rb.velocity.y < 0.5f)
+        if (rb.velocity.y < 1f)
         {
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
@@ -331,11 +322,13 @@ public class Player_Controller : MonoBehaviour
     public void Slide()
     {
         Cling();
+        Vector3 dir = detection.Get_Wall_Direction();
+        Debug.DrawLine(transform.position, transform.position + dir * slide_speed, Color.green);
         if (direction.y < 0 && detection.Is_Detecting())
         {
             float a = slide_speed + Time.deltaTime * settings.Slide_Accel;
             slide_speed = Mathf.Clamp(a, 0, settings.Max_Slide_Speed);
-            transform.position += Vector3.down * slide_speed * Time.deltaTime;
+            transform.position += dir * slide_speed * Time.deltaTime;
             return;
         }
     }
@@ -458,7 +451,10 @@ public class Player_Controller : MonoBehaviour
         animator.SetFloat("VELOCITY_X", Mathf.Round(rb.velocity.x));
         animator.SetFloat("WALK_SPEED", rb.velocity.x * direction.x);
 
-        animator.SetBool("GROUND", state_controller.Get_Active_State().name == "Moving" || state_controller.Get_Active_State().name == "Idle");
+        animator.SetBool("JUMP_01", state_controller.Get_Active_State().name == "Jump");
+        animator.SetBool("JUMP_02", state_controller.Get_Active_State().name == "Wall Jump");
+        animator.SetBool("MOVING", state_controller.Get_Active_State().name == "Moving");
+        animator.SetBool("IDLE", state_controller.Get_Active_State().name == "Idle");
         animator.SetBool("AERIAL", state_controller.Get_Active_State().name == "Aerial");
         animator.SetBool("CLING", state_controller.Get_Active_State().name == "Cling");
         animator.SetBool("GLIDE", state_controller.Get_Active_State().name == "Gliding");

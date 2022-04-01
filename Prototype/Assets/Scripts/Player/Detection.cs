@@ -65,6 +65,7 @@ public class Detection : MonoBehaviour
         Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
 
+        if (!down.collider) { return -1; }
         float a = right.collider ? right.distance : left.distance;
         float b = Vector2.Distance(right.point, down.point);
         float x;
@@ -109,6 +110,29 @@ public class Detection : MonoBehaviour
         return -1;
     }
 
+    public Vector2 Get_Wall_Direction()
+    {
+        Vector3 offset = (top - bottom) / 2;
+        float max = Vector2.Distance(top, transform.position + new Vector3(threshold, 0, 0));
+        Physics.Raycast(bottom, new Vector3(threshold, 0, 0) + offset, out R1, max, detectable);
+        Physics.Raycast(top, new Vector3(threshold, 0, 0) - offset, out R2, max, detectable);
+        Physics.Raycast(bottom, -new Vector3(threshold, 0, 0) + offset, out L1, max, detectable);
+        Physics.Raycast(top, -new Vector3(threshold, 0, 0) - offset, out L2, max, detectable);
+
+        if (L1.collider && L2.collider)
+        {
+
+            return (L1.point - L2.point).normalized;
+
+        }
+        else if (R1.collider && R2.collider)
+        {
+            return (R1.point - R2.point).normalized;
+        }
+
+        return Vector2.zero;
+    }
+
     Vector2 dir;
     /// <summary>Returns the direction of the current slope as a Vector2.</summary>
     public Vector2 Get_Slope_Direction()
@@ -120,12 +144,10 @@ public class Detection : MonoBehaviour
 
         if (right.collider && down.collider)
         {
-            Debug.Log("Right");
             return (right.point - down.point).normalized;
         }
         else if(left.collider && down.collider)
         {
-            Debug.Log("Left");
             return (down.point - left.point).normalized;
         }
         return Vector3.right;
