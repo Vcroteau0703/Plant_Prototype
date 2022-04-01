@@ -18,7 +18,7 @@ public class Water_Volume : Action_Volume
 
     public void Deactivate_Sap(GameObject actor)
     {
-        Player player = actor.GetComponent<Player>();
+        Player player = actor.GetComponentInParent<Player>();
         if (player.sapActive)
         {
             player.SapEffectOff();
