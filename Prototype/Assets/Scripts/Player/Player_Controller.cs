@@ -174,11 +174,11 @@ public class Player_Controller : MonoBehaviour
 
         if((left || right) && aerial_time > 0.25f) // Wall
         {        
-            if(wall < 30 && wall >= 0)
-            {
-                if(direction.y < 0 && slope == -1)
+            if(wall < 30 && wall >= 0 && state_controller.Get_State("Cling").enabled)
+            {               
+                if (direction.y < 0 && slope == -1)
                 {
-                    state_controller.Request_State("Slide");                  
+                    state_controller.Request_State("Slide");            
                     return;
                 }
                 else
@@ -192,14 +192,13 @@ public class Player_Controller : MonoBehaviour
         if(detection.Is_Detecting() == false || slope == -1) //Air
         {
             State glide = state_controller.Get_State("Gliding");
-
+            Debug.Log(slope);
             if (settings.Jump.phase == Jump.State.Canceled &&
                 settings.Wall_Jump.phase == Jump.State.Canceled &&
                 controls.Player.Glide.phase == InputActionPhase.Performed){
                 state_controller.Request_State("Gliding");
                 return;
-            }
-
+            }          
             state_controller.Request_State("Aerial");
             return;                     
         }
