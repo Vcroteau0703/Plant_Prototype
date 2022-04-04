@@ -45,36 +45,37 @@ So...*ahem*... what's your name?
 -> Sprig!
 -> ...Sprig.
 "Sprig?" Heh, now that's a funny name for a superhero!
-So, do you know what happened with that blizzard?
+My name's Spinner.
+Spinner: So, do you know what happened with that blizzard?
 -> No clue.
+    Spinner: Hmmm, well I think that maybe it finally cleared up?
 -> It must've finally cleared up.
-Hmmm, well I think that maybe it finally cleared up?
-I don't know...But I guess it's not important, as long as its over.
-Anyways, what are you doing?
+Spinner: I don't know...But I guess it's not important, as long as its over.
+Spinner: Anyways, what are you doing?
 -> I need to find my siblings.
 -> Do you know where to find lost plants?
-Well, there's some bad rumors about the caves under the tree up ahead.
-Anyone who goes in never comes out, so I wouldn't check there if I were you.
-Even if you wanted to, I don't think a plant like you can make it over the spikes.
-...But, if your lost plants are there, then I guess you'll have to find a way around that.
-Good luck!
+Spinner: Well, there's some bad rumors about the caves under the tree up ahead.
+Spinner: Anyone who goes in never comes out, so I wouldn't check there if I were you.
+Spinner: Even if you wanted to, I don't think a plant like you can make it over the spikes.
+Spinner: ...But, if your lost plants are there, then I guess you'll have to find a way around that.
+Spinner: Good luck!
 -> ...
 -> I can't make that jump.
-...Oh, you don't know how to scale walls, do you?
-Don't worry, I'll show you how it's done! Been doing this since I was a baby!
+Spinner: ...Oh, you don't know how to scale walls, do you?
+Spinner: Don't worry, I'll show you how it's done! Been doing this since I was a baby!
 <<Camera_Pan WallClimbTutorial>>
-Now, check this out!
+Spinner: Now, check this out!
 <<wait 1.5>>
-Jumping up walls is pretty easy. If you have good footing, you can hang for as long as you want.
+Spinner: Jumping up walls is pretty easy. If you have good footing, you can hang for as long as you want.
 <<Camera_Pan WallClimbTutorialMid>>
-Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
+Spinner: Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
 <<wait 0.5>>
-Alright, hope that helps!
+Spinner: Alright, hope that helps!
 <<Camera_Pan WallClimbTutorialEnd>>
-I'm gonna go over and head to the tree. Maybe I'll see you there!
-N-Not that I'm scared of the cave or anything, I just want to...er...
-...make sure the coast is clear!
-...yeah.
+Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
+Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
+Spinner: ...make sure the coast is clear!
+Spinner: ...yeah.
 
 ===
 title: tree1

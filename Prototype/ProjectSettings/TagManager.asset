@@ -9,6 +9,10 @@ TagManager:
   - Character
   - Pickup
   - HUD
+  - Earth
+  - Wood
+  - Water
+  - Stone
   layers:
   - Default
   - TransparentFX

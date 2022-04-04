@@ -1,5 +1,23 @@
-﻿title: Level2
+﻿title: Level2SapTut
 tags:
 ---
+
+Spinner: Sprig! You finally made it!
+<<Camera_Pan BeforeTut>>
+Spinner: This tree is massive!
+<<wait 1.5>> 
+Spinner: Ack! What is this stuff?
+It's my sap. Those nasty termites have left me wounded. Sorry little ones.
+Spinner: Ew. I'm so sticky and slow. I need to wash this off. 
+<<Camera_Pan SapTut>>
+<<wait 1.5>> 
+Spinner: Whew, that's much better.
+Spinner: Who was that?
+My name is Grover and I am the tree you walk upon little spiderling.
+Grover: Please help me by destroying those termites. As many as you can. I cannot recover while they continue to knaw at me.
+Grover: But be careful, they will eat at you too. 
+Spinner: How is he supposed to destroy them then?
+Grover: Perhaps my sap is the answer, once it starts flowing they quickly move away.
+
 
 ===
