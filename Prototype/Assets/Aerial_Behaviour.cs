@@ -5,21 +5,32 @@ using UnityEngine;
 public class Aerial_Behaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    [Header("JUMPING")]
+    public AnimationClip Implied_Wall_Jump, Implied_Jump;
+    [Header("AERIAL")]
+    public AnimationClip Normal_Aerial;
+    [Header("FALLING")]
+    public AnimationClip Fall, Fall_Transition;
+    [Header("GLIDING")]
+    public AnimationClip Glide;
 
-    public AnimationClip Implied_Wall_Jump, Implied_Jump, Normal_Aerial;
-    protected AnimatorOverrideController animatorOverrideController;
+    protected AnimatorOverrideController controller;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         
         AnimatorTransitionInfo transition = animator.GetAnimatorTransitionInfo(layerIndex);
 
-        animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-        animator.runtimeAnimatorController = animatorOverrideController;
+        controller = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        animator.runtimeAnimatorController = controller;
 
-        if (transition.IsName("IDLE -> AERIAL") || (transition.IsName("WALK -> AERIAL")))
+        if (transition.IsName("GROUND -> AIR"))
         {
-            animatorOverrideController["Aerial"] = Implied_Jump;
+            controller["Aerial"] = Implied_Jump;
+        }
+        else if(transition.IsName("WALL -> AIR"))
+        {
+            controller["Aerial"] = Implied_Wall_Jump;
         }
 
         //Debug.Log(animator.GetAnimatorTransitionInfo(layerIndex).IsName("IDLE -> AERIAL"));
@@ -28,12 +39,27 @@ public class Aerial_Behaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (stateInfo.IsName("AERIAL"))
+        bool isGlide = animator.GetBool("GLIDE");
+        bool isAerial = animator.GetBool("AERIAL");
+        float velocity_Y = animator.GetFloat("VELOCITY_Y");
+
+        if (isAerial)
         {
-            if (animatorOverrideController["Aerial"] == Implied_Jump && stateInfo.normalizedTime >= 1.5f)
+            if (controller["Aerial"] == Normal_Aerial && stateInfo.normalizedTime < 1.5f) { return; }
+
+            if (velocity_Y < 0)
             {
-                animatorOverrideController["Aerial"] = Normal_Aerial;
+                controller["Aerial"] = Fall;
             }
+            else
+            {
+                controller["Aerial"] =  Normal_Aerial;
+            }
+
+        }
+        else if(isGlide)
+        {
+            controller["Aerial"] = Glide;
         }
     }
 
