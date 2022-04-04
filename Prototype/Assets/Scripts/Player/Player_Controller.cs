@@ -172,11 +172,11 @@ public class Player_Controller : MonoBehaviour
         State active = state_controller.Get_Active_State();
 
 
-        if((left || right) && aerial_time > 0.5f) // Wall
+        if((left || right) && aerial_time > 0.25f) // Wall
         {        
             if(wall < 30 && wall >= 0)
             {
-                if(direction.y < 0)
+                if(direction.y < 0 && slope == -1)
                 {
                     state_controller.Request_State("Slide");                  
                     return;
