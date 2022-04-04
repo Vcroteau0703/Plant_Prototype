@@ -63,7 +63,7 @@ public class Detection : MonoBehaviour
     {
         Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
+        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, collider.bounds.extents.y + 0.1f, detectable);
 
         if (!down.collider) { return -1; }
         float a = right.collider ? right.distance : left.distance;
@@ -140,7 +140,7 @@ public class Detection : MonoBehaviour
         Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
         Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
         Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom, -Vector3.up, out down, collider.bounds.extents.y, detectable);
+        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, collider.bounds.extents.y + 0.1f, detectable);
 
         if (right.collider && down.collider)
         {
