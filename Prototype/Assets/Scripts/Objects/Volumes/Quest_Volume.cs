@@ -16,3 +16,4 @@ public class Quest_Volume : Action_Volume
         Quest_System.Start_Quest(quest);
     }
 }
+

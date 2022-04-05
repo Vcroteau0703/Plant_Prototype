@@ -7,17 +7,7 @@ using System.IO;
 
 public class TaskBar : MonoBehaviour
 {
-    public Quest _targetQuest;
-    public Quest Target_Quest{
-        get{
-            return _targetQuest;
-        }
-        set{
-            _targetQuest = value;
-            if (Application.isPlaying) { UpdateDisplay(); }        
-        }
-    }
-   
+    
     [Header("Components:")]
     public TMP_Text questTitle;
     public Transform taskContainer;
@@ -29,26 +19,23 @@ public class TaskBar : MonoBehaviour
         data = TaskBarData.GetData(); 
     }
 
-    public void UpdateDisplay()
+    public void UpdateDisplay(Quest quest)
     {
         foreach(Transform child in taskContainer.transform)
         {
             Destroy(child.gameObject);
         }
 
-        if (Target_Quest) { questTitle.text = Target_Quest.questTitle; }
+        if (quest) { questTitle.text = quest.questTitle; }
         else { questTitle.text = "No Quest Selected"; return; }
 
-        foreach (Event e in Target_Quest.events)
+        foreach (Event e in quest.events)
         {
-            if (!e.completed)
+            foreach (Task t in e.tasks)
             {
-                foreach (Task t in e.tasks)
-                {
-                    AddTask(t.description, t.progress);
-                }
-                break;
+                AddTask(t.description, t.progress);
             }
+            break;
         }
     }
 
@@ -57,9 +44,4 @@ public class TaskBar : MonoBehaviour
         GameObject task = Instantiate(data.default_task, taskContainer);
         task.GetComponent<Task_UI>().SetProperties(description, progress);
     }
-    private void OnValidate()
-    {
-        Target_Quest = _targetQuest;
-    }
-
 }
