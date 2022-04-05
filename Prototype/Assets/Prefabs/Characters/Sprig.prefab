@@ -5358,6 +5358,8 @@ GameObject:
   - component: {fileID: 241961526}
   - component: {fileID: 461688541}
   - component: {fileID: 820603017087038384}
+  - component: {fileID: 4951751202137397660}
+  - component: {fileID: 4241365237984782972}
   m_Layer: 7
   m_Name: Sprig
   m_TagString: Untagged
@@ -5809,6 +5811,145 @@ MonoBehaviour:
   closestItem: {fileID: 0}
   interactionRange: 2
   showRange: 0
+--- !u!82 &4951751202137397660
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841292781099324094}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &4241365237984782972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841292781099324094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061be93c4d94c0e41afce08a7e472370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detection: {fileID: 2686934931841054104}
+  footstepsWood:
+  - {fileID: 8300000, guid: 013c0f70fba287a43af7e7fb86454e02, type: 3}
+  - {fileID: 8300000, guid: b71de486bfdcc114899320da4d6be5b0, type: 3}
+  - {fileID: 8300000, guid: bb5cb976e3130fd4caf52704c16d907f, type: 3}
+  - {fileID: 8300000, guid: 3e233f3929a1b7d42b629b4a23925706, type: 3}
+  - {fileID: 8300000, guid: 81bff8d30c5eee144850e78c36dd7f42, type: 3}
+  footstepsEarth:
+  - {fileID: 8300000, guid: 97e1e1700fdb3064dbf7451376b27701, type: 3}
+  - {fileID: 8300000, guid: 406be27a3c5c71b44a439990dc468845, type: 3}
+  - {fileID: 8300000, guid: 200c7a61d270ce2458218c7f9982d15f, type: 3}
+  - {fileID: 8300000, guid: 3dba891944deaf94a8a4c6093f81ba72, type: 3}
+  - {fileID: 8300000, guid: 6cb4b26937187644ab35cdd4b245eb4e, type: 3}
+  footstepsStone:
+  - {fileID: 8300000, guid: 8f6016895affbc54caa55d7c14099005, type: 3}
+  - {fileID: 8300000, guid: 2e210f918704f9949b1ca09472ae3cc5, type: 3}
+  - {fileID: 8300000, guid: 56ab8fae260bf604a824d46a8a1258a9, type: 3}
+  - {fileID: 8300000, guid: f5f3042d1453e5d4fb4fc5d8e24eb3fa, type: 3}
+  - {fileID: 8300000, guid: b2601dcf6038d854b81bba92c7674043, type: 3}
+  footstepsWater:
+  - {fileID: 8300000, guid: 6dea33f86c4f41e4eb457df0dcce4a59, type: 3}
+  - {fileID: 8300000, guid: 302d14bf2d21d8d40b9b7613ea0eaf0f, type: 3}
+  - {fileID: 8300000, guid: 74d2f27d4f3575d42916c8081439faee, type: 3}
+  - {fileID: 8300000, guid: fe75565bbaa43cf45816bc214b71b03d, type: 3}
+  - {fileID: 8300000, guid: 2b149000e58ff334293cf3325f59f3e4, type: 3}
+  damage:
+  - {fileID: 8300000, guid: e97d2f492767f21449c0a6b0cd2e294c, type: 3}
+  - {fileID: 8300000, guid: 1f262f71ef31c8444bb04e34cfdd14b8, type: 3}
+  - {fileID: 8300000, guid: d317b0e757f92b84ea5d2b659b2a57be, type: 3}
+  death: {fileID: 8300000, guid: 85b921b125101674b808039fcbee4926, type: 3}
+  jump: {fileID: 8300000, guid: 5ce0d07d846bcdc40b3a51010c51c2ab, type: 3}
 --- !u!1 &5020844046622353769
 GameObject:
   m_ObjectHideFlags: 0
