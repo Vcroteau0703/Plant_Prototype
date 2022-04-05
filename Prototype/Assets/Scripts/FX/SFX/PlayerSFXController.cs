@@ -32,7 +32,7 @@ public class PlayerSFXController : MonoBehaviour
         if (down) { cast = detection.Get_Detection("Down"); }
         else if (left) { cast = detection.Get_Detection("Left"); }
         else if (right) { cast = detection.Get_Detection("Right"); }
-        if(cast != null)
+        if(cast.target != null)
         {
             switch (cast.target.tag)
             {
@@ -79,7 +79,7 @@ public class PlayerSFXController : MonoBehaviour
         aS.Play();
     }
 
-    public void Jump()
+    public void PlayJump()
     {
         aS.clip = jump;
         aS.Play();

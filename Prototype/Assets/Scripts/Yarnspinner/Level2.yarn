@@ -22,7 +22,7 @@ Grover: Perhaps my sap is the answer, once it starts flowing they quickly move a
 
 ===
 title: Level2Frond
-position: 0,0.5
+position: -3,44
 ---
 
 <<Camera_Pan FrondHug>>
@@ -31,9 +31,53 @@ Frond: Sprig!
 -> Brother!
 Frond: I've missed you. It's been a long time.
 Frond: I can see you've already been healing this place. 
+-> What happened to you and Aloe?
+    Frond: It was the blizzard Sprig. Don't you remember?
+    Frond: It doesn't matter does it? We're here now.
+-> What is this place?
+    Frond: I thought you would've figured it out by now.
+    Frond: I think it's best if you hear it from Aloe... She was always better at explaining these things to you. 
 Frond: Sprig... Aloe needs your help. She's trapped in that awful cave. 
 Frond: On my own I cannot save her, but I can help you survive that final gauntlet.
 Frond: Allow me to teach you to glide.
 <<Camera_Pan GlideTut>>
+Frond: When you jump, hold that energy within you and spread your leaves outward.
+Frond: Come this way there's more I want to show you.
+Hold A while in the air to glide
+
+
+===
+title: Level2Frond2
+position: -9,94
+---
+
+Frond: See this wind? The draft will catch your leaves and push you up in the air.
+<<Camera_Pan GlideTut2>>
+Frond: Meet me at the top of the tree. Show me what you've learned.
+Glide while over wind
+
+
+===
+title: Level2Frond3
+position: -8,151
+---
+
+Frond: You always were a fast learner huh?
+Frond: Alright alright, I can tell you're burning with questions little brother. Ask away.
+-> What happened the night we were seperated?
+    Frond: You must've just gotten here if you really don't remember.
+    Frond: Aloe and I were at home, you went out to gather some food for us.
+    Frond: There was a blizzard that night, we never could've predicted it.
+    Frond: After hours passed we grew worried. We went out to search for you.
+    Frond: And then suddenly I was here. Well... not here exactly, but in the fields where you woke.
+-> Why are you in this tree?
+    Frond: Grover is a chill guy. He's let me stay up in his branches away from the termites.
+    Grover: Frond has been great company, without him I surely would've been driven mad.
+-> Why isn't Aloe with you?
+    Frond: Well... There's something wrong with this place. As I'm sure you've noticed.
+    Frond: Aloe being the eldest and the most powerful... She was trapped.
+    Frond: The root of all of this, its in that cave.
+Frond: I'm sorry if I wasn't able to give you the answers your looking for. 
+Frond: Go and release Aloe, once she is free I will await you in the fields.
 
 ===
