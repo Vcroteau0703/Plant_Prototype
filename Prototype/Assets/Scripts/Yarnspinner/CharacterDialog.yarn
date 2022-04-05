@@ -41,11 +41,10 @@ I don't know what you did, but the water's clean now! Well, at least, up here it
 Everything is so pretty! It's like a paradise! I've never seen it look this good!
 Is it because you helped me? Do you have superpowers? Are you a superhero?!
 Woah, sorry, I'm talking way too fast.
-So...*ahem*... what's your name?
+Spinner: So...*ahem*...Hi. I'm Spinner. What's your name?
 -> Sprig!
 -> ...Sprig.
-"Sprig?" Heh, now that's a funny name for a superhero!
-My name's Spinner.
+Spinner: "Sprig?" Heh, now that's a funny name for a superhero!
 Spinner: So, do you know what happened with that blizzard?
 -> No clue.
     Spinner: Hmmm, well I think that maybe it finally cleared up?
@@ -63,15 +62,16 @@ Spinner: Good luck!
 -> I can't make that jump.
 Spinner: ...Oh, you don't know how to scale walls, do you?
 Spinner: Don't worry, I'll show you how it's done! Been doing this since I was a baby!
-<<Camera_Pan WallClimbTutorial>>
 Spinner: Now, check this out!
-<<wait 1.5>>
+<<Camera_Pan WallClimbTutorial>>
+<<wait 2>>
 Spinner: Jumping up walls is pretty easy. If you have good footing, you can hang for as long as you want.
 <<Camera_Pan WallClimbTutorialMid>>
+<<wait 0.5>>
 Spinner: Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
+<<Camera_Pan WallClimbTutorialEnd>>
 <<wait 0.5>>
 Spinner: Alright, hope that helps!
-<<Camera_Pan WallClimbTutorialEnd>>
 Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
 Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
 Spinner: ...make sure the coast is clear!
