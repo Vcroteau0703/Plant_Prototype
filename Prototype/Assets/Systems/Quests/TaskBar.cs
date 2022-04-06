@@ -19,29 +19,35 @@ public class TaskBar : MonoBehaviour
         data = TaskBarData.GetData(); 
     }
 
-    public void UpdateDisplay(Quest quest)
+    public void UpdateDisplay(Quest quest, Event targetEvent)
     {
-        foreach(Transform child in taskContainer.transform)
+        foreach (Transform child in taskContainer.transform)
         {
             Destroy(child.gameObject);
         }
 
         if (quest) { questTitle.text = quest.questTitle; }
-        else { questTitle.text = "No Quest Selected"; return; }
+        else { questTitle.text = ""; return; }
 
-        foreach (Event e in quest.events)
+        if (targetEvent != null)
         {
-            foreach (Task t in e.tasks)
+            foreach (Task t in targetEvent.tasks)
             {
-                AddTask(t.description, t.progress);
+                AddTask(t.description, t.progress, t.maxProgress);
             }
-            break;
-        }
+        }      
     }
 
-    public void AddTask(string description, string progress)
+    public void AddTask(string description, int progress, int maxProgress)
     {
+        string text;
+        if(maxProgress == 0){
+            text = "";
+        }
+        else{
+            text = progress < maxProgress ? progress.ToString() + "/" + maxProgress.ToString() : "Complete";
+        }      
         GameObject task = Instantiate(data.default_task, taskContainer);
-        task.GetComponent<Task_UI>().SetProperties(description, progress);
+        task.GetComponent<Task_UI>().SetProperties(description, text);
     }
 }

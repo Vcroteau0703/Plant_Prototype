@@ -15,5 +15,10 @@ public class Quest_Volume : Action_Volume
     {
         Quest_System.Start_Quest(quest);
     }
+
+    public override void OnTriggerExit(Collider other)
+    {
+        Quest_System.Complete_Quest(quest);
+    }
 }
 

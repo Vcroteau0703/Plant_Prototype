@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public struct Event
+public class Event
 {
     public string name;
     public List<Task> tasks;

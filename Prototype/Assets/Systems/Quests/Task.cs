@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct Task
+public class Task
 {
     public string description;
-    public string progress;
+    public int progress;
+    public int maxProgress;
 }
 

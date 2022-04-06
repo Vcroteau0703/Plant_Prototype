@@ -173,6 +173,7 @@ public class Player_Data
 {
     public int health;
     public int currColl;
+    public string currentQuest;
     public string scene;
     public Checkpoint_Data checkpoint;
 
@@ -181,6 +182,9 @@ public class Player_Data
         health = player.health;
         currColl = player.currColl;
         scene = SceneManager.GetActiveScene().name;
+
+        Quest current = Quest_Handler.instance.Target_Quest;
+        currentQuest = current != null ? Quest_Handler.instance.Target_Quest.name : "NONE";
 
         Checkpoint c = Checkpoint.Get_Active_Checkpoint();
         checkpoint = c != null ? new Checkpoint_Data(c) : null;
