@@ -2,22 +2,49 @@
 tags:
 ---
 
-Spinner: Sprig! You finally made it!
+Spinner: Oh hey! You finally made it!
 <<Camera_Pan BeforeTut>>
-Spinner: This tree is massive!
-<<wait 1.5>> 
+<<wait 1.5>>
+Spinner: This tree is so big...how are we going to explore it all?
 Spinner: Ack! What is this stuff?
-It's my sap. Those nasty termites have left me wounded. Sorry little ones.
-Spinner: Ew. I'm so sticky and slow. I need to wash this off. 
+Spinner: Ewwwww, I'm so sticky and slow. I need to wash this off. 
 <<Camera_Pan SapTut>>
-<<wait 1.5>> 
+<<wait 2.5>> 
 Spinner: Whew, that's much better.
-Spinner: Who was that?
-My name is Grover and I am the tree you walk upon little spiderling.
-Grover: Please help me by destroying those termites. As many as you can. I cannot recover while they continue to knaw at me.
-Grover: But be careful, they will eat at you too. 
-Spinner: How is he supposed to destroy them then?
-Grover: Perhaps my sap is the answer, once it starts flowing they quickly move away.
+Frond...? Is that you?
+Spinner: Eh? Who said that? There's no one here.
+Spinner: Ah well, it's not like the tree can talk, right?
+I assure you that I can, little spiderling.
+Spinner: W-Woah! We're so sorry, we didn't know you were alive, please forgive us!
+Not to worry. Any friend of Frond's is a friend of mine.
+Spinner: Uhhhh...who?
+Your quiet little companion over there. He's been caring for me ever since he arrived.
+Speaking of which, I could use your help once again.
+Those awful termites have returned, and it's been hard trying to get rid of them on my own. Could you get rid of them for me?
+-> How can I do that?
+    You used to use my sap to fight them off, remember?
+    As long as you've got a good coat on, they'll stick to you and die right away.
+-> Sorry, I'm not Frond.
+    Ohohoho! Frond, I may be old, but I've fallen for that joke before already.
+    Just be careful, if you touch them without a good coat of sap, they will eat you right away.
+-> Leave it to me!
+    Thank you. I can always count on you.
+    Just be careful, if you touch them without a good coat of sap, they will eat you right away.
+-> Spinner, get rid of the termites.
+    Spinner: Waaaaaah?! I'm not going near those things!
+    Frond was just joking, little spiderling. If you touch them without a good coat of sap, they will eat you right away.
+Spinner: Got it! We'll be safe Mr. Tree!
+Grover: Please, little spiderling, call me Grover.
+Spinner: Will do Mr. Grover Tree!
+<<wait 1>>
+Spinner: Psssst. You didn't tell me your name was Frond. Is that your secret identity?
+-> Frond is...my brother.
+Spinner: Wait really? What if he's hiding here somewhere? We've GOTTA explore now!
+Spinner: I'll meet you up ahead Sprig...or should I call you Frond and hide your secret identity...?
+-> Sprig.
+    Sprig it is! Two different names is pretty confusing, anyways.
+-> Frond.
+    Haha! Then I'll meet you up ahead, "Frond!"
 
 
 ===
@@ -26,24 +53,26 @@ position: -3,44
 ---
 
 <<Camera_Pan FrondHug>>
-Frond: Sprig!
+Frond: ...S-Sprig?!
 -> Frond!
 -> Brother!
-Frond: I've missed you. It's been a long time.
-Frond: I can see you've already been healing this place. 
--> What happened to you and Aloe?
-    Frond: It was the blizzard Sprig. Don't you remember?
-    Frond: It doesn't matter does it? We're here now.
--> What is this place?
-    Frond: I thought you would've figured it out by now.
-    Frond: I think it's best if you hear it from Aloe... She was always better at explaining these things to you. 
-Frond: Sprig... Aloe needs your help. She's trapped in that awful cave. 
-Frond: On my own I cannot save her, but I can help you survive that final gauntlet.
-Frond: Allow me to teach you to glide.
+Frond: No no no, you can't be real. I'm still dreaming, right?
+Frond: Tell me something only Sprig would know!
+-> Uhhhh...
+-> You're awake Frond.
+Frond: AHA! The real Sprig would have slapped me awake by now! You're a fake!
+-> Slap him.
+    Frond: AHA! Even more proof! The Sprig I know wouldn't hurt a fly!
+-> Do not.
+Frond: Haaaah...well now that I know I'm asleep, wanna come with me?
+Frond: I mean, you've got nothing better to do, right?
+Frond: Come on! Let's Glide across!
+-> ...What?
+Frond: Ohhhh, I like this version of you Sprig! I get to teach you things like when we were younger.
 <<Camera_Pan GlideTut>>
-Frond: When you jump, hold that energy within you and spread your leaves outward.
-Frond: Come this way there's more I want to show you.
-Hold A while in the air to glide
+<<wait 3>>
+Frond: When you jump, you just need to hold it and spread yourself outward.
+Frond: Give it a try!
 
 
 ===
@@ -51,10 +80,14 @@ title: Level2Frond2
 position: -9,94
 ---
 
-Frond: See this wind? The draft will catch your leaves and push you up in the air.
+Frond: Yay! I knew you could do it!
+-> Frond, we need to talk.
+-> Are you okay?
+Frond: Uhhhhh...
+Frond: *ahem* See this wind? If you glide over it, the draft will catch your leaves and push you up in the air.
 <<Camera_Pan GlideTut2>>
-Frond: Meet me at the top of the tree. Show me what you've learned.
-Glide while over wind
+<<wait 2.5>>
+Frond: Meet me at the top of the tree! I believe in you!
 
 
 ===
@@ -62,22 +95,155 @@ title: Level2Frond3
 position: -8,151
 ---
 
-Frond: You always were a fast learner huh?
-Frond: Alright alright, I can tell you're burning with questions little brother. Ask away.
--> What happened the night we were seperated?
-    Frond: You must've just gotten here if you really don't remember.
-    Frond: Aloe and I were at home, you went out to gather some food for us.
-    Frond: There was a blizzard that night, we never could've predicted it.
-    Frond: After hours passed we grew worried. We went out to search for you.
-    Frond: And then suddenly I was here. Well... not here exactly, but in the fields where you woke.
--> Why are you in this tree?
-    Frond: Grover is a chill guy. He's let me stay up in his branches away from the termites.
-    Grover: Frond has been great company, without him I surely would've been driven mad.
--> Why isn't Aloe with you?
-    Frond: Well... There's something wrong with this place. As I'm sure you've noticed.
-    Frond: Aloe being the eldest and the most powerful... She was trapped.
-    Frond: The root of all of this, its in that cave.
-Frond: I'm sorry if I wasn't able to give you the answers your looking for. 
-Frond: Go and release Aloe, once she is free I will await you in the fields.
+Frond: Nice gliding! I've gotta admit, I'm impressed.
+Frond: So what do you wanna do now that we're up here? Glide back down? Admire the view? Play a game?
+-> Glide down.
+    Frond: Alright! Why don't you go first and show me what you've got?
+-> Admire the view.
+    Frond: Alright! Let's lay back and admire!
+    <<wait 5>>
+    Frond: It is very pretty, don't you think?
+    <<wait 3>>
+    Frond: ...Even though I love this view, I don't think it beats the view from our tree.
+    Frond: There's just something too nostalgic about it, y'know?
+    <<wait 2.5>>
+    Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+-> Play a game.
+    Frond: Alright! How about a good old-fashioned game of hide and seek!
+    Frond: I'll seek. Go ahead and hide!
+    Frond: 1...
+    Frond: 2...
+    Frond: 3-4-5-6-7-8...
+    Frond: 9...
+    Frond: 9 and a half...
+    Frond: 10!
+    Frond: ...
+    Frond: Sprig you didn't even move.
+    Frond: ...Guess that means I win!
+    Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
+    -> Thank the developers over on itch.io.
+        Frond: Awww, I bet they're going to love it!
+    -> Say a swear word at the developers now so you don't have to be social.
+        Frond: W-Woah.
+        Frond: Sprig, I didn't think you had it in you.
+        Frond: I also don't think they care, but oh well. I totally get it!
+        Frond: Feels good to let out your anger sometimes.
+-> We need to talk.
+    Frond: ...uh, come on Sprig. Pick something else.
+    -> Glide down.
+        Frond: Alright! Why don't you go first and show me what you've got?
+    -> Admire the view.
+        Frond: Alright! Let's lay back and admire!
+        <<wait 5>>
+        Frond: It is very pretty, don't you think?
+        <<wait 3>>
+        Frond: ...Even though I love this view, I don't think it beats the view from our tree.
+        Frond: There's just something too nostalgic about it, y'know?
+        <<wait 2.5>>
+        Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+    -> Play a game.
+        Frond: Alright! How about a good old-fashioned game of hide and seek!
+        Frond: I'll seek. Go ahead and hide!
+        Frond: 1...
+        Frond: 2...
+        Frond: 3-4-5-6-7-8...
+        Frond: 9...
+        Frond: 9 and a half...
+        Frond: 10!
+        Frond: ...
+        Frond: Sprig you didn't even move.
+        Frond: ...Guess that means I win!
+        Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
+        -> Thank the developers over on itch.io.
+            Frond: Awww, I bet they're going to love it!
+        -> Say a swear word at the developers now so you don't have to be social.
+            Frond: W-Woah.
+            Frond: Sprig, I didn't think you had it in you.
+            Frond: I also don't think they care, but oh well. I totally get it!
+            Frond: Feels good to let out your anger sometimes.
+    -> We need to talk.
+        Frond: Sprig?
+        Frond: I don't think you heard me...
+        -> Glide down.
+            Frond: Alright! Why don't you go first and show me what you've got?
+        -> Admire the view.
+            Frond: Alright! Let's lay back and admire!
+            <<wait 5>>
+            Frond: It is very pretty, don't you think?
+            <<wait 3>>
+            Frond: ...Even though I love this view, I don't think it beats the view from our tree.
+            Frond: There's just something too nostalgic about it, y'know?
+            <<wait 2.5>>
+            Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+        -> Play a game.
+            Frond: Alright! How about a good old-fashioned game of hide and seek!
+            Frond: I'll seek. Go ahead and hide!
+            Frond: 1...
+            Frond: 2...
+            Frond: 3-4-5-6-7-8...
+            Frond: 9...
+            Frond: 9 and a half...
+            Frond: 10!
+            Frond: ...
+            Frond: Sprig you didn't even move.
+            Frond: ...Guess that means I win!
+            Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
+            -> Thank the developers over on itch.io.
+                Frond: Awww, I bet they're going to love it!
+            -> Say a swear word at the developers now so you don't have to be social.
+                Frond: W-Woah.
+                Frond: Sprig, I didn't think you had it in you.
+                Frond: I also don't think they care, but oh well. I totally get it!
+                Frond: Feels good to let out your anger sometimes.
+        -> We need to talk.
+        Frond: ...
+        -> We need to talk.
+        <<wait 2>>
+        Frond: I'm not dreaming, am I?
+        Frond: Ha...why do you have to be the reasonable one?
+        Frond: All I wanted was to have fun like we used to.
+        Frond: Was that really too much to ask?
+        Frond: ...
+        Frond: Alright. Let's talk. I'm sure you have questions.
+        -> What happened to you?
+        Frond: Same thing that happened to you.
+        Frond: I woke up here, and I couldn't find you or Aloe anywhere.
+        Frond: I was still feeling cold from...you know.
+        Frond: After some wandering, I met Grover here.
+        Frond: He was old and needed help, so I decided to help for a bit.
+        Frond: I could have left, but something about him...it reminded me of how you would help us no matter what.
+        Frond: So I stayed. I was pretty happy too.
+        -> Why did you leave Grover?
+        Frond: I didn't mean to leave him.
+        Frond: It's a bit of a funny story actually...well, as funny as you can get with abandoning someone.
+        Frond: One day when I was cleaning up those termites, I was feeling sick.
+        Frond: I'm not really sure why, but there wasn't any water to bring me back up to speed.
+        Frond: I ended up...drinking that poison.
+        Frond: Heh, you can laugh if you want. I really had no other options.
+        Frond: Since then, I couldn't really get a grip on reality.
+        Frond: ...That is, until now.
+        Frond: I don't really know how you did it, but I'm feeling better now that I'm with you.
+        -> Where's Aloe?
+        Frond: ...She left me to look for you when you got lost.
+        Frond: So I can't say for sure I know where she is.
+        Frond: But if I had to guess...she's in the one place I haven't looked.
+        Frond: The Caves.
+        Frond: It's not that simple though. The caves have something wrong with them. Grover can feel it.
+        Frond: But there's some hope now. And that's you.
+        Frond: Just look around us! Not only did you clean up those termites, you made Grover look better than I ever could!
+        Frond: I'm not sure what you did, but if you did that to the caves, maybe exploring them won't be as deadly as most plants would think.
+        -> I'm going to find her.
+        Frond: I know you will. You're braver than I could ever be.
+        Frond: When you find her...promise me you'll bring her home. I miss her.
+        -> I promise.
+        -> ...
+        Frond: ...okay.
+        Frond: I'll meet you both back home. There's two different paths that go into the cave.
+        Frond: One's from the fields way down there. You must've gone by it on your way here.
+        Frond: The other's underneath Grover. Ask him and he'll open up the path for you. And let him know I said it was okay.
+        Frond: ...And Sprig?
+        -> Yeah?
+        Frond: I love you.
+        Frond: Good luck.
 
 ===
