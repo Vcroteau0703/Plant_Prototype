@@ -64,7 +64,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         if (damageActive && amount != 0)
         {
             health -= amount;
-            anim.SetLayerWeight(1, 0.3f);
+            anim.SetLayerWeight(1, 0.5f);
+            anim.SetTrigger("HIT");
             if (health == 0)
             {
                 anim.SetTrigger("DEATH");
