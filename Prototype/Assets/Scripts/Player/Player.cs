@@ -22,6 +22,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
     internal GameObject HUD;
     internal int currColl;
+    Animator anim;
+    Player_Controller pC;
 
     private void Awake()
     {
@@ -44,6 +46,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
             }
         }
+        anim = GetComponent<Animator>();
+        pC = GetComponent<Player_Controller>();
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;
         HUD = GameObject.FindGameObjectWithTag("HUD");
         HUD.GetComponentInChildren<HealthUI>().UpdateUI(health);
@@ -60,11 +64,28 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         if (damageActive && amount != 0)
         {
             health -= amount;
-            if (health < 0) { health = 0; Respawn(); }
-            else if (health == 0) { Respawn(); }
+            anim.SetLayerWeight(1, 0.3f);
+            if (health == 0)
+            {
+                anim.SetTrigger("DEATH");
+                pC.OnDisable();
+                damageActive = false;
+            }
+            else if (health < 0)
+            {
+                health = 0;
+                pC.OnDisable();
+                anim.SetTrigger("DEATH");
+                damageActive = false;
+            }
             else { damageActive = false; }
             UpdateHealthUI(health);
         }
+    }
+
+    public void ResetLayerWeight()
+    {
+        anim.SetLayerWeight(1, 0f);
     }
 
     public void Respawn()
@@ -74,6 +95,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         if (x != null)
         {
             health = max_health;
+            damageActive = true;
             UpdateHealthUI(health);
             if (sapActive)
             {
@@ -112,7 +134,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         if(currHealth >= 0)
         {
             HUD.GetComponentInChildren<HealthUI>().UpdateUI(currHealth);
-            if(currHealth != max_health)
+            if(currHealth != max_health && currHealth != 0)
             {
                 if (sapActive)
                 {
