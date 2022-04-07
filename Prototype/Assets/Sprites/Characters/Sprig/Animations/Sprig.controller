@@ -855,6 +855,9 @@ MonoBehaviour:
   Implied_Wall_Jump: {fileID: 7400000, guid: 3d8793e189da9d943827d957dae50445, type: 2}
   Implied_Jump: {fileID: 7400000, guid: 1d0aa5468fcd6364a820e0d8700d33e6, type: 2}
   Normal_Aerial: {fileID: 7400000, guid: c0d896a214983cb4f8afba5f1dd37138, type: 2}
+  Fall: {fileID: 0}
+  Fall_Transition: {fileID: 7400000, guid: adb4a62722c657941b25e1924ac7e1c8, type: 2}
+  Glide: {fileID: 0}
 --- !u!1101 &3973314063063033026
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
