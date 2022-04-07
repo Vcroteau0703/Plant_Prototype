@@ -18,7 +18,9 @@ public class Quest_Volume : Action_Volume
 
     public override void OnTriggerExit(Collider other)
     {
-        Quest_System.Complete_Quest(quest);
+        List<Task> tasks = Quest_System.Get_Active_Event().tasks;
+        Quest_System.Update_Task(tasks[0], 1);
+        //Quest_System.Complete_Quest(quest);
     }
 }
 

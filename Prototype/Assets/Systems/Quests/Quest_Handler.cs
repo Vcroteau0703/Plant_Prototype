@@ -113,8 +113,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
             if (!data.Completed)
             {
                 questData = data;
-                Target_Quest = quest;
-                Load_Event(questData);
+                Target_Quest = quest;               
                 GameManager.SaveGame();
             }
             else
@@ -127,7 +126,6 @@ public class Quest_Handler : MonoBehaviour, ISavable
         {
             questData = new Quest_Data(quest);
             Target_Quest = quest;
-            Load_Event(questData);
             SaveSystem.Save(questData, "/Player/" + quest.name + ".data");
         }
     }
@@ -201,11 +199,25 @@ public class Quest_Handler : MonoBehaviour, ISavable
 
     public void Event_Start(string _event)
     {
+        foreach (Event_Actions a in Event_Triggers)
+        {
+            if (a.Event == _event)
+            {
+                a.OnEventStart.Invoke();
+            }
+        }
 
+        Load_Event(questData);
     }
     public void Event_Complete(string _event)
     {
-
+        foreach (Event_Actions a in Event_Triggers)
+        {
+            if (a.Event == _event)
+            {
+                a.OnEventComplete.Invoke();
+            }
+        }
     }
 
     public void Update_Tasks(Task task, int progress)
@@ -217,7 +229,6 @@ public class Quest_Handler : MonoBehaviour, ISavable
                 t.progress += progress;
             }
         }
-        Save();
         taskBar.UpdateDisplay(Target_Quest, Target_Event);
     }
 

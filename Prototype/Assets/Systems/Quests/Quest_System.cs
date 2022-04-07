@@ -32,4 +32,21 @@ public static class Quest_System
     {
         Quest_Handler.instance.Update_Tasks(task, progress);
     }
+
+    public static Event Get_Active_Event()
+    {
+        Event target = Quest_Handler.instance.Target_Event;
+        if(target != null){return target;}
+        else{return null;}     
+    }
+
+    public static void Next_Event()
+    {
+        Event target = Quest_Handler.instance.Target_Event;
+        if(target == null)
+        {
+            target = Quest_Handler.instance.Target_Quest.events[0];
+        }
+        Quest_Handler.instance.Event_Complete(target.name);
+    }
 }
