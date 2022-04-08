@@ -1597,8 +1597,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6139487979365936082, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
       propertyPath: m_text
-      value: No Case Selected
+      value: <Quest Info>
       objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936082, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936082, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: 97690656
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936083, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936083, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936083, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936083, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139487979365936083, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627747213983873161, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627747215027593729, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+      propertyPath: questTitle
+      value: 
+      objectReference: {fileID: 9208314570257297040}
     - target: {fileID: 8627747215027593729, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
       propertyPath: _targetCase
       value: 
@@ -1693,6 +1729,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+--- !u!114 &9208314570257297040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6139487979365936082, guid: 8856dca7882715945ae7b973e2663db5, type: 3}
+  m_PrefabInstance: {fileID: 3096601436824159554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6720141371477043009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8627747215027593731, guid: 8856dca7882715945ae7b973e2663db5, type: 3}

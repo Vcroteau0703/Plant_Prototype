@@ -43,10 +43,9 @@ public class Quest_Handler : MonoBehaviour, ISavable
 {
     public static Quest_Handler instance;
 
-    public Quest_Data questData = null;
-
     public TaskBar taskBar;
     public Quest _targetQuest;
+    public Event _targetEvent;
 
     public Quest[] allQuests;
 
@@ -70,94 +69,66 @@ public class Quest_Handler : MonoBehaviour, ISavable
         set{                      
             _targetQuest = value;
 
-            if(value != null)
-            {               
-                taskBar.UpdateDisplay(_targetQuest, questData.Current_Event);
-            }
-            else
+            if(value == null)
             {
-                questData = null;
-                taskBar.UpdateDisplay(_targetQuest, null);
-            }          
+                taskBar.UpdateDisplay(null, null);
+                return;
+            }
+            taskBar.UpdateDisplay(value, value.Data.Current_Event);
         }
     }
 
     public Event Target_Event { 
         get {
-            if (questData != null)
+            if (Target_Quest != null)
             {
-                return questData.Current_Event;
+                return Target_Quest.Data.Current_Event;
             }
             else { return null; }
         }
         set{
-            questData.Current_Event = value;
-           
-            if(Application.isPlaying) { taskBar.UpdateDisplay(_targetQuest, questData.Current_Event); }
+            _targetEvent = value;
+            Quest_Data data = Target_Quest.Data;
+            data.Current_Event = value;
+            Target_Quest.Data = data;
+            Debug.Log(Target_Quest.Data.Current_Event.name);
+            taskBar.UpdateDisplay(Target_Quest, value);
             GameManager.SaveGame();
         }
     }
 
     public void Save()
     {
-        if(questData == null) { return; }
-        SaveSystem.Save(questData, "/Player/"+ questData.FileName + ".data");
+        if(Target_Quest.Data == null) { return; }
+        SaveSystem.Save(Target_Quest.Data, "/Player/"+ Target_Quest.Data.FileName + ".data");
     }
 
     public void Load_Quest(Quest quest)
     {
-        if(quest == null) { return; }
-        Quest_Data data = SaveSystem.Load<Quest_Data>("/Player/" + quest.name + ".data");
-        if(data != null)
-        {
-            if (!data.Completed)
-            {
-                questData = data;
-                Target_Quest = quest;               
-                GameManager.SaveGame();
-            }
-            else
-            {
-                questData = null;
-            }
-            
-        }
-        else
-        {
-            questData = new Quest_Data(quest);
-            Target_Quest = quest;
-            SaveSystem.Save(questData, "/Player/" + quest.name + ".data");
-        }
+        if(quest == null || quest.Data.Completed) { return; }
+
+        Target_Quest = quest;
+        GameManager.SaveGame();    
     }
 
-    public void Load_Event(Quest_Data data)
+    public void Load_Event(Event _event)
     {
-        foreach(Event_Data d in data.Events)
-        {
-            if (!d.Completed)
-            {
-                foreach(Event e in Target_Quest.events)
-                {
-                    if(d.Name == e.name)
-                    {
-                        Target_Event = e;
-                        return;
-                    }
-                }
-            }
-        }
+        if(Target_Quest == null) { return; }
+
+        Event temp = Target_Quest.Get_Event(_event.name);
+
+        Target_Event = temp;     
     }
 
     public void Init()
     {
         Player_Data player = SaveSystem.Load<Player_Data>("/Player/Player.data");
         Quest quest = player != null ? Resources.Load<Quest>("Data/Quests/" + player.currentQuest) : null;
-        if(player != null && quest != null) { Target_Quest = quest; } else {
-            taskBar.UpdateDisplay(null, null);
-            return;
-        }
-        questData = SaveSystem.Load<Quest_Data>("/Player/" + Target_Quest.name + ".data");
-        Target_Event = questData.Current_Event;
+
+        if(player == null || quest == null) { return; }
+
+        Target_Quest = quest;
+        Target_Event = quest.Data.Current_Event;
     }
 
 
@@ -180,7 +151,9 @@ public class Quest_Handler : MonoBehaviour, ISavable
     public void Quest_Complete(Quest quest)
     {
         if(Target_Quest != quest){return;}
-        questData.Completed = true;
+        Quest_Data data = Target_Quest.Data;
+        data.Completed = true;
+        Target_Quest.Data = data;
         GameManager.SaveGame();
         Target_Quest = null;
         RemoveQuest(quest);
@@ -197,23 +170,23 @@ public class Quest_Handler : MonoBehaviour, ISavable
         taskBar.UpdateDisplay(Target_Quest, Target_Event);
     }
 
-    public void Event_Start(string _event)
+    public void Event_Start(Event _event)
     {
         foreach (Event_Actions a in Event_Triggers)
         {
-            if (a.Event == _event)
+            if (a.Event == _event.name)
             {
                 a.OnEventStart.Invoke();
             }
         }
 
-        Load_Event(questData);
+        Load_Event(_event);
     }
-    public void Event_Complete(string _event)
+    public void Event_Complete(Event _event)
     {
         foreach (Event_Actions a in Event_Triggers)
         {
-            if (a.Event == _event)
+            if (a.Event == _event.name)
             {
                 a.OnEventComplete.Invoke();
             }
@@ -222,11 +195,15 @@ public class Quest_Handler : MonoBehaviour, ISavable
 
     public void Update_Tasks(Task task, int progress)
     {
-        foreach(Task t in questData.Current_Event.tasks)
+        Quest_Data data = Target_Quest.Data;
+
+        foreach (Task t in data.Current_Event.tasks)
         {
-            if(t == task)
+            if(t.description == task.description)
             {
-                t.progress += progress;
+                t.progress = t.progress + progress >= t.maxProgress ? t.maxProgress : t.progress + progress;
+                Debug.Log("Updating Task...");
+                Target_Quest.Data = data;
             }
         }
         taskBar.UpdateDisplay(Target_Quest, Target_Event);

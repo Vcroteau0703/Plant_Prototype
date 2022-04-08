@@ -40,14 +40,15 @@ public class TaskBar : MonoBehaviour
 
     public void AddTask(string description, int progress, int maxProgress)
     {
+        Color progColor = progress >= maxProgress ? Color.green : Color.grey;
         string text;
         if(maxProgress == 0){
             text = "";
         }
         else{
-            text = progress < maxProgress ? progress.ToString() + "/" + maxProgress.ToString() : "Complete";
+            text = progress.ToString() + "/" + maxProgress.ToString();           
         }      
         GameObject task = Instantiate(data.default_task, taskContainer);
-        task.GetComponent<Task_UI>().SetProperties(description, text);
+        task.GetComponent<Task_UI>().SetProperties(description, text, Color.white, progColor);
     }
 }
