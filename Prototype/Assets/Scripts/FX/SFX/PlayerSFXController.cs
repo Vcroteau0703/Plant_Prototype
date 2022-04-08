@@ -16,11 +16,16 @@ public class PlayerSFXController : MonoBehaviour
     public AudioClip death;
     public AudioClip jump;
     AudioSource aS;
+
+    public ParticleSystem dustParticle;
+    public ParticleSystem dustLandingParticle;
+    public ParticleSystem dustWallLandingParticle;
        
     // Start is called before the first frame update
     private void Awake()
     {
         aS = GetComponent<AudioSource>();
+        var main = dustWallLandingParticle.main;
     }
 
     void DetermineMaterial()
@@ -64,6 +69,15 @@ public class PlayerSFXController : MonoBehaviour
     {
         DetermineMaterial();
         aS.Play();
+        if (transform.localScale.x < 0 && dustParticle.transform.localScale.x > 0)
+        {
+            dustParticle.transform.localScale = new Vector3 (-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
+        }
+        else if (transform.localScale.x > 0 && dustParticle.transform.localScale.x < 0)
+        {
+            dustParticle.transform.localScale = new Vector3(-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
+        }
+        dustParticle.Emit(1);
     }
 
     public void PlayDamage()
@@ -83,5 +97,30 @@ public class PlayerSFXController : MonoBehaviour
     {
         aS.clip = jump;
         aS.Play();
+        dustLandingParticle.Emit(1);
     }
+    
+    public void PlayLanding()
+    {
+        DetermineMaterial();
+        aS.Play();
+        dustLandingParticle.Emit(1);
+    }
+
+    public void PlayWallLanding()
+    {
+        DetermineMaterial();
+        aS.Play();
+        //var main = dustWallLandingParticle.main;
+        //if (transform.localScale.x < 0 && main.startRotationZ.constant > 0)
+        //{
+        //    main.startRotationZ = 90; 
+        //}
+        //else if (transform.localScale.x > 0 && main.startRotationZ.constant < 0)
+        //{
+        //    main.startRotationZ = -90;
+        //}
+        //dustWallLandingParticle.Emit(1);
+    }
+
 }
