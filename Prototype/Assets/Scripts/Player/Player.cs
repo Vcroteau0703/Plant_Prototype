@@ -19,6 +19,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
     internal bool sapActive = false;
     private bool damageActive = true;
+    public bool inWater = false;
 
     internal GameObject HUD;
     internal int currColl;
