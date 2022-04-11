@@ -12,6 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bb85c77d529a347b55f541e7ebf00e, type: 3}
   m_Name: Quest_02
   m_EditorClassIdentifier: 
+  _data:
+    FileName: Quest_02
+    Name: 'Chapter 0: Testing'
+    Completed: 0
+    Current_Event:
+      name: Turning off the Light
+      tasks:
+      - description: Finish the Quest
+        progress: 3
+        maxProgress: 3
+    Events:
+    - Name: Turning off the Light
+      Completed: 0
+      Tasks:
+      - Progress: 0
   questTitle: 'Chapter 0: Testing'
   events:
   - name: Turning off the Light

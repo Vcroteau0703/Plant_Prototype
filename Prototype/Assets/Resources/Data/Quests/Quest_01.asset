@@ -12,33 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bb85c77d529a347b55f541e7ebf00e, type: 3}
   m_Name: Quest_01
   m_EditorClassIdentifier: 
-  questTitle: 'Chapter 1: Forest'
+  _data:
+    FileName: Quest_01
+    Name: 'Chapter 1: Fields'
+    Completed: 0
+    Current_Event:
+      name: Cling Tutorial
+      tasks:
+      - description: Perform Wall Cling
+        progress: 0
+        maxProgress: 1
+      - description: Perform Slide
+        progress: 0
+        maxProgress: 1
+      - description: Perform Wall Jump
+        progress: 0
+        maxProgress: 1
+    Events:
+    - Name: Find Boulder
+      Completed: 1
+      Tasks:
+      - Progress: 0
+    - Name: Talk_01
+      Completed: 1
+      Tasks:
+      - Progress: 0
+    - Name: Cling Tutorial
+      Completed: 0
+      Tasks:
+      - Progress: 0
+      - Progress: 0
+      - Progress: 0
+  questTitle: 'Chapter 1: Fields'
   events:
-  - name: Explore
-    completed: 0
-    tasks:
-    - description: Explore the world!
-      progress: 
-    OnCompletion:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Meeting Spinner
-    completed: 0
+  - name: Find Boulder
     tasks:
     - description: Find a way up to Spinner
-      progress: 
-    OnCompletion:
-      m_PersistentCalls:
-        m_Calls: []
+      progress: 0
+      maxProgress: 0
+  - name: Talk_01
+    tasks:
+    - description: Talk To Spinner
+      progress: 0
+      maxProgress: 0
   - name: Cling Tutorial
-    completed: 0
     tasks:
     - description: Perform Wall Cling
-      progress: 0/1
+      progress: 0
+      maxProgress: 1
     - description: Perform Slide
-      progress: 0/1
+      progress: 0
+      maxProgress: 1
     - description: Perform Wall Jump
-      progress: 0/1
-    OnCompletion:
-      m_PersistentCalls:
-        m_Calls: []
+      progress: 0
+      maxProgress: 1

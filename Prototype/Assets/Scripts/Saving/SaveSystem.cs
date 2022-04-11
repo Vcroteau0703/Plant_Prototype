@@ -67,7 +67,7 @@ public static class SaveSystem
         BinaryFormatter formatter = new BinaryFormatter();
         string p = CurrentSave == "" ? Application.persistentDataPath + "/Default" + path : CurrentSave + path;
         if (!Directory.Exists(Application.persistentDataPath + "/Default")) { CreateNewSave("Default");  }
-        Debug.Log(p);
+        //Debug.Log(p);
         FileStream stream = new FileStream(p, FileMode.Create);
         formatter.Serialize(stream, data);
         stream.Close();

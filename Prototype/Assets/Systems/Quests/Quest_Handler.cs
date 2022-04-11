@@ -99,7 +99,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
 
     public void Save()
     {
-        if(Target_Quest.Data == null) { return; }
+        if(Target_Quest == null) { return; }
         SaveSystem.Save(Target_Quest.Data, "/Player/"+ Target_Quest.Data.FileName + ".data");
     }
 
@@ -172,15 +172,15 @@ public class Quest_Handler : MonoBehaviour, ISavable
 
     public void Event_Start(Event _event)
     {
+        Load_Event(_event);
+
         foreach (Event_Actions a in Event_Triggers)
         {
             if (a.Event == _event.name)
             {
                 a.OnEventStart.Invoke();
             }
-        }
-
-        Load_Event(_event);
+        }       
     }
     public void Event_Complete(Event _event)
     {
@@ -253,7 +253,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
             return;
         }
 
-        Quest[] temp = new Quest[allQuests.Length-1];
+        Quest[] temp = new Quest[allQuests.Length];
 
         for (int i = 0; i < temp.Length; i++)
         {

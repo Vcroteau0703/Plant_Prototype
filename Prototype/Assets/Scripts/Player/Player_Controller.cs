@@ -386,7 +386,6 @@ public class Player_Controller : MonoBehaviour
         rb.AddForce(jump.power * dir, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
-            Debug.Log("JUMP_02");
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f)
