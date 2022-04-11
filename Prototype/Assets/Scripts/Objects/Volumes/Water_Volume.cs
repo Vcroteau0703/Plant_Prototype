@@ -19,9 +19,15 @@ public class Water_Volume : Action_Volume
     public void Deactivate_Sap(GameObject actor)
     {
         Player player = actor.GetComponentInParent<Player>();
+        player.inWater = true;
         if (player.sapActive)
         {
             player.SapEffectOff();
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Player player = other.GetComponentInParent<Player>();
+        player.inWater = false;
     }
 }
