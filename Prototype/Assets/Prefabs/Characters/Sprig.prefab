@@ -177,7 +177,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3182980433931266349
 Transform:
@@ -281,7 +281,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6001939059051713863
 Transform:
@@ -440,7 +440,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444320573823645579}
-  - component: {fileID: 4451836552326410636}
   - component: {fileID: 2686934931841054104}
   - component: {fileID: 2534141348786143188}
   m_Layer: 7
@@ -464,19 +463,6 @@ Transform:
   m_Father: {fileID: 2126591705620906729}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4451836552326410636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3583338666867380758}
-  m_Material: {fileID: 13400000, guid: a4f25e1df484c3246934f458b1a572de, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9, y: 2.35, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2686934931841054104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5640,7 +5626,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: Cling
-    enabled: 1
+    enabled: 0
     active: 0
     looping: 1
     OnStateEnter:
@@ -5718,7 +5704,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: Gliding
-    enabled: 1
+    enabled: 0
     active: 0
     looping: 1
     OnStateEnter:
@@ -6003,7 +5989,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8707722837125966114
 Transform:
@@ -6106,7 +6092,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7409921963417862879
 Transform:
@@ -6210,7 +6196,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7584188605490529230
 Transform:
@@ -6438,7 +6424,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8116853267753675512
 Transform:
@@ -6586,7 +6572,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8022699130939309614}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.043, y: 0.042, z: 10.982}
+  m_LocalEulerAnglesHint: {x: -0.043, y: 0.042, z: 10.983}
 --- !u!1 &8153676907549695755
 GameObject:
   m_ObjectHideFlags: 0

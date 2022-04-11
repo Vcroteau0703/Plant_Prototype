@@ -297,7 +297,7 @@ public class Player_Controller : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
         
-        if (rb.velocity.y < 1f)
+        if (rb.velocity.y < settings.Jump.power && rb.velocity.y > settings.Fall_Speed/2)
         {
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
@@ -351,7 +351,7 @@ public class Player_Controller : MonoBehaviour
         while (jump.phase == Jump.State.Started)
         {            
             time += Time.deltaTime;
-            float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
+            float force = -Mathf.Pow(time, 2) + (jump.power / (1 / jump.floatiness) * -Physics.gravity.y);
             if (force < 0.1f)
             {
                 jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
@@ -386,7 +386,6 @@ public class Player_Controller : MonoBehaviour
         rb.AddForce(jump.power * dir, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
-            Debug.Log("JUMP_02");
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
             if (force < 0.1f)
