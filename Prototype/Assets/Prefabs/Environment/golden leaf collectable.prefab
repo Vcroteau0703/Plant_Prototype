@@ -4999,7 +4999,7 @@ GameObject:
   - component: {fileID: 2667352825478732399}
   - component: {fileID: 2667352825478732398}
   - component: {fileID: 2667352825478732401}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: golden leaf collectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5098,6 +5098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3111ebc18955da94d892a7a4ed6242ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupID: 
+  destroy: 0
 --- !u!1 &2667352825574211945
 GameObject:
   m_ObjectHideFlags: 0
