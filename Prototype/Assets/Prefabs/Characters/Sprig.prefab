@@ -199,7 +199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: -2495603383632963359, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 3094825735547801495, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5509,9 +5509,9 @@ MonoBehaviour:
   rb: {fileID: 241961521}
   detection: {fileID: 2686934931841054104}
   state_controller: {fileID: 461688541}
-  settings: {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
+  settings: {fileID: 11400000, guid: 7e6bf926a8206ab4aaaea7776e7c930e, type: 2}
   setting_presets:
-  - {fileID: 11400000, guid: 34cedd6ce4ab64f499601f00b8c495fc, type: 2}
+  - {fileID: 11400000, guid: 7e6bf926a8206ab4aaaea7776e7c930e, type: 2}
   - {fileID: 11400000, guid: 778839e93402dba40874164cd50b9a1c, type: 2}
   walkable:
     serializedVersion: 2
@@ -5552,7 +5552,7 @@ MonoBehaviour:
   sapSettings: {fileID: 11400000, guid: b1c2f1d19669c7149b7b2f98bb24f1ad, type: 2}
   health: 5
   max_health: 5
-  invCycles: 4
+  invCycles: 3
   sprigSprites:
   - {fileID: 1283036603645868746}
   - {fileID: 3370198460975564080}
@@ -5561,7 +5561,7 @@ MonoBehaviour:
   - {fileID: 3708509084569007970}
   - {fileID: 2440726248223387782}
   sapColor: {r: 1, g: 0.7490196, b: 0.56078434, a: 1}
-  SprigHurtColor: {r: 1, g: 0.5254902, b: 0.5254902, a: 1}
+  SprigHurtColor: {r: 1, g: 0.5235849, b: 0.5235849, a: 1}
 --- !u!114 &461688541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5826,7 +5826,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.095
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5900,7 +5900,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6027,7 +6027,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -3
   m_Sprite: {fileID: 1443598487317745390, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6130,7 +6130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -2
   m_Sprite: {fileID: -4839807640192544941, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6234,7 +6234,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9206413430652828620, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6462,7 +6462,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 2543704328104332952, guid: ef124375abd259f46bf2d667cb1a4ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12095,7 +12095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 29298
+      value: 39321
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime2
@@ -12127,15 +12127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.07751868
+      value: 0.33361518
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.093754746
+      value: 0.34558254
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.24528301
+      value: 0.46226418
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.a
@@ -12159,7 +12159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
@@ -12387,7 +12387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492054876041276977, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: m_SortingOrder
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8492054876041276977, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: m_UseCustomVertexStreams
@@ -12702,7 +12702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 29298
+      value: 39321
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime2
@@ -12734,15 +12734,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.07751868
+      value: 0.33361518
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.093754746
+      value: 0.34558254
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.24528301
+      value: 0.46226418
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.a
@@ -12766,7 +12766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
@@ -12998,7 +12998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492054876041276977, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: m_SortingOrder
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8492054876041276977, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: m_UseCustomVertexStreams
