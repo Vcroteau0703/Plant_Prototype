@@ -6,27 +6,27 @@ public class Quest_02 : MonoBehaviour
 {
     public Quest source;
 
-    public void Start_Termite_Quest()
+    public void Start_Termite_Quest(Termite_Tracker termiteTracker)
     {
-
+        StartCoroutine(Termite_Quest(termiteTracker));
     }
 
-    //public IEnumerator Termite_Quest()
-    //{
-    //    List<Task> tasks = Quest_System.Get_Active_Event().tasks;
-        
-    //    Quest_System.Next_Event(source);
-    //}
-
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Termite_Quest(Termite_Tracker tracker)
     {
-        
+        List<Task> tasks = Quest_System.Get_Active_Event().tasks;
+        int termiteProg = tracker.termitesRemaining - tracker.termites;
+
+        while (termiteProg < tasks[0].maxProgress)
+        {
+            if(termiteProg != tracker.termitesRemaining - tracker.termites)
+            {
+                termiteProg = tracker.termitesRemaining - tracker.termites;
+                Quest_System.Update_Task(tasks[0], 1);
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        Quest_System.Next_Event(source);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

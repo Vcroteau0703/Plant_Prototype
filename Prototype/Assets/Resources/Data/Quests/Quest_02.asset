@@ -14,16 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     FileName: Quest_02
-    Name: 'Chapter 0: Testing'
+    Name: 'Chapter 2: Mesquite Tree'
     Completed: 0
     Current_Event:
-      name: Turning off the Light
+      name: Speak to Frond
       tasks:
-      - description: Finish the Quest
-        progress: 3
-        maxProgress: 3
+      - description: Speak to Frond
+        progress: 0
+        maxProgress: 0
     Events:
-    - Name: Turning off the Light
+    - Name: Destroy Termites
+      Completed: 0
+      Tasks:
+      - Progress: 0
+    - Name: Speak to Frond
+      Completed: 0
+      Tasks:
+      - Progress: 0
+    - Name: Follow Frond
+      Completed: 0
+      Tasks:
+      - Progress: 0
+    - Name: Speak with Frond again
       Completed: 0
       Tasks:
       - Progress: 0
@@ -33,4 +45,19 @@ MonoBehaviour:
     tasks:
     - description: Destroy the Termites
       progress: 0
-      maxProgress: 10
+      maxProgress: 1
+  - name: Speak to Frond
+    tasks:
+    - description: Speak to Frond
+      progress: 0
+      maxProgress: 0
+  - name: Follow Frond
+    tasks:
+    - description: Follow Frond
+      progress: 0
+      maxProgress: 0
+  - name: Speak with Frond again
+    tasks:
+    - description: Meet Frond at the top of the Tree
+      progress: 0
+      maxProgress: 0

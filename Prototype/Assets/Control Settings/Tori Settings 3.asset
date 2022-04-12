@@ -23,13 +23,13 @@ MonoBehaviour:
     phase: 1
   Wall_Jump:
     power: 10
-    floatiness: 0.5
+    floatiness: 0.8
     angle: 210
     buffer: 0.1
     phase: 1
   Coyote_Delay: 0.15
-  Air_Speed: 10
-  Air_Control: 0.8
+  Air_Speed: 12
+  Air_Control: 1
   Air_Accel: 1.4
   Fall_Speed: -25
   Glide_Power: 2

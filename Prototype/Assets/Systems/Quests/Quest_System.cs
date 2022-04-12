@@ -73,6 +73,7 @@ public static class Quest_System
                 if(d.Name == current.name)
                 {
                     d.Completed = true;
+                    Quest_Handler.instance.Event_Complete(current);
                     continue;
                 }
 

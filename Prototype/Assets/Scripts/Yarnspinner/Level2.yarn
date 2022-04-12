@@ -1,7 +1,7 @@
 ﻿title: Level2SapTut
 tags:
 ---
-
+<<Start_Quest Quest_02>>
 Spinner: Oh hey! You finally made it!
 <<Camera_Pan BeforeTut>>
 <<wait 1.5>>
@@ -33,6 +33,7 @@ Those awful termites have returned, and it's been hard trying to get rid of them
 -> Spinner, get rid of the termites.
     Spinner: Waaaaaah?! I'm not going near those things!
     Frond was just joking, little spiderling. If you touch them without a good coat of sap, they will eat you right away.
+<<Next_Event Quest_02>>
 Spinner: Got it! We'll be safe Mr. Tree!
 Grover: Please, little spiderling, call me Grover.
 Spinner: Will do Mr. Grover Tree!
@@ -53,6 +54,7 @@ position: -3,44
 ---
 
 <<Camera_Pan FrondHug>>
+<<Next_Event Quest_02>>
 Frond: ...S-Sprig?!
 -> Frond!
 -> Brother!
@@ -80,6 +82,7 @@ title: Level2Frond2
 position: -9,94
 ---
 
+<<Next_Event Quest_02>>
 Frond: Yay! I knew you could do it!
 -> Frond, we need to talk.
 -> Are you okay?
@@ -95,6 +98,7 @@ title: Level2Frond3
 position: -8,151
 ---
 
+<<Next_Event Quest_02>>
 Frond: Nice gliding! I've gotta admit, I'm impressed.
 Frond: So what do you wanna do now that we're up here? Glide back down? Admire the view? Play a game?
 -> Glide down.

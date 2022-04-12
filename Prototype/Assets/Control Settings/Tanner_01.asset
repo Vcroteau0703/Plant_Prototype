@@ -17,7 +17,7 @@ MonoBehaviour:
   Friction: 0.2
   Jump:
     power: 8
-    floatiness: 0.2
+    floatiness: 0.09
     angle: 0
     buffer: 0
     phase: 1
