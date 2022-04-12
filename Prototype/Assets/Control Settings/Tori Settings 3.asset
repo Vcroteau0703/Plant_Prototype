@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
   m_Name: Tori Settings 3
   m_EditorClassIdentifier: 
-  Move_Speed: 18
+  Move_Speed: 15
   Acceleration: 1.6
   Friction: 0.2
   Jump:
