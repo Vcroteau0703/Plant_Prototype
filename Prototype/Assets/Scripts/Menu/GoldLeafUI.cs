@@ -5,30 +5,16 @@ using TMPro;
 
 public class GoldLeafUI : MonoBehaviour
 {
-    public int maxColl;
-    public int currentColl;
+    public int maxLeaves;
 
-    private TextMeshProUGUI currTxt;
-    private TextMeshProUGUI maxTxt;
-    private Player player;
+    public TextMeshProUGUI currTxt;
+    public TextMeshProUGUI maxTxt;
 
-    private void Awake()
+    private void OnEnable()
     {
-        currTxt = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        maxTxt = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
-        maxTxt.text = "/ " + maxColl.ToString();
-        currTxt.text = currentColl.ToString();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        UpdateLeafUI();
-    }
+        Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
 
-    public void UpdateLeafUI()
-    {
-        if (player.currColl != currentColl)
-        {
-            currentColl = player.currColl;
-        }
-        currTxt.text = currentColl.ToString();
+        maxTxt.text = "/ " + maxLeaves.ToString();
+        currTxt.text = data.goldLeaves.Length.ToString();
     }
-
 }

@@ -8,6 +8,8 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public Player_Control_Settings sapSettings;
     private Player_Control_Settings originalSettings;
 
+    public Gold_Leaf_Data[] goldenLeaves;
+
     public int health = 1;
     public int max_health = 1;
     public int invCycles;
@@ -195,21 +197,32 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 [System.Serializable]
 public class Player_Data
 {
+     //THIS CLASS CONTAINS THE DATA SAVED IN PATH: SaveFile/Player/Player.data
+
     public int health;
     public int currColl;
     public string currentQuest;
     public string scene;
     public Checkpoint_Data checkpoint;
+    public Gold_Leaf_Data[] goldLeaves;
 
     public Player_Data(Player player)
     {
+        //STATS
         health = player.health;
         currColl = player.currColl;
+
+        //COLLECTABLES
+        goldLeaves = player.goldenLeaves;
+
+        //SCENES
         scene = SceneManager.GetActiveScene().name;
 
+        //QUEST SYSTEM
         Quest current = Quest_Handler.instance.Target_Quest;
         currentQuest = current != null ? Quest_Handler.instance.Target_Quest.name : "NONE";
 
+        //CHECKPOINTS
         Checkpoint c = Checkpoint.Get_Active_Checkpoint();
         checkpoint = c != null ? new Checkpoint_Data(c) : null;
     }
