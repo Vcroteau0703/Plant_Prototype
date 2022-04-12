@@ -29,24 +29,22 @@ public class Gold_Leaf : Action_Volume
     {
         Instantiate(pickupParticle, transform.position, Quaternion.identity);
 
-        Player player = actor.GetComponentInParent<Player>();
-
-        Gold_Leaf_Data[] temp = player.goldenLeaves;
+        Gold_Leaf_Data[] temp = Player.goldenLeaves;
         
-        if(temp.Length == 0) {
-            player.goldenLeaves = new Gold_Leaf_Data[1];
-            player.goldenLeaves[0] = new Gold_Leaf_Data(this);
+        if(temp == null || temp.Length == 0) {
+            Player.goldenLeaves = new Gold_Leaf_Data[1];
+            Player.goldenLeaves[0] = new Gold_Leaf_Data(this);
             Destroy(gameObject);
             return;
         }
 
-        player.goldenLeaves = new Gold_Leaf_Data[temp.Length + 1];
+        Player.goldenLeaves = new Gold_Leaf_Data[temp.Length + 1];
 
         for (int i = 0; i < temp.Length; i++)
         {
-            player.goldenLeaves[i] = temp[i];
+            Player.goldenLeaves[i] = temp[i];
             if(i == temp.Length - 1){
-                player.goldenLeaves[i + 1] = new Gold_Leaf_Data(this);
+                Player.goldenLeaves[i + 1] = new Gold_Leaf_Data(this);
             }
         }
         Destroy(gameObject);
