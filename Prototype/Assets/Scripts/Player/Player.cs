@@ -8,7 +8,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
     public Player_Control_Settings sapSettings;
     private Player_Control_Settings originalSettings;
 
-    public Gold_Leaf_Data[] goldenLeaves;
+    public static Gold_Leaf_Data[] goldenLeaves;
 
     public int health = 1;
     public int max_health = 1;
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
 
         Player_Data player = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (player != null){
+            goldenLeaves = player.goldLeaves;
             health = player.health;
             currColl = player.currColl;
             if (SceneManager.GetActiveScene().name == player.scene)
@@ -213,7 +214,7 @@ public class Player_Data
         currColl = player.currColl;
 
         //COLLECTABLES
-        goldLeaves = player.goldenLeaves;
+        goldLeaves = Player.goldenLeaves;
 
         //SCENES
         scene = SceneManager.GetActiveScene().name;
