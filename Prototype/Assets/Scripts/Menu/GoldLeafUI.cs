@@ -12,9 +12,7 @@ public class GoldLeafUI : MonoBehaviour
 
     private void OnEnable()
     {
-        Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
-
         maxTxt.text = "/ " + maxLeaves.ToString();
-        currTxt.text = data.goldLeaves.Length.ToString();
+        currTxt.text = Player.goldenLeaves.Length.ToString();
     }
 }
