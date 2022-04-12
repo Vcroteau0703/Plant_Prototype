@@ -27,10 +27,10 @@ MonoBehaviour:
       Completed: 0
       Tasks:
       - Progress: 0
-  questTitle: 'Chapter 0: Testing'
+  questTitle: 'Chapter 2: Mesquite Tree'
   events:
-  - name: Turning off the Light
+  - name: Destroy Termites
     tasks:
-    - description: Finish the Quest
+    - description: Destroy the Termites
       progress: 0
-      maxProgress: 3
+      maxProgress: 10

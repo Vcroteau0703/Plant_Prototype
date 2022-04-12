@@ -11,12 +11,12 @@ public class Quest_02 : MonoBehaviour
 
     }
 
-    public IEnumerator Termite_Quest()
-    {
-        List<Task> tasks = Quest_System.Get_Active_Event().tasks;
+    //public IEnumerator Termite_Quest()
+    //{
+    //    List<Task> tasks = Quest_System.Get_Active_Event().tasks;
         
-        Quest_System.Next_Event(source);
-    }
+    //    Quest_System.Next_Event(source);
+    //}
 
     // Start is called before the first frame update
     void Start()
