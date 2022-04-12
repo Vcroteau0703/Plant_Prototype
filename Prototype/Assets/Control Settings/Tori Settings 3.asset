@@ -16,14 +16,14 @@ MonoBehaviour:
   Acceleration: 1.6
   Friction: 0.2
   Jump:
-    power: 10
-    floatiness: 0.05
+    power: 8
+    floatiness: 0.09
     angle: 0
     buffer: 0
     phase: 1
   Wall_Jump:
     power: 10
-    floatiness: 1
+    floatiness: 0.5
     angle: 210
     buffer: 0.1
     phase: 1
@@ -31,9 +31,9 @@ MonoBehaviour:
   Air_Speed: 10
   Air_Control: 0.8
   Air_Accel: 1.4
-  Fall_Speed: -30
+  Fall_Speed: -25
   Glide_Power: 2
-  Slide_Friction: 7
+  Slide_Friction: 5
   Max_Slide_Speed: 2
   Slide_Threshhold: 3
   Slide_Accel: 12
