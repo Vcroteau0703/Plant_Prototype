@@ -10,6 +10,9 @@ I need your help!
 I climbed all the way up here, but now I-I can't get down...
 Could you give me something to land on?
 <<Camera_Pan CameraAfterDialog>>
+<<Start_Quest Quest_01>>
+<<wait 1.5>>
+<<Next_Event Quest_01>>
 
 ===
 title: Dialogue2
@@ -31,6 +34,8 @@ position: 213,26
 <<Camera_Pan CameraDuringDialog>>
 Woah, down here! Check out the water!
 <<Camera_Pan CameraAfterDialog>>
+<<wait 1.5>>
+<<Next_Event Quest_01>>
 
 ===
 title: Node
@@ -71,6 +76,7 @@ Spinner: Jumping up walls is pretty easy. If you have good footing, you can hang
 Spinner: Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
 <<Camera_Pan WallClimbTutorialEnd>>
 <<wait 0.5>>
+<<Next_Event Quest_01>>
 Spinner: Alright, hope that helps!
 Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
 Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
