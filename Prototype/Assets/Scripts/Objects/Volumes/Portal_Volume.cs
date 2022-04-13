@@ -37,7 +37,10 @@ public class Portal_Volume : Action_Volume
     private IEnumerator LevelTransitionOut(GameObject actor)
     {
         //Make sprig run left or right
-
+        if (actor.TryGetComponent<Player_Controller>(out Player_Controller pC))
+        {
+            pC.OnDisable();
+        }
         //Fade screen to black
         User_Interface.transform.GetChild(3).GetComponent<Animator>().SetTrigger("Fade");
         //Load Next Level

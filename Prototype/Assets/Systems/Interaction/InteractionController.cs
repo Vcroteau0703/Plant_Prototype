@@ -19,7 +19,7 @@ public class InteractionController : MonoBehaviour
     
     private GameObject interactPrompt;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         if (inputs == null)
         {
@@ -27,6 +27,10 @@ public class InteractionController : MonoBehaviour
         }
         inputs.Player.Interact.performed += Interact;
         inputs.Player.Enable();
+    }
+    public void OnDisable()
+    {
+        inputs.Player.Disable();
     }
 
     private void Awake()
