@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Gold_Leaf : Action_Volume
 {
@@ -55,7 +56,7 @@ public class Gold_Leaf : Action_Volume
 [System.Serializable]
 public class Gold_Leaf_Data
 {
-    public int id;
+    [SerializeField] public int id;
     public Gold_Leaf_Data(Gold_Leaf leaf)
     {
         id = leaf.GetInstanceID();
