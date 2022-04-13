@@ -55,34 +55,36 @@ public static class Quest_System
 
     public static void Next_Event(Quest quest)
     {
-        if (quest.Data.Completed) { return; }
-        Event target = Quest_Handler.instance.Target_Event;
-        Event current = Quest_Handler.instance.Target_Event;
-        if (target == null)
-        {
-            target = Quest_Handler.instance.Target_Quest.events[0];
-            Quest_Handler.instance.Event_Start(target);
-            return;
-        }
+        Quest tQuest = Resources.Load<Quest>("Data/Quests/" + quest.name);
+        if (!tQuest) { Debug.Log("Requested Quest Start parameter does not exist in Resources."); return; }
 
-        Event_Data[] eventData = quest.Data.Events;
-        foreach(Event_Data d in eventData)
+        if (tQuest.Data.Completed) { return; }
+
+        Event curEvent = Quest_Handler.instance.Target_Event;
+
+        Debug.Log("Current Event: " + curEvent);
+
+        Event_Data[] eventData = tQuest.Data.Events;
+
+        for (int i = 0; i < eventData.Length; i++)
         {
-            if (!d.Completed)
+            if (curEvent != null && eventData[i].Name == curEvent.name)
             {
-                if(d.Name == current.name)
-                {
-                    d.Completed = true;
-                    Quest_Handler.instance.Event_Complete(current);
-                    continue;
-                }
-
-                target = quest.Get_Event(d.Name);
-                Quest_Handler.instance.Event_Start(target);
+                Quest_Data data = tQuest.Data;
+                data.Events[i].Completed = true;
+                Quest_Handler.instance.Event_Complete(curEvent);
+                tQuest.Data = data;
+                continue;
+            }
+            else if (eventData[i].Completed == false)
+            {
+                curEvent = tQuest.Get_Event(eventData[i].Name);
+                Quest_Handler.instance.Event_Start(curEvent);
                 return;
-            }          
+            }
         }
-        Complete_Quest(quest);
+        Debug.Log("No More Events to Load -> Quest Complete");
+        Complete_Quest(tQuest);
     }
 
     [Yarn.Unity.YarnCommand("Next_Event")]
@@ -103,6 +105,7 @@ public static class Quest_System
             {
                 Quest_Data data = tQuest.Data;
                 data.Events[i].Completed = true;
+                Quest_Handler.instance.Event_Complete(curEvent);
                 tQuest.Data = data;              
                 continue;
             }
