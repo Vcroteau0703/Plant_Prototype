@@ -10,6 +10,7 @@ public class Termite : Hazard
         {
             if (p.sapActive)
             {
+                gameObject.GetComponentInParent<Termite_Tracker>().Update_Termite_Count();
                 gameObject.SetActive(false);
             }
             else if (other.gameObject.TryGetComponent(out IDamagable a))

@@ -20,37 +20,37 @@ public class Action_Volume : MonoBehaviour
 
     public Trigger_Type trigger_type;
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {       
         if ((Layer_Filter & (1<<other.gameObject.layer)) == 0){ return; }
         else if (trigger_type == Trigger_Type.Trigger_Stay) { action.Invoke(other.gameObject); }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); }
     }
 
-    private void OnTriggerExit(Collider other)
+    public virtual void OnTriggerExit(Collider other)
     {
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Trigger_Exit) { action.Invoke(other.gameObject); }
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Collision_Stay) { action.Invoke(collision.gameObject); }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Collision_Enter) { action.Invoke(collision.gameObject); }
     }
 
-    private void OnCollisionExit(Collision collision)
+    public void OnCollisionExit(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Collision_Exit) { action.Invoke(collision.gameObject); }

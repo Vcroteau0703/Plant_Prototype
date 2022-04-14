@@ -17,10 +17,35 @@ public class Portal_Volume : Action_Volume
     public Portal_Data Data { get { return data; } }
 
     private BoxCollider col;
+    private GameObject User_Interface;
 
     private void OnEnable()
     {
-        action = Travel;
+        action = StartTransition;
+    }
+
+    private void Awake()
+    {
+        User_Interface = GameObject.Find("User_Interface");
+    }
+
+    private void StartTransition(GameObject actor)
+    {
+        StartCoroutine(LevelTransitionOut(actor));
+    }
+
+    private IEnumerator LevelTransitionOut(GameObject actor)
+    {
+        //Make sprig run left or right
+        if (actor.TryGetComponent<Player_Controller>(out Player_Controller pC))
+        {
+            pC.OnDisable();
+        }
+        //Fade screen to black
+        User_Interface.transform.GetChild(3).GetComponent<Animator>().SetTrigger("Fade");
+        //Load Next Level
+        yield return new WaitForSeconds(2f);
+        Travel(actor);
     }
 
     private void Travel(GameObject actor)

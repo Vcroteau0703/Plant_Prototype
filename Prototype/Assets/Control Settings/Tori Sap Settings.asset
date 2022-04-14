@@ -17,15 +17,13 @@ MonoBehaviour:
   Friction: 0.4
   Jump:
     power: 8
-    max_height: 15
-    floatiness: 0.05
+    floatiness: 0.01
     angle: 0
     buffer: 0
     phase: 0
   Wall_Jump:
-    power: 10
-    max_height: 15
-    floatiness: 0.03
+    power: 9
+    floatiness: 0.7
     angle: 36
     buffer: 0
     phase: 1

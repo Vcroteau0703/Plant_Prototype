@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658171c8820d9f4ab1861d9ab528b98, type: 3}
   m_Name: Tori Settings 3
   m_EditorClassIdentifier: 
-  Move_Speed: 18
+  Move_Speed: 15
   Acceleration: 1.6
   Friction: 0.2
   Jump:
     power: 8
-    floatiness: 0.5
+    floatiness: 0.09
     angle: 0
     buffer: 0
     phase: 1
   Wall_Jump:
-    power: 9
-    floatiness: 0.03
+    power: 10
+    floatiness: 0.8
     angle: 210
     buffer: 0.1
     phase: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
   Air_Accel: 1.4
   Fall_Speed: -25
   Glide_Power: 2
-  Slide_Friction: 7
+  Slide_Friction: 5
   Max_Slide_Speed: 2
   Slide_Threshhold: 3
   Slide_Accel: 12

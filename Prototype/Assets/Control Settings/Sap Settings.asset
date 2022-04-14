@@ -17,19 +17,19 @@ MonoBehaviour:
   Friction: 0.2
   Jump:
     power: 7
-    floatiness: 0.2
+    floatiness: 0.09
     angle: 0
     buffer: 0
     phase: 1
   Wall_Jump:
-    power: 8
-    floatiness: 0.03
+    power: 9
+    floatiness: 0.8
     angle: 210
     buffer: 0.1
     phase: 1
   Coyote_Delay: 0.15
-  Air_Speed: 9
-  Air_Control: 0.7
+  Air_Speed: 10
+  Air_Control: 0.9
   Air_Accel: 1.4
   Fall_Speed: -25
   Glide_Power: 2

@@ -5098,8 +5098,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3111ebc18955da94d892a7a4ed6242ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupID: 
-  destroy: 0
+  Layer_Filter:
+    serializedVersion: 2
+    m_Bits: 128
+  trigger_type: 1
+  pickupParticle: {fileID: 8394858444069499237, guid: 45a3ccc13723a2b4c9eb2313adb83301, type: 3}
 --- !u!1 &2667352825574211945
 GameObject:
   m_ObjectHideFlags: 0
