@@ -22,10 +22,11 @@ public class InteractionController : MonoBehaviour
     private void OnEnable()
     {
         if (inputs == null)
-        {
+        {           
             inputs = new Controls();
         }
         inputs.Player.Interact.performed += Interact;
+        Debug.Log("setup interact");
         inputs.Player.Enable();
     }
 
@@ -42,6 +43,7 @@ public class InteractionController : MonoBehaviour
     #region Inputs
     public void Interact(InputAction.CallbackContext context) // if user clicks pickup button
     {
+        Debug.Log("TABLET");
         if (closestItem != null) // do we have an item to interact with
         {
             InteractionID id = closestItem.GetComponent<InteractionID>(); // get the interaction ID
