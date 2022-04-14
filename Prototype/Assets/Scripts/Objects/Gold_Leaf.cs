@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEditor;
+using System.Reflection;
 
 public class Gold_Leaf : Action_Volume
 {
@@ -12,9 +13,13 @@ public class Gold_Leaf : Action_Volume
         Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (data == null) { return; }
 
-        foreach (Gold_Leaf_Data g in data.goldLeaves)
+        int localID = ((int)transform.position.sqrMagnitude);
+
+        foreach (Gold_Leaf_Data saved in data.goldLeaves)
         {
-            if (GetInstanceID() == g.id)
+            Debug.Log(localID + " | " + saved.id);
+
+            if (localID == saved.id)
             {
                 Destroy(gameObject);
             }
@@ -59,6 +64,6 @@ public class Gold_Leaf_Data
     [SerializeField] public int id;
     public Gold_Leaf_Data(Gold_Leaf leaf)
     {
-        id = leaf.GetInstanceID();
+        id = ((int)leaf.transform.position.sqrMagnitude);
     }
 }
