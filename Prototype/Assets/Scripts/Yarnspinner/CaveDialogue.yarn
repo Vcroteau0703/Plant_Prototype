@@ -121,3 +121,16 @@ Aloe: I'm sure it's not a problem. We'll only be gone a minute!
 ???: M̶̛̮a̷͉̚y̶̰̓b̸̜̓e̷̝͝ ̷̤̃I̵̗͝'̴͍̀ḻ̷̀l̶͝ͅ ̶͛ͅs̵͎̿e̶͔͠ē̶̩ ̸̲̓y̶̝̔ọ̸̓ṵ̴́ ̵͇̐ả̷̗ḡ̵̞a̴̹̐ì̷̥n̵̞̈́!̸̺̈
 
 ===
+title: AloeEncounter
+position: -12,-114
+---
+
+....Sprig... Sprig.....
+<<Start_Quest Quest_03>>
+<<Camera_Pan AloeEncounterAnim>>
+Find them.... Bring them to me....
+<<Next_Event Quest_03>>
+th.... one here...
+<<Camera_Pan AloeLeaves>>
+
+===
