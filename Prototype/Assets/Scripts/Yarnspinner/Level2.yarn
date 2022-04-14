@@ -11,28 +11,28 @@ Spinner: Ewwwww, I'm so sticky and slow. I need to wash this off.
 <<Camera_Pan SapTut>>
 <<wait 2.5>> 
 Spinner: Whew, that's much better.
-Frond...? Is that you?
+???: Frond...? Is that you?
 Spinner: Eh? Who said that? There's no one here.
 Spinner: Ah well, it's not like the tree can talk, right?
-I assure you that I can, little spiderling.
+???: I assure you that I can, little spiderling.
 Spinner: W-Woah! We're so sorry, we didn't know you were alive, please forgive us!
-Not to worry. Any friend of Frond's is a friend of mine.
+???: Not to worry. Any friend of Frond's is a friend of mine.
 Spinner: Uhhhh...who?
-Your quiet little companion over there. He's been caring for me ever since he arrived.
-Speaking of which, I could use your help once again.
-Those awful termites have returned, and it's been hard trying to get rid of them on my own. Could you get rid of them for me?
+???: Your quiet little companion over there. He's been caring for me ever since he arrived.
+???: Speaking of which, I could use your help once again.
+???: Those awful termites have returned, and it's been hard trying to get rid of them on my own. Could you get rid of them for me?
 -> How can I do that?
-    You used to use my sap to fight them off, remember?
-    As long as you've got a good coat on, they'll stick to you and die right away.
+    ???: You used to use my sap to fight them off, remember?
+    ???: As long as you've got a good coat on, they'll stick to you and die right away.
 -> Sorry, I'm not Frond.
-    Ohohoho! Frond, I may be old, but I've fallen for that joke before already.
-    Just be careful, if you touch them without a good coat of sap, they will eat you right away.
+    ???: Ohohoho! Frond, I may be old, but I've fallen for that joke before already.
+    ???: Just be careful, if you touch them without a good coat of sap, they will eat you right away.
 -> Leave it to me!
-    Thank you. I can always count on you.
-    Just be careful, if you touch them without a good coat of sap, they will eat you right away.
+    ???: Thank you. I can always count on you.
+    ???: Just be careful, if you touch them without a good coat of sap, they will eat you right away.
 -> Spinner, get rid of the termites.
     Spinner: Waaaaaah?! I'm not going near those things!
-    Frond was just joking, little spiderling. If you touch them without a good coat of sap, they will eat you right away.
+    ???: Frond was just joking, little spiderling. If you touch them without a good coat of sap, they will eat you right away.
 <<Next_Event Quest_02>>
 Spinner: Got it! We'll be safe Mr. Tree!
 Grover: Please, little spiderling, call me Grover.
