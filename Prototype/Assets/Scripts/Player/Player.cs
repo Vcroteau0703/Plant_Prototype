@@ -73,13 +73,15 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             if (health == 0)
             {
                 anim.SetTrigger("DEATH");
-                pC.OnDisable();
+                pC.controls.Player.Move.Disable();
+                pC.controls.Player.Jump.Disable();
                 damageActive = false;
             }
             else if (health < 0)
             {
                 health = 0;
-                pC.OnDisable();
+                pC.controls.Player.Move.Disable();
+                pC.controls.Player.Jump.Disable();
                 anim.SetTrigger("DEATH");
                 damageActive = false;
             }

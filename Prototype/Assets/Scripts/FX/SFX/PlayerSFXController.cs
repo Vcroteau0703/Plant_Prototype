@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerSFXController : MonoBehaviour
 {
+    Player_Controller pC;
     public Detection detection;
     bool left, right, down;
     int r;
@@ -28,6 +29,7 @@ public class PlayerSFXController : MonoBehaviour
     {
         aS = GetComponent<AudioSource>();
         player = gameObject.GetComponent<Player>();
+        pC = gameObject.GetComponent<Player_Controller>();
     }
 
     void DetermineMaterial()
@@ -161,6 +163,20 @@ public class PlayerSFXController : MonoBehaviour
             dustWallLandingParticle.transform.localScale = new Vector3(-dustWallLandingParticle.transform.localScale.x, dustWallLandingParticle.transform.localScale.y, dustWallLandingParticle.transform.localScale.z);
         }
         dustWallLandingParticle.Emit(1);
+    }
+
+
+    public void EnablePlayer()
+    {
+        pC.controls.Player.Move.Enable();
+        pC.controls.Player.Jump.Enable();
+        //pC.controls.Player.Enable();
+    }
+
+    public void DisablePlayer()
+    {
+        pC.controls.Player.Move.Disable();
+        pC.controls.Player.Jump.Disable();
     }
 
 }
