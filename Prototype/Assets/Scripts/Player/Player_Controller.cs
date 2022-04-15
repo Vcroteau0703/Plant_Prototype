@@ -171,6 +171,8 @@ public class Player_Controller : MonoBehaviour
 
         State active = state_controller.Get_Active_State();
 
+        Debug.Log(active.name);
+
 
         if((left || right) && aerial_time > 0.25f) // Wall
         {        
@@ -291,6 +293,8 @@ public class Player_Controller : MonoBehaviour
         aerial_time += Time.deltaTime;
         slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
         float speed = direction.x * settings.Air_Speed;
+        if (left) { speed = Mathf.Clamp(speed, 0, settings.Air_Speed); }
+        else if (right) { speed = Mathf.Clamp(speed, -settings.Air_Speed, 0); }
         float diff = speed - rb.velocity.x;
         float force = Mathf.Pow(Mathf.Abs(diff), settings.Air_Accel) * direction.x;
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
