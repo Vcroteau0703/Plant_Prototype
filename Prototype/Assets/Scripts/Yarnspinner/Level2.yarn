@@ -98,7 +98,6 @@ title: Level2Frond3
 position: -8,151
 ---
 
-<<Next_Event Quest_02>>
 Frond: Nice gliding! I've gotta admit, I'm impressed.
 Frond: So what do you wanna do now that we're up here? Glide back down? Admire the view? Play a game?
 -> Glide down.
@@ -237,6 +236,7 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
             Frond: Just look around us! Not only did you clean up those termites, you made Grover look better than I ever could!
             Frond: I'm not sure what you did, but if you did that to the caves, maybe exploring them won't be as deadly as most plants would think.
             -> I'm going to find her.
+            <<Next_Event Quest_02>>
             Frond: I know you will. You're braver than I could ever be.
             Frond: When you find her...promise me you'll bring her home. I miss her.
             -> I promise.
@@ -249,5 +249,14 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
             -> Yeah?
             Frond: I love you.
             Frond: Good luck.
+            <<Camera_Pan SprigFliesBackToTree>>
 
+===
+title: SpiderPlant
+position: 0,0.5
+---
+Spinner: How's the termite hunt going?
+-> No complaints
+-> This tree is easy to get lost in
+    Spinner: It's massive! Grover was telling me this path to my right goes straight to the caves.
 ===
