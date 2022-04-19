@@ -1,4 +1,5 @@
 ﻿title: Level2SapTut
+position: 0,0.5
 tags:
 ---
 <<Start_Quest Quest_02>>
@@ -99,9 +100,35 @@ position: -8,151
 ---
 
 Frond: Nice gliding! I've gotta admit, I'm impressed.
-Frond: So what do you wanna do now that we're up here? Glide back down? Admire the view? Play a game?
--> Glide down.
-    Frond: Alright! Why don't you go first and show me what you've got?
+Frond: So what do you wanna do now that we're up here? Listen to some music? Admire the view? Play a game?
+-> Listen to music.
+    Frond: Alright! *ahem*
+    Frond: "'Tis tradition to fall and climb back up"
+    Frond: "When you consider yourself to have had enough"
+    Frond: "One must remember to stay pepped and sharp"
+    Frond: "When you consider yourself..."
+    <<wait 2>>
+    Frond: Psssst. I kinda forgot this part, help me out.
+    -> Carp.
+        Frond: "When you consider yourself dull as a carp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Harp.
+        Frond: "When you consider yourself pretty as a harp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Tarp.
+        Frond: "When you consider yourself covered by a tarp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Scarp.
+        Frond: "When you consider yourself steep as a scarp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
 -> Admire the view.
     Frond: Alright! Let's lay back and admire!
     <<wait 5>>
@@ -133,8 +160,34 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
         Frond: Feels good to let out your anger sometimes.
 -> We need to talk.
     Frond: ...uh, come on Sprig. Pick something else.
-    -> Glide down.
-        Frond: Alright! Why don't you go first and show me what you've got?
+    -> Listen to music.
+        Frond: Alright! *ahem*
+        Frond: "'Tis tradition to fall and climb back up"
+        Frond: "When you consider yourself to have had enough"
+        Frond: "One must remember to stay pepped and sharp"
+        Frond: "When you consider yourself..."
+        <<wait 2>>
+        Frond: Psssst. I kinda forgot this part, help me out.
+        -> Carp.
+            Frond: "When you consider yourself dull as a carp!"
+            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+        -> Harp.
+            Frond: "When you consider yourself pretty as a harp!"
+            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+        -> Tarp.
+            Frond: "When you consider yourself covered by a tarp!"
+            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+        -> Scarp.
+            Frond: "When you consider yourself steep as a scarp!"
+            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
     -> Admire the view.
         Frond: Alright! Let's lay back and admire!
         <<wait 5>>
@@ -167,8 +220,34 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
     -> We need to talk.
         Frond: Sprig?
         Frond: I don't think you heard me...
-        -> Glide down.
-            Frond: Alright! Why don't you go first and show me what you've got?
+        -> Listen to music.
+            Frond: Alright! *ahem*
+            Frond: "'Tis tradition to fall and climb back up"
+            Frond: "When you consider yourself to have had enough"
+            Frond: "One must remember to stay pepped and sharp"
+            Frond: "When you consider yourself..."
+            <<wait 2>>
+            Frond: Psssst. I kinda forgot this part, help me out.
+            -> Carp.
+                Frond: "When you consider yourself dull as a carp!"
+                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+            -> Harp.
+                Frond: "When you consider yourself pretty as a harp!"
+                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+            -> Tarp.
+                Frond: "When you consider yourself covered by a tarp!"
+                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+            -> Scarp.
+                Frond: "When you consider yourself steep as a scarp!"
+                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
         -> Admire the view.
             Frond: Alright! Let's lay back and admire!
             <<wait 5>>
@@ -227,8 +306,7 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
             Frond: ...That is, until now.
             Frond: I don't really know how you did it, but I'm feeling better now that I'm with you.
             -> Where's Aloe?
-            Frond: ...She left me to look for you when you got lost.
-            Frond: So I can't say for sure I know where she is.
+            Frond: ...I think she left me to look for you. I'll be honest, I'm not sure.
             Frond: But if I had to guess...she's in the one place I haven't looked.
             Frond: The Caves.
             Frond: It's not that simple though. The caves have something wrong with them. Grover can feel it.
@@ -255,8 +333,44 @@ Frond: So what do you wanna do now that we're up here? Glide back down? Admire t
 title: SpiderPlant
 position: 0,0.5
 ---
-Spinner: How's the termite hunt going?
--> No complaints
--> This tree is easy to get lost in
-    Spinner: It's massive! Grover was telling me this path to my right goes straight to the caves.
+Spinner: Sooooooo Sprog, how's the hunt going?
+-> Pretty good so far.
+    Spinner: Cool! Then I'll leave you to it!
+-> I don't remember how to get rid of them...
+    Spinner: AH WAIT! I can help you, like a sidekick!
+    Spinner: Mr. Grover said if you're covered in sap then you can touch them.
+    Spinner: Hmmm, I need some sort of quip...
+    Spinner: ...is "crap" a swear word?
+    -> Yes.
+        Spinner: "If you're full of sap, the termites won't strike back!"
+    -> No.
+        Spinner: "If you're full of sap, they won't make you crap!"
+    -> Teach Spinner a REAL swear word.
+        Spinner: "If you're full of sap..."
+        Spinner: Hmmm, but that doesn't rhyme. Ah well, you get the jist.
+    Spinner: Just remember that and you should be fine!
+-> It's easy to get lost here.
+    Spinner: Yeah, I've always wanted to explore this place.
+    Spinner: My mom never let me, but she's...w-well, she's not here right now.
+    Spinner: If only she could see me now! I'm not her little baby country-side plant anymore!
+    Spinner: I'm not too worried about getting lost though.
+    Spinner: If you get lost, just remember: SLACK!
+    Spinner: That stands for Saves, Landmarks, And Checkpoints...Kool!
+-> ...What did you just call me?
+    Spinner: Hmmm? What?
+    -> What. Did. You. Just. Call. Me.
+    Spinner: Ooooooh, I called you Sprog!
+    -> Why.
+    Spinner: Well, remember when I asked you what I should call you?
+    Spinner: I didn't really like "Sprig" or "Frond," so I combined the two!
+    Spinner: Pretty creative, right? Now you've got a superhero name!
+    -> Great!
+    -> Don't ever call me Sprog again.
+        Spinner: O-Oh...
+        Spinner: I, uh, I see...
+        Spinner: ...
+        Spinner: You only want me to call you Sprog when you're on duty!
+        Spinner: Ha! It's so great watching you become a hero right before my eyes!
+        Spinner: Well, I'll let you get back to your work Sprog!
+        Spinner: ...er, Sprig. That's what I meant.
 ===

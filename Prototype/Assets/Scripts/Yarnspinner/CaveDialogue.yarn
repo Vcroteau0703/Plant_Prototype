@@ -3,37 +3,52 @@ tags:
 position: 1,-1
 ---
 
-You're late.
-Bring the four here. Then we can talk.
+???: Bring the four here...
 
 ===
 title: Aloe2
 position: 1, -1
 ---
 
-<<Camera_Pan GerminationCave>>
-Aloe: Sprig... You did it! I'd been trapped in that statue for too long. Longer than I can remember.
-Aloe: And look around you, this cave... this entire place is so much brighter because of you.
-Aloe: Heh...you're special, and I really mean that.
-Aloe: I watched you grow that vine outside without lifting a finger.
-Aloe: And if you can do that, maybe this world isn't nearly as doomed as I had thought.
-Aloe: ...
+Aloe: Haaaaaaah...thank you Sprig.
+-> Aloe...
+-> Sister...
+Aloe: You know, I almost didn't recognize you. You look better than before.
+Aloe: And that's not all that's new, is it?
+Aloe: I know you've been bringing life back to this sad world.
+Aloe: Leave it to you to make light out of a dark situation, right?
+Aloe: But if you can do that, maybe this world isn't nearly as doomed as I had thought.
+-> What are you talking about?
+Aloe: Still haven't figured it out? Well, I'll keep things brief.
+Aloe: We're dead.
+Aloe: ...and it's because of me.
+<<wait 2>>
 Aloe: I'm sorry. For everything.
-Aloe: I understand that it isn't my fault, and yet, it's something I could have stopped.
+Aloe: I know the blizzard wasn't my fault, but it's something I could have stopped.
+Aloe: I could've kept an eye on you. I could've helped Frond back at home. Instead...
 Aloe: If I was just like you...maybe...
+-> Maybe...?
+    Aloe: Maybe this wouldn't have happened.
+    Aloe: I wouldn't have come here and done this.
+    Aloe: Isn't that the worst part?
+    Aloe: I wasn't there for either of your final moments.
+-> It's okay.
+    Aloe: Ha, don't kid yourself.
+    Aloe: Just look at where we are because of me.
+    Aloe: It literally doesn't get worse than this.
 -> You're special too.
-Aloe: Stop.
-Aloe: I don't need to hear about how I'm special in my own way.
-Aloe: I abandoned you. I abandoned Frond. My family.
-Aloe: And now we're all here because I wasn't.
-Aloe: You can pretend to forgive me all you want, but deep down, we both know how you really feel.
+    Aloe: Stop.
+    Aloe: I don't need to hear about how I'm special in my own way.
+    Aloe: I abandoned you. I abandoned Frond. My family.
+    Aloe: And now we're all here because I wasn't.
+-> I forgive you.
+Aloe: ...You can pretend to forgive me all you want, but deep down, we both know how you really feel.
 Aloe: Go on, let it out.
 -> I love you.
 <<wait 5>>
-Aloe: ...
+Aloe: ...I-
 -> Come on. Let's go home.
-<<wait 1>>
-Aloe: Yeah ...Frond is waiting for us, I'll see you where it all began.
+<<Camera_Pan GerminationCave>>
 <<Next_Event Quest_03>>
 
 ===
@@ -59,8 +74,8 @@ title: Tablet3
 position: 198,116.5
 ---
 
-I've decided to write some more while I'm exploring here.
-I often despise my ancestors for ruining my family name with a bloodline of failures.
+In the meantime, I may as well keep writing.
+I often despise my ancestors for ruining my family name with a line of failures.
 But a doorway to the afterlife and back?
 Maybe they were onto something.
 
@@ -119,7 +134,7 @@ Aloe: I'm sure it's not a problem. We'll only be gone a minute!
 ???: You wouldn't happen to know an Aloe, would you?
 ???: You look just like her, and she and I...
 ???: ...well, we're close friends.
--> T h e r e ' s   a n o t h e r   s e c r e t   i n   t h e   f i e l d s .
+-> M e e t   m e   i n   t h e   f i e l d s .
 ???: Ah, of course! Thank you Sprig.
 ???: M̶̛̮a̷͉̚y̶̰̓b̸̜̓e̷̝͝ ̷̤̃I̵̗͝'̴͍̀ḻ̷̀l̶͝ͅ ̶͛ͅs̵͎̿e̶͔͠ē̶̩ ̸̲̓y̶̝̔ọ̸̓ṵ̴́ ̵͇̐ả̷̗ḡ̵̞a̴̹̐ì̷̥n̵̞̈́!̸̺̈
 
@@ -128,12 +143,13 @@ title: AloeEncounter
 position: -12,-114
 ---
 
-....Sprig... Sprig.....
+???: ...Sprig?
+???: ...Listen carefully...
 <<Start_Quest Quest_03>>
 <<Camera_Pan AloeEncounterAnim>>
-Find them.... Bring them to me....
+???: Find the pieces...bring them to me...
 <<Next_Event Quest_03>>
-th.... one here...
+???: There's one here...
 <<Camera_Pan AloeLeaves>>
 
 ===
