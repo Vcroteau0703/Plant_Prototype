@@ -33,7 +33,10 @@ public class UserInterface : MonoBehaviour
         inputs.Player.Pause.performed += Pause;
         inputs.Player.Pause.Enable();
 
-        canvas.worldCamera = Camera.main;
+        if(canvas.worldCamera == null)
+        {
+            canvas.worldCamera = Camera.main;
+        }      
     }
 
     public void Pause(InputAction.CallbackContext context)
