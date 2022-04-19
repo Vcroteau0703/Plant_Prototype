@@ -11,6 +11,9 @@ title: Aloe2
 position: 1, -1
 ---
 
+<<Camera_Pan GerminationCave>>
+Aloe: Sprig... You did it! I'd been trapped in that statue for too long. Longer than I can remember.
+Aloe: And look around you, this cave... this entire place is so much brighter because of you.
 Aloe: Heh...you're special, and I really mean that.
 Aloe: I watched you grow that vine outside without lifting a finger.
 Aloe: And if you can do that, maybe this world isn't nearly as doomed as I had thought.
@@ -30,7 +33,8 @@ Aloe: Go on, let it out.
 Aloe: ...
 -> Come on. Let's go home.
 <<wait 1>>
-*Aloe joined your party.*
+Aloe: Yeah ...Frond is waiting for us, I'll see you where it all began.
+<<Next_Event Quest_03>>
 
 ===
 title: Tablet1
