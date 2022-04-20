@@ -24,6 +24,7 @@ public class Player_Controller : MonoBehaviour
     public Vector2 direction;
     //public Vector2 touching;
     private float coyote_time;
+    private int jumpCount;
     public float slide_speed = 0;
     public float aerial_time;
     public float target_gravity = -9.81f;
@@ -66,6 +67,7 @@ public class Player_Controller : MonoBehaviour
     private void FixedUpdate()
     {
         State_Control();
+        Ground_Lock();
     }
     private void Update()
     {
@@ -99,22 +101,30 @@ public class Player_Controller : MonoBehaviour
             state_controller.Request_State("Moving");
         }
         else{
-            detection.collider.material.dynamicFriction = 1.5f;
             state_controller.Request_State("Idle");
         }
     }
     private void Request_Jump(InputAction.CallbackContext context)
     {
+        if(jumpCount >= 1) { return; }
+
         State state = state_controller.Get_Active_State();
 
         if (state.name == "Idle" || state.name == "Moving")
         {
+            jumpCount++;
             state_controller.Request_State("Jump");
         }       
+        else if(state.name == "Aerial" && aerial_time < settings.Coyote_Delay && settings.Jump.phase == Jump.State.Canceled)
+        {
+            jumpCount++;
+            state_controller.Request_State("Jump");
+        }
         else if (state.name == "Cling")
         {
+            jumpCount++;
             state_controller.Request_State("Wall Jump");
-        }
+        }      
     }
     private void Request_Cancel_Jump(InputAction.CallbackContext context)
     {
@@ -180,12 +190,14 @@ public class Player_Controller : MonoBehaviour
             {               
                 if (direction.y < 0 && slope == -1)
                 {
-                    state_controller.Request_State("Slide");            
+                    state_controller.Request_State("Slide");
+                    jumpCount = 0;
                     return;
                 }
                 else
                 {
                     state_controller.Request_State("Cling");
+                    jumpCount = 0;
                     return;
                 }
             }            
@@ -205,17 +217,18 @@ public class Player_Controller : MonoBehaviour
         }
         if (down) // Ground
         {
-            
             if (direction.x != 0)
             {
                 aerial_time = 0;
                 state_controller.Request_State("Moving");
+                jumpCount = 0;
                 return;
             }
             else
             {
                 aerial_time = 0;
                 state_controller.Request_State("Idle");
+                jumpCount = 0;
                 return;
             }
         }
@@ -224,6 +237,10 @@ public class Player_Controller : MonoBehaviour
     #endregion
 
     #region MOVEMENT
+    public void Idle()
+    {
+        detection.collider.material.dynamicFriction = 5f;
+    }
     public void Move()
     {        
         rb.isKinematic = false;
@@ -300,7 +317,7 @@ public class Player_Controller : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -settings.Air_Speed, settings.Air_Speed), rb.velocity.y);
         rb.AddForce(force * settings.Air_Control * Vector3.right, ForceMode.Acceleration);
         
-        if (rb.velocity.y < settings.Jump.power && rb.velocity.y > settings.Fall_Speed/2)
+        if (settings.Jump.phase == Jump.State.Canceled || settings.Wall_Jump.phase == Jump.State.Canceled)
         {
             Physics.gravity = new Vector3(Physics.gravity.x, settings.Fall_Speed, Physics.gravity.z);
         }
@@ -347,15 +364,17 @@ public class Player_Controller : MonoBehaviour
         StartCoroutine(Jump_01(settings.Jump, 0));
     }
     public IEnumerator Jump_01(Jump jump, float time)
-    {       
+    {
+        StartCoroutine(Jump_01_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(jump.power * Vector3.up, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
-        {            
+        {
+            //.Log(Physics.gravity.y);
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power / (1 / jump.floatiness) * -Physics.gravity.y);
-            if (force < 0.1f)
+            if (rb.velocity.y < 0f)
             {
                 jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
                 break;
@@ -367,6 +386,7 @@ public class Player_Controller : MonoBehaviour
     }
     public IEnumerator Jump_02(Jump jump, float time)
     {
+        Debug.Log("WALL JUMP");
         StartCoroutine(Jump_02_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -391,7 +411,7 @@ public class Player_Controller : MonoBehaviour
         {
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power * 0.90f / (1 / jump.floatiness));
-            if (force < 0.1f)
+            if (rb.velocity.y < 0.0f)
             {
                 jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
                 break;
@@ -400,6 +420,12 @@ public class Player_Controller : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
+    }
+    public IEnumerator Jump_01_Buffer()
+    {
+        state_controller.Disable_State("Jump");
+        yield return new WaitForSeconds(settings.Jump.buffer);
+        state_controller.Enable_State("Jump");
     }
     public IEnumerator Jump_02_Buffer()
     {
@@ -425,12 +451,12 @@ public class Player_Controller : MonoBehaviour
         RaycastHit hit;
         Vector2 dir = Quaternion.AngleAxis(-90, Vector3.forward) * detection.Get_Slope_Direction();
         Vector2 pos = detection.transform.position;
-        Debug.DrawRay(pos, dir * 1.5f, Color.red, 1.5f);
-        if (Physics.Raycast(pos, dir * 1.5f, out hit, 1.5f))
+        Debug.DrawRay(pos, dir * 1f, Color.red, 1f);
+        if (Physics.Raycast(pos, dir * 1f, out hit, 1f))
         {
             if(hit.distance < 1.2f) { return; }          
             transform.position += (hit.distance - detection.collider.bounds.extents.y) * Vector3.down;
-            Debug.Log(hit.distance);
+            //Debug.Log(hit.distance);
         }
     }
     #endregion

@@ -13,6 +13,7 @@ TagManager:
   - Wood
   - Water
   - Stone
+  - Camera_Trigger
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - ForegroundParallaxCam
   - Volume
   - Pickups
-  - 
+  - Easter_Egg
   - 
   - 
   - 
