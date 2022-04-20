@@ -507,6 +507,15 @@ public class Player_Controller : MonoBehaviour
         if(direction.x != 0) { return; }
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
+    public void Flip(float delay)
+    {
+        StartCoroutine(FlipBuffer(delay));
+    }
+    IEnumerator FlipBuffer(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Flip();
+    }
     #endregion
 }
 

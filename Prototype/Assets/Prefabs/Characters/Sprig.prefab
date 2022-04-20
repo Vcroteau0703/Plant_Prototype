@@ -5627,7 +5627,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: Cling
-    enabled: 0
+    enabled: 1
     active: 0
     looping: 1
     OnStateEnter:
@@ -5651,12 +5651,12 @@ MonoBehaviour:
         - m_Target: {fileID: 8153676909111123882}
           m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
           m_MethodName: Flip
-          m_Mode: 1
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 0.5
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -13140,7 +13140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: moveWithTransform
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: SizeModule.enabled

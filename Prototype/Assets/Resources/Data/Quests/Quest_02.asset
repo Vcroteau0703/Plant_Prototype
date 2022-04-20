@@ -17,9 +17,9 @@ MonoBehaviour:
     Name: 'Chapter 2: Mesquite Tree'
     Completed: 1
     Current_Event:
-      name: Talk_02
+      name: Find Aloe
       tasks:
-      - description: Meet Frond at the top of the Tree
+      - description: Find Aloe
         progress: 0
         maxProgress: 0
     Events:
@@ -39,13 +39,17 @@ MonoBehaviour:
       Completed: 1
       Tasks:
       - Progress: 0
+    - Name: Find Aloe
+      Completed: 1
+      Tasks:
+      - Progress: 0
   questTitle: 'Chapter 2: Mesquite Tree'
   events:
   - name: Destroy Termites
     tasks:
     - description: Destroy the Termites
       progress: 0
-      maxProgress: 10
+      maxProgress: 1
   - name: Talk_01
     tasks:
     - description: Speak to Frond
