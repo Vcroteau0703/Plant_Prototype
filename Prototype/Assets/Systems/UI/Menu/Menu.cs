@@ -9,11 +9,27 @@ public class Menu : MonoBehaviour
 {
     public TMP_InputField saveNameInputField;
     public GameObject First_Selected;
+    private EventSystem sys;
 
-    private void OnEnable()
+    private void Awake()
     {
-        EventSystem sys = EventSystem.current;
-        sys.SetSelectedGameObject(First_Selected, new BaseEventData(sys));
+        sys = EventSystem.current;
+    }
+
+    public void OnEnable()
+    {
+        StartCoroutine(Init());
+    }
+
+    IEnumerator Init()
+    {
+        yield return new WaitForEndOfFrame();
+        First_Selected.GetComponent<Button>().Select();
+    }
+
+    public void OnDisable()
+    {
+        sys.SetSelectedGameObject(null);
     }
 
     public void EnableButton(Button button)
