@@ -45,7 +45,7 @@ MonoBehaviour:
     tasks:
     - description: Destroy the Termites
       progress: 0
-      maxProgress: 1
+      maxProgress: 10
   - name: Talk_01
     tasks:
     - description: Speak to Frond
