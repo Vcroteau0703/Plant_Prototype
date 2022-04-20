@@ -43,8 +43,8 @@ MonoBehaviour:
   Ceiling_Angle: 30
   Cling_Threshold: 1
   Bonk_Power: 2
-  horizontal_deadzone: 0
-  vertical_deadzone: 0
+  horizontal_deadzone: 10
+  vertical_deadzone: 10
   Ground: 0.5
   Wall: 0.3
   Ceiling: 0.5
