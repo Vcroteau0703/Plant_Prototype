@@ -26,13 +26,26 @@ public class Debug_Console : MonoBehaviour
         GameObject child = transform.GetChild(0).gameObject;
         child.SetActive(!child.activeSelf);
 
-        if (child.activeSelf) { Player_Controller.instance.controls.Player.Disable(); }
+        if (child.activeInHierarchy) { Player_Controller.instance.controls.Player.Disable(); }
         else { Player_Controller.instance.controls.Player.Enable(); }
 
         if (EventSystem.current.currentSelectedGameObject) { EventSystem.current.SetSelectedGameObject(null); }
         EventSystem.current.SetSelectedGameObject(child);
         input.text = "";
     }
+    private void Toggle_Console()
+    {
+        GameObject child = transform.GetChild(0).gameObject;
+        child.SetActive(!child.activeSelf);
+
+        if (child.activeInHierarchy) { Player_Controller.instance.controls.Player.Disable(); }
+        else { Player_Controller.instance.controls.Player.Enable(); }
+
+        if (EventSystem.current.currentSelectedGameObject) { EventSystem.current.SetSelectedGameObject(null); }
+        EventSystem.current.SetSelectedGameObject(child);
+        input.text = "";
+    }
+
     // FORMAT
 
     // -> /spawn odin 2
@@ -43,13 +56,14 @@ public class Debug_Console : MonoBehaviour
             string arguments = null;
             string c = command.Replace("/", "").Replace("\n", "");
             if (command.Contains(" ")){
-                arguments = c.Split(' ')[1];
+                arguments = c.Replace(c.Split(' ')[0] + " ", "");
                 c = c.Split(' ')[0];               
             }
             string first = c[0].ToString().ToUpper();
             c = first + c.Substring(1, c.Length - 1);
             
             Debug.Log("c is " + c + " length is " + c.Length);
+            Debug.Log("Arguments: " + arguments);
             MethodInfo method_info = this.GetType().GetMethod(c,  BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
             Debug.Log(method_info);
             if (method_info != null){
@@ -60,7 +74,7 @@ public class Debug_Console : MonoBehaviour
                 Notification_System.Send_SystemNotify("Command not found", Color.red);
             }
             input.text = "";
-            input.gameObject.SetActive(!input.gameObject.activeSelf);
+            Toggle_Console();
         }        
         else if (command.EndsWith("\n")) { input.text = ""; }
     }
@@ -174,6 +188,42 @@ public class Debug_Console : MonoBehaviour
 
             System.Delegate[] a = d.Dialogue.CommandHandler.GetInvocationList();
             Debug.Log(a[0].Method.Name);
+        }
+    }
+    public void Ability(object args)
+    {
+        if (args == null)
+        {
+            Notification_System.Send_SystemNotify("Method requires 2 argument(s)", Color.red);
+            return;
+        }
+        
+        string[] input = args.ToString().Split(' '); // "Idle 0"
+
+        string name = input[0];
+        name = name.Substring(0, 1).ToUpper() + name.Substring(1, name.Length-1);
+        int enabled = int.Parse(input[1]);
+
+        Debug.Log(name);
+
+        Player_Controller player = Player_Controller.instance;
+        if (!player) 
+        {
+            Notification_System.Send_SystemNotify("Command requires 1 instance of <Player Controller> in the scene", Color.red);
+            return;
+        }
+
+        if(enabled == 1)
+        {
+            player.state_controller.Enable_State(name);
+        }
+        else if (enabled == 0)
+        {
+            player.state_controller.Disable_State(name);
+        }
+        else
+        {
+            Notification_System.Send_SystemNotify("Argument 2 of Ability <string> <int> must be 0 or 1", Color.red);
         }
     }
 

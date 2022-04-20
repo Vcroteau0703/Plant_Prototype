@@ -365,12 +365,13 @@ public class Player_Controller : MonoBehaviour
     }
     public IEnumerator Jump_01(Jump jump, float time)
     {
+        StartCoroutine(Jump_01_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(jump.power * Vector3.up, ForceMode.Impulse);
         while (jump.phase == Jump.State.Started)
         {
-            Debug.Log(Physics.gravity.y);
+            //.Log(Physics.gravity.y);
             time += Time.deltaTime;
             float force = -Mathf.Pow(time, 2) + (jump.power / (1 / jump.floatiness) * -Physics.gravity.y);
             if (rb.velocity.y < 0f)
@@ -420,6 +421,12 @@ public class Player_Controller : MonoBehaviour
         }
         jump.phase = jump.phase != Jump.State.Waiting ? Jump.State.Canceled : Jump.State.Waiting;
     }
+    public IEnumerator Jump_01_Buffer()
+    {
+        state_controller.Disable_State("Jump");
+        yield return new WaitForSeconds(settings.Jump.buffer);
+        state_controller.Enable_State("Jump");
+    }
     public IEnumerator Jump_02_Buffer()
     {
         state_controller.Disable_State("Aerial");
@@ -444,8 +451,8 @@ public class Player_Controller : MonoBehaviour
         RaycastHit hit;
         Vector2 dir = Quaternion.AngleAxis(-90, Vector3.forward) * detection.Get_Slope_Direction();
         Vector2 pos = detection.transform.position;
-        Debug.DrawRay(pos, dir * 1.5f, Color.red, 1.5f);
-        if (Physics.Raycast(pos, dir * 1.5f, out hit, 1.5f))
+        Debug.DrawRay(pos, dir * 1f, Color.red, 1f);
+        if (Physics.Raycast(pos, dir * 1f, out hit, 1f))
         {
             if(hit.distance < 1.2f) { return; }          
             transform.position += (hit.distance - detection.collider.bounds.extents.y) * Vector3.down;

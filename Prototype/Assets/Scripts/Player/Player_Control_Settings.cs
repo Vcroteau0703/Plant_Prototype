@@ -38,11 +38,4 @@ public class Player_Control_Settings : ScriptableObject
     [Range(0f, 100f)] public float horizontal_deadzone = 20f;
     [Range(0f, 100f)] public float vertical_deadzone = 20f;
     #endregion
-
-    #region DEVELOPMENT
-    [Header("Detection")]
-    public float Ground = 0.5f;
-    public float Wall = 0.3f;
-    public float Ceiling = 0.5f;
-    #endregion
 }
