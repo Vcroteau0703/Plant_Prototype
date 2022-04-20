@@ -30,7 +30,7 @@ public class State_Controller : MonoBehaviour, ISavable
     }
     private void Update()
     {
-        if (!isInvoking) { return; }
+        if (!isInvoking || Time.timeScale == 0) { return; }
         foreach (State s in states) {
             if (s.active && s.looping) {
                 s.OnStateEnter.Invoke();

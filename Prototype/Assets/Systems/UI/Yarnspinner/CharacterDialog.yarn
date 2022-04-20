@@ -1,0 +1,156 @@
+﻿title: Start
+tags:
+position: 1,-1
+---
+
+Hey wait! Up here!
+<<Camera_Pan CameraDuringDialog>>
+<<wait 1.5>>
+I need your help!
+I climbed all the way up here, but now I-I can't get down...
+Could you give me something to land on?
+<<Camera_Pan CameraAfterDialog>>
+<<Start_Quest Quest_01>>
+<<wait 1.5>>
+<<Next_Event Quest_01>>
+
+===
+title: Dialogue2
+position: 90,49
+---
+
+Thank you so much!
+I could've waited for my mom, but she's just taking forever to get here... 
+...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
+Just, uh, don't tell her about this.
+Wait...do you feel that?
+<<change_world GreenifyDirector>>
+
+===
+title: AfterTransformation
+position: 213,26
+---
+
+<<Camera_Pan CameraDuringDialog>>
+Woah, down here! Check out the water!
+<<Camera_Pan CameraAfterDialog>>
+<<wait 1.5>>
+<<Next_Event Quest_01>>
+
+===
+title: Node
+position: 198,116.5
+---
+
+I don't know what you did, but the water's clean now! Well, at least, up here it is.
+Everything is so pretty! It's like a paradise! I've never seen it look this good!
+Is it because you helped me? Do you have superpowers? Are you a superhero?!
+Woah, sorry, I'm talking way too fast.
+Spinner: So...*ahem*...Hi. I'm Spinner. What's your name?
+-> Sprig!
+-> ...Sprig.
+Spinner: "Sprig?" Heh, now that's a funny name for a superhero!
+Spinner: So, do you know what happened with that blizzard?
+-> No clue.
+    Spinner: Hmmm, well I think that maybe it finally cleared up?
+-> It must've finally cleared up.
+Spinner: I don't know...But I guess it's not important, as long as its over.
+Spinner: Anyways, what are you doing?
+-> I need to find my siblings.
+-> Do you know where to find lost plants?
+Spinner: Well, there's some bad rumors about the caves under the tree up ahead.
+Spinner: Anyone who goes in never comes out, so I wouldn't check there if I were you.
+Spinner: Even if you wanted to, I don't think a plant like you can make it over the spikes.
+Spinner: ...But, if your lost plants are there, then I guess you'll have to find a way around that.
+Spinner: Good luck!
+-> ...
+-> I can't make that jump.
+Spinner: ...Oh, you don't know how to scale walls, do you?
+Spinner: Don't worry, I'll show you how it's done! Been doing this since I was a baby!
+Spinner: Now, check this out!
+<<Camera_Pan WallClimbTutorial>>
+<<wait 2>>
+Spinner: Jumping up walls is pretty easy. If you have good footing, you can hang for as long as you want.
+<<Camera_Pan WallClimbTutorialMid>>
+<<wait 0.5>>
+Spinner: Sliding down a wall isn't too hard either! It's like sliding down a silky thread.
+<<Camera_Pan WallClimbTutorialEnd>>
+<<wait 0.5>>
+<<Next_Event Quest_01>>
+Spinner: Alright, hope that helps!
+Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
+Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
+Spinner: ...make sure the coast is clear!
+Spinner: ...yeah.
+
+===
+title: tree1
+position: 1,-1
+---
+
+uwu that tickles
+
+===
+title: tree2
+position: 1,-1
+---
+
+ouch!
+
+===
+title: Secret
+position: 216,-38
+---
+
+???: Phew. That was a tough jump, wasn't it?
+-> H e l l o   a g a i n .
+???: See that blue light over there? That's where we're going.
+-> I   d o u b t   y o u   c a n   t e l l   m e   y o u r   n a m e .
+???: Oh, the spikes.
+???: Here, hop on my back. I've had to do this a few times.
+<<wait 1.5>>
+???: Alright, that wasn't so bad, was it?
+???: Now, stay close and try to keep up.
+-> B u t   m a y b e   y o u   c a n   h e l p   m e   e s c a p e .
+???: Well, these caves can be tricky to navigate. Watch your step.
+???: Alright, this part's gonna be hard with you on my back, so I want you to follow these steps.
+???: See those stalagmites? You'll need to glide over them and climb over the wall at the end.
+???: There's gonna be a statue. That's the door I was talking about.
+???: All you need to do is put this tablet in, and you'll see what I was talking about.
+???: I know it's a lot to do for those two, but..
+???: I know you can do it Aloe.
+-> T r e e   n e x t .
+<<wait 3>>
+???: Hah...okay. Time to go.
+???: W̵̲͂͠o̵̝͓̽̇ǔ̷̱̞l̵̻̿̀d̸̯͒ǹ̶̩'̴̨̅̌t̷̫͈̓̿ ̸͙̇̚w̵͎̑a̸͉̕n̷͔̏͛ń̶̖a̸͔͝ ̵̧͎̿͂b̴̲͉̆́é̸̗ ̸͖̃ą̵̰̈́̒r̶̜̪͑̑o̴̻̽̀u̶͓͒͛n̶͍̊d̶̹͕̾̍ ̷͜͠f̴̻̲̍̓o̶͎̅r̵̤͇͛͂ ̸͚̮̒w̵̢̡̋h̶̼̻̒a̸̢͕̅͘t̸͙̣͗̈́ ̴̦͗̇h̵̺̤́̐ă̵͎̩p̸̲͗p̵͇̿̅e̵̡̠̾ņ̸̦̀s̶͇͒ ̴̪͉̔n̸͍̠͆͝ȩ̵̹̚ẍ̸͉́t̸̖̽.̶͈͌
+
+===
+title: Finale
+position: -29,131
+---
+Aloe: The three of us... together again. It's been so long, I've missed this.
+Frond: I never thought I'd see the two of you again.
+    -> What happens now?
+Aloe: You have a choice to make Sprig.
+Aloe: Thanks to you, the afterlife has been transformed into a paradise. We can stay here as long as you'd like.
+Aloe: But no one wants to stay in one place for eternity, once you are ready this tree here behind us has a hidden door.
+Aloe: Doing so will end our very existence.
+Frond: Are you ready for that Sprig?
+-> Yes
+    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+    <<Camera_Pan FinaleStuff>>
+-> No
+     Aloe: Then we can spend more time together and enjoy our afterlife until you are, brother.
+    Spinner: Yeah!
+===
+title: Finale2
+position: 0,0.5
+---
+
+Aloe: Are you ready?
+-> Yes
+    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+    <<Camera_Pan FinaleStuff>>
+-> No
+
+===
