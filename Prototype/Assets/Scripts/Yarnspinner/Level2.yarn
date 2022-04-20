@@ -74,7 +74,7 @@ Frond: Come on! Let's Glide across!
 Frond: Ohhhh, I like this version of you Sprig! I get to teach you things like when we were younger.
 <<Camera_Pan GlideTut>>
 <<wait 3>>
-Frond: When you jump, you just need to hold it and spread yourself outward.
+Frond: When you're in the air, try jumping again. Spread yourself out and the rest should come naturally.
 Frond: Give it a try!
 
 
@@ -100,8 +100,8 @@ position: -8,151
 ---
 
 Frond: Nice gliding! I've gotta admit, I'm impressed.
-Frond: So what do you wanna do now that we're up here? Listen to some music? Admire the view? Play a game?
--> Listen to music.
+Frond: So what do you wanna do now that we're up here? Sing together? Admire the view? Play a game?
+-> Sing a song.
     Frond: Alright! *ahem*
     Frond: "'Tis tradition to fall and climb back up"
     Frond: "When you consider yourself to have had enough"
@@ -160,7 +160,7 @@ Frond: So what do you wanna do now that we're up here? Listen to some music? Adm
         Frond: Feels good to let out your anger sometimes.
 -> We need to talk.
     Frond: ...uh, come on Sprig. Pick something else.
-    -> Listen to music.
+    -> Sing a song.
         Frond: Alright! *ahem*
         Frond: "'Tis tradition to fall and climb back up"
         Frond: "When you consider yourself to have had enough"
@@ -220,7 +220,7 @@ Frond: So what do you wanna do now that we're up here? Listen to some music? Adm
     -> We need to talk.
         Frond: Sprig?
         Frond: I don't think you heard me...
-        -> Listen to music.
+        -> Sing a song.
             Frond: Alright! *ahem*
             Frond: "'Tis tradition to fall and climb back up"
             Frond: "When you consider yourself to have had enough"
@@ -337,7 +337,7 @@ Spinner: Sooooooo Sprog, how's the hunt going?
 -> Pretty good so far.
     Spinner: Cool! Then I'll leave you to it!
 -> I don't remember how to get rid of them...
-    Spinner: AH WAIT! I can help you, like a sidekick!
+    Spinner: Don't worry, I can help you! Like a sidekick!
     Spinner: Mr. Grover said if you're covered in sap then you can touch them.
     Spinner: Hmmm, I need some sort of quip...
     Spinner: ...is "crap" a swear word?
@@ -364,13 +364,20 @@ Spinner: Sooooooo Sprog, how's the hunt going?
     Spinner: Well, remember when I asked you what I should call you?
     Spinner: I didn't really like "Sprig" or "Frond," so I combined the two!
     Spinner: Pretty creative, right? Now you've got a superhero name!
-    -> Great!
-    -> Don't ever call me Sprog again.
+    -> Awesome!
+        Spinner: Awwww stop, you're making me blush.
+    -> Don't ever call me such a stupid name ever again.
         Spinner: O-Oh...
         Spinner: I, uh, I see...
         Spinner: ...
-        Spinner: You only want me to call you Sprog when you're on duty!
-        Spinner: Ha! It's so great watching you become a hero right before my eyes!
-        Spinner: Well, I'll let you get back to your work Sprog!
-        Spinner: ...er, Sprig. That's what I meant.
+        -> Apologize to the child.
+            Spinner: Yay! Sprog!
+        -> Do not.
+            Spinner: ...............................
+            -> Apologize and end this sadness.
+                Spinner: Yay! Sprog!
+            -> Do not.
+                Spinner: .......................................................................................................................................
+                -> Give a half-baked apology and just roll along with it.
+                Spinner: Yay! Sprog!
 ===

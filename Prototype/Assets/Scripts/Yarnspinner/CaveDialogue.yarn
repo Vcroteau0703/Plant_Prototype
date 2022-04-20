@@ -10,20 +10,10 @@ title: Aloe2
 position: 1, -1
 ---
 
-Aloe: Haaaaaaah...thank you Sprig.
+Aloe: Hey, Sprig.
 -> Aloe...
 -> Sister...
-Aloe: You know, I almost didn't recognize you. You look better than before.
-Aloe: And that's not all that's new, is it?
-Aloe: I know you've been bringing life back to this sad world.
-Aloe: Leave it to you to make light out of a dark situation, right?
-Aloe: But if you can do that, maybe this world isn't nearly as doomed as I had thought.
--> What are you talking about?
-Aloe: Still haven't figured it out? Well, I'll keep things brief.
-Aloe: We're dead.
-Aloe: ...and it's because of me.
-<<wait 2>>
-Aloe: I'm sorry. For everything.
+Aloe: I...I'm sorry. For everything.
 Aloe: I know the blizzard wasn't my fault, but it's something I could have stopped.
 Aloe: I could've kept an eye on you. I could've helped Frond back at home. Instead...
 Aloe: If I was just like you...maybe...
@@ -49,6 +39,7 @@ Aloe: Go on, let it out.
 Aloe: ...I-
 -> Come on. Let's go home.
 <<Camera_Pan GerminationCave>>
+<<wait 3>>
 <<Next_Event Quest_03>>
 
 ===
