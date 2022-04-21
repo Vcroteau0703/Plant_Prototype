@@ -23,6 +23,7 @@ public class PlayerSFXController : MonoBehaviour
     public ParticleSystem dustLandingParticle;
     public ParticleSystem dustWallLandingParticle;
     public ParticleSystem splashParticle;
+    int cnt;
        
     // Start is called before the first frame update
     private void Awake()
@@ -75,23 +76,26 @@ public class PlayerSFXController : MonoBehaviour
 
     public void PlayFootsteps()
     {
-        DetermineMaterial();
-        aS.Play();
-        if (!player.inWater)
+        if(cnt < 1)
         {
-            if (transform.localScale.x < 0 && dustParticle.transform.localScale.x > 0)
+            DetermineMaterial();
+            aS.Play();
+            if (!player.inWater)
             {
-                dustParticle.transform.localScale = new Vector3(-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
+                if (transform.localScale.x < 0 && dustParticle.transform.localScale.x > 0)
+                {
+                    dustParticle.transform.localScale = new Vector3(-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
+                }
+                else if (transform.localScale.x > 0 && dustParticle.transform.localScale.x < 0)
+                {
+                    dustParticle.transform.localScale = new Vector3(-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
+                }
+                dustParticle.Emit(1);
             }
-            else if (transform.localScale.x > 0 && dustParticle.transform.localScale.x < 0)
-            {
-                dustParticle.transform.localScale = new Vector3(-dustParticle.transform.localScale.x, dustParticle.transform.localScale.y, dustParticle.transform.localScale.z);
-            }
-            dustParticle.Emit(1);
         }
         else
         {
-
+            cnt = 0;
         }
 
     }
@@ -127,6 +131,7 @@ public class PlayerSFXController : MonoBehaviour
     {
         DetermineMaterial();
         aS.Play();
+        cnt = 1;
         if (player.inWater)
         {
             splashParticle.Emit(1);
