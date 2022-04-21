@@ -99,7 +99,7 @@ ouch!
 
 ===
 title: Secret
-position: 1, -1
+position: 216,-38
 ---
 
 ???: Phew. That was a tough jump, wasn't it?
@@ -123,5 +123,34 @@ position: 1, -1
 <<wait 3>>
 ???: Hah...okay. Time to go.
 ???: W̵̲͂͠o̵̝͓̽̇ǔ̷̱̞l̵̻̿̀d̸̯͒ǹ̶̩'̴̨̅̌t̷̫͈̓̿ ̸͙̇̚w̵͎̑a̸͉̕n̷͔̏͛ń̶̖a̸͔͝ ̵̧͎̿͂b̴̲͉̆́é̸̗ ̸͖̃ą̵̰̈́̒r̶̜̪͑̑o̴̻̽̀u̶͓͒͛n̶͍̊d̶̹͕̾̍ ̷͜͠f̴̻̲̍̓o̶͎̅r̵̤͇͛͂ ̸͚̮̒w̵̢̡̋h̶̼̻̒a̸̢͕̅͘t̸͙̣͗̈́ ̴̦͗̇h̵̺̤́̐ă̵͎̩p̸̲͗p̵͇̿̅e̵̡̠̾ņ̸̦̀s̶͇͒ ̴̪͉̔n̸͍̠͆͝ȩ̵̹̚ẍ̸͉́t̸̖̽.̶͈͌
+
+===
+title: Finale
+position: -29,131
+---
+Aloe: The three of us... together again. It's been so long, I've missed this.
+Frond: I never thought I'd see the two of you again.
+    -> What happens now?
+Aloe: You have a choice to make Sprig.
+Aloe: Thanks to you, the afterlife has been transformed into a paradise. We can stay here as long as you'd like.
+Aloe: But no one wants to stay in one place for eternity, once you are ready this tree here behind us has a hidden door.
+Aloe: Doing so will end our very existence.
+Frond: Are you ready for that Sprig?
+-> Yes
+    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+    <<Camera_Pan FinaleStuff>>
+-> No
+     Aloe: Then we can spend more time together and enjoy our afterlife until you are, brother.
+    Spinner: Yeah!
+===
+title: Finale2
+position: 0,0.5
+---
+
+Aloe: Are you ready?
+-> Yes
+    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+    <<Camera_Pan FinaleStuff>>
+-> No
 
 ===

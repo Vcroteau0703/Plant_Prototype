@@ -76,6 +76,7 @@ public class State_Controller : MonoBehaviour, ISavable
     }
     public void Request_State(string name)
     {
+        if (Time.timeScale == 0) { return; }
         State current = Get_Active_State();
         foreach (State s in states)
         {

@@ -16,7 +16,7 @@ MonoBehaviour:
   Acceleration: 1.6
   Friction: 0.2
   Jump:
-    power: 7
+    power: 9
     floatiness: 0.09
     angle: 0
     buffer: 0
@@ -45,6 +45,3 @@ MonoBehaviour:
   Bonk_Power: 2
   horizontal_deadzone: 20
   vertical_deadzone: 20
-  Ground: 0.5
-  Wall: 0.3
-  Ceiling: 0.5

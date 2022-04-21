@@ -264,7 +264,7 @@ MonoBehaviour:
     m_Center: {x: -0.082869515, y: -0.009229422, z: 0.0051522134}
     m_Extent: {x: 0.16412227, y: 0.477553, z: 0.009737186}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &2752659921999334635
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
     m_Center: {x: -0.14321846, y: -0.083185196, z: -0.004810512}
     m_Extent: {x: 0.5498894, y: 0.79002535, z: 0.009684717}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &3183615697617410730
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,7 +5600,19 @@ MonoBehaviour:
     looping: 1
     OnStateEnter:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 8153676909111123882}
+          m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
+          m_MethodName: Idle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnStateExit:
       m_PersistentCalls:
         m_Calls: []
@@ -5651,12 +5663,12 @@ MonoBehaviour:
         - m_Target: {fileID: 8153676909111123882}
           m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
           m_MethodName: Flip
-          m_Mode: 1
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 0.5
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -6077,7 +6089,7 @@ MonoBehaviour:
     m_Center: {x: -0.14772823, y: 0.0050680637, z: 0.007872235}
     m_Extent: {x: 0.36516318, y: 0.30841762, z: 0.0012561416}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &5120996674535291057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,7 +6193,7 @@ MonoBehaviour:
     m_Center: {x: -0.1052251, y: -0.078810275, z: 0.00076123176}
     m_Extent: {x: 0.21739973, y: 0.5586122, z: 0.0011361674}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &5738547283730647087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,7 +6298,7 @@ MonoBehaviour:
     m_Center: {x: -0.112094104, y: 0.0074028373, z: -0.00068637915}
     m_Extent: {x: 0.4094594, y: 0.7905135, z: 0.006677691}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &5776809692513164939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6513,7 +6525,7 @@ MonoBehaviour:
     m_Center: {x: 0.100458145, y: -0.06766951, z: 0.0016663149}
     m_Extent: {x: 0.36917078, y: 0.6595702, z: 0.00700457}
   m_UseBatching: 1
-  m_AlwaysUpdate: 1
+  m_AlwaysUpdate: 0
 --- !u!1 &7846902725689735916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6574,7 +6586,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8022699130939309614}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.043, y: 0.042, z: 10.983}
+  m_LocalEulerAnglesHint: {x: -0.043, y: 0.042, z: 10.982}
 --- !u!1 &8153676907549695755
 GameObject:
   m_ObjectHideFlags: 0
@@ -13140,7 +13152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: moveWithTransform
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6965804903708298340, guid: d3feb326aae39b245810926c474764d5, type: 3}
       propertyPath: SizeModule.enabled
