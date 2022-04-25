@@ -1,11 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem.Utilities;
 
 [AddComponentMenu("Interactions/InteractionController")]
 public class InteractionController : MonoBehaviour
 {
     Controls inputs;
+
+    protected Device_UIData deviceUIData;
+    protected Device_UIElements deviceUI;
 
     public Player player;
 
@@ -25,12 +30,26 @@ public class InteractionController : MonoBehaviour
         {           
             inputs = new Controls();
         }
+        inputs.Debug.All.performed += OnInput;
+        inputs.Debug.Enable();
+
         inputs.Player.Interact.performed += Interact;
-        Debug.Log("setup interact");
         inputs.Player.Enable();
     }
+
+    private void OnInput(InputAction.CallbackContext context)
+    {
+        InputDevice device = context.control.device;
+        Debug.Log("Change: " + device.name);
+        deviceUI = deviceUIData.GetDeviceUI(device.name);
+    }
+
     public void OnDisable()
     {
+        inputs.Debug.All.performed -= OnInput;
+        inputs.Debug.Disable();
+
+        inputs.Player.Interact.performed -= Interact;
         inputs.Player.Disable();
     }
 
@@ -47,7 +66,6 @@ public class InteractionController : MonoBehaviour
     #region Inputs
     public void Interact(InputAction.CallbackContext context) // if user clicks pickup button
     {
-        Debug.Log("TABLET");
         if (closestItem != null) // do we have an item to interact with
         {
             InteractionID id = closestItem.GetComponent<InteractionID>(); // get the interaction ID
@@ -65,6 +83,7 @@ public class InteractionController : MonoBehaviour
 
     public void Setup()
     {
+        deviceUIData = Device_UIData.Get();
         InteractionData data = Resources.Load<InteractionData>("Data/Interaction Data");
         GameObject canvas = GameObject.Find("Interactions");
         if (!canvas)
@@ -120,25 +139,9 @@ public class InteractionController : MonoBehaviour
     public void DisplayInteractText(Vector3 textPos, string text)
     {  
         interactPrompt.SetActive(true);
-        InputDevice[] devices = InputSystem.devices.ToArray();
-        JoystickData data = JoystickData.Get();
-
-        foreach(InputDevice a in devices)
-        {
-            switch (a.displayName)
-            {
-                case "Xbox Controller":
-                    Joystick_UIElements elements = data.GetJoystickUI("Xbox");
-                    interactPrompt.GetComponent<InteractPrompt>().SetAttributes(elements.interact, text);
-                    interactPrompt.transform.position = textPos;
-                    return;
-
-                default:
-                    break;
-            }
-        }
-        interactPrompt.GetComponent<InteractPrompt>().SetAttributes(null, "[" + inputs.Player.Interact.GetBindingDisplayString(0) + "]" + text);
+        interactPrompt.GetComponent<InteractPrompt>().SetAttributes(deviceUI.binding[2], text);
         interactPrompt.transform.position = textPos;
+        return;
     }
     public void HideText()
     {
