@@ -1,5 +1,5 @@
 ﻿title: Level2SapTut
-position: 0,0.5
+position: -568,-343
 tags:
 ---
 <<Start_Quest Quest_02>>
@@ -51,7 +51,7 @@ Spinner: I'll meet you up ahead Sprig...or should I call you Frond and hide your
 
 ===
 title: Level2Frond
-position: -3,44
+position: -161,-349
 ---
 
 <<Camera_Pan FrondHug>>
@@ -81,7 +81,7 @@ Hold A while in the air to glide
 
 ===
 title: Level2Frond2
-position: -9,94
+position: 41,-336
 ---
 
 <<Next_Event Quest_02>>
@@ -97,188 +97,26 @@ Frond: Meet me at the top of the tree! I believe in you!
 
 ===
 title: Level2Frond3
-position: -8,151
+position: 219,-341
 ---
 
 Frond: Nice gliding! I've gotta admit, I'm impressed.
 Frond: So what do you wanna do now that we're up here? Sing together? Admire the view? Play a game?
 -> Sing a song.
-    Frond: Alright! *ahem*
-    Frond: "'Tis tradition to fall and climb back up"
-    Frond: "When you consider yourself to have had enough"
-    Frond: "One must remember to stay pepped and sharp"
-    Frond: "When you consider yourself..."
-    <<wait 2>>
-    Frond: Psssst. I kinda forgot this part, help me out.
-    -> Carp.
-        Frond: "When you consider yourself dull as a carp!"
-        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-    -> Harp.
-        Frond: "When you consider yourself pretty as a harp!"
-        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-    -> Tarp.
-        Frond: "When you consider yourself covered by a tarp!"
-        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-    -> Scarp.
-        Frond: "When you consider yourself steep as a scarp!"
-        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    <<jump FrondSing>>
 -> Admire the view.
-    Frond: Alright! Let's lay back and admire!
-    <<wait 5>>
-    Frond: It is very pretty, don't you think?
-    <<wait 3>>
-    Frond: ...Even though I love this view, I don't think it beats the view from our tree.
-    Frond: There's just something too nostalgic about it, y'know?
-    <<wait 2.5>>
-    Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+    <<jump FrondAdmire>>
 -> Play a game.
-    Frond: Alright! How about a good old-fashioned game of hide and seek!
-    Frond: I'll seek. Go ahead and hide!
-    Frond: 1...
-    Frond: 2...
-    Frond: 3-4-5-6-7-8...
-    Frond: 9...
-    Frond: 9 and a half...
-    Frond: 10!
-    Frond: ...
-    Frond: Sprig you didn't even move.
-    Frond: ...Guess that means I win!
-    Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
-    -> Thank the developers over on itch.io.
-        Frond: Awww, I bet they're going to love it!
-    -> Curse the developers instead.
-        Frond: W-Woah.
-        Frond: Sprig, I didn't think you had it in you.
-        Frond: I also don't think they care, but oh well. I totally get it!
-        Frond: Feels good to let out your anger sometimes.
+    <<jump FrondGame>>
 -> We need to talk.
     Frond: ...uh, come on Sprig. Pick something else.
-    -> Sing a song.
-        Frond: Alright! *ahem*
-        Frond: "'Tis tradition to fall and climb back up"
-        Frond: "When you consider yourself to have had enough"
-        Frond: "One must remember to stay pepped and sharp"
-        Frond: "When you consider yourself..."
-        <<wait 2>>
-        Frond: Psssst. I kinda forgot this part, help me out.
-        -> Carp.
-            Frond: "When you consider yourself dull as a carp!"
-            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-        -> Harp.
-            Frond: "When you consider yourself pretty as a harp!"
-            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-        -> Tarp.
-            Frond: "When you consider yourself covered by a tarp!"
-            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-        -> Scarp.
-            Frond: "When you consider yourself steep as a scarp!"
-            Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-            Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-            Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Sing a song.a
+        <<jump FrondSing>>
     -> Admire the view.
-        Frond: Alright! Let's lay back and admire!
-        <<wait 5>>
-        Frond: It is very pretty, don't you think?
-        <<wait 3>>
-        Frond: ...Even though I love this view, I don't think it beats the view from our tree.
-        Frond: There's just something too nostalgic about it, y'know?
-        <<wait 2.5>>
-        Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+        <<jump FrondAdmire>>
     -> Play a game.
-        Frond: Alright! How about a good old-fashioned game of hide and seek!
-        Frond: I'll seek. Go ahead and hide!
-        Frond: 1...
-        Frond: 2...
-        Frond: 3-4-5-6-7-8...
-        Frond: 9...
-        Frond: 9 and a half...
-        Frond: 10!
-        Frond: ...
-        Frond: Sprig you didn't even move.
-        Frond: ...Guess that means I win!
-        Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
-        -> Thank the developers over on itch.io.
-            Frond: Awww, I bet they're going to love it!
-        -> Curse the developers instead.
-            Frond: W-Woah.
-            Frond: Sprig, I didn't think you had it in you.
-            Frond: I also don't think they care, but oh well. I totally get it!
-            Frond: Feels good to let out your anger sometimes.
+        <<jump FrondGame>>
     -> We need to talk.
-        Frond: Sprig?
-        Frond: I don't think you heard me...
-        -> Sing a song.
-            Frond: Alright! *ahem*
-            Frond: "'Tis tradition to fall and climb back up"
-            Frond: "When you consider yourself to have had enough"
-            Frond: "One must remember to stay pepped and sharp"
-            Frond: "When you consider yourself..."
-            <<wait 2>>
-            Frond: Psssst. I kinda forgot this part, help me out.
-            -> Carp.
-                Frond: "When you consider yourself dull as a carp!"
-                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-            -> Harp.
-                Frond: "When you consider yourself pretty as a harp!"
-                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-            -> Tarp.
-                Frond: "When you consider yourself covered by a tarp!"
-                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-            -> Scarp.
-                Frond: "When you consider yourself steep as a scarp!"
-                Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
-                Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-                Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
-        -> Admire the view.
-            Frond: Alright! Let's lay back and admire!
-            <<wait 5>>
-            Frond: It is very pretty, don't you think?
-            <<wait 3>>
-            Frond: ...Even though I love this view, I don't think it beats the view from our tree.
-            Frond: There's just something too nostalgic about it, y'know?
-            <<wait 2.5>>
-            Frond: Okay, that's enough sightseeing from me. I liked that a lot!
-        -> Play a game.
-            Frond: Alright! How about a good old-fashioned game of hide and seek!
-            Frond: I'll seek. Go ahead and hide!
-            Frond: 1...
-            Frond: 2...
-            Frond: 3-4-5-6-7-8...
-            Frond: 9...
-            Frond: 9 and a half...
-            Frond: 10!
-            Frond: ...
-            Frond: Sprig you didn't even move.
-            Frond: ...Guess that means I win!
-            Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
-            -> Thank the developers over on itch.io.
-                Frond: Awww, I bet they're going to love it!
-            -> Curse the developers instead.
-                Frond: W-Woah.
-                Frond: Sprig, I didn't think you had it in you.
-                Frond: I also don't think they care, but oh well. I totally get it!
-                Frond: Feels good to let out your anger sometimes.
-        -> We need to talk.
             Frond: ...
             -> We need to talk.
             <<wait 2>>
@@ -332,7 +170,7 @@ Frond: So what do you wanna do now that we're up here? Sing together? Admire the
 
 ===
 title: SpiderPlant
-position: 0,0.5
+position: -359,-340
 ---
 Spinner: Sooooooo Sprog, how's the hunt going?
 -> Pretty good so far.
@@ -381,4 +219,145 @@ Spinner: Sooooooo Sprog, how's the hunt going?
                 Spinner: .......................................................................................................................................
                 -> Give a half-baked apology and just roll along with it.
                 Spinner: Yay! Sprog!
+===
+title: FrondRepeat
+position: 704,-490
+---
+Frond: So what do you wanna do now?
+-> Sing a song.
+    <<jump FrondSing>>
+-> Admire the view.
+    <<jump FrondAdmire>>
+-> Play a game.
+    <<jump FrondGame>>
+-> We need to talk.
+    Frond: ...uh, come on Sprig. Pick something else.
+    -> Sing a song.
+        <<jump FrondSing>>
+    -> Admire the view.
+        <<jump FrondAdmire>>
+    -> Play a game.
+        <<jump FrondGame>>
+    -> We need to talk.
+            Frond: ...
+            -> We need to talk.
+            <<wait 2>>
+            Frond: I'm not dreaming, am I?
+            Frond: Ha...why do you have to be the reasonable one?
+            Frond: All I wanted was to have fun like we used to.
+            Frond: Was that really too much to ask?
+            Frond: ...
+            Frond: Alright. Let's talk. I'm sure you have questions.
+            -> What happened to you?
+            Frond: Same thing that happened to you.
+            Frond: I woke up here, and I couldn't find you or Aloe anywhere.
+            Frond: I was still feeling cold from...you know.
+            Frond: After some wandering, I met Grover here.
+            Frond: He was old and needed help, so I decided to stay for a bit.
+            Frond: I could have left, but something about him...it reminded me of how you would help us no matter what.
+            Frond: So I stayed. I was pretty happy too.
+            -> Why did you leave Grover?
+            Frond: I didn't mean to leave him.
+            Frond: It's a bit of a funny story actually...well, as funny as you can get with abandoning someone.
+            Frond: One day when I was cleaning up those termites, I was feeling sick.
+            Frond: I'm not really sure why, but there wasn't any water to bring me back up to speed.
+            Frond: I ended up...drinking that poison.
+            Frond: Heh, you can laugh if you want. I really had no other options.
+            Frond: Since then, I couldn't really get a grip on reality.
+            Frond: ...That is, until now.
+            Frond: I don't really know how you did it, but I'm feeling better now that I'm with you.
+            -> Where's Aloe?
+            Frond: ...I think she left me to look for you. I'll be honest, I'm not sure.
+            Frond: But if I had to guess...she's in the one place I haven't looked.
+            Frond: The Caves.
+            Frond: It's not that simple though. The caves have something wrong with them. Grover can feel it.
+            Frond: But there's some hope now. And that's you.
+            Frond: Just look around us! Not only did you clean up those termites, you made Grover look better than I ever could!
+            Frond: I'm not sure what you did, but if you did that to the caves, maybe exploring them won't be as deadly as most plants would think.
+            -> I'm going to find her.
+            <<Next_Event Quest_02>>
+            Frond: I know you will. You're braver than I could ever be.
+            Frond: When you find her...promise me you'll bring her home. I miss her.
+            -> I promise.
+            -> ...
+            Frond: ...okay.
+            Frond: I'll meet you both back home. There's two different paths that go into the cave.
+            Frond: One's from the fields way down there. You must've gone by it on your way here.
+            Frond: The other's underneath Grover. Ask him and he'll open up the path for you. And let him know I said it was okay.
+            Frond: ...And Sprig?
+            -> Yeah?
+            Frond: I love you.
+            Frond: Good luck.
+            <<Camera_Pan SprigFliesBackToTree>>
+
+===
+title: FrondSing
+position: 354,-486
+---
+Frond: Alright! *ahem*
+    Frond: "'Tis tradition to fall and climb back up"
+    Frond: "When you consider yourself to have had enough"
+    Frond: "One must remember to stay pepped and sharp"
+    Frond: "When you consider yourself..."
+    <<wait 2>>
+    Frond: Psssst. I kinda forgot this part, help me out.
+    -> Carp.
+        Frond: "When you consider yourself dull as a carp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Harp.
+        Frond: "When you consider yourself pretty as a harp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Tarp.
+        Frond: "When you consider yourself covered by a tarp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    -> Scarp.
+        Frond: "When you consider yourself steep as a scarp!"
+        Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
+        Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
+        Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
+    <<jump FrondRepeat>>
+===
+title: FrondAdmire
+position: 353,-442
+---
+Frond: Alright! Let's lay back and admire!
+    ...
+    Frond: It is very pretty, don't you think?
+    ...
+    Frond: ...Even though I love this view, I don't think it beats the view from our tree.
+    Frond: There's just something too nostalgic about it, y'know?
+    ...
+    Frond: Okay, that's enough sightseeing from me. I liked that a lot!
+    <<jump FrondRepeat>>
+===
+title: FrondGame
+position: 354,-531
+---
+Frond: Alright! How about a good old-fashioned game of hide and seek!
+    Frond: I'll seek. Go ahead and hide!
+    Frond: 1...
+    Frond: 2...
+    Frond: 3-4-5-6-7-8...
+    Frond: 9...
+    Frond: 9 and a half...
+    Frond: 10!
+    Frond: ...
+    Frond: Sprig you didn't even move.
+    Frond: ...Guess that means I win!
+    Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
+    -> Thank the developers over on itch.io.
+        Frond: Awww, I bet they're going to love it!
+    -> Curse the developers instead.
+        Frond: W-Woah.
+        Frond: Sprig, I didn't think you had it in you.
+        Frond: I also don't think they care, but oh well. I totally get it!
+        Frond: Feels good to let out your anger sometimes.
+    <<jump FrondRepeat>>
+    
 ===
