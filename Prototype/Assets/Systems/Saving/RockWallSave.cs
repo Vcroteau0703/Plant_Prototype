@@ -27,7 +27,7 @@ public class RockWallSave : MonoBehaviour, ISavable
 
         if (data != null && data.isDone)
         {
-            cutscene.initialTime = 240f;
+            cutscene.initialTime = cutscene.duration;
             cutscene.Play();
         }
     }
