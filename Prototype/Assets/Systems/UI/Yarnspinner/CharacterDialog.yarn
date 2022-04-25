@@ -161,29 +161,107 @@ position: 216,-38
 title: Finale
 position: -29,131
 ---
-Aloe: The three of us... together again. It's been so long, I've missed this.
-Frond: I never thought I'd see the two of you again.
-    -> What happens now?
-Aloe: You have a choice to make Sprig.
-Aloe: Thanks to you, the afterlife has been transformed into a paradise. We can stay here as long as you'd like.
-Aloe: But no one wants to stay in one place for eternity, once you are ready this tree here behind us has a hidden door.
-Aloe: Doing so will end our very existence.
-Frond: Are you ready for that Sprig?
--> Yes
-    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+Frond: Sprig! You actually found her! Thank you! Thank you!
+Frond: I never thought I'd see her again...either of you.
+Spinner: You really are a hero Sprig!
+-> So what now?
+Aloe: Well, we need to talk Sprig. We have a choice for you.
+<<wait 1.5>>
+Aloe: Thanks to you, the afterlife has been transformed into a paradise.
+Aloe: I thought it would be impossible, but...
+Aloe: We can actually stay here.
+Aloe: But...obviously we all have to move on at some point.
+<<wait 1>>
+Aloe: This tree...was our home.
+Aloe: And it's said that when a plant moves on in the afterlife, we get to become trees like this.
+Aloe: Doing that will end our existence here.
+Aloe: So that's the choice we wanted to give you.
+Frond: If I can cut in, I don't want you to think that we're trying to persuade you one way or the other.
+Frond: We want you to be happy more than anything.
+Frond: And as long as you are, then we'll be happy too.
+Aloe: Heh, you've matured.
+Frond: Hey! I'm always mature!
+Frond: ...I just, don't really get to show it is all.
+<<wait 1>>
+Aloe: Well, let's cut to the chase then.
+Aloe: Do you want to stay here? Or do you want to leave?
+-> I want to move on together.
+    Aloe: Alright...are you ready Frond?
+    Frond: Honestly, I'm a little nervous. I'll miss Grover.
+    Spinner: Mr. Grover will be fine thanks to Sprig!
+    Frond: Heh, you're right.
+    Frond: Then...let's go. Together.
+    Frond: I love you guys.
     <<Camera_Pan FinaleStuff>>
--> No
-     Aloe: Then we can spend more time together and enjoy our afterlife until you are, brother.
-    Spinner: Yeah!
+-> I want to stay here with you.
+    Aloe: Let's get ourselves comfortable then.
+    Aloe: I think I'll stay here at home.
+    Aloe: It makes up for leaving it, I think.
+    Frond: I want to spend more time with Grover. I can really apologize for leaving him when I did.
+    Spinner: Yeah! And I want to keep playing!
+    Spinner: Who knows, there could be secrets lying around that we haven't even seen yet!
+    Aloe: Heh, yeah.
+    Aloe: If you ever change your mind, feel free to come back here.
 ===
 title: Finale2
 position: 0,0.5
 ---
 
-Aloe: Are you ready?
+Aloe: Are you ready to move on?
 -> Yes
-    Frond: Let us go then, perhaps we will go on more adventures together... In another life.
+    Aloe: Alright...are you ready Frond?
+    Frond: Honestly, I'm a little nervous. I'll miss Grover.
+    Spinner: Mr. Grover will be fine thanks to Sprig!
+    Frond: Heh, you're right.
+    Frond: Then...let's go. Together.
+    Frond: I love you guys.
     <<Camera_Pan FinaleStuff>>
 -> No
-
+    Aloe: Then did you want something?
+    -> How are you doing here?
+        Aloe: I'm feeling like I'm right where I'm meant to be for a change.
+        Aloe: After being trapped for so long, I feel homesick being here.
+        Aloe: You, me, and Frond...
+        Aloe: Remember your birthday? That was an incredible time.
+        Aloe: You made yourself a total mess right before the cake.
+        Aloe: Makes me happy every time I think about it.
+        Aloe: And it all happened here. All these memories.
+        Aloe: I want to cherish them with my life...well, afterlife.
+    -> What do you think of Spinner?
+        Aloe: He's uh...something else.
+        Aloe: But the important thing is that he reminds me of you. Younger you, I mean.
+        Aloe: He told me about his mom not showing up. That's tragic for a little guy like him, y'know?
+        Aloe: So the very least I can do is watch over him like how I watched over you.
+        Spinner: What were you guys saying? Sorry, I was distracted!
+        -> We were just talking about you.
+            Spinner: Oh, I'm sorry if I did something wrong!
+            Aloe: Ha, you did nothing wrong. You're okay.
+            Aloe: ...see what I mean? He's just like you!
+        -> We were just talking about Frond.
+            Spinner: Ooooooooh, gotcha. It's probably about the smell, right?
+            Frond: Huh?!
+            Spinner: Y'know, that whole Frond smell that he brings with him.
+            Spinner: It's so...fruity! And smoky!
+            Frond: I-I'm an air plant! I don't smell like anything!
+            Spinner: Ooooooooh, then that's probably me then.
+            Frond: ...Aloe are we seriously-
+            Aloe: Yes.
+            Frond: Alright, alright. You win.
+    -> The blizzard...
+        Aloe: Yes, that blizzard.
+        Aloe: That was the worst day of my life.
+        Aloe: I ended up going to the cave during it...and I never came back.
+        Aloe: I can't apologize enough, I-
+        Aloe: ...no. I can't dwell on it. I'm here now, so I want to do whatever I can to make it up to you.
+        Aloe: That's a promise.
+    -> That cave...
+        Aloe: Yeah, that cave is where the problem all started.
+        Aloe: I got trapped in that pod, with no way out.
+        Aloe: That wasn't supposed to happen, so that broke the life around it...
+        Aloe: But you were able to put the key back and fix it.
+        Spinner: Now the caves are looking better than ever!
+        Aloe: I thought you were scared of the caves?
+        Spinner: Oh absolutely. I am never taking a step in there.
+        Spinner: I'm just being positive! I'd imagine they look pretty cool!
+        Aloe: Heh, they do look pretty cool.
 ===
