@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using Cinemachine;
 
-public class Boulder : Hazard, ISavable
+public class Boulder : Hazard
 {
     public PlayableDirector director;
     public CinemachineVirtualCamera vcam;
@@ -31,41 +31,41 @@ public class Boulder : Hazard, ISavable
         vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
 
-    public void Save()
-    {
-        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
+//    public void Save()
+//    {
+//        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
 
-        if (data == null && isDone)
-        {
-            data = new BoulderData();
-            data.isDone = true;
-            SaveSystem.Save<BoulderData>(data, boulderSaveID);
-        }
-    }
+//        if (data == null && isDone)
+//        {
+//            data = new BoulderData();
+//            data.isDone = true;
+//            SaveSystem.Save<BoulderData>(data, boulderSaveID);
+//        }
+//    }
 
-    public void Load()
-    {
-        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
+//    public void Load()
+//    {
+//        BoulderData data = SaveSystem.Load<BoulderData>(boulderSaveID);
 
-        if (data != null && data.isDone)
-        {
-            director.initialTime = 250f;
-            director.Play();
-        }
-    }
+//        if (data != null && data.isDone)
+//        {
+//            director.initialTime = 250f;
+//            director.Play();
+//        }
+//    }
 
-    private void Awake()
-    {
-        Load();
-    }
+//    private void Awake()
+//    {
+//        Load();
+//    }
 
-    public void CutsceneDone(bool done)
-    {
-        isDone = done;
-    }
+//    public void CutsceneDone(bool done)
+//    {
+//        isDone = done;
+//    }
 }
-[System.Serializable]
-public class BoulderData
-{
-    public bool isDone = false;
-}
+//[System.Serializable]
+//public class BoulderData
+//{
+//    public bool isDone = false;
+//}

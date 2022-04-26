@@ -10,6 +10,7 @@ public class Quest_Data
     public bool Completed;
     public Event Current_Event;
     public Event_Data[] Events;
+    public Cutscene_Data[] cutscenes;
 
     public Quest_Data(Quest quest)
     {
