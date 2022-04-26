@@ -18,7 +18,7 @@ public class EnableEndGame : MonoBehaviour
     IEnumerator ActivateEnding()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log(taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text);
+        //Debug.Log(taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text);
         if (taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text == "Return to the Fields")
         {
             foreach (GameObject shit in shitToTurnOn)

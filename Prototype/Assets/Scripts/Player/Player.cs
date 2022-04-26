@@ -50,6 +50,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
                 transform.position = new Vector3(checkpoint[0], checkpoint[1], checkpoint[2]);
             }
         }
+        else
+        {
+            goldenLeaves = new Gold_Leaf_Data[0];
+        }
         anim = GetComponent<Animator>();
         pC = GetComponent<Player_Controller>();
         originalSettings = gameObject.GetComponent<Player_Controller>().settings;

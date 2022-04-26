@@ -25,7 +25,6 @@ MonoBehaviour:
     m_Objects:
     - {fileID: 1626626039453082240}
     - {fileID: -1442479349694909776}
-    - {fileID: -3280150979043564292}
 --- !u!74 &-3384838719008060161
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -570,7 +569,7 @@ MonoBehaviour:
   m_Time: 4.166666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 146598ea24ee35f459e053b788ade22f, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &-1442479349694909776
 MonoBehaviour:
   m_ObjectHideFlags: 1

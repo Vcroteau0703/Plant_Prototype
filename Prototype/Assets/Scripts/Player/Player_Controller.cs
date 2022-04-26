@@ -74,7 +74,7 @@ public class Player_Controller : MonoBehaviour
         target_gravity = Physics.gravity.y;
         Animation_Driver();
         //Ground_Lock();
-        friction = detection.collider.material.dynamicFriction;   
+        friction = detection.col.material.dynamicFriction;   
     }
     public void OnDisable()
     {
@@ -97,7 +97,7 @@ public class Player_Controller : MonoBehaviour
             return; 
         }
         else if (direction != Vector2.zero){
-            detection.collider.material.dynamicFriction = 0f;
+            detection.col.material.dynamicFriction = 0f;
             state_controller.Request_State("Moving");
         }
         else{
@@ -239,15 +239,15 @@ public class Player_Controller : MonoBehaviour
     #region MOVEMENT
     public void Idle()
     {
-        detection.collider.material.dynamicFriction = 5f;
+        detection.col.material.dynamicFriction = 5f;
     }
     public void Move()
     {        
         rb.isKinematic = false;
-        detection.collider.material.dynamicFriction = 0f;
+        detection.col.material.dynamicFriction = 0f;
         float ground_clamp = -0.75f;
 
-        Vector2 pos = detection.collider.transform.position;
+        Vector2 pos = detection.col.transform.position;
         Vector2 dir = detection.Get_Slope_Direction();
 
         float speed = direction.x * settings.Move_Speed;
@@ -306,7 +306,7 @@ public class Player_Controller : MonoBehaviour
     {
         
         rb.isKinematic = false;
-        detection.collider.material.dynamicFriction = 0;
+        detection.col.material.dynamicFriction = 0;
         aerial_time += Time.deltaTime;
         slide_speed = rb.velocity.y < -settings.Slide_Threshhold && Mathf.Abs(rb.velocity.y) > slide_speed ? Mathf.Clamp(Mathf.Abs(rb.velocity.y), 0, settings.Max_Slide_Speed) : slide_speed;
         float speed = direction.x * settings.Air_Speed;
@@ -455,7 +455,7 @@ public class Player_Controller : MonoBehaviour
         if (Physics.Raycast(pos, dir * 1f, out hit, 1f))
         {
             if(hit.distance < 1.2f) { return; }          
-            transform.position += (hit.distance - detection.collider.bounds.extents.y) * Vector3.down;
+            transform.position += (hit.distance - detection.col.bounds.extents.y) * Vector3.down;
             //Debug.Log(hit.distance);
         }
     }

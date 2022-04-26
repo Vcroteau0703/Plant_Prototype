@@ -49,7 +49,7 @@ public class PlayerSFXController : MonoBehaviour
             if (down) { cast = detection.Get_Detection("Down"); }
             else if (left) { cast = detection.Get_Detection("Left"); }
             else if (right) { cast = detection.Get_Detection("Right"); }
-            if (cast.target != null)
+            if (cast != null && cast.target != null)
             {
                 switch (cast.target.tag)
                 {
