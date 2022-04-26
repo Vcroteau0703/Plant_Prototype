@@ -93,20 +93,22 @@ Frond: No no no, you can't be real. I'm still dreaming, right?
 Frond: Tell me something only Sprig would know!
 -> Uhhhh...
 -> You're awake Frond.
-Frond: AHA! The real Sprig would have slapped me awake by now! You're a fake!
--> Slap him.
+Frond: AHA! The real Sprig would have shook me awake by now! You're a fake!
+-> Shake him.
     Frond: AHA! Even more proof! The Sprig I know wouldn't hurt a fly!
 -> Do not.
-Frond: Haaaah...well now that I know I'm asleep, wanna come with me?
+Frond: Haaaah...well now that I know I'm dreaming, let's go and explore!
 Frond: I mean, you've got nothing better to do, right?
-Frond: Come on! Let's Glide across!
+-> Uhhhh...
+-> Actually...
+Frond: Great!
+Frond: Now come on! Let's Glide across!
 -> ...What?
-Frond: Ohhhh, I like this version of you Sprig! I get to teach you things like when we were younger.
+Frond: Oh, you don't know how to Glide? Don't worry, just do what I do.
 <<Camera_Pan GlideTut>>
 <<wait 3>>
-Frond: When you're in the air, try jumping again. Spread yourself out and the rest should come naturally.
+Frond: When you're in the air, try jumping again. You'll spread out your leaves and the rest should come naturally.
 Frond: Give it a try!
-Hold A while in the air to glide
 
 
 ===
@@ -298,7 +300,7 @@ Spinner: Sooooooo Sprog, how's the hunt going?
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Pretty creative, right? Now you've got a superhero name!
     -> Awesome!
-    <<PlayAudio DialogSFX "spinner">>
+        <<PlayAudio DialogSFX "spinner">>
         Spinner: Awwww stop, you're making me blush.
     -> Don't ever call me such a stupid name ever again.
         <<PlayAudio DialogSFX "spinner">>

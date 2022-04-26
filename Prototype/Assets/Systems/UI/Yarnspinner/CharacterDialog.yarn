@@ -165,7 +165,7 @@ Frond: Sprig! You actually found her! Thank you! Thank you!
 Frond: I never thought I'd see her again...either of you.
 Spinner: You really are a hero Sprig!
 -> So what now?
-Aloe: Well, we need to talk Sprig. We have a choice for you.
+Aloe: We need to talk Sprig. We have a choice for you.
 <<wait 1.5>>
 Aloe: Thanks to you, the afterlife has been transformed into a paradise.
 Aloe: I thought it would be impossible, but...
@@ -248,7 +248,7 @@ Aloe: Are you ready to move on?
             Aloe: Yes.
             Frond: Alright, alright. You win.
     -> The blizzard...
-        Aloe: Yes, that blizzard.
+        Aloe: That blizzard...
         Aloe: That was the worst day of my life.
         Aloe: I ended up going to the cave during it...and I never came back.
         Aloe: I can't apologize enough, I-
@@ -256,7 +256,7 @@ Aloe: Are you ready to move on?
         Aloe: That's a promise.
     -> That cave...
         Aloe: Yeah, that cave is where the problem all started.
-        Aloe: I got trapped in that pod, with no way out.
+        Aloe: I got trapped in that pod with no way out.
         Aloe: That wasn't supposed to happen, so that broke the life around it...
         Aloe: But you were able to put the key back and fix it.
         Spinner: Now the caves are looking better than ever!
