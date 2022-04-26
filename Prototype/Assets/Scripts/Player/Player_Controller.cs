@@ -181,7 +181,7 @@ public class Player_Controller : MonoBehaviour
 
         State active = state_controller.Get_Active_State();
 
-        Debug.Log(active.name);
+        //Debug.Log(active.name);
 
 
         if((left || right) && aerial_time > 0.25f) // Wall

@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Action_Volume : MonoBehaviour, ISavable
+public class Action_Volume : MonoBehaviour
 {
+    public Action_Volume_Data data;
+
     public bool oneShot;
-    private bool activated;
     public LayerMask Layer_Filter;
 
     public delegate void Action(GameObject actor);
@@ -16,11 +16,12 @@ public class Action_Volume : MonoBehaviour, ISavable
         Load();      
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
-        if (oneShot)
+        if (oneShot == true)
         {
-            action += Set_Activated;
+            Debug.Log("high");
+            action = Set_Activated;
         }
     }
 
@@ -43,7 +44,6 @@ public class Action_Volume : MonoBehaviour, ISavable
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hello");
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); }
     }
@@ -73,20 +73,17 @@ public class Action_Volume : MonoBehaviour, ISavable
     }
 
     public void Set_Activated(GameObject actor)
-    {
-        action = Set_Activated;
-        activated = true;
-    }
-
-    public void Save()
-    {
-        Action_Volume_Data data = new Action_Volume_Data(activated);
-        SaveSystem.Save(data, "/Levels/actionVol_" + transform.position.magnitude.ToString() + ".data");
+    {       
+        data.activated = true;
+        data.ID = ((int)transform.position.sqrMagnitude);
+        GameManager.instance.sceneData.Update_AVol_Data(data);
+        Destroy(gameObject);
     }
 
     public void Load()
     {
-        Action_Volume_Data data = SaveSystem.Load<Action_Volume_Data>("/Levels/actionVol_" + transform.position.magnitude.ToString() + ".data");
+        SceneData sceneData = SaveSystem.Load<SceneData>("/Levels/" + SceneManager.GetActiveScene().name + ".data");
+        Action_Volume_Data data = sceneData != null ? sceneData.Get_AVol_Data((int)transform.position.sqrMagnitude) : null;
         if (data != null && data.activated) { Destroy(gameObject); }
     }
 }
@@ -94,7 +91,11 @@ public class Action_Volume : MonoBehaviour, ISavable
 [System.Serializable]
 public class Action_Volume_Data 
 {
-    public bool activated;
-    public Action_Volume_Data(bool activated) { this.activated = activated; }
+    public int ID;
+    public bool activated;    
+    public Action_Volume_Data(int ID, bool activated) {
+        this.ID = ID;
+        this.activated = activated;
+    }
 }
 

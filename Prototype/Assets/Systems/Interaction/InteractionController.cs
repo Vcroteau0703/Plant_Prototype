@@ -40,7 +40,6 @@ public class InteractionController : MonoBehaviour
     private void OnInput(InputAction.CallbackContext context)
     {
         InputDevice device = context.control.device;
-        Debug.Log("Change: " + device.name);
         deviceUI = deviceUIData.GetDeviceUI(device.name);
     }
 
