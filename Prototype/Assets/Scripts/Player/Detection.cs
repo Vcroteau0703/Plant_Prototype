@@ -7,7 +7,7 @@ public class Detection : MonoBehaviour
 {
     public LayerMask detectable;
     public List<Detection_Cast> casts;
-    public Collider collider;
+    public Collider col;
 
     Vector3 bottom, top;
 
@@ -15,11 +15,11 @@ public class Detection : MonoBehaviour
 
     private void Update()
     {
-        bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
-        top = collider.transform.position + new Vector3(0, collider.bounds.extents.y, 0);
+        bottom = col.transform.position - new Vector3(0, col.bounds.extents.y, 0);
+        top = col.transform.position + new Vector3(0, col.bounds.extents.y, 0);
 
         foreach (Detection_Cast c in casts){
-            c.Cast(collider.transform.position);
+            c.Cast(col.transform.position);
         }
 
         //Debug.Log(Get_Wall_Angle(threshold));
@@ -35,7 +35,7 @@ public class Detection : MonoBehaviour
             {
                 Gizmos.color = new Color(0, 1, 1, 0.4f);
             }
-            Gizmos.DrawCube(collider.transform.position + c.center, c.halfExtends * 2);
+            Gizmos.DrawCube(col.transform.position + c.center, c.halfExtends * 2);
         }
 
         if (Application.isPlaying)
@@ -61,9 +61,9 @@ public class Detection : MonoBehaviour
     /// <summary>Returns the incline of the current slope in degrees.</summary>
     public float Get_Slope_Angle()
     {
-        Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, collider.bounds.extents.y + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.right, out right, col.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.left, out left, col.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, col.bounds.extents.y + 0.1f, detectable);
 
         if (!down.collider) { return -1; }
         float a = right.collider ? right.distance : left.distance;
@@ -137,10 +137,10 @@ public class Detection : MonoBehaviour
     /// <summary>Returns the direction of the current slope as a Vector2.</summary>
     public Vector2 Get_Slope_Direction()
     {
-        Vector3 bottom = collider.transform.position - new Vector3(0, collider.bounds.extents.y, 0);
-        Physics.Raycast(bottom, Vector3.right, out right, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom, Vector3.left, out left, collider.bounds.extents.x + 0.1f, detectable);
-        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, collider.bounds.extents.y + 0.1f, detectable);
+        Vector3 bottom = col.transform.position - new Vector3(0, col.bounds.extents.y, 0);
+        Physics.Raycast(bottom, Vector3.right, out right, col.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom, Vector3.left, out left, col.bounds.extents.x + 0.1f, detectable);
+        Physics.Raycast(bottom + Vector3.up * 0.1f, -Vector3.up, out down, col.bounds.extents.y + 0.1f, detectable);
 
         if (right.collider && down.collider)
         {

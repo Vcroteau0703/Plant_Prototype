@@ -17,8 +17,6 @@ public class Gold_Leaf : Action_Volume
 
         foreach (Gold_Leaf_Data saved in data.goldLeaves)
         {
-            Debug.Log(localID + " | " + saved.id);
-
             if (localID == saved.id)
             {
                 Destroy(gameObject);

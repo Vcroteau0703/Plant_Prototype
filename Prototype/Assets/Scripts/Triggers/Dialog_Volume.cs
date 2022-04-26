@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class TriggerDialog : MonoBehaviour
+public class Dialog_Volume : Action_Volume
 {
     public DialogueRunner dialogueRunner;
     public string dialogueToRun;
 
-    private void OnTriggerEnter(Collider other)
+    new private void OnEnable()
+    {
+        base.OnEnable();
+        Debug.Log("low");
+        action += Start_Dialog;
+    }
+
+    private void Start_Dialog(GameObject actor)
     {
         dialogueRunner.StartDialogue(dialogueToRun);
-        gameObject.SetActive(false);
     }
 }

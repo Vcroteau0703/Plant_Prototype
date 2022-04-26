@@ -531,7 +531,7 @@ MonoBehaviour:
     OnDetectionExit:
       m_PersistentCalls:
         m_Calls: []
-  collider: {fileID: 2534141348786143188}
+  col: {fileID: 2534141348786143188}
   threshold: 1
 --- !u!136 &2534141348786143188
 CapsuleCollider:

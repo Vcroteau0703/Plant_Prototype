@@ -38,7 +38,13 @@ public static class Notification_System
         if (GO == null)
         {
             GO = Object.Instantiate(data.defaultNotificationCanvas);
-            GO.GetComponent<Canvas>().worldCamera = Camera.main;
+            foreach(Camera c in Camera.allCameras)
+            {
+                if(c.tag == "UI_Camera")
+                {
+                    GO.GetComponent<Canvas>().worldCamera = c;
+                }
+            }
             GO.name = "Notifications";
             Notifications = GO.transform;
             return;

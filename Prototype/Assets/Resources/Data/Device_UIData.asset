@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f401ead3c94964690dce284d25fac4, type: 3}
+  m_Name: Device_UIData
+  m_EditorClassIdentifier: 
+  device_UIElements:
+  - deviceName: XInput
+    binding:
+    - {fileID: 21300000, guid: 893ac5f0f77f7664685a5773618a37b5, type: 3}
+    - {fileID: 21300000, guid: e7d68cbe56b897542ad5ddcfe4e89d67, type: 3}
+    - {fileID: 21300000, guid: 2d0fcfe6dec4e9048946730c633c9563, type: 3}
+    - {fileID: 21300000, guid: 37cab924dde000b4f8dd20fb78abc938, type: 3}
+  - deviceName: DualShock4
+    binding:
+    - {fileID: 21300000, guid: e768be53dd73e6f4c885d62d56241a7a, type: 3}
+    - {fileID: 21300000, guid: e54a244c9fc993a4bba842aeaa36507b, type: 3}
+    - {fileID: 21300000, guid: 5b433bc887b41984c8d3364c44f228a2, type: 3}
+    - {fileID: 21300000, guid: 4961b71f6a27c9748b33c382d48217fd, type: 3}
+  - deviceName: Keyboard
+    binding:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 8b783fc95e72edf4c9ef7752c98e78ca, type: 3}
+    - {fileID: 0}

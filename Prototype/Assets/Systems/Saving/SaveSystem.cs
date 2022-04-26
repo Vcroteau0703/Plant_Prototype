@@ -2,7 +2,7 @@ using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
-
+using UnityEditor;
 public static class SaveSystem
 {
     public static string CurrentSave = "";
@@ -26,7 +26,14 @@ public static class SaveSystem
         CurrentSave = directory.FullName;
 
         string p_Levels = Path.Combine(CurrentSave, "Levels");
-        Directory.CreateDirectory(p_Levels);       
+        Directory.CreateDirectory(p_Levels);
+        
+        //foreach(EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+        //{
+        //    string[] temp = scene.path.Split('/');
+        //    string p_level = Path.Combine(p_Levels, temp[temp.Length-1].Replace(".unity", ""));
+        //    Directory.CreateDirectory(p_level);
+        //}
 
         string p_Player = Path.Combine(CurrentSave, "Player");
         Directory.CreateDirectory(p_Player);
@@ -67,7 +74,6 @@ public static class SaveSystem
         BinaryFormatter formatter = new BinaryFormatter();
         string p = CurrentSave == "" ? Application.persistentDataPath + "/Default" + path : CurrentSave + path;
         if (!Directory.Exists(Application.persistentDataPath + "/Default")) { CreateNewSave("Default");  }
-        //Debug.Log(p);
         FileStream stream = new FileStream(p, FileMode.Create);
         formatter.Serialize(stream, data);
         stream.Close();
