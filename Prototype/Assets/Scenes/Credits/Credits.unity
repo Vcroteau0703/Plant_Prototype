@@ -154,7 +154,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086957521}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -466,7 +466,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086957521}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cam Connolly
+  m_text: 'Cameron Connolly
 
     Level Designer, QA, Narrative'
   m_isRightToLeft: 0
@@ -1103,7 +1103,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086957521}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 1422015006}
   - component: {fileID: 1422015004}
   m_Layer: 5
-  m_Name: Tanner
+  m_Name: Tori
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,9 +1421,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tanner Cobb
+  m_text: 'Victoria Croteau
 
-    Gameplay Engineer'
+    Producer, Director, VFX Artist, 2D Artist, Animator,
+    Narrative'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e87de4968947b14394da295d853d24f, type: 2}
   m_sharedMaterial: {fileID: -4533487964215801697, guid: 9e87de4968947b14394da295d853d24f, type: 2}
@@ -1712,15 +1713,41 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Special Thanks To
+  m_text: 'Special Thanks To:
 
     Jeff Warmouth
 
     John Amakawa
 
-    Our Playtesters
+    John Puelio
 
-'
+    Alex
+    Dinsdale
+
+    Ross Hayao
+
+    Aaron Hogan
+
+    Emily Vescovi
+
+    Kris Camp
+
+    Ben
+    Warmouth
+
+    Veronica Hazen
+
+    All Made in MA Playtesters
+
+
+
+
+
+
+
+
+    Sprig
+    (2020-2021)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e87de4968947b14394da295d853d24f, type: 2}
   m_sharedMaterial: {fileID: -4533487964215801697, guid: 9e87de4968947b14394da295d853d24f, type: 2}
@@ -2018,7 +2045,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086957521}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2471,11 +2498,11 @@ RectTransform:
   m_Children:
   - {fileID: 1472400243}
   - {fileID: 1422015003}
+  - {fileID: 2139240094}
   - {fileID: 204125500}
   - {fileID: 1161407731}
   - {fileID: 43769293}
   - {fileID: 1830545725}
-  - {fileID: 2139240094}
   - {fileID: 63926356}
   - {fileID: 1939922139}
   - {fileID: 721752213}
@@ -2502,7 +2529,7 @@ GameObject:
   - component: {fileID: 2139240096}
   - component: {fileID: 2139240095}
   m_Layer: 5
-  m_Name: Tori
+  m_Name: Tanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,7 +2547,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086957521}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2566,10 +2593,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Victoria Croteau
+  m_text: 'Tanner Cobb
 
-    Producer, Director, VFX Artist, 2D Artist, Animator,
-    Narrative'
+    Gameplay Engineer
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e87de4968947b14394da295d853d24f, type: 2}
   m_sharedMaterial: {fileID: -4533487964215801697, guid: 9e87de4968947b14394da295d853d24f, type: 2}
