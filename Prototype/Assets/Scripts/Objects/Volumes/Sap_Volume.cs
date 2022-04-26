@@ -27,6 +27,7 @@ public class Sap_Volume : Action_Volume
         else
         {
             player.SapEffectOn();
+            transform.parent.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -42,6 +43,7 @@ public class Sap_Volume : Action_Volume
     {
         yield return new WaitForSeconds(sapCooldown);
         player.SapEffectOff();
+        transform.parent.GetComponent<AudioSource>().Stop();
     }
 
 }
