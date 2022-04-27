@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hazard : MonoBehaviour
+public class Hazard : Action_Volume
 {
     public int damage;
-    private void Awake()
+
+    new private void OnEnable()
     {
-        //if (!GetComponent<Collider>()){ Debug.LogError("MISSING COMPONENT: " + this.gameObject.name + " is missing a collider."); };
+        base.OnEnable();
+        action = Deal_Damage;
     }
-    private void OnTriggerStay(Collider other)
+
+    public virtual void Deal_Damage(GameObject actor)
     {
-        if (other.gameObject.transform.parent.TryGetComponent(out IDamagable a))
+        if (actor.transform.parent.TryGetComponent(out IDamagable a))
         {
             a.Damage(damage);
         }

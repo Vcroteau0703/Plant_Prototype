@@ -203,7 +203,7 @@ public class Player_Controller : MonoBehaviour
             }            
         } 
      
-        if(detection.Is_Detecting() == false || slope == -1) //Air
+        if(detection.Is_Detecting() == false || (slope == -1 && !down)) //Air
         {
             State glide = state_controller.Get_State("Gliding");
             if (settings.Jump.phase == Jump.State.Canceled &&
@@ -215,6 +215,7 @@ public class Player_Controller : MonoBehaviour
             state_controller.Request_State("Aerial");
             return;                     
         }
+
         if (down) // Ground
         {
             if (direction.x != 0)

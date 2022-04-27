@@ -11,7 +11,6 @@ public class Dialog_Volume : Action_Volume
     new private void OnEnable()
     {
         base.OnEnable();
-        Debug.Log("low");
         action += Start_Dialog;
     }
 
