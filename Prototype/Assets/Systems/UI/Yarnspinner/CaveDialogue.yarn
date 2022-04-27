@@ -9,33 +9,43 @@ position: 1,-1
 title: Aloe2
 position: 1, -1
 ---
-
+<<PlayAudio DialogSFX "aloe">>
 Aloe: Hey, Sprig.
 -> Aloe...
 -> Sister...
+<<PlayAudio DialogSFX "aloe">>
 Aloe: I...I'm sorry. For everything.
 Aloe: I know the blizzard wasn't my fault, but it's something I could have stopped.
+<<PlayAudio DialogSFX "aloe">>
 Aloe: I could've kept an eye on you. I could've helped Frond back at home. Instead...
 Aloe: If I was just like you...maybe...
 -> Maybe...?
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: Maybe this wouldn't have happened.
     Aloe: I wouldn't have come here and done this.
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: Isn't that the worst part?
     Aloe: I wasn't there for either of your final moments.
 -> It's okay.
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: Ha, don't kid yourself.
     Aloe: Just look at where we are because of me.
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: It literally doesn't get worse than this.
 -> You're special too.
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: Stop.
     Aloe: I don't need to hear about how I'm special in my own way.
+    <<PlayAudio DialogSFX "aloe">>
     Aloe: I abandoned you. I abandoned Frond. My family.
     Aloe: And now we're all here because I wasn't.
 -> I forgive you.
+<<PlayAudio DialogSFX "aloe">>
 Aloe: ...You can pretend to forgive me all you want, but deep down, we both know how you really feel.
 Aloe: Go on, let it out.
 -> I love you.
 <<wait 5>>
+<<PlayAudio DialogSFX "aloe">>
 Aloe: ...I-
 -> Come on. Let's go home.
 <<Camera_Pan GerminationCave>>
@@ -135,10 +145,12 @@ position: -12,-114
 ---
 
 <<Next_Event Quest_02>>
+<<PlayAudio DialogSFX "aloe">>
 ???: ...Sprig?
 ???: ...Listen carefully...
 <<Start_Quest Quest_03>>
 <<Camera_Pan AloeEncounterAnim>>
+<<PlayAudio DialogSFX "aloe">>
 ???: Find the pieces...bring them to me...
 <<Next_Event Quest_03>>
 ???: There's one here...

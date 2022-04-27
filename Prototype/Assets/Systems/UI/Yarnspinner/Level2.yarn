@@ -9,7 +9,6 @@ Spinner: Oh hey! You finally made it!
 <<wait 1.5>>
 <<PlayAudio DialogSFX "spinner">>
 Spinner: This tree is so big...how are we going to explore it all?
-<<PlayAudio DialogSFX "spinner">>
 Spinner: Ack! What is this stuff?
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Ewwwww, I'm so sticky and slow. I need to wash this off. 
@@ -17,10 +16,10 @@ Spinner: Ewwwww, I'm so sticky and slow. I need to wash this off.
 <<wait 2.5>> 
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Whew, that's much better.
+<<PlayAudio DialogSFX "grover">>
 ???: Frond...? Is that you?
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Eh? Who said that? There's no one here.
-<<PlayAudio DialogSFX "spinner">>
 Spinner: Ah well, it's not like the tree can talk, right?
 <<PlayAudio DialogSFX "grover">>
 ???: I assure you that I can, little spiderling.
@@ -32,24 +31,20 @@ Spinner: W-Woah! We're so sorry, we didn't know you were alive, please forgive u
 Spinner: Uhhhh...who?
 <<PlayAudio DialogSFX "grover">>
 ???: Your quiet little companion over there. He's been caring for me ever since he arrived.
-<<PlayAudio DialogSFX "grover">>
 ???: Speaking of which, I could use your help once again.
 <<PlayAudio DialogSFX "grover">>
 ???: Those awful termites have returned, and it's been hard trying to get rid of them on my own. Could you get rid of them for me?
 -> How can I do that?
     <<PlayAudio DialogSFX "grover">>
     ???: You used to use my sap to fight them off, remember?
-    <<PlayAudio DialogSFX "grover">>
     ???: As long as you've got a good coat on, they'll stick to you and die right away.
 -> Sorry, I'm not Frond.
     <<PlayAudio DialogSFX "grover">>
     ???: Ohohoho! Frond, I may be old, but I've fallen for that joke before already.
-    <<PlayAudio DialogSFX "grover">>
     ???: Just be careful, if you touch them without a good coat of sap, they will eat you right away.
 -> Leave it to me!
     <<PlayAudio DialogSFX "grover">>
     ???: Thank you. I can always count on you.
-    <<PlayAudio DialogSFX "grover">>
     ???: Just be careful, if you touch them without a good coat of sap, they will eat you right away.
 -> Spinner, get rid of the termites.
     <<PlayAudio DialogSFX "spinner">>
@@ -86,27 +81,35 @@ position: -161,-349
 
 <<Camera_Pan FrondHug>>
 <<Next_Event Quest_02>>
+<<PlayAudio DialogSFX "frond">>
 Frond: ...S-Sprig?!
 -> Frond!
 -> Brother!
+<<PlayAudio DialogSFX "frond">>
 Frond: No no no, you can't be real. I'm still dreaming, right?
 Frond: Tell me something only Sprig would know!
 -> Uhhhh...
 -> You're awake Frond.
+<<PlayAudio DialogSFX "frond">>
 Frond: AHA! The real Sprig would have shook me awake by now! You're a fake!
 -> Shake him.
+    <<PlayAudio DialogSFX "frond">>
     Frond: AHA! Even more proof! The Sprig I know wouldn't hurt a fly!
 -> Do not.
+<<PlayAudio DialogSFX "frond">>
 Frond: Haaaah...well now that I know I'm dreaming, let's go and explore!
 Frond: I mean, you've got nothing better to do, right?
 -> Uhhhh...
 -> Actually...
+<<PlayAudio DialogSFX "frond">>
 Frond: Great!
 Frond: Now come on! Let's Glide across!
 -> ...What?
+<<PlayAudio DialogSFX "frond">>
 Frond: Oh, you don't know how to Glide? Don't worry, just do what I do.
 <<Camera_Pan GlideTut>>
 <<wait 3>>
+<<PlayAudio DialogSFX "frond">>
 Frond: When you're in the air, try jumping again. You'll spread out your leaves and the rest should come naturally.
 Frond: Give it a try!
 
@@ -117,13 +120,16 @@ position: 41,-336
 ---
 
 <<Next_Event Quest_02>>
+<<PlayAudio DialogSFX "frond">>
 Frond: Yay! I knew you could do it!
 -> Frond, we need to talk.
 -> Are you okay?
+<<PlayAudio DialogSFX "frond">>
 Frond: Uhhhhh...
 Frond: *ahem* See this wind? If you glide over it, the draft will catch your leaves and push you up in the air.
 <<Camera_Pan GlideTut2>>
 <<wait 2.5>>
+<<PlayAudio DialogSFX "frond">>
 Frond: Meet me at the top of the tree! I believe in you!
 
 
@@ -133,7 +139,6 @@ position: 219,-341
 ---
 <<PlayAudio DialogSFX "frond">>
 Frond: Nice gliding! I've gotta admit, I'm impressed.
-<<PlayAudio DialogSFX "frond">>
 Frond: So what do you wanna do now that we're up here? Sing together? Admire the view? Play a game?
 -> Sing a song.
     <<jump FrondSing>>
@@ -157,62 +162,49 @@ Frond: So what do you wanna do now that we're up here? Sing together? Admire the
             <<wait 2>>
             <<PlayAudio DialogSFX "frond">>
             Frond: I'm not dreaming, am I?
-            <<PlayAudio DialogSFX "frond">>
             Frond: Ha...why do you have to be the reasonable one?
             <<PlayAudio DialogSFX "frond">>
             Frond: All I wanted was to have fun like we used to.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Was that really too much to ask?
             <<PlayAudio DialogSFX "frond">>
             Frond: ...
-            <<PlayAudio DialogSFX "frond">>
             Frond: Alright. Let's talk. I'm sure you have questions.
             -> What happened to you?
             <<PlayAudio DialogSFX "frond">>
             Frond: Same thing that happened to you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I woke up here, and I couldn't find you or Aloe anywhere.
             <<PlayAudio DialogSFX "frond">>
             Frond: I was still feeling cold from...you know.
-            <<PlayAudio DialogSFX "frond">>
             Frond: After some wandering, I met Grover here.
             <<PlayAudio DialogSFX "frond">>
             Frond: He was old and needed help, so I decided to stay for a bit.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I could have left, but something about him...it reminded me of how you would help us no matter what.
             <<PlayAudio DialogSFX "frond">>
             Frond: So I stayed. I was pretty happy too.
             -> Why did you leave Grover?
             <<PlayAudio DialogSFX "frond">>
             Frond: I didn't mean to leave him.
-            <<PlayAudio DialogSFX "frond">>
             Frond: It's a bit of a funny story actually...well, as funny as you can get with abandoning someone.
             <<PlayAudio DialogSFX "frond">>
             Frond: One day when I was cleaning up those termites, I was feeling sick.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I'm not really sure why, but there wasn't any water to bring me back up to speed.
             <<PlayAudio DialogSFX "frond">>
             Frond: I ended up...drinking that poison.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Heh, you can laugh if you want. I really had no other options.
             <<PlayAudio DialogSFX "frond">>
             Frond: Since then, I couldn't really get a grip on reality.
-            <<PlayAudio DialogSFX "frond">>
             Frond: ...That is, until now.
             <<PlayAudio DialogSFX "frond">>
             Frond: I don't really know how you did it, but I'm feeling better now that I'm with you.
             -> Where's Aloe?
             <<PlayAudio DialogSFX "frond">>
             Frond: ...I think she left me to look for you. I'll be honest, I'm not sure.
-            <<PlayAudio DialogSFX "frond">>
             Frond: But if I had to guess...she's in the one place I haven't looked.
             <<PlayAudio DialogSFX "frond">>
             Frond: The Caves.
-            <<PlayAudio DialogSFX "frond">>
             Frond: It's not that simple though. The caves have something wrong with them. Grover can feel it.
             <<PlayAudio DialogSFX "frond">>
             Frond: But there's some hope now. And that's you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Just look around us! Not only did you clean up those termites, you made Grover look better than I ever could!
             <<PlayAudio DialogSFX "frond">>
             Frond: I'm not sure what you did, but if you did that to the caves, maybe exploring them won't be as deadly as most plants would think.
@@ -220,24 +212,20 @@ Frond: So what do you wanna do now that we're up here? Sing together? Admire the
             <<Next_Event Quest_02>>
             <<PlayAudio DialogSFX "frond">>
             Frond: I know you will. You're braver than I could ever be.
-            <<PlayAudio DialogSFX "frond">>
             Frond: When you find her...promise me you'll bring her home. I miss her.
             -> I promise.
             -> ...
             <<PlayAudio DialogSFX "frond">>
             Frond: ...okay.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I'll meet you both back home. There's two different paths that go into the cave.
             <<PlayAudio DialogSFX "frond">>
             Frond: One's from the fields way down there. You must've gone by it on your way here.
-            <<PlayAudio DialogSFX "frond">>
             Frond: The other's underneath Grover. Ask him and he'll open up the path for you. And let him know I said it was okay.
             <<PlayAudio DialogSFX "frond">>
             Frond: ...And Sprig?
             -> Yeah?
             <<PlayAudio DialogSFX "frond">>
             Frond: I love you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Good luck.
             <<Camera_Pan SprigFliesBackToTree>>
 
@@ -253,11 +241,9 @@ Spinner: Sooooooo Sprog, how's the hunt going?
 -> I don't remember how to get rid of them...
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Don't worry, I can help you! Like a sidekick!
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: Mr. Grover said if you're covered in sap then you can touch them.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Hmmm, I need some sort of quip...
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: ...is "crap" a swear word?
     -> Yes.
         <<PlayAudio DialogSFX "spinner">>
@@ -268,24 +254,19 @@ Spinner: Sooooooo Sprog, how's the hunt going?
     -> Teach Spinner a REAL swear word.
         <<PlayAudio DialogSFX "spinner">>
         Spinner: "If you're full of sap..."
-        <<PlayAudio DialogSFX "spinner">>
         Spinner: Hmmm, but that doesn't rhyme. Ah well, you get the jist.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Just remember that and you should be fine!
 -> It's easy to get lost here.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Yeah, I've always wanted to explore this place.
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: My mom never let me, but she's...w-well, she's not here right now.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: If only she could see me now! I'm not her little baby country-side plant anymore!
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: I'm not too worried about getting lost though.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: If you get lost, just remember: SLACK!
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: That stands for Saves, Landmarks, And Checkpoints...Kool!
-    <<PlayAudio DialogSFX "spinner">>
 -> ...What did you just call me?
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Hmmm? What?
@@ -295,7 +276,6 @@ Spinner: Sooooooo Sprog, how's the hunt going?
     -> Why.
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Well, remember when I asked you what I should call you?
-    <<PlayAudio DialogSFX "spinner">>
     Spinner: I didn't really like "Sprig" or "Frond," so I combined the two!
     <<PlayAudio DialogSFX "spinner">>
     Spinner: Pretty creative, right? Now you've got a superhero name!
@@ -305,7 +285,6 @@ Spinner: Sooooooo Sprog, how's the hunt going?
     -> Don't ever call me such a stupid name ever again.
         <<PlayAudio DialogSFX "spinner">>
         Spinner: O-Oh...
-        <<PlayAudio DialogSFX "spinner">>
         Spinner: I, uh, I see...
         Spinner: ...
         -> Apologize to the child.
@@ -349,62 +328,49 @@ Frond: So what do you wanna do now?
             <<wait 2>>
             <<PlayAudio DialogSFX "frond">>
             Frond: I'm not dreaming, am I?
-            <<PlayAudio DialogSFX "frond">>
             Frond: Ha...why do you have to be the reasonable one?
             <<PlayAudio DialogSFX "frond">>
             Frond: All I wanted was to have fun like we used to.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Was that really too much to ask?
             <<PlayAudio DialogSFX "frond">>
             Frond: ...
-            <<PlayAudio DialogSFX "frond">>
             Frond: Alright. Let's talk. I'm sure you have questions.
             -> What happened to you?
             <<PlayAudio DialogSFX "frond">>
             Frond: Same thing that happened to you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I woke up here, and I couldn't find you or Aloe anywhere.
             <<PlayAudio DialogSFX "frond">>
             Frond: I was still feeling cold from...you know.
-            <<PlayAudio DialogSFX "frond">>
             Frond: After some wandering, I met Grover here.
             <<PlayAudio DialogSFX "frond">>
             Frond: He was old and needed help, so I decided to stay for a bit.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I could have left, but something about him...it reminded me of how you would help us no matter what.
             <<PlayAudio DialogSFX "frond">>
             Frond: So I stayed. I was pretty happy too.
             -> Why did you leave Grover?
             <<PlayAudio DialogSFX "frond">>
             Frond: I didn't mean to leave him.
-            <<PlayAudio DialogSFX "frond">>
             Frond: It's a bit of a funny story actually...well, as funny as you can get with abandoning someone.
             <<PlayAudio DialogSFX "frond">>
             Frond: One day when I was cleaning up those termites, I was feeling sick.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I'm not really sure why, but there wasn't any water to bring me back up to speed.
             <<PlayAudio DialogSFX "frond">>
             Frond: I ended up...drinking that poison.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Heh, you can laugh if you want. I really had no other options.
             <<PlayAudio DialogSFX "frond">>
             Frond: Since then, I couldn't really get a grip on reality.
-            <<PlayAudio DialogSFX "frond">>
             Frond: ...That is, until now.
             <<PlayAudio DialogSFX "frond">>
             Frond: I don't really know how you did it, but I'm feeling better now that I'm with you.
             -> Where's Aloe?
             <<PlayAudio DialogSFX "frond">>
             Frond: ...I think she left me to look for you. I'll be honest, I'm not sure.
-            <<PlayAudio DialogSFX "frond">>
             Frond: But if I had to guess...she's in the one place I haven't looked.
             <<PlayAudio DialogSFX "frond">>
             Frond: The Caves.
-            <<PlayAudio DialogSFX "frond">>
             Frond: It's not that simple though. The caves have something wrong with them. Grover can feel it.
             <<PlayAudio DialogSFX "frond">>
             Frond: But there's some hope now. And that's you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Just look around us! Not only did you clean up those termites, you made Grover look better than I ever could!
             <<PlayAudio DialogSFX "frond">>
             Frond: I'm not sure what you did, but if you did that to the caves, maybe exploring them won't be as deadly as most plants would think.
@@ -412,24 +378,20 @@ Frond: So what do you wanna do now?
             <<Next_Event Quest_02>>
             <<PlayAudio DialogSFX "frond">>
             Frond: I know you will. You're braver than I could ever be.
-            <<PlayAudio DialogSFX "frond">>
             Frond: When you find her...promise me you'll bring her home. I miss her.
             -> I promise.
             -> ...
             <<PlayAudio DialogSFX "frond">>
             Frond: ...okay.
-            <<PlayAudio DialogSFX "frond">>
             Frond: I'll meet you both back home. There's two different paths that go into the cave.
             <<PlayAudio DialogSFX "frond">>
             Frond: One's from the fields way down there. You must've gone by it on your way here.
-            <<PlayAudio DialogSFX "frond">>
             Frond: The other's underneath Grover. Ask him and he'll open up the path for you. And let him know I said it was okay.
             <<PlayAudio DialogSFX "frond">>
             Frond: ...And Sprig?
             -> Yeah?
             <<PlayAudio DialogSFX "frond">>
             Frond: I love you.
-            <<PlayAudio DialogSFX "frond">>
             Frond: Good luck.
             <<Camera_Pan SprigFliesBackToTree>>
 
@@ -441,11 +403,9 @@ position: 354,-486
 Frond: Alright! *ahem*
     <<PlayAudio DialogSFX "frond">>
     Frond: "'Tis tradition to fall and climb back up"
-    <<PlayAudio DialogSFX "frond">>
     Frond: "When you consider yourself to have had enough"
     <<PlayAudio DialogSFX "frond">>
     Frond: "One must remember to stay pepped and sharp"
-    <<PlayAudio DialogSFX "frond">>
     Frond: "When you consider yourself..."
     <<wait 2>>
     <<PlayAudio DialogSFX "frond">>
@@ -453,38 +413,30 @@ Frond: Alright! *ahem*
     -> Carp.
         <<PlayAudio DialogSFX "frond">>
         Frond: "When you consider yourself dull as a carp!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
         <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
     -> Harp.
         <<PlayAudio DialogSFX "frond">>
         Frond: "When you consider yourself pretty as a harp!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
         <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
     -> Tarp.
         <<PlayAudio DialogSFX "frond">>
         Frond: "When you consider yourself covered by a tarp!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
         <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
     -> Scarp.
         <<PlayAudio DialogSFX "frond">>
         Frond: "When you consider yourself steep as a scarp!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! This is our day! We're on our way, we said so!"
         <<PlayAudio DialogSFX "frond">>
         Frond: "Ho! Ho! We're here to stay! And the world is ours to regrow!"
-        <<PlayAudio DialogSFX "frond">>
         Frond: Haaaaah...singing is hard. But the ending's always a great payoff.
     <<jump FrondRepeat>>
 ===
@@ -499,7 +451,6 @@ Frond: Alright! Let's lay back and admire!
     ...
     <<PlayAudio DialogSFX "frond">>
     Frond: ...Even though I love this view, I don't think it beats the view from our tree.
-    <<PlayAudio DialogSFX "frond">>
     Frond: There's just something too nostalgic about it, y'know?
     ...
     <<PlayAudio DialogSFX "frond">>
@@ -513,22 +464,18 @@ position: 354,-531
 Frond: Alright! How about a good old-fashioned game of hide and seek!
     <<PlayAudio DialogSFX "frond">>
     Frond: I'll seek. Go ahead and hide!
-    <<PlayAudio DialogSFX "frond">>
     Frond: 1...
     <<PlayAudio DialogSFX "frond">>
     Frond: 2...
-    <<PlayAudio DialogSFX "frond">>
     Frond: 3-4-5-6-7-8...
     <<PlayAudio DialogSFX "frond">>
     Frond: 9...
-    <<PlayAudio DialogSFX "frond">>
     Frond: 9 and a half...
     <<PlayAudio DialogSFX "frond">>
     Frond: 10!
     Frond: ...
     <<PlayAudio DialogSFX "frond">>
     Frond: Sprig you didn't even move.
-    <<PlayAudio DialogSFX "frond">>
     Frond: ...Guess that means I win!
     <<PlayAudio DialogSFX "frond">>
     Frond: And as my reward, you can go ahead and thank the developers for not programming you to play hide-and-seek with me!
@@ -538,11 +485,9 @@ Frond: Alright! How about a good old-fashioned game of hide and seek!
     -> Curse the developers instead.
         <<PlayAudio DialogSFX "frond">>
         Frond: W-Woah.
-        <<PlayAudio DialogSFX "frond">>
         Frond: Sprig, I didn't think you had it in you.
         <<PlayAudio DialogSFX "frond">>
         Frond: I also don't think they care, but oh well. I totally get it!
-        <<PlayAudio DialogSFX "frond">>
         Frond: Feels good to let out your anger sometimes.
     <<jump FrondRepeat>>
     
