@@ -5639,7 +5639,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: Cling
-    enabled: 0
+    enabled: 1
     active: 0
     looping: 1
     OnStateEnter:
@@ -5691,9 +5691,33 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4241365237984782972}
+          m_TargetAssemblyTypeName: PlayerSFXController, Assembly-CSharp
+          m_MethodName: WallSlide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnStateExit:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4241365237984782972}
+          m_TargetAssemblyTypeName: PlayerSFXController, Assembly-CSharp
+          m_MethodName: DeactivateSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Aerial
     enabled: 1
     active: 0
@@ -5717,7 +5741,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: Gliding
-    enabled: 0
+    enabled: 1
     active: 0
     looping: 1
     OnStateEnter:
@@ -5735,9 +5759,33 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4241365237984782972}
+          m_TargetAssemblyTypeName: PlayerSFXController, Assembly-CSharp
+          m_MethodName: Glide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnStateExit:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4241365237984782972}
+          m_TargetAssemblyTypeName: PlayerSFXController, Assembly-CSharp
+          m_MethodName: DeactivateSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Wall Jump
     enabled: 1
     active: 0
@@ -5983,6 +6031,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d317b0e757f92b84ea5d2b659b2a57be, type: 3}
   death: {fileID: 8300000, guid: 85b921b125101674b808039fcbee4926, type: 3}
   jump: {fileID: 8300000, guid: 5ce0d07d846bcdc40b3a51010c51c2ab, type: 3}
+  slide: {fileID: 8300000, guid: fcb3febe21781c949a937dc2e23bdd00, type: 3}
+  glide: {fileID: 8300000, guid: d47ae2299ef3fd14ab816bfd20a9754d, type: 3}
   dustParticle: {fileID: 8164523778322449277}
   dustLandingParticle: {fileID: 8634192346904530172}
   dustWallLandingParticle: {fileID: 3459449090143220351}

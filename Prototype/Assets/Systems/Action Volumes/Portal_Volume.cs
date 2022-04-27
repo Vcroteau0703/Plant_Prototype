@@ -41,6 +41,14 @@ public class Portal_Volume : Action_Volume
         {
             pC.OnDisable();
         }
+        MonoBehaviour[] monos = FindObjectsOfType<MonoBehaviour>(true);
+        foreach (MonoBehaviour m in monos)
+        {
+            foreach (MusicTransition a in m.GetComponents<MusicTransition>())
+            {
+                a.StartTransition(true);
+            }
+        }
         //Fade screen to black
         User_Interface.transform.GetChild(3).GetComponent<Animator>().SetTrigger("Fade");
         //Load Next Level
