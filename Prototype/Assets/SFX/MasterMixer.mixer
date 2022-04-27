@@ -104,13 +104,13 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: e522cbbe058daa448ac0520a6d594777
-    name: MyExposedParam 3
+    name: masterVol
   - guid: 4bcd95f317313dd4fad18c3f825abd63
-    name: MyExposedParam 1
+    name: musicVol
   - guid: d68d8c0a953603448a15238dc3da6700
-    name: MyExposedParam
+    name: sfxVol
   - guid: cc6ec1efb30ca754a8e17a0cc60adcda
-    name: MyExposedParam 2
+    name: vaVol
   m_AudioMixerGroupViews:
   - guids:
     - 84cba52f651ac884f8b15658820ba7c7
@@ -170,17 +170,17 @@ AudioMixerSnapshotController:
   m_FloatValues:
     145b83211cb3d694ab9b8b8e462c93e4: 1030
     c5d5d2a1b304f2540877b64e8a714b62: 60
-    4bcd95f317313dd4fad18c3f825abd63: -0.93152964
+    4bcd95f317313dd4fad18c3f825abd63: 0
     0082cc245bba5f344b8aa4919f47c232: 0.54
     fb1740d6272ec8a42be9e57526d56fcd: -1000
     c89fa3f77e5d9d144abc90027f6cff50: 0
     fcf531787393188439ee8c5927885c68: 0
     121d31982d1d04d4d88e46a97df9651e: 0.01
     a36249894dab7ab4ab4b1b51c5068d67: -370
-    d68d8c0a953603448a15238dc3da6700: -0.39762527
-    96c3da3c6b6e57041ade6866843ebafb: 0.10800299
+    d68d8c0a953603448a15238dc3da6700: 0
+    96c3da3c6b6e57041ade6866843ebafb: 0
     70a9b85cd66900148965644c4cb58d25: 0
-    e522cbbe058daa448ac0520a6d594777: -0.39762527
+    e522cbbe058daa448ac0520a6d594777: 0
     7a9e7faf4f531d0458ee930a494b7801: -1200
     8b9effdfd02b02e47a338069575eb766: 1.49
   m_TransitionOverrides: {}
