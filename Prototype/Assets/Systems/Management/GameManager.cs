@@ -38,8 +38,9 @@ public class GameManager : MonoBehaviour, ISavable
     }
 
     private void Awake()
-    {
+    {      
         instance = this;
+        sceneData = new SceneData();
         Load();
     }
 

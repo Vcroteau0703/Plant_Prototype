@@ -20,8 +20,7 @@ public class Action_Volume : MonoBehaviour
     {
         if (oneShot == true)
         {
-            Debug.Log("high");
-            action = Set_Activated;
+            action = Save_And_Destroy;
         }
     }
 
@@ -42,7 +41,7 @@ public class Action_Volume : MonoBehaviour
         else if (trigger_type == Trigger_Type.Trigger_Stay) { action.Invoke(other.gameObject); }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); }
@@ -72,7 +71,7 @@ public class Action_Volume : MonoBehaviour
         else if (trigger_type == Trigger_Type.Collision_Exit) { action.Invoke(collision.gameObject); }
     }
 
-    public void Set_Activated(GameObject actor)
+    public void Save_And_Destroy(GameObject actor)
     {       
         data.activated = true;
         data.ID = ((int)transform.position.sqrMagnitude);

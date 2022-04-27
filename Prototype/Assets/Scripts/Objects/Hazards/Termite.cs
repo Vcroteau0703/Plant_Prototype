@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class Termite : Hazard
 {
-    private void OnTriggerEnter(Collider other)
+    public override void Deal_Damage(GameObject actor)
     {
-        if (other.transform.parent.TryGetComponent<Player>(out Player p))
+        if (actor.transform.parent.TryGetComponent(out Player p))
         {
             if (p.sapActive)
             {
                 gameObject.GetComponentInParent<Termite_Tracker>().Update_Termite_Count();
-                gameObject.SetActive(false);
+                if (oneShot)
+                {
+                    Save_And_Destroy(gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
             }
-            else if (other.gameObject.TryGetComponent(out IDamagable a))
+            else if (p.TryGetComponent(out IDamagable a))
             {
                 a.Damage(damage);
             }
