@@ -16,6 +16,8 @@ public class PlayerSFXController : MonoBehaviour
     public AudioClip[] damage;
     public AudioClip death;
     public AudioClip jump;
+    public AudioClip slide;
+    public AudioClip glide;
     AudioSource aS;
     private Player player;
 
@@ -24,6 +26,7 @@ public class PlayerSFXController : MonoBehaviour
     public ParticleSystem dustWallLandingParticle;
     public ParticleSystem splashParticle;
     int cnt;
+    bool active = false;
        
     // Start is called before the first frame update
     private void Awake()
@@ -159,17 +162,31 @@ public class PlayerSFXController : MonoBehaviour
 
     public void WallSlide()
     {
-        if (transform.localScale.x < 0 && dustWallLandingParticle.transform.localScale.x > 0)
+        if (!active)
         {
-            dustWallLandingParticle.transform.localScale = new Vector3(-dustWallLandingParticle.transform.localScale.x, dustWallLandingParticle.transform.localScale.y, dustWallLandingParticle.transform.localScale.z);
+            aS.clip = slide;
+            aS.loop = true;
+            aS.Play();
+            active = true;
         }
-        else if (transform.localScale.x > 0 && dustWallLandingParticle.transform.localScale.x < 0)
+    }
+    
+    public void Glide()
+    {
+        if (!active)
         {
-            dustWallLandingParticle.transform.localScale = new Vector3(-dustWallLandingParticle.transform.localScale.x, dustWallLandingParticle.transform.localScale.y, dustWallLandingParticle.transform.localScale.z);
+            aS.clip = glide;
+            aS.Play();
+            active = true;
         }
-        dustWallLandingParticle.Emit(1);
     }
 
+    public void DeactivateSFX()
+    {
+        active = false;
+        aS.loop = false;
+        aS.Stop();
+    }
 
     public void EnablePlayer()
     {
