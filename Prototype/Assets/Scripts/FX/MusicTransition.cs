@@ -1,50 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicTransition : MonoBehaviour
 {
-    AudioSource aS;
+    public AudioMixer master;
     float thisVol;
-    public bool transition;
-    internal bool isTransitioning;
 
     private void Awake()
     {
-        aS = GetComponent<AudioSource>();
-        thisVol = aS.volume;
+        master.GetFloat("masterVol", out thisVol);
         StartTransition(false);
     }
 
     public void StartTransition(bool exit)
     {
-        if (transition)
+        if (exit)
         {
-            if (exit)
-            {
-                StartCoroutine(VolumeTransition(thisVol, 0, 0.5f));
-            }
-            else
-            {
-                aS.volume = 0;
-                StartCoroutine(VolumeTransition(0, thisVol, 0.5f));
-            }
-
+            StartCoroutine(VolumeTransition(thisVol, -80, 3f));
+        }
+        else
+        {
+            master.SetFloat("masterVol", -80);
+            StartCoroutine(VolumeTransition(-80, thisVol, 3f));
         }
     }
     
     IEnumerator VolumeTransition(float startVol, float finalVol, float cycleTime)
     {
-        isTransitioning = true;
         float currentTime = 0;
         while (currentTime < cycleTime)
         {
             currentTime += Time.deltaTime;
             float t = currentTime / cycleTime;
             float currentVol = Mathf.Lerp(startVol, finalVol, t);
-            aS.volume = currentVol;
+            master.SetFloat("masterVol", currentVol);
             yield return null;
         }
-        isTransitioning = false;
     }
 }

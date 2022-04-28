@@ -11,7 +11,6 @@ public class WhispersSFX : MonoBehaviour
     float initVol;
     float endVol = 0f;
     int randomClip;
-    public MusicTransition music;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +23,12 @@ public class WhispersSFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!music.isTransitioning)
+        if (timer > audioTime)
         {
-            if (timer > audioTime)
-            {
-                PlaySFX();
-                StartCoroutine(FadeTransition(0.5f));
-            }
-            timer += Time.deltaTime;
+            PlaySFX();
+            StartCoroutine(FadeTransition(0.5f));
         }
+        timer += Time.deltaTime;
     }
 
     void PlaySFX()
