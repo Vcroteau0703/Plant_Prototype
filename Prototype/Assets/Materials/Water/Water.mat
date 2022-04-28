@@ -134,9 +134,9 @@ Material:
     m_Colors:
     - Color_a49c2ba777554937a7259fbb71f7786e: {r: 0.3764706, g: 0, b: 0.54901963, a: 1}
     - Vector3_3051dec42db94b07bdb7815ab1975fde: {r: 0, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 0.58431375, g: 0, b: 0.8, a: 1}
+    - _BaseColor: {r: 1, g: 0, b: 0.18627453, a: 1}
     - _Color: {r: 0.9490196, g: 0, b: 1, a: 0.5176471}
-    - _Emission: {r: 0.41608888, g: 0, b: 1.7207955, a: 0}
+    - _Emission: {r: 3.2490096, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0.06833775, b: 0.31132078, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
