@@ -36,7 +36,9 @@ public class UserInterface : MonoBehaviour
         if(canvas.worldCamera == null)
         {
             canvas.worldCamera = Camera.main;
-        }      
+        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Pause(InputAction.CallbackContext context)
@@ -45,10 +47,14 @@ public class UserInterface : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             return;
         }
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Pause()
@@ -57,10 +63,14 @@ public class UserInterface : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             return;
         }
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void OnDisable()
