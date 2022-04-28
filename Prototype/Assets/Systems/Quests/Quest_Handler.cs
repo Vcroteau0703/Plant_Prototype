@@ -129,6 +129,14 @@ public class Quest_Handler : MonoBehaviour, ISavable
 
         Target_Quest = quest;
         Target_Event = quest.Data.Current_Event;
+
+        foreach (Event_Actions a in Event_Triggers)
+        {
+            if (a.Event == Target_Event.name)
+            {
+                a.OnEventStart.Invoke();
+            }
+        } // OnEventStart
     }
 
 

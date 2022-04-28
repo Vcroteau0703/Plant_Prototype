@@ -24,7 +24,10 @@ public class Menu : MonoBehaviour
     IEnumerator Init()
     {
         yield return new WaitForEndOfFrame();
-        First_Selected.GetComponent<Button>().Select();
+        if (First_Selected != null)
+        {
+            First_Selected.GetComponent<Button>().Select();
+        }
     }
 
     public void OnDisable()
