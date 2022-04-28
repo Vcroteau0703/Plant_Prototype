@@ -6,11 +6,14 @@ using UnityEngine.Audio;
 public class MusicTransition : MonoBehaviour
 {
     public AudioMixer master;
-    float thisVol;
 
     private void Awake()
     {
-        master.GetFloat("masterVol", out thisVol);
+        master.SetFloat("trueMasterVol", -80);
+    }
+    
+    private void OnEnable()
+    {
         StartTransition(false);
     }
 
@@ -18,12 +21,11 @@ public class MusicTransition : MonoBehaviour
     {
         if (exit)
         {
-            StartCoroutine(VolumeTransition(thisVol, -80, 2f));
+            StartCoroutine(VolumeTransition(0, -80, 2f));
         }
         else
         {
-            master.SetFloat("masterVol", -80);
-            StartCoroutine(VolumeTransition(-80, thisVol, 2f));
+            StartCoroutine(VolumeTransition(-80, 0, 2f));
         }
     }
     
@@ -35,7 +37,7 @@ public class MusicTransition : MonoBehaviour
             currentTime += Time.deltaTime;
             float t = currentTime / cycleTime;
             float currentVol = Mathf.Lerp(startVol, finalVol, t);
-            master.SetFloat("masterVol", currentVol);
+            master.SetFloat("trueMasterVol", currentVol);
             yield return null;
         }
     }
