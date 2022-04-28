@@ -24,7 +24,6 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
             }
         }
     }
-
     public static Checkpoint Get_Active_Checkpoint()
     {
         foreach (MonoBehaviour m in FindObjectsOfType<MonoBehaviour>())
@@ -37,8 +36,6 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
         }
         return null;
     }
-
-
     public void Update_Checkpoint(Checkpoint checkpoint)
     {
         if(checkpoint == this)
@@ -50,8 +47,6 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
             state = State.Inactive;
         }
     }
-
-
     private void OnDrawGizmos()
     {
         if (state == State.Active)

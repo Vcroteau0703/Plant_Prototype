@@ -35,6 +35,16 @@ public class InteractionController : MonoBehaviour
 
         inputs.Player.Interact.performed += Interact;
         inputs.Player.Enable();
+
+        double time = InputSystem.devices[0].lastUpdateTime;
+        InputDevice target = InputSystem.devices[0];
+        foreach(InputDevice d in InputSystem.devices){
+            if(d.lastUpdateTime < time){
+                time = d.lastUpdateTime;
+                target = d;
+            }
+        }
+        deviceUI = deviceUIData.GetDeviceUI(target.name);
     }
 
     private void OnInput(InputAction.CallbackContext context)

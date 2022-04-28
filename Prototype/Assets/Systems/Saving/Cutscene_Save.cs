@@ -11,7 +11,7 @@ public class Cutscene_Save : MonoBehaviour
     {
         Cutscene_Save_Data data = SaveSystem.Load<Cutscene_Save_Data>("/Levels/Cutscene_Save.data");
 
-        if (data == null) { return; }
+        if (data == null || data.cutscenes == null) { return; }
 
         foreach (Cutscene_Data saved in data.cutscenes)
         {

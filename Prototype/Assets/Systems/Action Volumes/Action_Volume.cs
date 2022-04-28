@@ -44,7 +44,7 @@ public class Action_Volume : MonoBehaviour
     public virtual void OnTriggerEnter(Collider other)
     {
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); }
+        else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); } 
     }
 
     public virtual void OnTriggerExit(Collider other)
