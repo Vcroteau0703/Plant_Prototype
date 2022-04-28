@@ -18,12 +18,12 @@ public class MusicTransition : MonoBehaviour
     {
         if (exit)
         {
-            StartCoroutine(VolumeTransition(thisVol, -80, 3f));
+            StartCoroutine(VolumeTransition(thisVol, -80, 2f));
         }
         else
         {
             master.SetFloat("masterVol", -80);
-            StartCoroutine(VolumeTransition(-80, thisVol, 3f));
+            StartCoroutine(VolumeTransition(-80, thisVol, 2f));
         }
     }
     

@@ -9,7 +9,6 @@ Hey wait! Up here!
 <<wait 1.5>>
 <<PlayAudio DialogSFX "spinner">>
 I need your help!
-<<PlayAudio DialogSFX "spinner">>
 I climbed all the way up here, but now I-I can't get down...
 <<PlayAudio DialogSFX "spinner">>
 Could you give me something to land on?
@@ -24,11 +23,9 @@ position: 90,49
 ---
 <<PlayAudio DialogSFX "spinner">>
 Thank you so much!
-<<PlayAudio DialogSFX "spinner">>
 I could've waited for my mom, but she's just taking forever to get here... 
 <<PlayAudio DialogSFX "spinner">>
 ...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
-<<PlayAudio DialogSFX "spinner">>
 Just, uh, don't tell her about this.
 <<PlayAudio DialogSFX "spinner">>
 Wait...do you feel that?
@@ -52,11 +49,9 @@ position: 198,116.5
 ---
 <<PlayAudio DialogSFX "spinner">>
 I don't know what you did, but the water's clean now! Well, at least, up here it is.
-<<PlayAudio DialogSFX "spinner">>
 Everything is so pretty! It's like a paradise! I've never seen it look this good!
 <<PlayAudio DialogSFX "spinner">>
 Is it because you helped me? Do you have superpowers? Are you a superhero?!
-<<PlayAudio DialogSFX "spinner">>
 Woah, sorry, I'm talking way too fast.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: So...*ahem*...Hi. I'm Spinner. What's your name?
@@ -64,7 +59,6 @@ Spinner: So...*ahem*...Hi. I'm Spinner. What's your name?
 -> ...Sprig.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: "Sprig?" Heh, now that's a funny name for a superhero!
-<<PlayAudio DialogSFX "spinner">>
 Spinner: So, do you know what happened with that blizzard?
 -> No clue.
     <<PlayAudio DialogSFX "spinner">>
@@ -72,17 +66,14 @@ Spinner: So, do you know what happened with that blizzard?
 -> It must've finally cleared up.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: I don't know...But I guess it's not important, as long as its over.
-<<PlayAudio DialogSFX "spinner">>
 Spinner: Anyways, what are you doing?
 -> I need to find my siblings.
 -> Do you know where to find lost plants?
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Well, there's some bad rumors about the caves under the tree up ahead.
-<<PlayAudio DialogSFX "spinner">>
 Spinner: Anyone who goes in never comes out, so I wouldn't check there if I were you.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Even if you wanted to, I don't think a plant like you can make it over the spikes.
-<<PlayAudio DialogSFX "spinner">>
 Spinner: ...But, if your lost plants are there, then I guess you'll have to find a way around that.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Good luck!
@@ -90,7 +81,6 @@ Spinner: Good luck!
 -> I can't make that jump.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: ...Oh, you don't know how to scale walls, do you?
-<<PlayAudio DialogSFX "spinner">>
 Spinner: Don't worry, I'll show you how it's done! Been doing this since I was a baby!
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Now, check this out!
@@ -107,11 +97,9 @@ Spinner: Sliding down a wall isn't too hard either! It's like sliding down a sil
 <<Next_Event Quest_01>>
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Alright, hope that helps!
-<<PlayAudio DialogSFX "spinner">>
 Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
 <<PlayAudio DialogSFX "spinner">>
 Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
-<<PlayAudio DialogSFX "spinner">>
 Spinner: ...make sure the coast is clear!
 <<PlayAudio DialogSFX "spinner">>
 Spinner: ...yeah.
