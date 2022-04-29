@@ -4,14 +4,14 @@ position: 1,-1
 ---
 
 <<PlayAudio DialogSFX "spinner">>
-Hey wait! Up here!
+???: Hey wait! Up here!
 <<Camera_Pan CameraDuringDialog>>
 <<wait 1.5>>
 <<PlayAudio DialogSFX "spinner">>
-I need your help!
-I climbed all the way up here, but now I-I can't get down...
+???: I need your help!
+???: I climbed all the way up here, but now I-I can't get down...
 <<PlayAudio DialogSFX "spinner">>
-Could you give me something to land on?
+???: Could you give me something to land on?
 <<Camera_Pan CameraAfterDialog>>
 <<Start_Quest Quest_01>>
 <<wait 1.5>>
@@ -22,13 +22,13 @@ title: Dialogue2
 position: 90,49
 ---
 <<PlayAudio DialogSFX "spinner">>
-Thank you so much!
-I could've waited for my mom, but she's just taking forever to get here... 
+???: Thank you so much!
+???: I could've waited for my mom, but she's just taking forever to get here... 
 <<PlayAudio DialogSFX "spinner">>
-...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
-Just, uh, don't tell her about this.
+???: ...b-but that's okay! I've never been left alone for this long before, and I'm really proving myself!
+???: Just, uh, don't tell her about this.
 <<PlayAudio DialogSFX "spinner">>
-Wait...do you feel that?
+???: Wait...do you feel that?
 <<change_world GreenifyDirector>>
 
 ===
@@ -38,7 +38,7 @@ position: 213,26
 
 <<Camera_Pan CameraDuringDialog>>
 <<PlayAudio DialogSFX "spinner">>
-Woah, down here! Check out the water!
+???: Woah, down here! Check out the water!
 <<Camera_Pan CameraAfterDialog>>
 <<wait 1.5>>
 <<Next_Event Quest_01>>
@@ -48,35 +48,31 @@ title: Node
 position: 198,116.5
 ---
 <<PlayAudio DialogSFX "spinner">>
-I don't know what you did, but the water's clean now! Well, at least, up here it is.
-Everything is so pretty! It's like a paradise! I've never seen it look this good!
-<<PlayAudio DialogSFX "spinner">>
-Is it because you helped me? Do you have superpowers? Are you a superhero?!
-Woah, sorry, I'm talking way too fast.
+???: I don't know what you did, but the water's clean now! Well, at least, up here it is.
+???: Everything is so pretty! It's like a paradise! I've never seen it look this good!
+???: Woah, sorry, I'm talking way too fast.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: So...*ahem*...Hi. I'm Spinner. What's your name?
 -> Sprig!
 -> ...Sprig.
 <<PlayAudio DialogSFX "spinner">>
-Spinner: "Sprig?" Heh, now that's a funny name for a superhero!
+Spinner: "Sprig?" I'll remember that!
 Spinner: So, do you know what happened with that blizzard?
 -> No clue.
-    <<PlayAudio DialogSFX "spinner">>
-    Spinner: Hmmm, well I think that maybe it finally cleared up?
 -> It must've finally cleared up.
 <<PlayAudio DialogSFX "spinner">>
-Spinner: I don't know...But I guess it's not important, as long as its over.
+Spinner: Hmmmm...I don't know, but I guess it's not important, as long as its over.
 Spinner: Anyways, what are you doing?
 -> I need to find my siblings.
 -> Do you know where to find lost plants?
 <<PlayAudio DialogSFX "spinner">>
-Spinner: Well, there's some bad rumors about the caves under the tree up ahead.
-Spinner: Anyone who goes in never comes out, so I wouldn't check there if I were you.
+Spinner: W-Well, there is a cave system up ahead.
+Spinner: Anyone who goes in the cave with the red lights never comes out, so I wouldn't check there if I were you.
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Even if you wanted to, I don't think a plant like you can make it over the spikes.
-Spinner: ...But, if your lost plants are there, then I guess you'll have to find a way around that.
+Spinner: ...But who wants to go to that stupid cave anyway?
 <<PlayAudio DialogSFX "spinner">>
-Spinner: Good luck!
+Spinner: There's this tree I've heard a lot about. Why don't we head there instead?
 -> ...
 -> I can't make that jump.
 <<PlayAudio DialogSFX "spinner">>
@@ -98,11 +94,6 @@ Spinner: Sliding down a wall isn't too hard either! It's like sliding down a sil
 <<PlayAudio DialogSFX "spinner">>
 Spinner: Alright, hope that helps!
 Spinner: I'm gonna go over and head to the tree. Maybe I'll see you there!
-<<PlayAudio DialogSFX "spinner">>
-Spinner: N-Not that I'm scared of the cave or anything, I just want to...er...
-Spinner: ...make sure the coast is clear!
-<<PlayAudio DialogSFX "spinner">>
-Spinner: ...yeah.
 
 ===
 title: tree1
