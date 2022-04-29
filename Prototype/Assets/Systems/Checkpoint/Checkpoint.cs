@@ -36,6 +36,30 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
         }
         return null;
     }
+    public static Checkpoint Find_Checkpoint(int ID)
+    {
+        foreach (MonoBehaviour m in FindObjectsOfType<MonoBehaviour>())
+        {
+            Checkpoint x = null;
+            if (m.TryGetComponent(out Checkpoint c))
+            {
+                if (((int)c.transform.position.sqrMagnitude) == ID) { return c; }
+            }
+        }
+        return null;
+    }
+    public static void Set_Checkpoint(Checkpoint c, State state)
+    {
+        c.state = state;
+        foreach (MonoBehaviour m in FindObjectsOfType<MonoBehaviour>())
+        {
+            if (m.TryGetComponent(out ICheckpoint x))
+            {
+                x.Update_Checkpoint(c);
+            }
+        }
+
+    }
     public void Update_Checkpoint(Checkpoint checkpoint)
     {
         if(checkpoint == this)
@@ -69,13 +93,9 @@ public class Checkpoint : MonoBehaviour, ICheckpoint
 [System.Serializable]
 public class Checkpoint_Data
 {
-    public float[] position;
-
+    public int ID;
     public Checkpoint_Data(Checkpoint c)
     {
-        position = new float[3];
-        position[0] = c.transform.position.x;
-        position[1] = c.transform.position.y;
-        position[2] = c.transform.position.z;
+        ID = ((int)c.transform.position.sqrMagnitude);
     }
 }

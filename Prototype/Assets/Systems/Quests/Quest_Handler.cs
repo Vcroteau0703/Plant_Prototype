@@ -92,8 +92,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
             data.Current_Event = value;
             Target_Quest.Data = data;
             Debug.Log(Target_Quest.Data.Current_Event.name);
-            taskBar.UpdateDisplay(Target_Quest, value);
-            GameManager.SaveGame();
+            taskBar.UpdateDisplay(Target_Quest, value);           
         }
     }
 
@@ -107,8 +106,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
     {
         if(quest == null || quest.Data.Completed) { return; }
 
-        Target_Quest = quest;
-        GameManager.SaveGame();    
+        Target_Quest = quest;         
     }
 
     public void Load_Event(Event _event)
@@ -153,7 +151,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
                 a.OnQuestStart.Invoke();
             }
         }
-
+        GameManager.SaveGame();
         taskBar.UpdateDisplay(Target_Quest, Target_Event);       
     }
     public void Quest_Complete(Quest quest)
@@ -188,7 +186,8 @@ public class Quest_Handler : MonoBehaviour, ISavable
             {
                 a.OnEventStart.Invoke();
             }
-        }       
+        }
+        GameManager.SaveGame();
     }
     public void Event_Complete(Event _event)
     {
@@ -199,6 +198,7 @@ public class Quest_Handler : MonoBehaviour, ISavable
                 a.OnEventComplete.Invoke();
             }
         }
+        GameManager.SaveGame();
     }
 
     public void Update_Tasks(Task task, int progress)
