@@ -9,6 +9,6 @@ public class LoadScene : MonoBehaviour
     
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(nextScene);
+        Laucher.LoadScene(nextScene);
     }
 }
