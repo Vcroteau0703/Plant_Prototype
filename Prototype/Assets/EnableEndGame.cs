@@ -19,17 +19,21 @@ public class EnableEndGame : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         //Debug.Log(taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text);
-        if (taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text == "Return to the Fields")
+        if(taskList.transform.GetChild(0) != null)
         {
-            foreach (GameObject shit in shitToTurnOn)
+            if (taskList.transform.GetChild(0).Find("Description").GetComponent<TextMeshProUGUI>().text == "Return to the Fields")
             {
-                shit.SetActive(true);
-            }
-            foreach (GameObject shit in shitToShutOff)
-            {
-                shit.SetActive(false);
+                foreach (GameObject shit in shitToTurnOn)
+                {
+                    shit.SetActive(true);
+                }
+                foreach (GameObject shit in shitToShutOff)
+                {
+                    shit.SetActive(false);
+                }
             }
         }
+
     }
 
     public void StartCredits()

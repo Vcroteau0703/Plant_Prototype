@@ -25,6 +25,7 @@ public class Boulder : Hazard
 
     public void ResetCutscene()
     {
+        ChangeDamage(0);
         director.time = 0;
         director.Evaluate();
         director.Stop();
