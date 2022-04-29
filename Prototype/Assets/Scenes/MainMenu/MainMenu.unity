@@ -22634,6 +22634,7 @@ GameObject:
   - component: {fileID: 1371336291}
   - component: {fileID: 1371336290}
   - component: {fileID: 1371336289}
+  - component: {fileID: 1371336292}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -22717,6 +22718,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371336287}
   m_CullTransparentMesh: 1
+--- !u!114 &1371336292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371336287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e80ca8ccde38ef45a8318c9bebb8a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Intro
 --- !u!1 &1372808546
 GameObject:
   m_ObjectHideFlags: 0
@@ -24643,6 +24657,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1878908540}
+        m_TargetAssemblyTypeName: MusicTransition, Assembly-CSharp
+        m_MethodName: StartTransition
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1504227606
 MonoBehaviour:
@@ -29645,7 +29671,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8781524848506809031, guid: 86ffd15d6a697654ab0e30231000fc4d, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e8eb26e199a4bca448eff6375bc5e081, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 66e486a639d398b428238c062c5c38cc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.67
   m_Pitch: 1
