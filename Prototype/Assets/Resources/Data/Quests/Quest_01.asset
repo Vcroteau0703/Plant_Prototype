@@ -15,18 +15,18 @@ MonoBehaviour:
   _data:
     FileName: Quest_01
     Name: 'Chapter 1: Fields'
-    Completed: 0
+    Completed: 1
     Current_Event:
       name: Cling Tutorial
       tasks:
       - description: Perform Wall Cling
-        progress: 0
+        progress: 1
         maxProgress: 1
       - description: Perform Slide
-        progress: 0
+        progress: 1
         maxProgress: 1
       - description: Perform Wall Jump
-        progress: 0
+        progress: 1
         maxProgress: 1
     Events:
     - Name: Find Boulder
@@ -38,21 +38,22 @@ MonoBehaviour:
       Tasks:
       - Progress: 0
     - Name: Cling Tutorial
-      Completed: 0
+      Completed: 1
       Tasks:
       - Progress: 0
       - Progress: 0
       - Progress: 0
+    cutscenes: []
   questTitle: 'Chapter 1: Fields'
   events:
   - name: Find Boulder
     tasks:
-    - description: Find a way up to Spinner
+    - description: Find a way up to the Spider Plant
       progress: 0
       maxProgress: 0
   - name: Talk_01
     tasks:
-    - description: Talk To Spinner
+    - description: Talk to the Spider Plant
       progress: 0
       maxProgress: 0
   - name: Cling Tutorial
