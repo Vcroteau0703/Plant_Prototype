@@ -12,8 +12,6 @@ public class Settings_UI : MonoBehaviour
     public List<TMP_Dropdown> dropdowns;
     public List<Slider> sliders;
 
-    public GameObject first_Select;
-
     private void Awake()
     {
         Settings.Initialize();
@@ -46,16 +44,6 @@ public class Settings_UI : MonoBehaviour
     private void OnEnable()
     {
         Refresh_Settings();
-        StartCoroutine(Set_First_Selected(first_Select));
-    }
-
-    public IEnumerator Set_First_Selected(GameObject a)
-    {
-        yield return new WaitForEndOfFrame();
-        if(a.TryGetComponent<Button>(out Button b))
-        {
-            b.Select();
-        }
     }
 
     public void Refresh_Settings()
@@ -126,12 +114,21 @@ public class Settings_UI : MonoBehaviour
         }
     }
 
-    public void Disable_Slider_Naviation(Slider slider)
+    public void Toggle_Slider_Navigation(Slider slider)
     {
-        Navigation nav = slider.navigation;     
-        nav.mode = Navigation.Mode.None;
+        Navigation nav = slider.navigation;
+        switch (nav.mode) 
+        {
+            case Navigation.Mode.Explicit:
+                nav.mode = Navigation.Mode.None;
+                break;
+            case Navigation.Mode.None:
+                nav.mode = Navigation.Mode.Explicit;
+                break;      
+        }
         slider.navigation = nav;
     }
+
     public void Enable_Slider_Naviation(Slider slider)
     {
         Navigation nav = slider.navigation;

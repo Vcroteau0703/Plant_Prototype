@@ -1,16 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class LoadMenu : MonoBehaviour
 {
     public GameObject saveButton_prefab;
     public RectTransform savesContent;
+
+    private Controls input;
+
     private void OnEnable()
     {
+        input ??= new Controls();
+        input.UI.Primary_Action.performed += Initiate_File_Delete;
+        input.UI.Primary_Action.Enable();
         LoadSaves(SaveSystem.GetSaveNames());
+    }
+    private void OnDisable()
+    {
+        input.UI.Primary_Action.performed -= Initiate_File_Delete;
+        input.UI.Primary_Action.Disable();
+    }
+
+    public void Initiate_File_Delete(InputAction.CallbackContext ctx)
+    {
+        GameObject selected = EventSystem.current.currentSelectedGameObject;
+
+        if(selected.TryGetComponent(out FileLoad f))
+        {
+            ActionWindow.ButtonFunction function = f.Delete;
+            Notification_System.Send_ActionWindow("Do you want to delete " + f.fileName.text + "?", "Delete", function);
+        }  
     }
 
     public void LoadSaves(string[] fileNames)

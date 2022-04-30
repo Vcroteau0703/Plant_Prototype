@@ -8,31 +8,11 @@ using UnityEngine.EventSystems;
 public class Menu : MonoBehaviour
 {
     public TMP_InputField saveNameInputField;
-    public GameObject First_Selected;
-    private EventSystem sys;
 
-    private void Awake()
-    {
-        sys = EventSystem.current;
-    }
-
-    public void OnEnable()
-    {
-        StartCoroutine(Init());
-    }
-
-    IEnumerator Init()
+    IEnumerator Set_Selected(GameObject obj)
     {
         yield return new WaitForEndOfFrame();
-        if (First_Selected != null)
-        {
-            First_Selected.GetComponent<Button>().Select();
-        }
-    }
-
-    public void OnDisable()
-    {
-        sys.SetSelectedGameObject(null);
+        obj.GetComponent<Button>().Select();
     }
 
     public void EnableButton(Button button)
@@ -77,6 +57,17 @@ public class Menu : MonoBehaviour
             }
         }
         menu.SetActive(true);
+
+        Button[] buttons = menu.GetComponentsInChildren<Button>();
+
+        foreach (Button b in buttons)
+        {
+            if(b.gameObject.CompareTag("First Selection"))
+            {
+                StartCoroutine(Set_Selected(b.gameObject));
+            }
+        }
+
     }
 
     public void ExitGame()
