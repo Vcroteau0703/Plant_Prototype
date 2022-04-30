@@ -345,28 +345,6 @@
                 },
                 {
                     "name": "",
-                    "id": "410cf0ca-97ef-4473-9dd0-113c81761ac4",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Switch_Controls",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d1088907-56d9-44d3-84d2-da31f4e74136",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Switch_Controls",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "cd4cf36f-e38f-492b-b41b-9337fd69b4b1",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -470,6 +448,14 @@
                     "type": "PassThrough",
                     "id": "3c511a38-37c6-49b4-95e7-4fa96757d66e",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Primary_Action",
+                    "type": "Button",
+                    "id": "4e686945-7a90-48a9-b809-00c4ae0a47ca",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -890,6 +876,39 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba469ee9-2f91-4ce8-8b4c-f80a04bc8baf",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary_Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b9c8bc01-f3a0-44cc-8cf5-844bb271e4bb",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary_Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23e9fbb7-bda5-4c1e-8259-88cbc7e76501",
+                    "path": "<Keyboard>/delete",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary_Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
