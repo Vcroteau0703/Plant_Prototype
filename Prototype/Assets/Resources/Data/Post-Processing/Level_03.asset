@@ -17,6 +17,29 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+--- !u!114 &-5448838407060223301
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  gain:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &-3812036466383781760
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -104,13 +127,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Level_03_PP_Volume
+  m_Name: Level_03
   m_EditorClassIdentifier: 
   components:
   - {fileID: 1946826814804744697}
   - {fileID: -7644842518396241337}
   - {fileID: -3812036466383781760}
   - {fileID: -3343717414374656149}
+  - {fileID: -5448838407060223301}
 --- !u!114 &1946826814804744697
 MonoBehaviour:
   m_ObjectHideFlags: 3

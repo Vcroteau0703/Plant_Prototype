@@ -9,8 +9,15 @@ public class Menu : MonoBehaviour
 {
     public TMP_InputField saveNameInputField;
 
+    private void OnEnable()
+    {
+        GameObject target = Get_First_Selection(gameObject);
+        if(target != null){StartCoroutine(Set_Selected(target));}
+    }
+
     IEnumerator Set_Selected(GameObject obj)
     {
+        EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         obj.GetComponent<Button>().Select();
     }
@@ -57,17 +64,21 @@ public class Menu : MonoBehaviour
             }
         }
         menu.SetActive(true);
+        StartCoroutine(Set_Selected(Get_First_Selection(menu)));
+    }
 
+    public GameObject Get_First_Selection(GameObject menu)
+    {
         Button[] buttons = menu.GetComponentsInChildren<Button>();
 
         foreach (Button b in buttons)
         {
-            if(b.gameObject.CompareTag("First Selection"))
+            if (b.gameObject.CompareTag("First Selection"))
             {
-                StartCoroutine(Set_Selected(b.gameObject));
+                return b.gameObject;            
             }
         }
-
+        return null;
     }
 
     public void ExitGame()
