@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour, IDamagable, ISavable
 {
     public Player_Control_Settings sapSettings;
-    private Player_Control_Settings originalSettings;
+    public Player_Control_Settings originalSettings;
 
     public static Gold_Leaf_Data[] goldenLeaves;
 
@@ -57,7 +57,6 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         }
         anim = GetComponent<Animator>();
         pC = GetComponent<Player_Controller>();
-        originalSettings = gameObject.GetComponent<Player_Controller>().settings;
         HUD = GameObject.FindGameObjectWithTag("HUD");
         HUD.GetComponentInChildren<HealthUI>().UpdateUI(health);
     }
