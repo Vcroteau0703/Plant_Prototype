@@ -2,34 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using System.IO;
 
 public class Settings_UI : MonoBehaviour
 {
     public Transform[] settingsContainers;
 
     public List<TMP_Dropdown> dropdowns;
+    public List<Slider> sliders;
 
     private void Awake()
     {
         Settings.Initialize();
 
         dropdowns = new List<TMP_Dropdown>();
+        sliders = new List<Slider>();
         foreach (Transform t in settingsContainers)
         {
             foreach (Transform b in t)
             {
-                TMP_Dropdown target = b.GetComponentInChildren<TMP_Dropdown>();
-                if (target != null)
-                {
-                    dropdowns.Add(target);
-                }
+                TMP_Dropdown dropdown = b.GetComponentInChildren<TMP_Dropdown>();
+                Slider slider = b.GetComponentInChildren<Slider>();
+
+                if (dropdown != null){dropdowns.Add(dropdown);}
+                if (slider != null) { sliders.Add(slider); }
             }
         }
 
         foreach (TMP_Dropdown n in dropdowns)
         {
             n.onValueChanged.AddListener(delegate { Update_Setting(n.options[n.value].text, n.transform.parent.name); });
+        }
+
+        foreach(Slider s in sliders)
+        {
+            s.onValueChanged.AddListener(delegate { Update_Setting(s.value.ToString(), s.transform.parent.name); });
         }
     }
 
@@ -57,16 +68,36 @@ public class Settings_UI : MonoBehaviour
                 case "Bloom": temp = data.vSync == true ? "On" : "Off"; Check_Change(temp, n); continue;
             }
         }
-    }
 
-    private void Check_Change(string targetSetting, TMP_Dropdown target)
-    {
-        int i = 0;
-        foreach (TMP_Dropdown.OptionData a in target.options)
+        foreach (Slider s in sliders)
         {
-            Debug.Log(a.text + " | " + targetSetting);
-            if (a.text == targetSetting) { target.value = i; return; }
-            i++;
+            switch (s.transform.parent.name)
+            {
+                case "Brightness": Check_Change((data.brightness * 50).ToString(), s); continue;
+                case "Master": Check_Change(data.masterVolume.ToString(), s); continue;
+                case "Music": Check_Change(data.musicVolume.ToString(), s); continue;
+                case "SFX": Check_Change(data.effects_Volume.ToString(), s); continue;
+                case "Voice": Check_Change(data.voice_Volume.ToString(), s); continue;
+            }
+        }
+    }
+    private void Check_Change<T>(string targetSetting, T target)
+    {
+        if(target.GetType() == typeof(TMP_Dropdown))
+        {
+            TMP_Dropdown temp = target as TMP_Dropdown;
+            int i = 0;
+            foreach (TMP_Dropdown.OptionData a in temp.options)
+            {
+                Debug.Log(a.text + " | " + targetSetting);
+                if (a.text == targetSetting) { temp.value = i; return; }
+                i++;
+            }
+        }
+        else if(target.GetType() == typeof(Slider))
+        {
+            Slider temp = target as Slider;
+            temp.value = float.Parse(targetSetting);
         }
     }
     public void Update_Setting(string value, string setting)
@@ -84,7 +115,39 @@ public class Settings_UI : MonoBehaviour
                 Settings.Shadow_Quality = value; break;
             case "Texture_Quality":
                 Settings.Texture_Quality = value; break;
+            case "Brightness":
+                Settings.Brightness = float.Parse(value); break;
+            case "Master":
+                Settings.Master_Volume = float.Parse(value); break;
+            case "Music":
+                Settings.Music_Volume = float.Parse(value); break;
+            case "SFX":
+                Settings.Effects_Volume = float.Parse(value); break;
+            case "Voice":
+                Settings.Voice_Volume = float.Parse(value); break;
+
         }
+    }
+
+    public void Toggle_Slider_Navigation(Slider slider)
+    {
+        Navigation nav = slider.navigation;
+        switch (nav.mode) 
+        {
+            case Navigation.Mode.Explicit:
+                nav.mode = Navigation.Mode.None;
+                break;
+            case Navigation.Mode.None:
+                nav.mode = Navigation.Mode.Explicit;
+                break;      
+        }
+        slider.navigation = nav;
+    }
+    public void Enable_Slider_Naviation(Slider slider)
+    {
+        Navigation nav = slider.navigation;
+        nav.mode = Navigation.Mode.Explicit;
+        slider.navigation = nav;
     }
 }
 
@@ -93,6 +156,7 @@ public class Setting_Data
 {
     public string display, shadow_Q, texture_Q;
     public int fps;
+    public float brightness, masterVolume, musicVolume, effects_Volume, voice_Volume;
     public bool vSync, bloom;
     public Setting_Data(){}
 }
@@ -100,10 +164,10 @@ public class Setting_Data
 public static class Settings
 {
     private static Setting_Data Data = null;
-
+    private static AudioMixer audioMixer;
     private static void Save(){SaveSystem.Save(Data, "/Player/Settings.data");}
-
     public static void Initialize(){
+        audioMixer = Resources.Load<AudioMixer>(Path.Combine("Data/Audio/MasterMixer"));
         if (Data == null) {
             Setting_Data temp = SaveSystem.Load<Setting_Data>("/Player/Settings.data");
             if(temp == null)
@@ -115,6 +179,7 @@ public static class Settings
         }
     }
 
+    #region GRAPHICS
     public static string Display 
     { 
         get { 
@@ -164,13 +229,13 @@ public static class Settings
         set
         {
             Data.shadow_Q = value;
-            ShadowResolution res = ShadowResolution.Medium;
+            UnityEngine.ShadowResolution res = UnityEngine.ShadowResolution.Medium;
             switch (value) 
             {
-                case "Low": res = ShadowResolution.Low; break;
-                case "Medium": res = ShadowResolution.Medium; break;
-                case "High": res = ShadowResolution.High; break;
-                case "Maximum": res = ShadowResolution.VeryHigh; break;
+                case "Low": res = UnityEngine.ShadowResolution.Low; break;
+                case "Medium": res = UnityEngine.ShadowResolution.Medium; break;
+                case "High": res = UnityEngine.ShadowResolution.High; break;
+                case "Maximum": res = UnityEngine.ShadowResolution.VeryHigh; break;
             }
             QualitySettings.shadowResolution = res;
             Save();
@@ -196,4 +261,66 @@ public static class Settings
             Save();
         }
     }
+    public static float Brightness
+    {
+        get { return Data.brightness * 50; }
+        set
+        {
+            Data.brightness = value / 50;
+            VolumeProfile[] profiles = Resources.LoadAll<VolumeProfile>(Path.Combine("Data", "Post-Processing"));
+
+            foreach (VolumeProfile p in profiles)
+            {              
+                if(p.TryGet(out LiftGammaGain a)){
+                    Debug.Log("Changed Gamma to:" + value/50f);
+                    Vector4Parameter x = new Vector4Parameter(new Vector4(a.gamma.value.x, a.gamma.value.y, a.gamma.value.z, -1.0f + (value / 50)));
+                    a.gamma.SetValue(x);
+                }
+            }
+            Save();
+        }
+    }
+    #endregion
+
+    #region AUDIO
+    public static float Master_Volume
+    {
+        get { return Data.masterVolume; }
+        set { 
+            Data.masterVolume = value;
+            audioMixer.SetFloat("masterVol", value);
+            Save();
+        }
+    }
+    public static float Music_Volume
+    {
+        get { return Data.musicVolume; }
+        set
+        {
+            Data.musicVolume = value;
+            audioMixer.SetFloat("musicVol", value);
+            Save();
+        }
+    }
+    public static float Effects_Volume
+    {
+        get { return Data.effects_Volume; }
+        set
+        {
+            Data.effects_Volume = value;
+            audioMixer.SetFloat("sfxVol", value);
+            Save();
+        }
+    }
+    public static float Voice_Volume
+    {
+        get { return Data.voice_Volume; }
+        set
+        {
+            Data.voice_Volume = value;
+            audioMixer.SetFloat("vaVol", value);
+            Save();
+        }
+    }
+    #endregion
 }

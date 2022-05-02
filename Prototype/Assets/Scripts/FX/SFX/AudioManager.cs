@@ -11,8 +11,8 @@ public class AudioManager : MonoBehaviour
 
     public void SetExposedParam(int group)
     {
-        audioMixer.SetFloat(audioSettings[group].exposedParam, audioSettings[group].slider.value);
-        PlayerPrefs.SetFloat(audioSettings[group].exposedParam, audioSettings[group].slider.value);
+        //audioMixer.SetFloat(audioSettings[group].exposedParam, audioSettings[group].slider.value);
+       //PlayerPrefs.SetFloat(audioSettings[group].exposedParam, audioSettings[group].slider.value);
     }
 
 }

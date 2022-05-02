@@ -37,7 +37,14 @@ public class ActionWindow : MonoBehaviour
 
     public void CloseNotification(float delay)
     {
-        Destroy(gameObject, delay);
+        foreach(GameObject g in FindObjectsOfType<GameObject>())
+        {
+            if(g.activeInHierarchy && g.CompareTag("First Selection"))
+            {
+                g.GetComponent<Button>().Select();
+            }
+        }
+        Destroy(gameObject, delay);       
         if (Player_Controller.instance)
         {
             Player_Controller.instance.state_controller.isInvoking = true;
