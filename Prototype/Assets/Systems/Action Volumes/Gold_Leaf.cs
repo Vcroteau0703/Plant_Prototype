@@ -7,9 +7,11 @@ using System.Reflection;
 public class Gold_Leaf : Action_Volume
 {
     public GameObject pickupParticle;
+    AudioSource aS;
 
     private void Awake()
     {
+        aS = transform.parent.GetComponent<AudioSource>();
         Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if (data == null) { return; }
 
@@ -36,6 +38,7 @@ public class Gold_Leaf : Action_Volume
         Gold_Leaf_Data[] temp = Player.goldenLeaves;
         
         if(temp == null || temp.Length == 0) {
+            aS.Play();
             Player.goldenLeaves = new Gold_Leaf_Data[1];
             Player.goldenLeaves[0] = new Gold_Leaf_Data(this);
             Destroy(gameObject);

@@ -11,6 +11,7 @@ public class Termite : Hazard
             if (p.sapActive)
             {
                 gameObject.GetComponentInParent<Termite_Tracker>().Update_Termite_Count();
+                gameObject.GetComponentInParent<TermiteSFX>().PlaySFX();
                 if (oneShot)
                 {
                     Save_And_Destroy(gameObject);

@@ -16,7 +16,7 @@ public class Quest_02 : MonoBehaviour
         List<Task> tasks = Quest_System.Get_Active_Event().tasks;
         int termiteProg = tracker.termitesRemaining - tracker.termites;
 
-        while (termiteProg < tasks[0].maxProgress)
+        while (source.Data.Current_Event.tasks[0].progress < tasks[0].maxProgress)
         {
             if(termiteProg != tracker.termitesRemaining - tracker.termites)
             {
