@@ -385,8 +385,8 @@ Frond: So what do you wanna do now?
             Frond: ...okay.
             Frond: I'll meet you both back home. There's two different paths that go into the cave.
             <<PlayAudio DialogSFX "frond">>
-            Frond: One's from the fields way down there. You must've gone by it on your way here.
-            Frond: The other's underneath Grover. Ask him and he'll open up the path for you. And let him know I said it was okay.
+            Frond: One's at the fields way down there. You must've gone by it on your way here.
+            Frond: The other's underneath Grover. The path to get there is at his base.
             <<PlayAudio DialogSFX "frond">>
             Frond: ...And Sprig?
             -> Yeah?
@@ -499,7 +499,7 @@ Frond: I...I can't...
 Frond: Sprig...
 Frond: Aloe...
 Frond: I don't know who I am...without you...
--> Y o u   w a n t   t o   h e l p   m e   d o n ' t   y o u ?
+-> Y o u   w a n t   t o   h e l p   m e ,   d o n ' t   y o u ?
 Grover: Hmm? Who's there?
 Frond: ...
 Grover: Hey, little plant. Say something.
@@ -513,7 +513,7 @@ Frond: Who...?
 Grover: My name is Grover.
 Grover: I'm going to help you warm up, okay?
 Grover: It's not safe for you with me.
--> I   n e e d   t h e m   g o n e .   T h r e e   o f   t h e m .
+-> I   n e e d   a   g a t e   t o   g e t   b a c k .
 Frond: H-How so?
 Grover: I've started getting infested as of late.
 Grover: There's termites everywhere, causing me to bleed out sap.
@@ -521,7 +521,7 @@ Grover: The good thing about my sap is that it'll warm you up.
 Frond: Y-Yeah, it feels that way...
 Grover: But once you're on your feet, you need to leave.
 Frond: ...What about you?
--> I   n e e d   t o   b e   t h e i r   r e p l a c e m e n t .
+-> S o m e t h i n g   d i f f e r e n t   f r o m   t h e   o n e   i n   t h e   c a v e .
 Frond: ...You can't fix this on your own, can you?
 Grover: You don't want a part in this, child.
 Frond: Well neither do you! Agh...
