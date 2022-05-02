@@ -165,9 +165,12 @@ public static class Settings
 {
     private static Setting_Data Data = null;
     private static AudioMixer audioMixer;
+    private static VolumeProfile[] profiles;
     private static void Save(){SaveSystem.Save(Data, "/Player/Settings.data");}
     public static void Initialize(){
         audioMixer = Resources.Load<AudioMixer>(Path.Combine("Data/Audio/MasterMixer"));
+        profiles = Resources.LoadAll<VolumeProfile>(Path.Combine("Data", "Post-Processing"));
+
         if (Data == null) {
             Setting_Data temp = SaveSystem.Load<Setting_Data>("/Player/Settings.data");
             if(temp == null)
@@ -267,14 +270,11 @@ public static class Settings
         set
         {
             Data.brightness = value / 50;
-            VolumeProfile[] profiles = Resources.LoadAll<VolumeProfile>(Path.Combine("Data", "Post-Processing"));
-
             foreach (VolumeProfile p in profiles)
             {              
                 if(p.TryGet(out LiftGammaGain a)){
                     Debug.Log("Changed Gamma to:" + value/50f);
-                    Vector4Parameter x = new Vector4Parameter(new Vector4(a.gamma.value.x, a.gamma.value.y, a.gamma.value.z, -1.0f + (value / 50)));
-                    a.gamma.SetValue(x);
+                    a.gamma.value = new Vector4(a.gamma.value.x, a.gamma.value.y, a.gamma.value.z, -1.0f + (value / 50));
                 }
             }
             Save();
