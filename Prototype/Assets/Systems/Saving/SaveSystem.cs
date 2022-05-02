@@ -12,13 +12,35 @@ public static class SaveSystem
         DirectoryInfo dir = new DirectoryInfo(Application.persistentDataPath);
         DirectoryInfo[] info = dir.GetDirectories();
         string[] fileNames = new string[info.Length];
+        string defaultName = "Default";
 
         for(int i = 0; i < info.Length; i++)
         {
             fileNames[i] = info[i].Name;
         }
+
+        fileNames = Remove_File(fileNames, defaultName);
+
+
         return fileNames;
     }
+
+    static string[] Remove_File(string[]array, string target)
+    {
+        string[] temp = new string[array.Length - 1];
+
+        int a, t;
+
+        for (a = 0, t = 0; a < array.Length; a++)
+        {
+            if(array[a] == target) {continue;}          
+            temp[t] = array[a];
+            t++;
+        }
+
+        return temp;
+    }
+
     public static void CreateNewSave(string name)
     {
         string p_Main = Path.Combine(Application.persistentDataPath, name);

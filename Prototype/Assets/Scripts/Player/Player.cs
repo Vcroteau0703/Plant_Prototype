@@ -127,7 +127,10 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             sR.color = sapColor;
         }
         GameObject.Find("SapEffect").GetComponent<ParticleSystem>().Play();
-        gameObject.GetComponent<Player_Controller>().settings = sapSettings;
+        sapSettings.Jump.phase = originalSettings.Jump.phase;
+        sapSettings.Wall_Jump.phase = originalSettings.Wall_Jump.phase;
+        Player_Controller.instance.settings = sapSettings;
+
     }
 
     public void SapEffectOff()
@@ -138,7 +141,9 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             sR.color = Color.white;
         }
         GameObject.Find("SapEffect").GetComponent<ParticleSystem>().Stop();
-        gameObject.GetComponent<Player_Controller>().settings = originalSettings;
+        originalSettings.Jump.phase = sapSettings.Jump.phase;
+        originalSettings.Wall_Jump.phase = sapSettings.Wall_Jump.phase;
+        Player_Controller.instance.settings = originalSettings;
     }
 
     public void UpdateHealthUI(int currHealth)
