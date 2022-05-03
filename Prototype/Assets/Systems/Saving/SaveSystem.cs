@@ -19,9 +19,11 @@ public static class SaveSystem
             fileNames[i] = info[i].Name;
         }
 
-        fileNames = Remove_File(fileNames, defaultName);
+        if(Directory.Exists(Path.Combine(Application.persistentDataPath, "Default")))
+        {
+            fileNames = Remove_File(fileNames, defaultName);
 
-
+        }
         return fileNames;
     }
 
