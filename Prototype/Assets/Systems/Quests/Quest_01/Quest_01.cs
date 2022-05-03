@@ -23,16 +23,19 @@ public class Quest_01 : MonoBehaviour
             switch (player.Get_Active_State().name)
             {
                 case "Cling":
+                    if (cling) { break; }
                     cling = true;
                     Quest_System.Update_Task(tasks[0], 1);
                     break;
 
                 case "Slide":
+                    if (slide) { break; }
                     slide = true;
                     Quest_System.Update_Task(tasks[1], 1);
                     break;
 
                 case "Wall Jump":
+                    if (jump) { break; }
                     Quest_System.Update_Task(tasks[2], 1);
                     jump = true;
                     break;

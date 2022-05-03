@@ -7,6 +7,7 @@ public class Task_UI : MonoBehaviour
 {
     public TMP_Text content;
     public TMP_Text progress;
+    public Animator animator;
 
     public void SetProperties(string content, string progress, Color contentColor, Color progressColor)
     {
@@ -15,5 +16,10 @@ public class Task_UI : MonoBehaviour
         this.content.text = content;
         if(progress == null || progress == "0") { this.progress.text = ""; }
         else { this.progress.text = progress; }    
+    }
+
+    public void Destroy_Self()
+    {
+        Destroy(gameObject);
     }
 }

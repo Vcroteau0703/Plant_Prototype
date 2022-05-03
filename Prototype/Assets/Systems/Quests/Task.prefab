@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 531965453201614363}
   - component: {fileID: 531965453201614358}
   - component: {fileID: -8085932386849846220}
+  - component: {fileID: 1224002410635859651}
   m_Layer: 5
   m_Name: Task
   m_TagString: Untagged
@@ -195,6 +196,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: {fileID: 4546946281900407701}
   progress: {fileID: 531965452722816621}
+  animator: {fileID: 1224002410635859651}
+--- !u!95 &1224002410635859651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531965453201614362}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0660072c8d3c24944bc98d943690a6bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4087973082231564490
 GameObject:
   m_ObjectHideFlags: 0
