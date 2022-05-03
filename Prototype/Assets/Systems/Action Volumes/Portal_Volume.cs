@@ -19,7 +19,7 @@ public class Portal_Volume : Action_Volume
     private BoxCollider col;
     private GameObject User_Interface;
 
-    private void OnEnable()
+    new private void OnEnable()
     {
         action = StartTransition;
     }

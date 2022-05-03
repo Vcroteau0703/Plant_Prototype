@@ -43,11 +43,11 @@ public class Player : MonoBehaviour, IDamagable, ISavable
         if (player != null){
             goldenLeaves = player.goldLeaves;
             health = player.health;
-            currColl = player.currColl;
-            Checkpoint c = Checkpoint.Find_Checkpoint(player.checkpoint.ID);
-            Checkpoint.Set_Checkpoint(c, Checkpoint.State.Active);
+            currColl = player.currColl;           
             if (SceneManager.GetActiveScene().name == player.scene)
             {
+                Checkpoint c = Checkpoint.Find_Checkpoint(player.checkpoint.ID);
+                Checkpoint.Set_Checkpoint(c, Checkpoint.State.Active);
                 transform.position = Checkpoint.Get_Active_Checkpoint().transform.position;
             }
         }
