@@ -15,9 +15,12 @@ Aloe: Hey, Sprig.
 -> Sister...
 <<PlayAudio DialogSFX "aloe">>
 Aloe: I...I'm sorry. For everything.
-Aloe: I know the blizzard wasn't my fault, but it's something I could have stopped.
+Aloe: It's my fault.
 <<PlayAudio DialogSFX "aloe">>
-Aloe: I could've kept an eye on you. I could've helped Frond back at home. Instead...
+Aloe: Not the blizzard...but...everything that's happened to us.
+Aloe: I could've kept an eye on you. I could've helped Frond back at home.
+<<PlayAudio DialogSFX "aloe">>
+Aloe: I could have done something. And I left you to die instead.
 Aloe: If I was just like you...maybe...
 -> Maybe...?
     <<PlayAudio DialogSFX "aloe">>
@@ -43,6 +46,19 @@ Aloe: If I was just like you...maybe...
 <<PlayAudio DialogSFX "aloe">>
 Aloe: ...You can pretend to forgive me all you want, but deep down, we both know how you really feel.
 Aloe: Go on, let it out.
+-> It's not your fault.
+<<wait 1>>
+<<PlayAudio DialogSFX "aloe">>
+Aloe: ...Wh-
+Aloe: No, take this seriously.
+<<PlayAudio DialogSFX "aloe">>
+Aloe: You hate me. So say it.
+-> I'll never hate you.
+<<PlayAudio DialogSFX "aloe">>
+Aloe: STOP!
+Aloe: I don't want your praise...I don't deserve it...
+<<PlayAudio DialogSFX "aloe">>
+Aloe: Just say you hate me already!
 -> I love you.
 <<wait 5>>
 <<PlayAudio DialogSFX "aloe">>
