@@ -11,13 +11,29 @@ public class Loading : MonoBehaviour
     private AsyncOperation target;
     void Start()
     {
-        string scene = SaveSystem.Load<Player_Data>("/Player/Player.data").scene;
+        int scene = SaveSystem.Load<Portal_Data>("/Temp/Portal.data").nextScene;
         target = SceneManager.LoadSceneAsync(scene);
-        target.allowSceneActivation = true;
+        StartCoroutine(Activate_Scene());
     }
 
-    private void LateUpdate()
-    {
-        progressText.text = (target.progress * 100).ToString("00") + "%";
+    IEnumerator Activate_Scene()
+    {  
+        progressText.text = "0%";
+        target.allowSceneActivation = false;
+        while (progressText.text != "100%")
+        {
+            float current = float.Parse(progressText.text.Replace("%", ""));
+            if(current < target.progress/0.9f * 100)
+            {
+                progressText.text = (current + 1f).ToString() + "%";
+            }
+            else
+            {
+                progressText.text = (target.progress / 0.9f * 100).ToString() + "%";
+            }          
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(1.5f);
+        target.allowSceneActivation = true;
     }
 }
