@@ -14,6 +14,10 @@ public class Action_Volume : MonoBehaviour
     protected void Awake()
     {
         Load();
+    }
+
+    protected void OnEnable()
+    {
         if (oneShot == true)
         {
             action = Save_And_Destroy;
@@ -34,38 +38,37 @@ public class Action_Volume : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {       
         if ((Layer_Filter & (1<<other.gameObject.layer)) == 0){ return; }
-        else if (trigger_type == Trigger_Type.Trigger_Stay) { action.Invoke(other.gameObject); }
+        else if (trigger_type == Trigger_Type.Trigger_Stay && action != null) { action.Invoke(other.gameObject); }
     }
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        Debug.Log(gameObject.name);
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); } 
+        else if (trigger_type == Trigger_Type.Trigger_Enter && action != null) { action.Invoke(other.gameObject); } 
     }
 
     public virtual void OnTriggerExit(Collider other)
     {
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Trigger_Exit) { action.Invoke(other.gameObject); }
+        else if (trigger_type == Trigger_Type.Trigger_Exit && action != null) { action.Invoke(other.gameObject); }
     }
 
     public void OnCollisionStay(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Collision_Stay) { action.Invoke(collision.gameObject); }
+        else if (trigger_type == Trigger_Type.Collision_Stay && action != null) { action.Invoke(collision.gameObject); }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Collision_Enter) { action.Invoke(collision.gameObject); }
+        else if (trigger_type == Trigger_Type.Collision_Enter && action != null) { action.Invoke(collision.gameObject); }
     }
 
     public void OnCollisionExit(Collision collision)
     {
         if ((Layer_Filter & (1 << collision.gameObject.layer)) == 0) { return; }
-        else if (trigger_type == Trigger_Type.Collision_Exit) { action.Invoke(collision.gameObject); }
+        else if (trigger_type == Trigger_Type.Collision_Exit && action != null) { action.Invoke(collision.gameObject); }
     }
 
     public void Save_And_Destroy(GameObject actor)

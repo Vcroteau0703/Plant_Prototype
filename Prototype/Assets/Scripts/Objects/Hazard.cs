@@ -5,10 +5,9 @@ using UnityEngine;
 public class Hazard : Action_Volume
 {
     public int damage;
-
-    new private void Awake()
+    new private void OnEnable()
     {
-        base.Awake();
+        base.OnEnable();
         action = Deal_Damage;
     }
 

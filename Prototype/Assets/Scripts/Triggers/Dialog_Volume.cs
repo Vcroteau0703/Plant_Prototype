@@ -8,9 +8,9 @@ public class Dialog_Volume : Action_Volume
     public DialogueRunner dialogueRunner;
     public string dialogueToRun;
 
-    new private void Awake()
+    new private void OnEnable()
     {
-        base.Awake();
+        base.OnEnable();
         action += Start_Dialog;
     }
 
