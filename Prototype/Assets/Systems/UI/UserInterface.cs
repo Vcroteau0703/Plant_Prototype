@@ -29,6 +29,16 @@ public class UserInterface : MonoBehaviour
         instance = this;
     }
 
+    public void DisablePause()
+    {
+        inputs.Player.Pause.Disable();
+    }
+
+    public void EnablePause()
+    {
+        inputs.Player.Pause.Enable();
+    }
+
     private void Awake()
     {
         if (inputs == null)
