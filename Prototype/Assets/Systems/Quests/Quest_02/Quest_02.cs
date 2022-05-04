@@ -6,22 +6,25 @@ public class Quest_02 : MonoBehaviour
 {
     public Quest source;
 
-    public void Start_Termite_Quest(Termite_Tracker termiteTracker)
+    public int maxTermites;
+    public int termitesLeft;
+
+    public void Start_Termite_Quest()
     {
-        StartCoroutine(Termite_Quest(termiteTracker));
+        termitesLeft = transform.GetComponentsInChildren<Termite>().Length;
+        StartCoroutine(Termite_Quest());
     }
 
-    IEnumerator Termite_Quest(Termite_Tracker tracker)
+    IEnumerator Termite_Quest()
     {
         List<Task> tasks = Quest_System.Get_Active_Event().tasks;
-        int termiteProg = tracker.termitesRemaining - tracker.termites;
-
+        int temp = termitesLeft;
         while (source.Data.Current_Event.tasks[0].progress < tasks[0].maxProgress)
         {
-            if(termiteProg != tracker.termitesRemaining - tracker.termites)
+            if(temp != termitesLeft)
             {
-                termiteProg = tracker.termitesRemaining - tracker.termites;
                 Quest_System.Update_Task(tasks[0], 1);
+                temp = termitesLeft;
             }
             yield return new WaitForEndOfFrame();
         }

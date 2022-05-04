@@ -10,7 +10,7 @@ public class Termite : Hazard
         {
             if (p.sapActive)
             {
-                gameObject.GetComponentInParent<Termite_Tracker>().Update_Termite_Count();
+                transform.GetComponentInParent<Quest_02>().termitesLeft -= 1;
                 gameObject.GetComponentInParent<TermiteSFX>().PlaySFX();
                 if (oneShot)
                 {
