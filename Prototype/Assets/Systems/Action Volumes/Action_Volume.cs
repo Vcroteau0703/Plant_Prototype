@@ -72,7 +72,7 @@ public class Action_Volume : MonoBehaviour
     {       
         data.activated = true;
         data.ID = ((int)transform.position.sqrMagnitude);
-        GameManager.instance.sceneData.Update_AVol_Data(data);
+        GameManager.instance.sceneData.Update_Scene_Data(data);
         Destroy(gameObject);
     }
 
