@@ -33,10 +33,6 @@ public class Portal_Volume : Action_Volume
     private IEnumerator LevelTransitionOut(GameObject actor)
     {
         //Make sprig run left or right
-        if (actor.TryGetComponent<Player_Controller>(out Player_Controller pC))
-        {
-            pC.OnDisable();
-        }
         MonoBehaviour[] monos = FindObjectsOfType<MonoBehaviour>(true);
         foreach (MonoBehaviour m in monos)
         {
