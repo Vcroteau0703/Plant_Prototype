@@ -7,9 +7,9 @@ public class Cutscene_Volume : Action_Volume
 {
     public PlayableDirector cutscene;
 
-    new private void Awake()
+    new private void OnEnable()
     {
-        base.Awake();
+        base.OnEnable();
         action += Start_Cutscene;
     }
 
