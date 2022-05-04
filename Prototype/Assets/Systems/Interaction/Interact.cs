@@ -25,7 +25,7 @@ public class Interact : MonoBehaviour
         data.active = true;
         data.ID = ((int)transform.position.sqrMagnitude);
         GameManager.instance.sceneData.Update_Scene_Data(data);
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     public void Load()
