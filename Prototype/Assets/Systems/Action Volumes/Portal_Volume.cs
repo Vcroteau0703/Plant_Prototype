@@ -19,13 +19,9 @@ public class Portal_Volume : Action_Volume
     private BoxCollider col;
     private GameObject User_Interface;
 
-    new private void OnEnable()
+    new private void Awake()
     {
         action = StartTransition;
-    }
-
-    private void Awake()
-    {
         User_Interface = GameObject.Find("User_Interface");
     }
 

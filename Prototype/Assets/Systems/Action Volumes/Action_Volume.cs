@@ -11,13 +11,9 @@ public class Action_Volume : MonoBehaviour
     public delegate void Action(GameObject actor);
     public Action action;
 
-    private void Awake()
+    protected void Awake()
     {
-        Load();      
-    }
-
-    protected void OnEnable()
-    {
+        Load();
         if (oneShot == true)
         {
             action = Save_And_Destroy;
@@ -43,6 +39,7 @@ public class Action_Volume : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log(gameObject.name);
         if ((Layer_Filter & (1 << other.gameObject.layer)) == 0) { return; }
         else if (trigger_type == Trigger_Type.Trigger_Enter) { action.Invoke(other.gameObject); } 
     }

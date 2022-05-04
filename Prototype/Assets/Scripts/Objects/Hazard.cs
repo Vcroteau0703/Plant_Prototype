@@ -6,9 +6,9 @@ public class Hazard : Action_Volume
 {
     public int damage;
 
-    new private void OnEnable()
+    new private void Awake()
     {
-        base.OnEnable();
+        base.Awake();
         action = Deal_Damage;
     }
 
