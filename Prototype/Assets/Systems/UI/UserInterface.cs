@@ -18,6 +18,12 @@ public class UserInterface : MonoBehaviour
 
     private Controls inputs;
 
+    //Mouse Stuff
+    float timeLeft;
+    float visibleCursorTimer = 2f;
+    float cursorPosition;
+    bool catchCursor = true;
+
     private void OnEnable()
     {
         instance = this;
@@ -32,13 +38,41 @@ public class UserInterface : MonoBehaviour
 
         inputs.Player.Pause.performed += Pause;
         inputs.Player.Pause.Enable();
+        inputs.Player.Pointer.performed += EnableMouse;
+        inputs.Player.Pointer.Enable();
 
-        if(canvas.worldCamera == null)
+        if (canvas.worldCamera == null)
         {
             canvas.worldCamera = Camera.main;
         }
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    }
+
+    void EnableMouse(InputAction.CallbackContext context)
+    {
+        timeLeft = visibleCursorTimer;
+        Cursor.visible = true;
+        catchCursor = false;
+    }
+
+    void EnableMouse()
+    {
+        timeLeft = visibleCursorTimer;
+        Cursor.visible = true;
+        catchCursor = false;
+    }
+
+    void Update()
+    {
+        if (!catchCursor)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                timeLeft = visibleCursorTimer;
+                Cursor.visible = false;
+                catchCursor = true;
+            }
+        }
     }
 
     public void Pause(InputAction.CallbackContext context)
@@ -47,14 +81,10 @@ public class UserInterface : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
             return;
         }
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void Pause()
@@ -63,14 +93,10 @@ public class UserInterface : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
             return;
         }
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private void OnDisable()
