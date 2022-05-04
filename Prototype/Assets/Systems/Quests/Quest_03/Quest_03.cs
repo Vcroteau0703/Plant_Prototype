@@ -7,32 +7,26 @@ public class Quest_03 : MonoBehaviour
 {
     public GameObject taskList;
     public Quest source;
-    public Tablet_Tracker tablet_Tracker;
 
-    public void Start()
+    public int totalTablets;
+    public int tabletsRemaining;
+
+    public void Start_Cave_Quest()
     {
-        //if(source.Data.Current_Event != null)
-        //{
-        //    Quest_System.Start_Quest("Quest_03");
-        //}
+        tabletsRemaining = transform.GetComponentsInChildren<Tablet>().Length;
+        StartCoroutine(Cave_Quest());
     }
 
-    public void Start_Cave_Quest(Tablet_Tracker tablet_Tracker)
-    {
-        StartCoroutine(Cave_Quest(tablet_Tracker));
-    }
-
-    IEnumerator Cave_Quest(Tablet_Tracker tracker)
+    IEnumerator Cave_Quest()
     {
         List<Task> tasks = Quest_System.Get_Active_Event().tasks;
-        int tabletProg = tracker.tabletsRemaining - tracker.tablets;
-
+        int temp = tabletsRemaining;
         while (source.Data.Current_Event.tasks[0].progress < tasks[0].maxProgress)
         {
-            if (tabletProg != tracker.tabletsRemaining - tracker.tablets)
+            if (temp != tabletsRemaining)
             {
-                tabletProg = tracker.tabletsRemaining - tracker.tablets;
                 Quest_System.Update_Task(tasks[0], 1);
+                temp = tabletsRemaining;
             }
             yield return new WaitForEndOfFrame();
         }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Hazard : Action_Volume
 {
     public int damage;
-
     new private void OnEnable()
     {
         base.OnEnable();

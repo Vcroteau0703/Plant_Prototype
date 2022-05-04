@@ -278,7 +278,6 @@ public class Player_Controller : MonoBehaviour
             else if (c.name == "Right")
             {
                 Vector2 dir = detection.transform.right;
-                Debug.Log(dir);
                 rb.AddForce(dir * settings.Cling_Power, ForceMode.Force);
                 Flip(1);
             }
@@ -387,7 +386,6 @@ public class Player_Controller : MonoBehaviour
     }
     public IEnumerator Jump_02(Jump jump, float time)
     {
-        Debug.Log("WALL JUMP");
         StartCoroutine(Jump_02_Buffer());
         jump.phase = Jump.State.Started;
         rb.velocity = new Vector2(rb.velocity.x, 0);
