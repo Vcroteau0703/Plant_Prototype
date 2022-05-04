@@ -65,7 +65,7 @@ public class Settings_UI : MonoBehaviour
                 case "V-Sync": temp = data.vSync == true ? "On" : "Off"; Check_Change(temp, n); continue;
                 case "Shadow_Quality": Check_Change(data.shadow_Q, n); continue;
                 case "Texture_Quality": Check_Change(data.texture_Q, n); continue;
-                case "Bloom": temp = data.vSync == true ? "On" : "Off"; Check_Change(temp, n); continue;
+                case "Bloom": temp = data.bloom == true ? "On" : "Off"; Check_Change(temp, n); continue;
             }
         }
 
@@ -117,6 +117,8 @@ public class Settings_UI : MonoBehaviour
                 Settings.Texture_Quality = value; break;
             case "Brightness":
                 Settings.Brightness = float.Parse(value); break;
+            case "Bloom":
+                Settings.Bloom = value == "On" ? true : false; break;
             case "Master":
                 Settings.Master_Volume = float.Parse(value); break;
             case "Music":
@@ -154,10 +156,10 @@ public class Settings_UI : MonoBehaviour
 [System.Serializable]
 public class Setting_Data
 {
-    public string display, shadow_Q, texture_Q;
-    public int fps;
-    public float brightness, masterVolume, musicVolume, effects_Volume, voice_Volume;
-    public bool vSync, bloom;
+    public string display= "1920x1080", shadow_Q = "High", texture_Q = "High";
+    public int fps = 60;
+    public float brightness = 1.0f, masterVolume = -15, musicVolume = -15, effects_Volume = -15, voice_Volume = -15;
+    public bool vSync = true, bloom = true;
     public Setting_Data(){}
 }
 
@@ -178,7 +180,18 @@ public static class Settings
                 Data = new Setting_Data();
                 return;
             }
-            Data = temp;         
+            Data = temp;
+            Display = Display;
+            FPS = FPS;
+            V_Sync = V_Sync;
+            Shadow_Quality = Shadow_Quality;
+            Texture_Quality = Texture_Quality;
+            Bloom = Bloom;
+            Brightness = Brightness;
+            Master_Volume = Master_Volume;
+            Music_Volume = Music_Volume;
+            Effects_Volume = Effects_Volume;
+            Voice_Volume = Voice_Volume;
         }
     }
 
@@ -264,6 +277,22 @@ public static class Settings
             Save();
         }
     }
+    public static bool Bloom
+    {
+        get { return Data.bloom; }
+        set
+        {
+            Data.bloom = value;
+            foreach (VolumeProfile p in profiles)
+            {
+                if (p.TryGet(out Bloom a))
+                {
+                    a.active = value;
+                }
+            }
+            Save();
+        }
+    }
     public static float Brightness
     {
         get { return Data.brightness * 50; }
@@ -273,7 +302,6 @@ public static class Settings
             foreach (VolumeProfile p in profiles)
             {              
                 if(p.TryGet(out LiftGammaGain a)){
-                    Debug.Log("Changed Gamma to:" + value/50f);
                     a.gamma.value = new Vector4(a.gamma.value.x, a.gamma.value.y, a.gamma.value.z, -1.0f + (value / 50));
                 }
             }

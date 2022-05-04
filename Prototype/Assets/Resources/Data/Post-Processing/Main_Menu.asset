@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
@@ -90,29 +90,6 @@ MonoBehaviour:
     m_Value: 25
     min: -100
     max: 100
---- !u!114 &-1222244540237963302
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  lift:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -0.008140989}
-  gamma:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.023971787}
-  gain:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -0.008140787}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +107,7 @@ MonoBehaviour:
   - {fileID: 6788356588857264401}
   - {fileID: -2491098334039908906}
   - {fileID: 5620877241207200117}
-  - {fileID: -1222244540237963302}
+  - {fileID: 7852108820829918866}
 --- !u!114 &5620877241207200117
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -184,3 +161,26 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+--- !u!114 &7852108820829918866
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gain:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}

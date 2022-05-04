@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class System_Manager : MonoBehaviour
 {
-    private void OnEnable()
+    private void Awake()
     {
         SaveSystem.CurrentSave = "";
+    }
+
+    private void Start()
+    {
+        Settings.Initialize();
     }
 }
