@@ -57,9 +57,10 @@ public class Portal_Volume : Action_Volume
             SaveSystem.Save(data, "/Temp/Portal.data");
         } 
         data.destination = Linked_ID;
+        data.nextScene = Scene_ID;
         SaveSystem.Save(data, "/Temp/Portal.data");
         GameManager.SaveGame();
-        SceneManager.LoadScene(Scene_ID);
+        SceneManager.LoadSceneAsync("Loading", LoadSceneMode.Single);
     }
 
     private void OnDrawGizmos()
@@ -86,4 +87,5 @@ public class Portal_Volume : Action_Volume
 public class Portal_Data
 {
     public string destination;
+    public int nextScene;
 }
