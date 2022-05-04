@@ -7,7 +7,14 @@ public static class Laucher
 {  
     public static void LoadScene(int index)
     {
-        SceneManager.LoadScene(index);        
+        SceneManager.LoadScene(index);
+        AsyncOperation levelLoad = SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
+        levelLoad.completed += LevelLoad_completed;
+    }
+
+    private static void LevelLoad_completed(AsyncOperation obj)
+    {
+        obj.allowSceneActivation = true;
     }
 
     public static IEnumerator LoadScene(string sceneName, float delay)
