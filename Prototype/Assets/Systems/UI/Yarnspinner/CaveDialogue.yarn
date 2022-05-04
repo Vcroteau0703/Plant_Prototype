@@ -20,7 +20,9 @@ Aloe: It's my fault.
 Aloe: Not the blizzard...but...everything that's happened to us.
 Aloe: I could've kept an eye on you. I could've helped Frond back at home.
 <<PlayAudio DialogSFX "aloe">>
-Aloe: I could have done something. And I left you to die instead.
+Aloe: I could have done something.
+Aloe: And I left you to die instead.
+<<PlayAudio DialogSFX "aloe">>
 Aloe: If I was just like you...maybe...
 -> Maybe...?
     <<PlayAudio DialogSFX "aloe">>
@@ -60,7 +62,7 @@ Aloe: I don't want your praise...I don't deserve it...
 <<PlayAudio DialogSFX "aloe">>
 Aloe: Just say you hate me already!
 -> I love you.
-<<wait 5>>
+<<wait 4>>
 <<PlayAudio DialogSFX "aloe">>
 Aloe: ...I-
 -> Come on. Let's go home.
