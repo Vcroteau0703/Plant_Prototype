@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a10edfb8324a64085636f5edf317cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLeaves: 15
+  maxLeaves: 20
   currTxt: {fileID: 157620596}
   maxTxt: {fileID: 781247873}
 --- !u!1 &1406664580
