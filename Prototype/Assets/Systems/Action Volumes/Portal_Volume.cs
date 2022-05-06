@@ -61,7 +61,8 @@ public class Portal_Volume : Action_Volume
             SaveSystem.Save(data, "/Temp/Portal.data");
         }
         data.destination = Linked_ID;
-        data.nextScene = Scene_ID;
+        Loading_Data load_Data = new Loading_Data(Scene_ID);
+        SaveSystem.Save(load_Data, "/Temp/Loading.data");
         SaveSystem.Save(data, "/Temp/Portal.data");
         GameManager.SaveGame();
         SceneManager.LoadSceneAsync("Loading", LoadSceneMode.Single);
@@ -91,5 +92,4 @@ public class Portal_Volume : Action_Volume
 public class Portal_Data
 {
     public string destination;
-    public int nextScene;
 }
