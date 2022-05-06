@@ -9,6 +9,8 @@ public class Portal_Volume : Action_Volume
     public string Portal_ID;
     public string Linked_ID;
 
+    public bool isTraveling;
+
     public Vector2 Size = Vector2.one;
 
     public Vector2 Spawn_Offset;
@@ -50,12 +52,14 @@ public class Portal_Volume : Action_Volume
 
     private void Travel(GameObject actor)
     {
+        if (isTraveling) { return; }
+        isTraveling = true;
         Portal_Data temp = SaveSystem.Load<Portal_Data>("/Temp/Portal.data");
         if(temp != null && temp.destination != "") {
             temp.destination = "";
             data = temp;
             SaveSystem.Save(data, "/Temp/Portal.data");
-        } 
+        }
         data.destination = Linked_ID;
         data.nextScene = Scene_ID;
         SaveSystem.Save(data, "/Temp/Portal.data");

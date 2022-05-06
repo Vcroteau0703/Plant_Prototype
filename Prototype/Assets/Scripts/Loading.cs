@@ -17,7 +17,8 @@ public class Loading : MonoBehaviour
     }
 
     IEnumerator Activate_Scene()
-    {  
+    {
+        Debug.Log("Loading...");
         progressText.text = "0%";
         target.allowSceneActivation = false;
         while (progressText.text != "100%")
