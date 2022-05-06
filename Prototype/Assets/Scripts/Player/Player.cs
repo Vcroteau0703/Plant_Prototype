@@ -44,7 +44,7 @@ public class Player : MonoBehaviour, IDamagable, ISavable
             goldenLeaves = player.goldLeaves;
             health = player.health;
             currColl = player.currColl;           
-            if (SceneManager.GetActiveScene().name == player.scene)
+            if (SceneManager.GetActiveScene().buildIndex == player.scene)
             {
                 Checkpoint c = Checkpoint.Find_Checkpoint(player.checkpoint.ID);
                 Checkpoint.Set_Checkpoint(c, Checkpoint.State.Active);
@@ -214,7 +214,7 @@ public class Player_Data
     public int health;
     public int currColl;
     public string currentQuest;
-    public string scene;
+    public int scene;
     public Checkpoint_Data checkpoint;
     public Gold_Leaf_Data[] goldLeaves;
 
@@ -228,7 +228,7 @@ public class Player_Data
         goldLeaves = Player.goldenLeaves;
 
         //SCENES
-        scene = SceneManager.GetActiveScene().name;
+        scene = SceneManager.GetActiveScene().buildIndex;
 
         //QUEST SYSTEM
         Quest current = Quest_Handler.instance.Target_Quest;

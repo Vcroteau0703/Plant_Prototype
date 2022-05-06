@@ -9,7 +9,7 @@ public class FileLoad : MonoBehaviour
 {
     public TMP_Text fileName;
     public void LoadSave()
-    {
+    {        
         SaveSystem.CurrentSave = Path.Combine(Application.persistentDataPath, fileName.text);
         Player_Data data = SaveSystem.Load<Player_Data>("/Player/Player.data");
         if(data == null)
@@ -18,7 +18,8 @@ public class FileLoad : MonoBehaviour
             Notification_System.Send_ActionWindow("Player.data does not exist in " + fileName.text + ". File might be corrupt or lost, Would you like to delete the save?", "Delete", function);
             return;
         }
-        Laucher.LoadScene(data.scene);
+        //Laucher.LoadScene(data.scene);
+        UI_Effects.Fade_Load(data.scene);
     }
     public void Delete()
     {
